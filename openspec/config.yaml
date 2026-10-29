@@ -9,24 +9,21 @@ context: |
   com meditação dinâmica (passagens, comentários, imagens via Supabase). MVP sem auth.
   Código em src/: features, shared, data, domain. Especificação de produto em docs/project-spec.md.
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always state what is out of scope
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+rules:
+  proposal:
+    - Declarar explicitamente o que está fora do escopo
+    - Referenciar capabilities afetadas em openspec/specs/
+  specs:
+    - Texto de cenários em pt-BR; manter SHALL/MUST em inglês
+    - Preferir GIVEN/WHEN/THEN; incluir pelo menos um cenário de falha ou limite por requirement crítico
+  tasks:
+    - Marcar tarefas verificáveis (comando ou critério observável)
 
-# Per-operation guidance (optional)
-# Add advisory guidance for how apply and archive work should be conducted.
-# This is separate from artifact rules above.
-# Example:
-#   operations:
-#     apply:
-#       guidance:
-#         - Keep test summaries concise
-#     archive:
-#       guidance:
-#         - Summarize the archive outcome before finishing
+operations:
+  apply:
+    guidance:
+      - Rodar npx tsc --noEmit antes de marcar tasks concluídas
+      - Não alterar openspec/specs/ principais fora de sync/archive
+  archive:
+    guidance:
+      - Confirmar openspec validate --all --strict antes de arquivar

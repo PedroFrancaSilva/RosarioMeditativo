@@ -1,0 +1,10 @@
+---
+description: Fluxo de agente — OpenSpec + arquitetura src/
+globs: src/**,openspec/**
+alwaysApply: false
+---
+
+# Workflow do agente
+
+1. **Especificação:** seguir `.cursor/rules/openspec.mdc` — changes OpenSpec para comportamento novo; specs em `openspec/specs/`.
+2. **Código:** respeitar a estrutura do README — `src/features/` (fluxos), `src/data/` (API/repositórios), `src/domain/` (tipos/regras), `src/shared/` (UI/providers), `src/app/` (rotas Expo Router). Manter UI fina; lógica de dados fora dos componentes de tela quando possível.

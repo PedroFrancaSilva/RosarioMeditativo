@@ -52,18 +52,30 @@ Especificações de comportamento ficam em `openspec/specs/`:
 - `meditation-content` — conteúdo dinâmico e Supabase
 - `local-experience` — contador, áudio, offline, cache
 
-Comandos no **terminal**:
+Comandos no **terminal** (OpenSpec CLI 1.15+):
 
 ```bash
-openspec spec list              # listar specs
-openspec spec validate          # validar todas
+# Validar specs normativas
+openspec validate --specs --no-interactive
+
+# Validar tudo (CI / pré-commit) — também via npm
+npm run openspec:check
+# equivalente: openspec validate --all --strict --no-interactive
+
 openspec list                   # mudanças ativas
 openspec view                   # dashboard interativo
+openspec show rosary-prayer     # detalhe de uma capability (exemplo)
 ```
 
-No **Cursor**, use os comandos `/opsx:explore`, `/opsx:propose`, `/opsx:apply`, `/opsx:archive` (ver `.cursor/commands/`).
+> **Deprecado:** `openspec spec list` e `openspec spec validate` ainda podem responder, mas emitem aviso; use os comandos acima.
 
-Para uma nova funcionalidade: proponha uma change, implemente as tasks, arquive para fundir deltas em `openspec/specs/`.
+Fluxo no **Cursor** (comandos em `.cursor/commands/`):
+
+`/opsx:explore` → `/opsx:propose` → `/opsx:apply` → `/opsx:sync` (se necessário) → `/opsx:archive`
+
+Também disponíveis: `/opsx:update` (refinar artefatos da change). Perfil expandido (`/opsx:verify`, `/opsx:onboard`, etc.) **não** está instalado neste projeto — use o fluxo core acima ou `openspec new change <nome-kebab-case>`.
+
+Para nova funcionalidade: **não** edite `openspec/specs/**/spec.md` direto; proponha uma change, implemente as tasks, valide (`npm run openspec:check` + `npx tsc --noEmit`), depois arquive (ou sync) para fundir deltas nas specs principais.
 
 Documento de produto (visão geral): `docs/project-spec.md`.
 

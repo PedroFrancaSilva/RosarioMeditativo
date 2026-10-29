@@ -1,0 +1,12 @@
+---
+description: OpenSpec change workflow e specs normativas (Rosário Meditativo)
+alwaysApply: true
+---
+
+# OpenSpec — governança
+
+- **Novas features ou mudanças de comportamento** MUST passar pelo fluxo OpenSpec: propose → apply → archive (ou sync quando aplicável). **Não** editar diretamente `openspec/specs/**/spec.md` para entregar funcionalidade nova.
+- **Comportamento normativo** vive em `openspec/specs/<capability>/spec.md`. **Visão de produto / escopo** em `docs/project-spec.md` — não duplicar requirements longos lá.
+- Preferir comandos `/opsx:explore`, `/opsx:propose`, `/opsx:apply`, `/opsx:sync`, `/opsx:archive` ou CLI `openspec new change <nome-kebab-case>`.
+- Deltas em changes usam seções **ADDED** / **MODIFIED** / **REMOVED** / **RENAMED**; cabeçalhos `### Requirement:` estáveis (identificadores para merge no archive).
+- Antes de concluir implementação: `npm run openspec:check` e `npx tsc --noEmit`.
