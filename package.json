@@ -36,5 +36,9 @@
     "web": "expo start --web",
     "openspec:check": "openspec validate --all --strict --no-interactive"
   },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "npm@10.9.9",
   "private": true
 }

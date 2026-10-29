@@ -8,3 +8,5 @@ alwaysApply: false
 
 1. **Especificação:** seguir `.cursor/rules/openspec.mdc` — changes OpenSpec para comportamento novo; specs em `openspec/specs/`.
 2. **Código:** respeitar a estrutura do README — `src/features/` (fluxos), `src/data/` (API/repositórios), `src/domain/` (tipos/regras), `src/shared/` (UI/providers), `src/app/` (rotas Expo Router). Manter UI fina; lógica de dados fora dos componentes de tela quando possível.
+3. **Ambiente:** usar Node via `nvm use` (`.nvmrc` na raiz); **npm** apenas — não migrar para pnpm/yarn neste repo.
+4. **Dependências:** após mudanças em `package.json` / lockfile, rodar **`npx expo-doctor`**; preferir **`npx expo install`** para pacotes Expo/RN.

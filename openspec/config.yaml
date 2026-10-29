@@ -22,7 +22,9 @@ rules:
 operations:
   apply:
     guidance:
+      - Node ≥ 22.13 (nvm use / .nvmrc); gerenciador npm + package-lock.json
       - Rodar npx tsc --noEmit antes de marcar tasks concluídas
+      - Após mudanças de dependências ou upgrade Expo, rodar npx expo-doctor
       - Não alterar openspec/specs/ principais fora de sync/archive
   archive:
     guidance:

@@ -24,7 +24,8 @@ Estrutura de código:
 
 ## Pré-requisitos
 
-- Node.js 20+ (recomendado: [nvm](https://github.com/nvm-sh/nvm))
+- Node.js **≥ 22.13** (Expo SDK 58; use [nvm](https://github.com/nvm-sh/nvm) com `.nvmrc` na raiz)
+- **npm** — gerenciador oficial do repositório (`package-lock.json`); não usar pnpm/yarn em paralelo
 - OpenSpec CLI em `~/.local/bin` (instalado via [openspec.dev](https://openspec.dev/docs/installation))
 - Android Studio ou dispositivo com Expo Go / development build
 
@@ -32,16 +33,21 @@ Estrutura de código:
 
 ```bash
 cd ~/Projetos/RosarioMeditativo
-nvm use 22   # se usar nvm
-npm install
+nvm use          # lê .nvmrc (Node 22.13+)
+npm install      # em CI: npm ci
 cp .env.example .env   # opcional até linkar Supabase
 npm run android        # ou: npm start
 ```
 
-Typecheck:
+Dependências do ecossistema Expo/React Native: preferir **`npx expo install <pacote>`** em vez de `npm install` direto.
+
+Qualidade local (antes de concluir mudanças):
 
 ```bash
+npm run openspec:check
 npx tsc --noEmit
+npx expo-doctor          # saúde do projeto Expo
+# após upgrade de SDK: npx expo install --fix
 ```
 
 ## OpenSpec (desenvolvimento orientado a especificação)
