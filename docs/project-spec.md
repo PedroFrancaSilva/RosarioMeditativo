@@ -15,8 +15,10 @@ O usuário deve conseguir rezar mesmo sem saber as orações de cor. O app guia 
 - Estado / dados: TanStack Query (React Query) + cache local
 - Backend: Supabase (Postgres + Storage + API)
 - Áudio: expo-audio
-- Persistência local: AsyncStorage ou expo-sqlite
+- Persistência local: AsyncStorage (sessão de oração e preferência de canto). Não há `expo-sqlite` nem bucket de Storage no código atual
 - Sem autenticação no MVP
+
+A implementação da oração, do conteúdo e do canto está em `docs/oracao.md`. Este ficheiro continua a ser a visão de produto, não o mapa do código.
 
 ## Funcionalidades principais (MVP)
 
