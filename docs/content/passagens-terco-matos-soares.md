@@ -8,6 +8,8 @@ Documento de curadoria para seed do MVP (`passages` no Supabase). Textos copiado
 
 **Slug do mistério:** `{type}-{sortOrder}` (ex.: `joyful-1`), alinhado a `mysteryRepository`.
 
+**Uso no app:** `buildEmbeddedPassages` ignora qualquer slug presente em `CURATED_MEDITATIONS` (`src/data/content/curatedMeditations.ts`). Os vinte mistérios do catálogo têm pacote curado, por isso este seed não é o texto que a oração mostra hoje. Ele volta a servir de fallback só para um slug que saia desse mapa. Ver `docs/oracao.md`.
+
 ## Referências tradicionais (primária + complementar)
 
 | Slug | Mistério | Passagem principal (terço scriptural) | Complementar usual |

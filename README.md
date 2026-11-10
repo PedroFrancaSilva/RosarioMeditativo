@@ -9,16 +9,16 @@ Aplicativo mobile (Android primeiro) para rezar o Terço com meditação dinâmi
 | UI | Expo SDK 58, React Native, TypeScript (strict) |
 | Navegação | Expo Router (`src/app/`) |
 | Dados remotos | Supabase + TanStack Query |
-| Áudio | expo-audio |
-| Persistência local | AsyncStorage (contador, cache; repositórios em evolução) |
+| Áudio | expo-audio (antífona mariana durante a oração) |
+| Persistência local | AsyncStorage (sessão incompleta e preferência de canto) |
 
 Estrutura de código:
 
 - `src/app/` — rotas (Expo Router)
-- `src/features/` — fluxos de produto (oração, mistérios, etc.)
+- `src/features/` — oração (`rosary-prayer`) e canto (`chant`)
 - `src/shared/` — componentes, providers, constantes
-- `src/data/` — cliente API e repositórios
-- `src/domain/` — tipos e regras de domínio
+- `src/data/` — cliente Supabase, repositórios e JSON de meditação
+- `src/domain/` — tipos e regras (passos do terço, calendário, precedência de conteúdo)
 - `openspec/` — especificações executáveis (OpenSpec)
 - `supabase/migrations/` — schema Postgres + RLS
 
@@ -57,7 +57,7 @@ Especificações de comportamento ficam em `openspec/specs/`:
 
 - `rosary-prayer` — fluxo de oração, gestos, contas
 - `meditation-content` — conteúdo dinâmico e Supabase
-- `local-experience` — contador, áudio, offline, cache
+- `local-experience` — áudio, offline e cache (o contador de terços completos está na spec e ainda não existe em `src/`)
 
 Comandos no **terminal** (OpenSpec CLI 1.15+):
 
@@ -86,17 +86,17 @@ Para nova funcionalidade: **não** edite `openspec/specs/**/spec.md` direto; pro
 
 Documento de produto (visão geral): `docs/project-spec.md`.
 
+Mapa da implementação (rotas, sessão, conteúdo, canto, chaves locais): `docs/oracao.md`.
+
 ## Supabase
 
 1. Crie um projeto em [supabase.com](https://supabase.com).
-2. Aplique migrações (CLI local ou SQL Editor):
+2. Aplique **todas** as migrações em `supabase/migrations/`, por ordem do nome do ficheiro (CLI local ou SQL Editor). O schema inicial sozinho não chega: migrações seguintes acrescentam `passage_id`, `meditation_ready`, colunas de imagem e o seed curado.
 
    ```bash
    supabase link --project-ref YOUR_REF
    supabase db push
    ```
-
-   Ou execute o conteúdo de `supabase/migrations/20251029000000_initial_content_schema.sql` no SQL Editor.
 
 3. Copie URL e **anon key** para `.env`:
 
@@ -107,20 +107,9 @@ Documento de produto (visão geral): `docs/project-spec.md`.
 
 RLS permite **leitura anon** nas tabelas de conteúdo (`mysteries`, `passages`, `commentaries`, `images`, `deeper_references`). Não commite `.env`.
 
-## GitHub
+## Repositório
 
-O repositório remoto ainda precisa ser criado nesta máquina (`gh` não estava instalado no bootstrap). Passos:
-
-```bash
-# Instalar GitHub CLI (Arch/CachyOS)
-sudo pacman -S github-cli
-gh auth login
-
-# Repositório privado
-gh repo create RosarioMeditativo --private --source=. --remote=origin --push
-```
-
-Nome consistente: **`RosarioMeditativo`** (slug Expo: `rosariomeditativo`).
+Código em [PedroFrancaSilva/RosarioMeditativo](https://github.com/PedroFrancaSilva/RosarioMeditativo). Nome do app: **Rosário Meditativo**. Slug Expo: `rosariomeditativo`.
 
 ## Licença
 
