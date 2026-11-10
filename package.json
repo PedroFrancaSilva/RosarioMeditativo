@@ -34,7 +34,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "openspec:check": "openspec validate --all --strict --no-interactive"
+    "openspec:check": "openspec validate --all --strict --no-interactive",
+    "test": "node --test supabase/content-grants.test.mjs"
   },
   "engines": {
     "node": ">=22.13.0"

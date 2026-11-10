@@ -95,7 +95,7 @@ Documento de produto (visão geral): `docs/project-spec.md`.
    supabase db push
    ```
 
-   Ou execute o conteúdo de `supabase/migrations/20251029000000_initial_content_schema.sql` no SQL Editor.
+   No SQL Editor, execute cada arquivo de `supabase/migrations/` em ordem de nome. O schema inicial só cria as policies de leitura; `20261110150200_grant_anon_select_on_content.sql` concede `SELECT` a `anon`. Sem esse `GRANT`, o Data API responde `42501` (permission denied) antes de avaliar a policy.
 
 3. Copie URL e **anon key** para `.env`:
 
@@ -104,7 +104,7 @@ Documento de produto (visão geral): `docs/project-spec.md`.
    EXPO_PUBLIC_SUPABASE_ANON_KEY=...
    ```
 
-RLS permite **leitura anon** nas tabelas de conteúdo (`mysteries`, `passages`, `commentaries`, `images`, `deeper_references`). Não commite `.env`.
+As tabelas de conteúdo (`mysteries`, `passages`, `commentaries`, `images`, `deeper_references`) ficam legíveis pelo papel `anon`: policy de `SELECT` com RLS e `GRANT SELECT` explícito. Não commite `.env`.
 
 ## GitHub
 
