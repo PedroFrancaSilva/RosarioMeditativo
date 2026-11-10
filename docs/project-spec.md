@@ -14,7 +14,7 @@ O usuário deve conseguir rezar mesmo sem saber as orações de cor. O app guia 
 - Navegação: Expo Router
 - Estado / dados: TanStack Query (React Query) + cache local
 - Backend: Supabase (Postgres + Storage + API)
-- Áudio: expo-av
+- Áudio: expo-audio
 - Persistência local: AsyncStorage ou expo-sqlite
 - Sem autenticação no MVP
 

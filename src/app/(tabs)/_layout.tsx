@@ -3,6 +3,7 @@ import { Link, Tabs } from 'expo-router';
 import { Platform, Pressable } from 'react-native';
 
 import Colors from '@/shared/constants/Colors';
+import { contemplative } from '@/shared/constants/contemplative';
 import { useColorScheme } from '@/shared/components/useColorScheme';
 import { useClientOnlyValue } from '@/shared/components/useClientOnlyValue';
 
@@ -20,7 +21,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
+          title: 'Rezar',
+          headerShown: false,
+          tabBarStyle: { display: 'none' },
+          sceneStyle: { backgroundColor: contemplative.background },
           tabBarIcon: ({ color }) => (
             <SymbolView
               name={{

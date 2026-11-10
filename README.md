@@ -9,7 +9,7 @@ Aplicativo mobile (Android primeiro) para rezar o Terço com meditação dinâmi
 | UI | Expo SDK 58, React Native, TypeScript (strict) |
 | Navegação | Expo Router (`src/app/`) |
 | Dados remotos | Supabase + TanStack Query |
-| Áudio | expo-av |
+| Áudio | expo-audio |
 | Persistência local | AsyncStorage (contador, cache; repositórios em evolução) |
 
 Estrutura de código:
@@ -45,6 +45,7 @@ Qualidade local (antes de concluir mudanças):
 
 ```bash
 npm run openspec:check
+npm test                 # Jest (domínio do terço + componentes)
 npx tsc --noEmit
 npx expo-doctor          # saúde do projeto Expo
 # após upgrade de SDK: npx expo install --fix

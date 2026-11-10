@@ -37,7 +37,19 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+coverage/
+
+# local OpenSpec / agent seed scratch
+.cursor-seed*
+.cursor-query*.json
+.tmp-*
 
 # generated native folders
 /ios
 /android
+
+#Reference Folders
+references/
+
+# SQL/MCP scratch loads (local only; canonical migrations in supabase/migrations/)
+/carga/

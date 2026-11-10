@@ -6,6 +6,8 @@ export type Mystery = {
   type: MysteryType;
   sortOrder: number;
   description: string | null;
+  /** Pacote de meditação curado. Não se infere só por existir alguma passagem. */
+  meditationReady: boolean;
 };
 
 export type Passage = {
@@ -19,6 +21,7 @@ export type Passage = {
 export type Commentary = {
   id: string;
   mysteryId: string;
+  passageId: string;
   text: string;
   author: string;
   source: string | null;
@@ -33,6 +36,22 @@ export type MysteryImage = {
   artist: string | null;
   description: string | null;
   sortOrder: number;
+  resizeMode?: 'cover' | 'contain';
+  rotateEveryNHailMarys?: number | null;
+  /** Nulo usa o fôlego padrão. Não há zoom por imagem. */
+  focalX?: number | null;
+  focalY?: number | null;
+  driftX?: number | null;
+  driftY?: number | null;
+};
+
+export type MysteryMeditationBundle = {
+  passages: Passage[];
+  commentaries: Commentary[];
+  images: MysteryImage[];
+  deeperReferences: DeeperReference[];
+  /** Intervalo de Ave-Marias para trocar imagem (default 2). */
+  rotateEveryNHailMarys: number;
 };
 
 export type DeeperReference = {

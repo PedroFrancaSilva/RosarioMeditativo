@@ -1,0 +1,17 @@
+{
+  "name": "Rosário Meditativo",
+  "short_name": "Rosário",
+  "description": "Um momento de silêncio, presença e oração.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#15110e",
+  "theme_color": "#15110e",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
