@@ -9,18 +9,21 @@ Aplicativo mobile (Android primeiro) para rezar o Terço com meditação dinâmi
 | UI | Expo SDK 58, React Native, TypeScript (strict) |
 | Navegação | Expo Router (`src/app/`) |
 | Dados remotos | Supabase + TanStack Query |
-| Áudio | expo-av |
-| Persistência local | AsyncStorage (contador, cache; repositórios em evolução) |
+| Áudio | expo-av (dependência instalada; sem uso em `src/` ainda) |
+| Persistência local | AsyncStorage instalado; contador e cache ainda sem código em `src/` |
 
 Estrutura de código:
 
-- `src/app/` — rotas (Expo Router)
-- `src/features/` — fluxos de produto (oração, mistérios, etc.)
+- `src/app/` — rotas (Expo Router); UI atual é o template de abas
+- `src/features/` — fluxos de produto (pasta reservada, só `.gitkeep`)
 - `src/shared/` — componentes, providers, constantes
-- `src/data/` — cliente API e repositórios
-- `src/domain/` — tipos e regras de domínio
+- `src/data/` — cliente Supabase; `repositories/` ainda vazio
+- `src/domain/` — tipos de conteúdo (`mystery.ts`)
 - `openspec/` — especificações executáveis (OpenSpec)
 - `supabase/migrations/` — schema Postgres + RLS
+- `docs/` — visão de produto, guia de desenvolvimento e modelo de conteúdo
+
+O mapa do que já roda e do que a spec ainda não tem em código está em `docs/desenvolvimento.md`.
 
 ## Pré-requisitos
 
@@ -32,11 +35,12 @@ Estrutura de código:
 ## Como rodar
 
 ```bash
-cd ~/Projetos/RosarioMeditativo
+git clone https://github.com/PedroFrancaSilva/RosarioMeditativo.git
+cd RosarioMeditativo
 nvm use          # lê .nvmrc (Node 22.13+)
-npm install      # em CI: npm ci
+npm ci           # ou: npm install
 cp .env.example .env   # opcional até linkar Supabase
-npm run android        # ou: npm start
+npm start              # Android: npm run android
 ```
 
 Dependências do ecossistema Expo/React Native: preferir **`npx expo install <pacote>`** em vez de `npm install` direto.
@@ -104,22 +108,21 @@ Documento de produto (visão geral): `docs/project-spec.md`.
    EXPO_PUBLIC_SUPABASE_ANON_KEY=...
    ```
 
-RLS permite **leitura anon** nas tabelas de conteúdo (`mysteries`, `passages`, `commentaries`, `images`, `deeper_references`). Não commite `.env`.
+A migração liga RLS e cria policy de **`SELECT` para `anon`** em `mysteries`, `passages`, `commentaries`, `images` e `deeper_references`. Não há policy de escrita. Sem as variáveis, o app abre e `supabase` fica `null` (aviso no console). Detalhe de colunas, tipos e um `INSERT` de exemplo: `docs/modelo-de-conteudo.md`. Não commite `.env`.
 
-## GitHub
+## Repositório
 
-O repositório remoto ainda precisa ser criado nesta máquina (`gh` não estava instalado no bootstrap). Passos:
+[PedroFrancaSilva/RosarioMeditativo](https://github.com/PedroFrancaSilva/RosarioMeditativo).
 
-```bash
-# Instalar GitHub CLI (Arch/CachyOS)
-sudo pacman -S github-cli
-gh auth login
+| Identificador | Valor |
+|---------------|--------|
+| `app.json` `name` e `slug` | `RosarioMeditativo` |
+| `app.json` `scheme` | `rosariomeditativo` |
+| `package.json` `name` | `rosariomeditativo` |
 
-# Repositório privado
-gh repo create RosarioMeditativo --private --source=. --remote=origin --push
-```
+`ios/` e `android/` ficam de fora do git. A configuração nativa está em `app.json`.
 
-Nome consistente: **`RosarioMeditativo`** (slug Expo: `rosariomeditativo`).
+Guia de ambiente, bootstrap e problemas frequentes: `docs/desenvolvimento.md`.
 
 ## Licença
 

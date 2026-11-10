@@ -10,17 +10,19 @@ O usuário deve conseguir rezar mesmo sem saber as orações de cor. O app guia 
 
 ## Stack técnica
 
-- Frontend: Expo (React Native) + TypeScript
-- Navegação: Expo Router
-- Estado / dados: TanStack Query (React Query) + cache local
-- Backend: Supabase (Postgres + Storage + API)
-- Áudio: expo-av
-- Persistência local: AsyncStorage ou expo-sqlite
+- Frontend: Expo SDK 58 (React Native) + TypeScript strict
+- Navegação: Expo Router (`src/app/`)
+- Estado remoto: TanStack Query, cache em memória (`src/shared/providers/AppProviders.tsx`)
+- Backend: Supabase Postgres. Imagens são URLs em `images.url`; a migração inicial não cria bucket de Storage
+- Áudio previsto: `expo-av` (dependência presente, sem chamada em `src/`)
+- Persistência local prevista: AsyncStorage (dependência presente, sem chamada em `src/`). `expo-sqlite` não está no projeto
 - Sem autenticação no MVP
+
+O que já está no código e o que ainda é só spec: `docs/desenvolvimento.md`. Contrato SQL ↔ `src/domain/mystery.ts`: `docs/modelo-de-conteudo.md`.
 
 ## Funcionalidades principais (MVP)
 
-Ver `openspec/specs/` para requisitos e cenários detalhados.
+Ver `openspec/specs/` para requisitos e cenários detalhados. A UI versionada ainda é o template de abas do Expo Router.
 
 ## Fora do MVP
 
