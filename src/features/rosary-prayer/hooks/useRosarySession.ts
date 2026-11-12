@@ -19,7 +19,12 @@ type SessionState = {
 type SessionAction =
   | { type: 'next' }
   | { type: 'previous' }
-  | { type: 'skipToNextMystery' };
+  | { type: 'skipToNextMystery' }
+  | { type: 'replaceSteps'; steps: PrayerStep[] };
+
+function prayerStepsSignature(steps: readonly PrayerStep[]): string {
+  return steps.map((step) => `${step.id}\0${step.mysteryId ?? ''}`).join('\n');
+}
 
 function clampStepIndex(index: number, stepCount: number): number {
   if (stepCount <= 0) return 0;
@@ -45,6 +50,11 @@ function sessionReducer(state: SessionState, action: SessionAction): SessionStat
         stepIndex: nextIndex,
       };
     }
+    case 'replaceSteps':
+      return {
+        steps: action.steps,
+        stepIndex: clampStepIndex(state.stepIndex, action.steps.length),
+      };
     default:
       return state;
   }
@@ -77,6 +87,13 @@ export function useRosarySession(
     ({ steps: builtSteps, initialStepIndex: startIndex }) =>
       createInitialSessionState(builtSteps, startIndex),
   );
+
+  // O primeiro render usa o catálogo embutido (slugs). Quando o Supabase responde,
+  // os mesmos passos voltam com UUID. Sem adotar essa lista, o mistério ativo some
+  // e a meditação, a obra e as contas deixam de acompanhar a década.
+  if (prayerStepsSignature(steps) !== prayerStepsSignature(state.steps)) {
+    dispatch({ type: 'replaceSteps', steps });
+  }
 
   const currentStep = state.steps[state.stepIndex];
   const presentation: StepPresentation = useMemo(
