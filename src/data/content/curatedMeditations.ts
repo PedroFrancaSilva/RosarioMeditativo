@@ -19,10 +19,18 @@ import sorrowful3 from './sorrowful-3Meditation.json';
 import sorrowful4 from './sorrowful-4Meditation.json';
 import sorrowful5 from './sorrowful-5Meditation.json';
 
-export type CuratedMeditation = {
+export type CuratedCommentary = { sortOrder: number; author: string; source: string; text: string };
+
+export type CuratedPassage = {
   reference: string;
   text: string;
-  commentaries: { sortOrder: number; author: string; source: string; text: string }[];
+  /** Comentários desta passagem; o sorteio só junta um comentário à sua própria passagem. */
+  commentaries: CuratedCommentary[];
+};
+
+/** Pacote curado de um mistério: várias passagens, cada uma com os seus comentários. */
+export type CuratedMeditation = {
+  passages: CuratedPassage[];
 };
 
 /** Slugs with a curated offline package (not generic Matos Soares only). */

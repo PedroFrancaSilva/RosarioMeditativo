@@ -13,54 +13,49 @@ jest.mock('@/data/api/supabaseClient', () => ({
 }));
 
 describe('meditationContentRepository', () => {
-  it('embedded joyful-1 é a passagem Lc 1, 26-27 com nove comentários', () => {
+  it('embedded joyful-1 tem a saudação do anjo e o «faça-se», cada uma com os seus comentários', () => {
     const bundle = getEmbeddedMeditationBundle('joyful-1');
     expect(bundle.images).toHaveLength(5);
-    expect(bundle.passages).toHaveLength(1);
-    expect(bundle.passages[0]?.reference).toBe('Lc 1, 26-27');
-    expect(bundle.passages.some((passage) => passage.reference === 'Is 7, 14')).toBe(false);
-    expect(bundle.passages.some((passage) => passage.reference === 'Lc 1, 26-38')).toBe(false);
-    expect(bundle.commentaries).toHaveLength(9);
-    expect(bundle.commentaries[0]?.author).toBe('São Tomás de Aquino');
-    expect(bundle.commentaries[1]?.source).toBe('Suma Teológica, III, q. 30, a. 2');
-    expect(bundle.commentaries.every((item) => item.passageId === bundle.passages[0]?.id)).toBe(true);
+    expect(bundle.passages.map((passage) => passage.reference)).toEqual(['Lc 1, 26-27', 'Lc 1, 28-38']);
+    expect(bundle.passages[1]?.text).toContain('Eis aqui a serva do Senhor');
+    const [first, second] = bundle.passages;
+    const ofFirst = bundle.commentaries.filter((item) => item.passageId === first?.id);
+    const ofSecond = bundle.commentaries.filter((item) => item.passageId === second?.id);
+    expect(ofFirst[0]?.author).toBe('São Tomás de Aquino');
+    expect(ofFirst[1]?.source).toBe('Suma Teológica, III, q. 30, a. 2');
+    expect(ofSecond.map((item) => item.source)).toContain('CIC 494');
+    expect(ofFirst.length + ofSecond.length).toBe(bundle.commentaries.length);
     expect(bundle.rotateEveryNHailMarys).toBe(2);
   });
 
-  it('os outros dezanove mistérios usam o pacote curado, não o Matos Soares genérico', () => {
-    const slugs = [
-      'joyful-2',
-      'joyful-3',
-      'joyful-4',
-      'joyful-5',
-      'luminous-1',
-      'luminous-2',
-      'luminous-3',
-      'luminous-4',
-      'luminous-5',
-      'sorrowful-1',
-      'sorrowful-2',
-      'sorrowful-3',
-      'sorrowful-4',
-      'sorrowful-5',
-      'glorious-1',
-      'glorious-2',
-      'glorious-3',
-      'glorious-4',
-      'glorious-5',
-    ];
+  it('os vinte mistérios têm várias passagens curadas, todas com comentário próprio', () => {
+    const slugs = ['joyful', 'luminous', 'sorrowful', 'glorious'].flatMap((type) =>
+      [1, 2, 3, 4, 5].map((n) => `${type}-${n}`),
+    );
+    const sources = new Map<string, string>();
     for (const slug of slugs) {
       const bundle = getEmbeddedMeditationBundle(slug);
-      expect(bundle.passages).toHaveLength(1);
-      expect(bundle.commentaries.length).toBeGreaterThanOrEqual(6);
-      expect(bundle.commentaries.length).toBeLessThanOrEqual(9);
-      expect(bundle.commentaries.every((item) => item.passageId === bundle.passages[0]?.id)).toBe(true);
+      expect(bundle.passages.length).toBeGreaterThanOrEqual(2);
+      const ids = new Set(bundle.passages.map((passage) => passage.id));
+      expect(bundle.commentaries.every((item) => ids.has(item.passageId))).toBe(true);
+      for (const passage of bundle.passages) {
+        expect(bundle.commentaries.some((item) => item.passageId === passage.id)).toBe(true);
+        expect(passage.text.split('«').length).toBe(passage.text.split('»').length);
+      }
+      for (const item of bundle.commentaries) {
+        expect(item.source).not.toMatch(/não é citação verbal/);
+        // Um comentário do Catecismo não se repete noutro mistério.
+        if (item.author === 'Catecismo da Igreja Católica') {
+          const key = item.source ?? '';
+          expect(sources.get(key) ?? slug).toBe(slug);
+          sources.set(key, slug);
+        }
+      }
       expect(bundle.images.length).toBeGreaterThanOrEqual(4);
       expect(bundle.rotateEveryNHailMarys).toBe(2);
     }
-    const visitacao = getEmbeddedMeditationBundle('joyful-2');
-    expect(visitacao.passages[0]?.reference).toBe('Lc 1, 39-45');
-    expect(visitacao.passages.some((passage) => passage.reference === 'Lc 1, 46-55')).toBe(false);
+    const coroacao = getEmbeddedMeditationBundle('glorious-5');
+    expect(coroacao.passages[0]?.text).not.toContain('figura da Mãe do Messias');
   });
 
   it('comentário sem passagem não entra na meditação', () => {

@@ -1,54 +1,64 @@
 {
-  "reference": "Lc 2, 22-35",
-  "text": "Levaram-no a Jerusalém para o apresentar ao Senhor. Simeão tomou o Menino em seus braços: \"Agora, Senhor, podes deixar partir o teu servo em paz, porque os meus olhos viram a tua salvação.\" Disse a Maria: \"Eis que este Menino está posto para ruína e ressurgimento de muitos em Israel; e uma espada trespassará a tua alma!\"",
-  "commentaries": [
+  "passages": [
     {
-      "sortOrder": 0,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 529",
-      "text": "A apresentação de Jesus no templo mostra-O como Primogénito que pertence ao Senhor. Com Simeão e Ana, é toda a expectativa de Israel que vem ao encontro do seu Salvador (a tradição bizantina designa por encontro este acontecimento). Jesus é reconhecido como o Messias tão longamente esperado, «luz das nações» e «glória de Israel», mas também como «sinal de contradição». A espada de dor, predita a Maria, anuncia essa outra oblação, perfeita e única, da cruz, que trará a salvação que Deus «preparou diante de todos os povos»."
+      "reference": "Lc 2, 22-24",
+      "text": "Depois que se completaram os dias da purificação de Maria, segundo a lei de Moisés, levaram-no a Jerusalém para o apresentar ao Senhor, segundo o que está escrito na lei do Senhor: Todo o varão primogênito será consagrado ao Senhor, e para oferecerem em sacrifício, conforme o que também está escrito na lei do Senhor, um par de rolas ou dois pombinhos.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 583 (texto abreviado)",
+          "text": "Jesus, como antes d'Ele os profetas, professou pelo templo de Jerusalém o mais profundo respeito. Ali foi apresentado por José e Maria, quarenta dias depois do seu nascimento…"
+        },
+        {
+          "sortOrder": 1,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 37, a. 3, respondeo (texto abreviado; tradução do latim)",
+          "text": "Cristo quis ser feito sob a Lei, para resgatar os que estavam sob a Lei e para que a justificação da Lei se cumprisse espiritualmente nos seus membros. … Uma vez que Cristo, nascido de mulher, era primogénito e quis ser feito sob a Lei, o evangelista Lucas mostra que estas duas coisas foram observadas a respeito d’Ele. Primeiro, o que toca aos primogénitos, quando diz que o levaram a Jerusalém para o apresentar ao Senhor… Segundo, o que toca em comum a todos, quando diz que dessem uma oferta… um par de rolas ou dois pombinhos."
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 37, a. 4, respondeo (tradução integral do latim; não é texto original em português)",
+          "text": "Assim como a plenitude da graça deriva de Cristo para a Mãe, assim convinha que a Mãe se conformasse à humildade do Filho, pois Deus dá a graça aos humildes, como se diz na carta de Tiago. Por isso, assim como Cristo, embora não estivesse sujeito à Lei, quis submeter-se à circuncisão e aos outros encargos da Lei, para dar exemplo de humildade e de obediência, para aprovar a Lei e para tirar aos judeus ocasião de calúnia, pelas mesmas razões quis que também a sua Mãe cumprisse as observâncias da Lei, às quais, contudo, não estava sujeita."
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Bernardo de Claraval",
+          "source": "In Purificatione Beatae Mariae, sermo III, 2 (PL 183, 370) (texto abreviado; tradução do latim)",
+          "text": "Verdadeiramente, ó bem-aventurada Virgem, verdadeiramente não tens motivo, nem te é necessária a purificação. … Oferece o teu Filho, Virgem sagrada, e apresenta ao Senhor o fruto bendito do teu ventre. Oferece, para reconciliação de todos nós, uma vítima santa, agradável a Deus. … Mas esta oblação, irmãos, parece assaz delicada, quando apenas é apresentado ao Senhor, resgatado com aves e logo reconduzido. Virá quando não será oferecido no templo, nem entre os braços de Simeão, mas fora da cidade, entre os braços da cruz. … Aquela será o sacrifício vespertino; esta é o matutino."
+        }
+      ]
     },
     {
-      "sortOrder": 1,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 583 (texto abreviado)",
-      "text": "Jesus, como antes d'Ele os profetas, professou pelo templo de Jerusalém o mais profundo respeito. Ali foi apresentado por José e Maria, quarenta dias depois do seu nascimento…"
-    },
-    {
-      "sortOrder": 2,
-      "author": "São Tomás de Aquino",
-      "source": "Suma Teológica, III, q. 37, a. 3, respondeo (texto abreviado; tradução do latim)",
-      "text": "Cristo quis ser feito sob a Lei, para resgatar os que estavam sob a Lei e para que a justificação da Lei se cumprisse espiritualmente nos seus membros. … Uma vez que Cristo, nascido de mulher, era primogénito e quis ser feito sob a Lei, o evangelista Lucas mostra que estas duas coisas foram observadas a respeito d’Ele. Primeiro, o que toca aos primogénitos, quando diz que o levaram a Jerusalém para o apresentar ao Senhor… Segundo, o que toca em comum a todos, quando diz que dessem uma oferta… um par de rolas ou dois pombinhos."
-    },
-    {
-      "sortOrder": 3,
-      "author": "São Tomás de Aquino",
-      "source": "Suma Teológica, III, q. 37, a. 4, respondeo (tradução integral do latim; não é texto original em português)",
-      "text": "Assim como a plenitude da graça deriva de Cristo para a Mãe, assim convinha que a Mãe se conformasse à humildade do Filho, pois Deus dá a graça aos humildes, como se diz na carta de Tiago. Por isso, assim como Cristo, embora não estivesse sujeito à Lei, quis submeter-se à circuncisão e aos outros encargos da Lei, para dar exemplo de humildade e de obediência, para aprovar a Lei e para tirar aos judeus ocasião de calúnia, pelas mesmas razões quis que também a sua Mãe cumprisse as observâncias da Lei, às quais, contudo, não estava sujeita."
-    },
-    {
-      "sortOrder": 4,
-      "author": "São Sofrónio de Jerusalém",
-      "source": "Orat. 3 de Hypapante, 6-7 (PG 87, 3, 3291-3293) (texto abreviado)",
-      "text": "Todos nós que celebramos e veneramos com tanta piedade o mistério do Encontro do Senhor, corramos para Ele com todo o fervor do nosso espírito. Ninguém deixe de participar neste Encontro, ninguém se recuse a levar a sua luz. … Nenhum fique excluído deste esplendor, nenhum persista em continuar imerso na noite, mas avancemos todos resplandecentes; iluminados por este fulgor, vamos todos juntos ao seu encontro e com o velho Simeão recebamos a luz clara e eterna; associemo-nos à sua alegria e cantemos com ele um hino de ação de graças ao Pai da luz, que enviou a luz verdadeira e, afastando todas as trevas, nos fez participantes do seu esplendor. A salvação de Deus, com efeito, preparada diante de todos os povos, manifestou a glória que nos pertence a nós, que somos o novo Israel; e nós próprios, graças a Ele, vimos essa salvação e fomos absolvidos da antiga e tenebrosa culpa, tal como Simeão, depois de ver a Cristo, foi libertado dos laços da vida presente. …"
-    },
-    {
-      "sortOrder": 5,
-      "author": "São Bernardo de Claraval",
-      "source": "In Purificatione Beatae Mariae, sermo III, 2 (PL 183, 370) (texto abreviado; tradução do latim)",
-      "text": "Verdadeiramente, ó bem-aventurada Virgem, verdadeiramente não tens motivo, nem te é necessária a purificação. … Oferece o teu Filho, Virgem sagrada, e apresenta ao Senhor o fruto bendito do teu ventre. Oferece, para reconciliação de todos nós, uma vítima santa, agradável a Deus. … Mas esta oblação, irmãos, parece assaz delicada, quando apenas é apresentado ao Senhor, resgatado com aves e logo reconduzido. Virá quando não será oferecido no templo, nem entre os braços de Simeão, mas fora da cidade, entre os braços da cruz. … Aquela será o sacrifício vespertino; esta é o matutino."
-    },
-    {
-      "sortOrder": 6,
-      "author": "São João Paulo II",
-      "source": "Rosarium Virginis Mariae, 20 (texto abreviado)",
-      "text": "… Os dois últimos mistérios, porém, mesmo conservando o sabor da alegria antecipam já os sinais do drama. A apresentação no templo, de facto, enquanto exprime a alegria da consagração e extasia o velho Simeão, regista também a profecia do « sinal de contradição » que o Menino será para Israel e da espada que trespassará a alma da Mãe (cf. Lc 2, 34-35). …"
-    },
-    {
-      "sortOrder": 7,
-      "author": "São João Paulo II",
-      "source": "Redemptoris Mater, 16 (texto abreviado)",
-      "text": "… Maria, um pouco mais tarde, ouve outras palavras: aquelas que foram pronunciadas por Simeão, no templo de Jerusalém. Estava-se já no quadragésimo dia depois do nascimento de Jesus, quando Maria e José, segundo a prescrição da Lei de Moisés, «levaram o menino a Jerusalém, para o oferecer ao Senhor» (Lc 2, 22). … Nessa mesma altura, porém, Simeão dirige-se a Maria com as seguintes palavras: «Ele é destinado a ser ocasião de queda e de ressurgimento para muitos em Israel e a ser um sinal de contradição... a fim de se revelarem os pensamentos de muitos corações»; e acrescenta, com referência directa a Maria: «E tu mesma terás a alma trespassada por uma espada» (Lc 2, 34-35). … Aquilo que Simeão diz apresenta-se como um segundo anúncio a Maria, uma vez que indica a dimensão histórica concreta em que o Filho realizará a sua missão, ou seja, na incompreensão e na dor. Se este outro anúncio confirma, por um lado, a sua fé no cumprimento das promessas divinas da salvação, por outro, também lhe revela que ela terá que viver a sua obediência de fé no sofrimento, ao lado do Salvador que sofre, e que a sua maternidade será obscura e marcada pela dor. …"
+      "reference": "Lc 2, 25-35",
+      "text": "Havia então em Jerusalém um homem chamado Simeão. Este homem era justo e piedoso; esperava a consolação de Israel, e o Espírito Santo estava nele. … ele o tomou em seus braços, e louvou a Deus, dizendo: «Agora, Senhor, podes deixar partir o teu servo em paz, segundo a tua palavra; porque os meus olhos viram a tua salvação, a qual preparaste em favor de todos os povos; luz para iluminar as nações, e glória de Israel, teu povo.» … Simeão os abençoou, e disse a Maria, sua mãe: «Eis que este Menino está posto para ruína e ressurgimento de muitos em Israel, e para ser alvo de contradição. E uma espada trespassará a tua alma! Assim se descobrirão os pensamentos escondidos nos corações de muitos.»",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 529",
+          "text": "A apresentação de Jesus no templo mostra-O como Primogénito que pertence ao Senhor. Com Simeão e Ana, é toda a expectativa de Israel que vem ao encontro do seu Salvador (a tradição bizantina designa por encontro este acontecimento). Jesus é reconhecido como o Messias tão longamente esperado, «luz das nações» e «glória de Israel», mas também como «sinal de contradição». A espada de dor, predita a Maria, anuncia essa outra oblação, perfeita e única, da cruz, que trará a salvação que Deus «preparou diante de todos os povos»."
+        },
+        {
+          "sortOrder": 1,
+          "author": "São Sofrónio de Jerusalém",
+          "source": "Orat. 3 de Hypapante, 6-7 (PG 87, 3, 3291-3293) (texto abreviado)",
+          "text": "Todos nós que celebramos e veneramos com tanta piedade o mistério do Encontro do Senhor, corramos para Ele com todo o fervor do nosso espírito. Ninguém deixe de participar neste Encontro, ninguém se recuse a levar a sua luz. … Nenhum fique excluído deste esplendor, nenhum persista em continuar imerso na noite, mas avancemos todos resplandecentes; iluminados por este fulgor, vamos todos juntos ao seu encontro e com o velho Simeão recebamos a luz clara e eterna; associemo-nos à sua alegria e cantemos com ele um hino de ação de graças ao Pai da luz, que enviou a luz verdadeira e, afastando todas as trevas, nos fez participantes do seu esplendor. A salvação de Deus, com efeito, preparada diante de todos os povos, manifestou a glória que nos pertence a nós, que somos o novo Israel; e nós próprios, graças a Ele, vimos essa salvação e fomos absolvidos da antiga e tenebrosa culpa, tal como Simeão, depois de ver a Cristo, foi libertado dos laços da vida presente. …"
+        },
+        {
+          "sortOrder": 2,
+          "author": "São João Paulo II",
+          "source": "Rosarium Virginis Mariae, 20 (texto abreviado)",
+          "text": "… Os dois últimos mistérios, porém, mesmo conservando o sabor da alegria antecipam já os sinais do drama. A apresentação no templo, de facto, enquanto exprime a alegria da consagração e extasia o velho Simeão, regista também a profecia do « sinal de contradição » que o Menino será para Israel e da espada que trespassará a alma da Mãe (cf. Lc 2, 34-35). …"
+        },
+        {
+          "sortOrder": 3,
+          "author": "São João Paulo II",
+          "source": "Redemptoris Mater, 16 (texto abreviado)",
+          "text": "… Maria, um pouco mais tarde, ouve outras palavras: aquelas que foram pronunciadas por Simeão, no templo de Jerusalém. Estava-se já no quadragésimo dia depois do nascimento de Jesus, quando Maria e José, segundo a prescrição da Lei de Moisés, «levaram o menino a Jerusalém, para o oferecer ao Senhor» (Lc 2, 22). … Nessa mesma altura, porém, Simeão dirige-se a Maria com as seguintes palavras: «Ele é destinado a ser ocasião de queda e de ressurgimento para muitos em Israel e a ser um sinal de contradição... a fim de se revelarem os pensamentos de muitos corações»; e acrescenta, com referência directa a Maria: «E tu mesma terás a alma trespassada por uma espada» (Lc 2, 34-35). … Aquilo que Simeão diz apresenta-se como um segundo anúncio a Maria, uma vez que indica a dimensão histórica concreta em que o Filho realizará a sua missão, ou seja, na incompreensão e na dor. Se este outro anúncio confirma, por um lado, a sua fé no cumprimento das promessas divinas da salvação, por outro, também lhe revela que ela terá que viver a sua obediência de fé no sofrimento, ao lado do Salvador que sofre, e que a sua maternidade será obscura e marcada pela dor. …"
+        }
+      ]
     }
   ]
 }

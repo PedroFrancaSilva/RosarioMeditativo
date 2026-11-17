@@ -1,48 +1,52 @@
 {
-  "reference": "Lc 2, 43-49",
-  "text": "Ficou o Menino Jesus em Jerusalém. Três dias depois, encontraram-no no templo sentado no meio dos doutores. Sua mãe disse-lhe: «Filho, porque procedeste assim connosco?» Ele disse-lhes: «Não sabíeis que devo ocupar-me nas coisas de meu Pai?»",
-  "commentaries": [
+  "passages": [
     {
-      "sortOrder": 0,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 534",
-      "text": "«O reencontro de Jesus no templo é o único acontecimento que quebra o silêncio dos evangelhos sobre os anos ocultos de Jesus. Nele, Jesus deixa entrever o mistério da sua consagração total à missão decorrente da sua filiação divina: \"Não sabíeis que Eu tenho de estar na casa do meu Pai?\". Maria e José \"não compreenderam\" esta palavra, mas acolheram-na na fé, e Maria \"guardava no coração todas estas recordações\", ao longo dos anos em que Jesus permaneceu oculto no silêncio duma vida normal.»"
+      "reference": "Lc 2, 42-49",
+      "text": "Quando chegou aos doze anos, indo eles a Jerusalém segundo o costume daquela festa, acabados os dias que ela durava, quando voltaram, ficou o Menino Jesus em Jerusalém, sem que seus pais o advertissem. … Aconteceu que, três dias depois, o encontraram no templo sentado no meio dos doutores, ouvindo-os e interrogando-os. … Quando o viram, admiraram-se. E sua mãe disse-lhe: «Filho, porque procedeste assim connosco? Eis que teu pai e eu te procurávamos cheios de aflição.» Ele disse-lhes: «Para que me buscáveis? Não sabíeis que devo ocupar-me nas coisas de meu Pai?»",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 534",
+          "text": "«O reencontro de Jesus no templo é o único acontecimento que quebra o silêncio dos evangelhos sobre os anos ocultos de Jesus. Nele, Jesus deixa entrever o mistério da sua consagração total à missão decorrente da sua filiação divina: \"Não sabíeis que Eu tenho de estar na casa do meu Pai?\". Maria e José \"não compreenderam\" esta palavra, mas acolheram-na na fé, e Maria \"guardava no coração todas estas recordações\", ao longo dos anos em que Jesus permaneceu oculto no silêncio duma vida normal.»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 12, a. 3",
+          "text": "«Cristo foi constituído cabeça da Igreja … de modo que … todos recebessem dele a doutrina da Verdade. Donde ele mesmo diz … \"Para isto nasci … para dar testemunho da verdade.\" E por isso não convinha à sua dignidade que fosse ensinado por qualquer homem.» … «Como Orígenes afirma … o Senhor interrogava, não para aprender algo, mas para ensinar ao interrogar.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "Santo Agostinho",
+          "source": "Sermão 51",
+          "text": "«Quando o Senhor Jesus Cristo tinha doze anos … ficou … no templo, e discutia com os anciãos … A Palavra de Deus nunca se cala, mas nem sempre é ouvida.» … «Não sabíeis que devo estar nas coisas que são de meu Pai?» … «não aponta para Deus como Pai de tal modo que negue ser José pai … \"Era-lhes submisso.\"»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "Orígenes de Alexandria",
+          "source": "Homilias sobre Lucas, hom. 19 (Lc 2,40-46)",
+          "text": "«Onde, pois, o encontram? No templo; pois aí se encontra o Filho de Deus. Se tu também … procurares o Filho de Deus, procura-o primeiro no templo.» … «Interrogava … os mestres, não para aprender algo, mas para instruí-los ao interrogar.»"
+        }
+      ]
     },
     {
-      "sortOrder": 1,
-      "author": "São Tomás de Aquino",
-      "source": "Suma Teológica, III, q. 12, a. 3",
-      "text": "«Cristo foi constituído cabeça da Igreja … de modo que … todos recebessem dele a doutrina da Verdade. Donde ele mesmo diz … \"Para isto nasci … para dar testemunho da verdade.\" E por isso não convinha à sua dignidade que fosse ensinado por qualquer homem.» … «Como Orígenes afirma … o Senhor interrogava, não para aprender algo, mas para ensinar ao interrogar.»"
-    },
-    {
-      "sortOrder": 2,
-      "author": "Santo Agostinho",
-      "source": "Sermão 51",
-      "text": "«Quando o Senhor Jesus Cristo tinha doze anos … ficou … no templo, e discutia com os anciãos … A Palavra de Deus nunca se cala, mas nem sempre é ouvida.» … «Não sabíeis que devo estar nas coisas que são de meu Pai?» … «não aponta para Deus como Pai de tal modo que negue ser José pai … \"Era-lhes submisso.\"»"
-    },
-    {
-      "sortOrder": 3,
-      "author": "Orígenes de Alexandria",
-      "source": "Homilias sobre Lucas, hom. 19 (Lc 2,40-46)",
-      "text": "«Onde, pois, o encontram? No templo; pois aí se encontra o Filho de Deus. Se tu também … procurares o Filho de Deus, procura-o primeiro no templo.» … «Interrogava … os mestres, não para aprender algo, mas para instruí-los ao interrogar.»"
-    },
-    {
-      "sortOrder": 4,
-      "author": "São Bernardo de Claraval",
-      "source": "Homilia I super Missus est, 7-8 (Lc 2,51)",
-      "text": "«\"E era submisso a eles.\" Quem, a quem? Deus, aos homens. … Deus … era submisso a Maria, e não somente a Maria, mas também a José, por causa de Maria. … Aprende, ó homem, a obedecer.»"
-    },
-    {
-      "sortOrder": 5,
-      "author": "São João Paulo II",
-      "source": "Rosarium Virginis Mariae, § 20 (texto condensado, não é citação verbal)",
-      "text": "Meditar o episódio de Jesus, aos doze anos, no templo: ele aparece na divina sabedoria, escuta e interroga, no papel de quem ensina; revela-se Filho dedicado às coisas do Pai; José e Maria, angustiados, «não entenderam» as suas palavras."
-    },
-    {
-      "sortOrder": 6,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 564",
-      "text": "«Pela sua submissão a Maria e a José, assim como pelo seu trabalho humilde em Nazaré durante longos anos, Jesus dá-nos o exemplo da santidade na vida quotidiana da família e do trabalho.»"
+      "reference": "Lc 2, 51-52",
+      "text": "Depois desceu com eles, e foi a Nazaré; e era-lhes submisso. Sua mãe conservava todas estas coisas no seu coração. Jesus crescia em sabedoria, em estatura e em graça diante de Deus e dos homens.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "São Bernardo de Claraval",
+          "source": "Homilia I super Missus est, 7-8 (Lc 2,51)",
+          "text": "«\"E era submisso a eles.\" Quem, a quem? Deus, aos homens. … Deus … era submisso a Maria, e não somente a Maria, mas também a José, por causa de Maria. … Aprende, ó homem, a obedecer.»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 564",
+          "text": "«Pela sua submissão a Maria e a José, assim como pelo seu trabalho humilde em Nazaré durante longos anos, Jesus dá-nos o exemplo da santidade na vida quotidiana da família e do trabalho.»"
+        }
+      ]
     }
   ]
 }
