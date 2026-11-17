@@ -13,9 +13,9 @@ describe('presentPrayerStep', () => {
     const steps = buildPrayerSteps(twoMysterySession);
     const hail = steps.find((step) => step.id === 'open-hail-3');
     const view = presentPrayerStep(hail!);
-    expect(view.lead).toBe('A Palavra se fez carne e habitou entre nós.');
-    expect(view.bodySummary.includes('Palavra se fez carne')).toBe(false);
-    expect(view.bodyFull.includes('Palavra se fez carne')).toBe(false);
+    expect(view.lead).toBe('Pelo aumento da caridade.');
+    expect(view.bodySummary.includes('caridade')).toBe(false);
+    expect(view.bodyFull.includes('caridade')).toBe(false);
     expect(view.bodyFull.startsWith('Ave, Maria')).toBe(true);
   });
 

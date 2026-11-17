@@ -12,8 +12,9 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
 import 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { Modal } from 'react-native';
+import { Modal, Platform } from 'react-native';
 
+import { configureReminderHandler } from '@/features/reminder/dailyReminder';
 import { LaunchScreen } from '@/shared/components/LaunchScreen';
 import { useColorScheme } from '@/shared/components/useColorScheme';
 import { contemplative, contemplativeMotion } from '@/shared/constants/contemplative';
@@ -35,6 +36,11 @@ if (Constants.appOwnership !== 'expo') {
     duration: contemplativeMotion.screen,
     fade: true,
   });
+}
+
+// O lembrete diário também aparece com o app aberto.
+if (Platform.OS !== 'web') {
+  configureReminderHandler();
 }
 
 // Keeps the native splash up until the branded launch screen is on screen.
@@ -99,6 +105,13 @@ function RootLayoutNav() {
             <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
             <Stack.Screen
               name="meditation-coverage"
+              options={{
+                headerShown: false,
+                contentStyle: { backgroundColor: contemplative.background },
+              }}
+            />
+            <Stack.Screen
+              name="ajustes"
               options={{
                 headerShown: false,
                 contentStyle: { backgroundColor: contemplative.background },

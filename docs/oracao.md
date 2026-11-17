@@ -56,13 +56,13 @@ Slug de conteúdo: `{type}-{sortOrder}` (`joyful-1`). `resolveMysteryContentTarg
 
 | Parte | Embutido | Remoto ganha quando |
 |-------|----------|---------------------|
-| Passagens | `CURATED_MEDITATIONS[slug]` (um par passagem + comentários). Slug ausente desse mapa usa `supabase/seed/passages-matos-soares.json` | `passages` do `mystery_id` não vazio |
-| Comentários | Os do JSON curado, com `passageId` `embedded-passage-<slug>-0` | Há pelo menos um comentário remoto cujo `passage_id` está nas passagens **já escolhidas**. Comentário sem `passage_id` é descartado (`toCommentary`) |
+| Passagens | `CURATED_MEDITATIONS[slug].passages` (2–3 por mistério, texto verbatim de Matos Soares). Slug ausente desse mapa usa `supabase/seed/passages-matos-soares.json` | `passages` do `mystery_id` não vazio |
+| Comentários | Os de cada passagem do JSON curado, com `passageId` `embedded-passage-<slug>-<índice>` | Há pelo menos um comentário remoto cujo `passage_id` está nas passagens **já escolhidas**. Comentário sem `passage_id` é descartado (`toCommentary`) |
 | Imagens | Galeria em `prayerAssets.ts` (`url` vazio; o fundo usa o `require` local) | A lista `images` do mistério não é vazia: entra no bundle no lugar da galeria. O fundo usa `{ uri }` só quando `url` tem texto; senão mostra o ficheiro embutido do mesmo índice (ou o fundo padrão) |
 | Aprofundar | Só `joyful-1` tem uma referência embutida | `deeper_references` não vazio |
 | Rotação | `rotateEveryNHailMarys` da galeria, senão 2 | O primeiro valor não nulo nas imagens **remotas**, mesmo que a galeria embutida seja a que aparece |
 
-Sorteio (`drawMeditationPair`): uma passagem ao acaso e um comentário **dessa** passagem. O par é redesenhado quando a lista de ids de passagem muda. Não há troca manual.
+Sorteio (`drawMeditationPair`): uma passagem ao acaso e um comentário **dessa** passagem. O par é redesenhado quando a lista de ids de passagem muda. “Outra meditação” (`drawAnother`) sorteia outro par entre todos os pares passagem + comentário do mistério, nunca o atual, e só aparece com mais de um par.
 
 Índice da obra (`mysteryGalleryImageIndex`): uma imagem → sempre 0. Ave-Maria *n* → `floor((n - 1) / every)`, limitado à última. Glória e Fátima mostram a última. Fora da década, a primeira. Movimento padrão em `src/domain/artworkMotion.ts` (escala 1 → 1,045 em 18 s); não há zoom por imagem.
 
@@ -91,10 +91,21 @@ Ficheiros em `assets/audio/`: Alma, Regina caeli, Salve Regina. **Ave Regina cae
 |-------|----------|
 | `@rosario/incomplete-session` | Snapshot da oração (`schemaVersion` 1) |
 | `@rosario/chant-enabled` | `'1'` ou `'0'` |
+| `@rosario/preferences` | Ajustes (`schemaVersion` 1): tamanho do texto, vibração, Ave-Marias iniciais, lembrete |
+| `@rosario/completed-tercos` | Contador de terços (número inteiro) |
 | `@rosario/dev/tools-enabled` | Painel de crop. Só é lido com `__DEV__` |
 | `@rosario/dev/mystery-image-crop/…` | Ajuste de crop do dev |
 
-Não há contador de terços nem `expo-sqlite`. A spec `local-experience` ainda descreve esse contador, um download de pacote no primeiro arranque e uma ação explícita de offline; o código usa o JSON embutido e não faz esse download.
+Não há `expo-sqlite`. A spec `local-experience` ainda descreve um download de pacote no primeiro arranque e uma ação explícita de offline; o código usa o JSON embutido e não faz esse download.
+
+## Ajustes, contador e lembrete
+
+- `PreferencesProvider` lê `@rosario/preferences`; componentes usam `usePrayerPreferences` (de `preferencesContext.ts`, sem AsyncStorage). A rota `/prayer` espera essa leitura antes de montar a sessão, porque os passos (frases das Ave-Marias iniciais) fixam-se ao montar.
+- Ave-Marias iniciais: `openingIntentions` no `RosarySessionConfig`; padrão fé/esperança/caridade, opção Angelus (`buildPrayerSteps`).
+- Contador (`completionCounter.ts`): soma no passo `completion`, uma vez por montagem. Terço = 1; rosário completo = um por conjunto; mistério avulso = 0.
+- Vibração (`hapticCueForStep` + `playHapticCue`): só ao avançar ou em “Próximo mistério”. Glória com `mysteryId` = fim de dezena.
+- Lembrete (`dailyReminder.ts`): trigger `DAILY` local, canal Android `daily-reminder`, id fixo `daily-rosary-reminder`. Precisa de development build com o plugin `expo-notifications`.
+- `useKeepAwake` na `PrayerScreen`.
 
 ## Onde mexer
 

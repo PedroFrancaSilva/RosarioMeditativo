@@ -23,6 +23,10 @@ jest.mock('@/features/rosary-prayer/hooks/useMysteries', () => {
   };
 });
 
+jest.mock('@/features/rosary-prayer/session/completionCounter', () => ({
+  useCompletedCount: () => ({ data: 0 }),
+}));
+
 jest.mock('@/features/chant/ChantToggle', () => {
   const React = require('react');
   const { Text } = require('react-native');

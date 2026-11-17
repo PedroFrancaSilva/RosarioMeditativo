@@ -1,12 +1,18 @@
 import {
-  ARTWORK_DURATION_MS,
   artworkPath,
   type ArtworkMotion,
   type ArtworkPath,
 } from '@/domain/artworkMotion';
 import { contemplative } from '@/shared/constants/contemplative';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { AccessibilityInfo, ActivityIndicator, StyleSheet, View, useWindowDimensions } from 'react-native';
+import {
+  AccessibilityInfo,
+  ActivityIndicator,
+  Image,
+  StyleSheet,
+  View,
+  useWindowDimensions,
+} from 'react-native';
 import type { ImageSourcePropType } from 'react-native';
 import Animated, {
   Easing,
@@ -26,6 +32,40 @@ type Props = {
 
 type IntrinsicSize = { width: number; height: number };
 
+function usable(size: { width?: number; height?: number } | null | undefined): size is IntrinsicSize {
+  return Boolean(size && (size.width ?? 0) > 0 && (size.height ?? 0) > 0);
+}
+
+/**
+ * Tamanho natural da obra. O evento de `onLoad` traz `source` no Android/iOS,
+ * mas não no react-native-web; aí vale o asset resolvido ou `Image.getSize`.
+ */
+function measureSource(
+  reported: { width?: number; height?: number } | undefined,
+  source: ImageSourcePropType,
+  onSize: (size: IntrinsicSize) => void,
+) {
+  if (usable(reported)) {
+    onSize({ width: reported.width, height: reported.height });
+    return;
+  }
+  const resolved = Image.resolveAssetSource?.(source as Parameters<typeof Image.resolveAssetSource>[0]);
+  if (usable(resolved)) {
+    onSize({ width: resolved.width, height: resolved.height });
+    return;
+  }
+  const uri = resolved?.uri ?? (typeof source === 'object' && source && 'uri' in source ? source.uri : undefined);
+  if (uri) {
+    Image.getSize(
+      uri,
+      (width, height) => {
+        if (width > 0 && height > 0) onSize({ width, height });
+      },
+      () => undefined,
+    );
+  }
+}
+
 function pathSignature(path: ArtworkPath | null): string {
   if (!path) return '';
   return [
@@ -35,6 +75,7 @@ function pathSignature(path: ArtworkPath | null): string {
     path.end.translateX,
     path.end.translateY,
     path.end.scale,
+    path.durationMs,
   ].join(',');
 }
 
@@ -101,21 +142,29 @@ export function ArtworkBackground({ source, motion, backgroundKey }: Props) {
       visible.value = 0;
       return;
     }
+    visible.value = 1;
+    if (reduceMotion) {
+      // Parado no foco curado, não numa borda da obra.
+      cancelAnimation(progress);
+      progress.value = 0;
+      startX.value = current.rest.translateX;
+      startY.value = current.rest.translateY;
+      startScale.value = current.rest.scale;
+      endX.value = current.rest.translateX;
+      endY.value = current.rest.translateY;
+      endScale.value = current.rest.scale;
+      return;
+    }
     startX.value = current.start.translateX;
     startY.value = current.start.translateY;
     endX.value = current.end.translateX;
     endY.value = current.end.translateY;
     startScale.value = current.start.scale;
     endScale.value = current.end.scale;
-    visible.value = 1;
-    if (reduceMotion) {
-      cancelAnimation(progress);
-      progress.value = 0;
-      return;
-    }
     progress.value = 0;
     progress.value = withRepeat(
-      withTiming(1, { duration: ARTWORK_DURATION_MS, easing: Easing.linear }),
+      // Ida e volta suaves: desacelera nas bordas da obra, sem tranco na virada.
+      withTiming(1, { duration: current.durationMs, easing: Easing.inOut(Easing.sin) }),
       -1,
       true,
     );
@@ -163,8 +212,7 @@ export function ArtworkBackground({ source, motion, backgroundKey }: Props) {
           source={source}
           resizeMode="cover"
           onLoad={(event) => {
-            const { width, height } = event.nativeEvent.source;
-            if (width > 0 && height > 0) setIntrinsic({ width, height });
+            measureSource(event?.nativeEvent?.source, source, setIntrinsic);
             setLoaded(true);
           }}
           onError={() => setFailed(true)}

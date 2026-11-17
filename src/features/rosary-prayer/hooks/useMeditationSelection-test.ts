@@ -1,8 +1,10 @@
-import { renderHook } from '@testing-library/react-native';
+import { act, renderHook } from '@testing-library/react-native';
 
 import type { Commentary, Passage } from '@/domain/mystery';
 import {
+  drawAnotherMeditationPair,
   drawMeditationPair,
+  meditationPairs,
   useMeditationSelection,
 } from '@/features/rosary-prayer/hooks/useMeditationSelection';
 
@@ -60,6 +62,26 @@ describe('drawMeditationPair', () => {
   });
 });
 
+describe('drawAnotherMeditationPair', () => {
+  it('nunca devolve o par atual e mantém o comentário na sua passagem', () => {
+    const current = { passage: passages[0], commentary: commentaries[0] };
+    for (const value of [0, 0.4, 0.99]) {
+      const next = drawAnotherMeditationPair(passages, commentaries, current, () => value);
+      expect(next.commentary?.id).not.toBe('c1');
+      expect(next.commentary?.passageId).toBe(next.passage?.id);
+    }
+  });
+
+  it('com um só par possível fica no atual', () => {
+    const only = { passage: passages[1], commentary: commentaries[2] };
+    expect(drawAnotherMeditationPair([passages[1]!], commentaries, only, () => 0.5)).toBe(only);
+  });
+
+  it('passagem sem comentário também entra no sorteio', () => {
+    expect(meditationPairs(passages, [commentaries[0]!])).toHaveLength(2);
+  });
+});
+
 describe('useMeditationSelection', () => {
   const content = { passages, commentaries, deeperReferences: [] };
 
@@ -67,7 +89,7 @@ describe('useMeditationSelection', () => {
     const random = queue([0.6, 0, 0, 0]);
     const { result, rerender } = await renderHook(() => useMeditationSelection(content, random));
     const first = result.current.commentary?.id;
-    rerender({});
+    await rerender({});
     expect(result.current.passage?.id).toBe('p2');
     expect(result.current.commentary?.id).toBe(first);
     expect(result.current.commentary?.id).toBe('c3');
@@ -77,9 +99,24 @@ describe('useMeditationSelection', () => {
     const random = queue([0, 0, 0.6, 0]);
     const first = await renderHook(() => useMeditationSelection(content, random));
     expect(first.result.current.passage?.id).toBe('p1');
-    first.unmount();
+    await first.unmount();
     const second = await renderHook(() => useMeditationSelection(content, random));
     expect(second.result.current.passage?.id).toBe('p2');
     expect(second.result.current.commentary?.id).toBe('c3');
+    await second.unmount();
+  });
+
+  it('«Outra meditação» troca o par e só aparece com mais de um par', async () => {
+    const random = queue([0, 0, 0.99]);
+    const { result } = await renderHook(() => useMeditationSelection(content, random));
+    expect(result.current.canDrawAnother).toBe(true);
+    expect(result.current.commentary?.id).toBe('c1');
+    await act(() => result.current.drawAnother());
+    expect(result.current.commentary?.id).toBe('c3');
+    expect(result.current.passage?.id).toBe('p2');
+
+    const single = { passages: [passages[1]!], commentaries, deeperReferences: [] };
+    const alone = await renderHook(() => useMeditationSelection(single, random));
+    expect(alone.result.current.canDrawAnother).toBe(false);
   });
 });

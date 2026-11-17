@@ -1,3 +1,4 @@
+import { usePrayerPreferences } from '@/features/preferences/preferencesContext';
 import { contemplative, contemplativeFonts, contemplativeMotion } from '@/shared/constants/contemplative';
 import { useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, View, type LayoutChangeEvent } from 'react-native';
@@ -16,6 +17,10 @@ export function PrayerTextBlock({ kicker, title, summary, fullText, lead }: Prop
   const animatedHeight = useSharedValue(0);
   const hasMeasured = useRef(false);
   const body = expanded ? fullText : summary;
+  const { textScale } = usePrayerPreferences();
+  const titleSize = { fontSize: 28 * textScale, lineHeight: 32 * textScale };
+  const bodySize = { fontSize: 16 * textScale, lineHeight: 24 * textScale };
+  const leadSize = { fontSize: 10 * textScale, lineHeight: 14 * textScale };
 
   const onMeasure = (event: LayoutChangeEvent) => {
     const next = event.nativeEvent.layout.height;
@@ -36,9 +41,9 @@ export function PrayerTextBlock({ kicker, title, summary, fullText, lead }: Prop
   const inner = (
     <>
       <Text style={styles.kicker}>{kicker}</Text>
-      <Text style={styles.title}>{title}</Text>
-      {lead ? <Text style={styles.lead}>{lead}</Text> : null}
-      <Text style={styles.body}>{body}</Text>
+      <Text style={[styles.title, titleSize]}>{title}</Text>
+      {lead ? <Text style={[styles.lead, leadSize]}>{lead}</Text> : null}
+      <Text style={[styles.body, bodySize]}>{body}</Text>
       <Text style={styles.hint}>
         {expanded ? 'Toque para recolher' : 'Toque para ver texto completo'}
       </Text>

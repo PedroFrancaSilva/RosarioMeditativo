@@ -1,5 +1,7 @@
 import {
   ARTWORK_DURATION_MS,
+  ARTWORK_SWEEP_MAX_DURATION_MS,
+  artworkSweepAxis,
   ARTWORK_SCALE_END,
   ARTWORK_SCALE_START,
   artworkPath,
@@ -28,10 +30,17 @@ function expectCovered(
 }
 
 describe('artworkPath', () => {
-  it('usa o fôlego padrão, de escala 1 a cerca de 1,045, sem faixa vazia', () => {
+  it('obra larga é percorrida de borda a borda, sem faixa vazia', () => {
     const path = artworkPath(SCREEN);
     expect(path).not.toBeNull();
-    expect(path?.durationMs).toBe(ARTWORK_DURATION_MS);
+    expect(path?.sweep).toBe('x');
+    expect(path?.durationMs).toBeGreaterThan(ARTWORK_DURATION_MS);
+    expect(path?.durationMs).toBeLessThanOrEqual(ARTWORK_SWEEP_MAX_DURATION_MS);
+    // Começa na borda esquerda e termina com a borda direita encostada na tela.
+    expect(path?.start.translateX).toBeCloseTo(0);
+    const cover = SCREEN.screenHeight / SCREEN.imageHeight;
+    const endWidth = SCREEN.imageWidth * cover * path!.end.scale;
+    expect(path!.end.translateX + endWidth).toBeCloseTo(SCREEN.screenWidth);
     expect(path?.start.scale).toBe(ARTWORK_SCALE_START);
     expect(path?.end.scale).toBeCloseTo(ARTWORK_SCALE_END);
     expect(resolveArtworkMotion(undefined)).toEqual(DEFAULT_ARTWORK_MOTION);
@@ -39,13 +48,13 @@ describe('artworkPath', () => {
     expectCovered(path!.end, SCREEN.screenWidth, SCREEN.screenHeight, SCREEN.imageWidth, SCREEN.imageHeight);
   });
 
-  it('um foco customizado desloca a translação e mantém a mesma escala', () => {
+  it('um foco customizado desloca o quadro de repouso e mantém a mesma escala', () => {
     const plain = artworkPath(SCREEN);
     const custom = artworkPath({
       ...SCREEN,
       motion: { focalX: 0.2, focalY: 0.38, driftX: 0.035, driftY: -0.025 },
     });
-    expect(custom?.start.translateX).not.toBe(plain?.start.translateX);
+    expect(custom?.rest.translateX).not.toBe(plain?.rest.translateX);
     expect(custom?.start.scale).toBe(ARTWORK_SCALE_START);
     expect(custom?.end.scale).toBeCloseTo(ARTWORK_SCALE_END);
   });
@@ -78,5 +87,31 @@ describe('artworkPath', () => {
         legacyCropPercent: entry?.bakedLateralCropPercent,
       }),
     ).toEqual(artworkPath(SCREEN));
+  });
+
+  it('deriva negativa percorre da direita para a esquerda', () => {
+    const path = artworkPath({ ...SCREEN, motion: { driftX: -0.03 } });
+    expect(path?.start.translateX).toBeLessThan(path!.end.translateX);
+  });
+
+  it('obra que quase cabe na tela só respira em torno do foco', () => {
+    const fit = { screenWidth: 390, screenHeight: 844, imageWidth: 400, imageHeight: 844 };
+    const path = artworkPath(fit);
+    expect(path?.sweep).toBeNull();
+    expect(path?.durationMs).toBe(ARTWORK_DURATION_MS);
+    expect(path?.start).toEqual(path?.rest);
+  });
+
+  it('a duração cresce com a sobra, mas não passa do máximo', () => {
+    const narrow = artworkPath({ ...SCREEN, imageWidth: 1000 });
+    const wide = artworkPath({ ...SCREEN, imageWidth: 4000 });
+    expect(narrow!.durationMs).toBeLessThan(wide!.durationMs);
+    expect(wide!.durationMs).toBe(ARTWORK_SWEEP_MAX_DURATION_MS);
+  });
+
+  it('escolhe o eixo que mais transborda', () => {
+    expect(artworkSweepAxis(390, 844, { x: 300, y: 0 })).toBe('x');
+    expect(artworkSweepAxis(390, 844, { x: 0, y: 400 })).toBe('y');
+    expect(artworkSweepAxis(390, 844, { x: 10, y: 10 })).toBeNull();
   });
 });

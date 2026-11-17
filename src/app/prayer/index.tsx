@@ -1,7 +1,9 @@
 import { PrayerScreen } from '@/features/rosary-prayer/components/PrayerScreen';
 import { useMysteries } from '@/features/rosary-prayer/hooks/useMysteries';
+import { usePrayerPreferences } from '@/features/preferences/preferencesContext';
 import { usePersistRosarySession } from '@/features/rosary-prayer/hooks/usePersistRosarySession';
 import { useRosarySession } from '@/features/rosary-prayer/hooks/useRosarySession';
+import { useRecordCompletion } from '@/features/rosary-prayer/session/completionCounter';
 import {
   getEmbeddedCatalog,
   getEmbeddedMysteryById,
@@ -39,6 +41,19 @@ function parseStepIndex(value: string | string[] | undefined): number | undefine
 }
 
 export default function PrayerRoute() {
+  // Os passos (incluindo as frases das Ave-Marias iniciais) fixam-se ao montar a sessão.
+  const { loaded } = usePrayerPreferences();
+  if (!loaded) {
+    return (
+      <View style={styles.centered}>
+        <ActivityIndicator size="large" color={contemplative.gold} />
+      </View>
+    );
+  }
+  return <PrayerSession />;
+}
+
+function PrayerSession() {
   const params = useLocalSearchParams<{
     mode?: string;
     set?: string;
@@ -54,6 +69,7 @@ export default function PrayerRoute() {
   const initialStepIndex = parseStepIndex(params.stepIndex);
 
   const { data: remoteCatalog, isLoading: mysteriesLoading } = useMysteries(set);
+  const { openingIntentions } = usePrayerPreferences().preferences;
 
   const sessionConfig = useMemo(() => {
     const catalog = remoteCatalog ?? getEmbeddedCatalog(set);
@@ -61,21 +77,22 @@ export default function PrayerRoute() {
       const mystery =
         catalog.find((m) => m.id === mysteryId) ?? getEmbeddedMysteryById(mysteryId);
       if (mystery) {
-        return { mode, set, mysteries: [mystery] };
+        return { mode, set, mysteries: [mystery], openingIntentions };
       }
     }
     if (mode === 'tercio' && mysteryType) {
       const subset = filterMysteriesByType(catalog, mysteryType);
       if (subset.length > 0) {
-        return { mode: 'tercio' as const, set, mysteries: subset };
+        return { mode: 'tercio' as const, set, mysteries: subset, openingIntentions };
       }
     }
-    return { mode: 'full' as const, set, mysteries: catalog };
-  }, [remoteCatalog, mode, set, mysteryId, mysteryType]);
+    return { mode: 'full' as const, set, mysteries: catalog, openingIntentions };
+  }, [remoteCatalog, mode, set, mysteryId, mysteryType, openingIntentions]);
 
   const session = useRosarySession(sessionConfig, { initialStepIndex });
 
   usePersistRosarySession(sessionConfig, session.stepIndex, session.currentStep);
+  useRecordCompletion(sessionConfig, session.currentStep);
 
   if (mysteriesLoading && !remoteCatalog) {
     return (

@@ -10,7 +10,8 @@ Aplicativo mobile (Android primeiro) para rezar o Terço com meditação dinâmi
 | Navegação | Expo Router (`src/app/`) |
 | Dados remotos | Supabase + TanStack Query |
 | Áudio | expo-audio (antífona mariana durante a oração) |
-| Persistência local | AsyncStorage (sessão incompleta e preferência de canto) |
+| Persistência local | AsyncStorage (sessão incompleta, canto, ajustes e contador de terços) |
+| Aparelho | expo-keep-awake, expo-haptics, expo-notifications (lembrete diário) |
 
 Estrutura de código:
 
@@ -57,7 +58,7 @@ Especificações de comportamento ficam em `openspec/specs/`:
 
 - `rosary-prayer` — fluxo de oração, gestos, contas
 - `meditation-content` — conteúdo dinâmico e Supabase
-- `local-experience` — áudio, offline e cache (o contador de terços completos está na spec e ainda não existe em `src/`)
+- `local-experience` — áudio, contador de terços, lembrete diário, offline e cache (o download explícito de pacote offline está na spec e ainda não existe em `src/`)
 
 Comandos no **terminal** (OpenSpec CLI 1.15+):
 

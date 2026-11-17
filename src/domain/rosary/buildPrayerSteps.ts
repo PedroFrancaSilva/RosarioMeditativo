@@ -1,4 +1,5 @@
 import type { Mystery } from '@/domain/mystery';
+import type { OpeningIntentions } from '@/domain/preferences/prayerPreferences';
 import type { PrayerStep, RosarySessionConfig } from '@/domain/rosary/types';
 
 function fixedStep(
@@ -48,21 +49,34 @@ function decadeSteps(mystery: Mystery, prefix: string): PrayerStep[] {
   return steps;
 }
 
-const OPENING_HAIL_LEADS = [
+/** Pedido tradicional das três Ave-Marias iniciais do terço. */
+export const VIRTUE_OPENING_LEADS = [
+  'Pelo aumento da fé.',
+  'Pelo aumento da esperança.',
+  'Pelo aumento da caridade.',
+] as const;
+
+/** Versículos do Angelus, alternativa escolhida nos ajustes. */
+export const ANGELUS_OPENING_LEADS = [
   'O Anjo do Senhor anunciou a Maria, e ela concebeu do Espírito Santo.',
   'Eis aqui a serva do Senhor; faça-se em mim segundo a vossa palavra.',
   'A Palavra se fez carne e habitou entre nós.',
 ] as const;
 
-function openingSteps(): PrayerStep[] {
+export function openingLeads(intentions: OpeningIntentions = 'virtues'): readonly string[] {
+  return intentions === 'angelus' ? ANGELUS_OPENING_LEADS : VIRTUE_OPENING_LEADS;
+}
+
+function openingSteps(intentions: OpeningIntentions | undefined): PrayerStep[] {
+  const leads = openingLeads(intentions);
   return [
     fixedStep('open-sign', 'sign-of-cross', 'Sinal da Cruz'),
     fixedStep('open-offering', 'opening-offering', 'Oferecimento'),
     fixedStep('open-creed', 'creed', 'Credo'),
     fixedStep('open-our-father', 'our-father', 'Pai-Nosso'),
-    fixedStep('open-hail-1', 'hail-mary', 'Ave-Maria', 1, undefined, OPENING_HAIL_LEADS[0]),
-    fixedStep('open-hail-2', 'hail-mary', 'Ave-Maria', 2, undefined, OPENING_HAIL_LEADS[1]),
-    fixedStep('open-hail-3', 'hail-mary', 'Ave-Maria', 3, undefined, OPENING_HAIL_LEADS[2]),
+    fixedStep('open-hail-1', 'hail-mary', 'Ave-Maria', 1, undefined, leads[0]),
+    fixedStep('open-hail-2', 'hail-mary', 'Ave-Maria', 2, undefined, leads[1]),
+    fixedStep('open-hail-3', 'hail-mary', 'Ave-Maria', 3, undefined, leads[2]),
     fixedStep('open-glory', 'glory-be', 'Glória'),
   ];
 }
@@ -90,7 +104,7 @@ export function buildPrayerSteps(config: RosarySessionConfig): PrayerStep[] {
   const steps: PrayerStep[] = [];
 
   if (mode === 'full' || mode === 'tercio') {
-    steps.push(...openingSteps());
+    steps.push(...openingSteps(config.openingIntentions));
     mysteries.forEach((mystery, index) => {
       steps.push(announceStep(mystery));
       steps.push(...decadeSteps(mystery, `m${index}`));
