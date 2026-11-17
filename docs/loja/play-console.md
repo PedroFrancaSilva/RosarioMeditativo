@@ -1,6 +1,6 @@
 # Publicação no Google Play — Ora et Contempla
 
-Roteiro e textos prontos para o Play Console. Pacote: `com.rosariomeditativo.app`.
+Roteiro e textos prontos para o Play Console. Pacote Android: `com.pessoal.ora_et_contempla` (o mesmo cadastrado no Play Console; não muda depois do primeiro envio).
 
 ## 1. Antes de enviar
 

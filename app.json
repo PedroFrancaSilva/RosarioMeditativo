@@ -12,7 +12,7 @@
       "bundleIdentifier": "com.rosariomeditativo.app"
     },
     "android": {
-      "package": "com.rosariomeditativo.app",
+      "package": "com.pessoal.ora_et_contempla",
       "adaptiveIcon": {
         "backgroundColor": "#110E0C",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
