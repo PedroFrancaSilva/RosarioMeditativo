@@ -58,9 +58,9 @@ export default function HomePrayerScreen() {
         showsVerticalScrollIndicator={false}>
         <View style={styles.eyebrowRow}>
           <View style={styles.eyebrowRule} />
-          <Text style={styles.eyebrow}>Ora et contempla</Text>
+          <Text style={styles.eyebrow}>Rosário meditativo</Text>
         </View>
-        <Text style={styles.title}>Rosário{'\n'}Meditativo</Text>
+        <Text style={styles.title}>Ora et{'\n'}Contempla</Text>
         <Text style={styles.intro}>Um momento de silêncio, presença e oração.</Text>
         {completedCount ? (
           <Text style={styles.counter}>{completedCountLabel(completedCount)}</Text>

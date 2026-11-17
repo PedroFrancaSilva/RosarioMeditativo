@@ -8,7 +8,7 @@ export default function MenuModalScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Menu</Text>
-      <Text style={styles.subtitle}>Rosário Meditativo</Text>
+      <Text style={styles.subtitle}>Ora et Contempla</Text>
 
       {__DEV__ ? (
         <View style={styles.card}>

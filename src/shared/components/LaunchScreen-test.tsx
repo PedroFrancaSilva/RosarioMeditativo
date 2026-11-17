@@ -35,12 +35,12 @@ describe('<LaunchScreen />', () => {
       </SafeAreaProvider>,
     );
 
-    expect(screen.getByText('Ora et contempla')).toBeTruthy();
-    expect(screen.getByText('Rosário\nMeditativo')).toBeTruthy();
+    expect(screen.getByText('Rosário meditativo')).toBeTruthy();
+    expect(screen.getByText('Ora et\nContempla')).toBeTruthy();
     expect(screen.getByText('Preparando seu momento de oração')).toBeTruthy();
     expect(screen.getByLabelText('Carregando')).toBeTruthy();
     expect(
-      screen.getByLabelText('Rosário Meditativo. Preparando seu momento de oração.'),
+      screen.getByLabelText('Ora et Contempla. Preparando seu momento de oração.'),
     ).toBeTruthy();
   });
 });
