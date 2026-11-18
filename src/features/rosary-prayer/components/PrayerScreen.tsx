@@ -1,4 +1,9 @@
+import { hapticCueForStep } from '@/domain/rosary/hapticCue';
+import { completedCountLabel } from '@/domain/rosary/completionCount';
 import { useChantDuringPrayer } from '@/features/chant/useChantDuringPrayer';
+import { usePrayerPreferences } from '@/features/preferences/preferencesContext';
+import { playHapticCue } from '@/features/rosary-prayer/haptics';
+import { useCompletedCount } from '@/features/rosary-prayer/session/completionCounter';
 import { ArtworkBackground } from '@/features/rosary-prayer/components/ArtworkBackground';
 import { DeeperReferencesModal } from '@/features/rosary-prayer/components/DeeperReferencesModal';
 import { DecadeBeadRow } from '@/features/rosary-prayer/components/DecadeBeadRow';
@@ -18,12 +23,13 @@ import type { RosaryProgressModel } from '@/domain/rosary/rosaryProgress';
 import type { MysteryType } from '@/domain/mystery';
 import { TERCO_TITLES } from '@/domain/mysteryTerco';
 import { contemplative, contemplativeFonts, contemplativeMotion } from '@/shared/constants/contemplative';
+import { useKeepAwake } from 'expo-keep-awake';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useCallback, useEffect, useRef } from 'react';
 import { useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, {
   runOnJS,
@@ -63,6 +69,10 @@ export function PrayerScreen({
 }: Props) {
   const insets = useSafeAreaInsets();
   useChantDuringPrayer();
+  // A tela não apaga durante a oração; volta ao normal ao sair desta rota.
+  useKeepAwake();
+  const { preferences } = usePrayerPreferences();
+  const { data: completedCount } = useCompletedCount();
   const { source, credit, motion, devCrop, backgroundKey } = useMysteryBackground(
     presentation.mysteryId,
     {
@@ -85,6 +95,8 @@ export function PrayerScreen({
   const meditation = useMeditationSelection(meditationQuery.data);
   const [deeperOpen, setDeeperOpen] = useState(false);
   const advancing = useRef(false);
+  /** Só vibra ao chegar a um passo avançando (não ao voltar nem ao retomar). */
+  const movedForward = useRef(false);
 
   const screenOpacity = useSharedValue(0);
   const contentOpacity = useSharedValue(1);
@@ -104,6 +116,14 @@ export function PrayerScreen({
     if (!showMeditation) setDeeperOpen(false);
   }, [showMeditation]);
 
+  useEffect(() => {
+    if (!movedForward.current) return;
+    movedForward.current = false;
+    if (!preferences.haptics) return;
+    const cue = hapticCueForStep(presentation.step);
+    if (cue) playHapticCue(cue);
+  }, [presentation.step, preferences.haptics]);
+
   const leaveTo = useCallback(
     (action: () => void) => {
       screenOpacity.value = withTiming(0, { duration: contemplativeMotion.screen }, (finished) => {
@@ -116,6 +136,7 @@ export function PrayerScreen({
   const handleAdvance = useCallback(() => {
     if (isCompletion || !canGoNext || advancing.current) return;
     advancing.current = true;
+    movedForward.current = true;
     onNext();
     setTimeout(() => {
       advancing.current = false;
@@ -124,12 +145,20 @@ export function PrayerScreen({
 
   const handleBack = useCallback(() => {
     if (isCompletion || !canGoPrevious) return;
+    movedForward.current = false;
     onPrevious();
   }, [canGoPrevious, isCompletion, onPrevious]);
+
+  const handleSkip = useCallback(() => {
+    movedForward.current = true;
+    onSkipToNextMystery();
+  }, [onSkipToNextMystery]);
 
   const pan = Gesture.Pan()
     .runOnJS(true)
     .activeOffsetX([-24, 24])
+    // Arrasto vertical é rolagem do texto, não troca de oração.
+    .failOffsetY([-16, 16])
     .onEnd((event) => {
       if (isCompletion) return;
       if (event.translationX < -40) handleAdvance();
@@ -175,7 +204,7 @@ export function PrayerScreen({
                 {header.detail ? <Text style={styles.headerDetail}>{header.detail}</Text> : null}
                 {canSkipToNextMystery && !isCompletion ? (
                   <Pressable
-                    onPress={onSkipToNextMystery}
+                    onPress={handleSkip}
                     accessibilityRole="button"
                     accessibilityLabel="Próximo mistério"
                     hitSlop={8}>
@@ -232,6 +261,9 @@ export function PrayerScreen({
                 <View style={styles.completion}>
                   <Text style={styles.completionTitle}>{presentation.title}</Text>
                   <Text style={styles.completionBody}>{presentation.bodyFull}</Text>
+                  {completedCount ? (
+                    <Text style={styles.completionCount}>{completedCountLabel(completedCount)}</Text>
+                  ) : null}
                   <Pressable
                     style={styles.homeButton}
                     onPress={() => leaveTo(() => router.replace('/(tabs)'))}
@@ -241,6 +273,12 @@ export function PrayerScreen({
                 </View>
               ) : (
                 <>
+                  {/* Com texto grande ou meditação longa, o painel rola; as contas ficam fixas. */}
+                  <ScrollView
+                    style={styles.bottomScroll}
+                    showsVerticalScrollIndicator={false}
+                    bounces={false}
+                    keyboardShouldPersistTaps="handled">
                   <Animated.View style={contentStyle}>
                     {setName && hasMystery ? <Text style={styles.setName}>{setName}</Text> : null}
                     <Text style={styles.mysteryTitle}>{persistentMysteryLabel}</Text>
@@ -251,6 +289,8 @@ export function PrayerScreen({
                         commentary={meditation.commentary}
                         hasDeeperReferences={meditation.hasDeeperReferences}
                         onOpenDeeper={() => setDeeperOpen(true)}
+                        canDrawAnother={meditation.canDrawAnother}
+                        onDrawAnother={meditation.drawAnother}
                       />
                     ) : null}
                     <PrayerTextBlock
@@ -262,6 +302,7 @@ export function PrayerScreen({
                       fullText={presentation.bodyFull}
                     />
                   </Animated.View>
+                  </ScrollView>
                   <DecadeBeadRow view={beadView} />
                 </>
               )}
@@ -368,6 +409,10 @@ const styles = StyleSheet.create({
   },
   bottom: {
     paddingHorizontal: 20,
+    flexShrink: 1,
+  },
+  bottomScroll: {
+    flexGrow: 0,
   },
   setName: {
     color: contemplative.gold,
@@ -419,6 +464,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
     textAlign: 'center',
+  },
+  completionCount: {
+    color: contemplative.gold,
+    fontFamily: contemplativeFonts.sansSemi,
+    fontSize: 11,
+    letterSpacing: 1.4,
+    textTransform: 'uppercase',
   },
   homeButton: {
     marginTop: 8,

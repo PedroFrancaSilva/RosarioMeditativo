@@ -83,4 +83,34 @@ describe('<MeditationBlock />', () => {
     );
     expect(empty.toJSON()).toBeNull();
   });
+
+  it('«Outra meditação» só aparece quando há outro par e chama o sorteio', async () => {
+    const onDrawAnother = jest.fn();
+    const { getByText, queryByText, rerender } = await render(
+      <MeditationBlock
+        status="ready"
+        passage={passage}
+        commentary={commentary}
+        hasDeeperReferences={false}
+        onOpenDeeper={() => undefined}
+        canDrawAnother
+        onDrawAnother={onDrawAnother}
+      />,
+    );
+    await userEvent.setup().press(getByText('Outra meditação'));
+    expect(onDrawAnother).toHaveBeenCalledTimes(1);
+
+    await rerender(
+      <MeditationBlock
+        status="ready"
+        passage={passage}
+        commentary={commentary}
+        hasDeeperReferences={false}
+        onOpenDeeper={() => undefined}
+        canDrawAnother={false}
+        onDrawAnother={onDrawAnother}
+      />,
+    );
+    expect(queryByText('Outra meditação')).toBeNull();
+  });
 });

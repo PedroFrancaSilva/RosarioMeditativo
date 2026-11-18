@@ -2,13 +2,23 @@ import { buildPrayerSteps } from '@/domain/rosary/buildPrayerSteps';
 import { getFixedPrayer } from '@/domain/rosary/fixedPrayers';
 import { singleMysterySession, twoMysterySession } from '@/domain/rosary/testFixtures';
 
-const OPENING_LEADS = [
+const OPENING_LEADS = ['Pelo aumento da fé.', 'Pelo aumento da esperança.', 'Pelo aumento da caridade.'];
+
+const ANGELUS_LEADS = [
   'O Anjo do Senhor anunciou a Maria, e ela concebeu do Espírito Santo.',
   'Eis aqui a serva do Senhor; faça-se em mim segundo a vossa palavra.',
   'A Palavra se fez carne e habitou entre nós.',
 ];
 
 describe('buildPrayerSteps', () => {
+  it('com a opção Angelus, as Ave-Marias iniciais levam os versículos do Angelus', () => {
+    const steps = buildPrayerSteps({ ...twoMysterySession, openingIntentions: 'angelus' });
+    expect(steps.filter((s) => s.id.startsWith('open-hail')).map((s) => s.lead)).toEqual(
+      ANGELUS_LEADS,
+    );
+    expect(steps).toHaveLength(buildPrayerSteps(twoMysterySession).length);
+  });
+
   it('inclui abertura, dois mistérios e conclusão no terço completo', () => {
     const steps = buildPrayerSteps(twoMysterySession);
     expect(steps[0]?.label).toBe('Sinal da Cruz');

@@ -1,5 +1,6 @@
 import type { Commentary, Passage } from '@/domain/mystery';
 import { meditationExcerpt } from '@/domain/meditationExcerpt';
+import { usePrayerPreferences } from '@/features/preferences/preferencesContext';
 import { contemplative, contemplativeFonts } from '@/shared/constants/contemplative';
 import { useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
@@ -10,16 +11,20 @@ type Props = {
   commentary?: Commentary;
   hasDeeperReferences: boolean;
   onOpenDeeper: () => void;
+  canDrawAnother?: boolean;
+  onDrawAnother?: () => void;
 };
 
 function ExpandableText({ text, meta }: { text: string; meta?: string }) {
   const excerpt = meditationExcerpt(text);
   const [expanded, setExpanded] = useState(false);
   const body = excerpt && !expanded ? excerpt : text;
+  const { textScale } = usePrayerPreferences();
+  const scaled = { fontSize: 15 * textScale, lineHeight: 22 * textScale };
 
   const inner = (
     <>
-      <Text style={styles.body}>{body}</Text>
+      <Text style={[styles.body, scaled]}>{body}</Text>
       {meta ? <Text style={styles.commentaryMeta}>{meta}</Text> : null}
       {excerpt ? (
         <Text style={styles.hint}>
@@ -48,6 +53,8 @@ export function MeditationBlock({
   commentary,
   hasDeeperReferences,
   onOpenDeeper,
+  canDrawAnother = false,
+  onDrawAnother,
 }: Props) {
   if (status === 'loading') {
     return (
@@ -78,14 +85,30 @@ export function MeditationBlock({
           />
         </View>
       ) : null}
-      {hasDeeperReferences ? (
-        <Pressable
-          style={styles.deeperButton}
-          onPress={onOpenDeeper}
-          accessibilityRole="button"
-          accessibilityLabel="Quero me aprofundar">
-          <Text style={styles.deeperText}>Quero me aprofundar</Text>
-        </Pressable>
+      {hasDeeperReferences || (canDrawAnother && onDrawAnother) ? (
+        <View style={styles.actions}>
+          {canDrawAnother && onDrawAnother ? (
+            <Pressable
+              style={styles.deeperButton}
+              onPress={onDrawAnother}
+              accessibilityRole="button"
+              accessibilityLabel="Outra meditação"
+              accessibilityHint="Mostra outra passagem ou outro comentário deste mistério"
+              hitSlop={8}>
+              <Text style={styles.deeperText}>Outra meditação</Text>
+            </Pressable>
+          ) : null}
+          {hasDeeperReferences ? (
+            <Pressable
+              style={styles.deeperButton}
+              onPress={onOpenDeeper}
+              accessibilityRole="button"
+              accessibilityLabel="Quero me aprofundar"
+              hitSlop={8}>
+              <Text style={styles.deeperText}>Quero me aprofundar</Text>
+            </Pressable>
+          ) : null}
+        </View>
       ) : null}
     </View>
   );
@@ -122,6 +145,11 @@ const styles = StyleSheet.create({
     fontFamily: contemplativeFonts.sansSemi,
     fontSize: 12,
     marginTop: 2,
+  },
+  actions: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    columnGap: 20,
   },
   deeperButton: {
     alignSelf: 'flex-start',

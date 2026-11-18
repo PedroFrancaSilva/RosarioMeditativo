@@ -42,7 +42,7 @@ function buildEmbeddedPassages(): Record<string, Passage[]> {
     if (row.mystery_slug in CURATED_MEDITATIONS) continue;
     const list = map[row.mystery_slug] ?? [];
     list.push({
-      id: `embedded-passage-${row.mystery_slug}-${row.sort_order}`,
+      id: embeddedPassageId(row.mystery_slug, row.sort_order),
       mysteryId: row.mystery_slug,
       text: row.text,
       reference: row.reference,
@@ -225,35 +225,40 @@ export async function fetchRemoteDeeperReferences(mysteryId: string): Promise<De
   }));
 }
 
-function curatedPassage(contentSlug: string, curated: CuratedMeditation): Passage {
-  return {
-    id: `embedded-passage-${contentSlug}-0`,
+export function embeddedPassageId(contentSlug: string, index: number): string {
+  return `embedded-passage-${contentSlug}-${index}`;
+}
+
+function curatedPassages(contentSlug: string, curated: CuratedMeditation): Passage[] {
+  return curated.passages.map((passage, index) => ({
+    id: embeddedPassageId(contentSlug, index),
     mysteryId: contentSlug,
-    text: curated.text,
-    reference: curated.reference,
-    sortOrder: 0,
-  };
+    text: passage.text,
+    reference: passage.reference,
+    sortOrder: index,
+  }));
 }
 
 function embeddedPassages(contentSlug: string): Passage[] {
   const curated = CURATED_MEDITATIONS[contentSlug];
-  if (curated) return [curatedPassage(contentSlug, curated)];
+  if (curated) return curatedPassages(contentSlug, curated);
   return EMBEDDED_PASSAGES_BY_SLUG[contentSlug] ?? [];
 }
 
 function embeddedCommentaries(contentSlug: string): Commentary[] {
   const curated = CURATED_MEDITATIONS[contentSlug];
   if (!curated) return [];
-  const passageId = `embedded-passage-${contentSlug}-0`;
-  return curated.commentaries.map((row) => ({
-    id: `embedded-commentary-${contentSlug}-${row.sortOrder}`,
-    mysteryId: contentSlug,
-    passageId,
-    text: row.text,
-    author: row.author,
-    source: row.source,
-    sortOrder: row.sortOrder,
-  }));
+  return curated.passages.flatMap((passage, index) =>
+    passage.commentaries.map((row) => ({
+      id: `embedded-commentary-${contentSlug}-${index}-${row.sortOrder}`,
+      mysteryId: contentSlug,
+      passageId: embeddedPassageId(contentSlug, index),
+      text: row.text,
+      author: row.author,
+      source: row.source,
+      sortOrder: row.sortOrder,
+    })),
+  );
 }
 
 function embeddedDeeper(contentSlug: string): DeeperReference[] {

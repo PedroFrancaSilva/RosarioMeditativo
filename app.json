@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "RosarioMeditativo",
+    "name": "Ora et Contempla",
     "slug": "RosarioMeditativo",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,11 +8,12 @@
     "scheme": "rosariomeditativo",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rosariomeditativo.app"
     },
     "android": {
-      "package": "com.rosariomeditativo.app",
-        "adaptiveIcon": {
+      "package": "com.pessoal.ora_et_contempla",
+      "adaptiveIcon": {
         "backgroundColor": "#110E0C",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
@@ -21,6 +22,10 @@
       "predictiveBackGestureEnabled": false,
       "permissions": [
         "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
       ]
     },
     "web": {
@@ -47,7 +52,13 @@
           "microphonePermission": false
         }
       ],
-      "expo-asset"
+      "expo-asset",
+      [
+        "expo-notifications",
+        {
+          "color": "#d4af55"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

@@ -2,7 +2,9 @@ import { useMysteries } from '@/features/rosary-prayer/hooks/useMysteries';
 import type { MysteryType } from '@/domain/mystery';
 import { groupMysteriesByTerco, tercoTypeForDate } from '@/domain/mysteryTerco';
 import type { MysterySet } from '@/domain/rosary/types';
+import { completedCountLabel } from '@/domain/rosary/completionCount';
 import { ChantToggle } from '@/features/chant/ChantToggle';
+import { useCompletedCount } from '@/features/rosary-prayer/session/completionCounter';
 import { ResumePrayerDialog } from '@/features/rosary-prayer/components/ResumePrayerDialog';
 import { usePrayerStart } from '@/features/rosary-prayer/hooks/usePrayerStart';
 import type { PrayerStartIntent } from '@/features/rosary-prayer/navigation/incompleteSessionLabel';
@@ -25,6 +27,7 @@ export default function HomePrayerScreen() {
   }, [mysteries, set]);
 
   const { begin, continueSaved, startFresh, dismiss, dialogDescription } = usePrayerStart();
+  const { data: completedCount } = useCompletedCount();
 
   const beginPrayer = (intent: PrayerStartIntent) => {
     void begin(intent).then((result) => {
@@ -55,10 +58,13 @@ export default function HomePrayerScreen() {
         showsVerticalScrollIndicator={false}>
         <View style={styles.eyebrowRow}>
           <View style={styles.eyebrowRule} />
-          <Text style={styles.eyebrow}>Ora et contempla</Text>
+          <Text style={styles.eyebrow}>Rosário meditativo</Text>
         </View>
-        <Text style={styles.title}>Rosário{'\n'}Meditativo</Text>
+        <Text style={styles.title}>Ora et{'\n'}Contempla</Text>
         <Text style={styles.intro}>Um momento de silêncio, presença e oração.</Text>
+        {completedCount ? (
+          <Text style={styles.counter}>{completedCountLabel(completedCount)}</Text>
+        ) : null}
 
         <View style={styles.segment} accessibilityRole="tablist">
           <Pressable
@@ -134,14 +140,18 @@ export default function HomePrayerScreen() {
           </View>
         ) : null}
 
-        <Pressable
-          style={styles.coverageLink}
-          onPress={() =>
-            router.push({ pathname: '/meditation-coverage', params: { set } } as Href)
-          }
-          accessibilityRole="button">
-          <Text style={styles.coverageText}>Escolher um terço</Text>
-        </Pressable>
+        <View style={styles.links}>
+          <Pressable
+            onPress={() =>
+              router.push({ pathname: '/meditation-coverage', params: { set } } as Href)
+            }
+            accessibilityRole="button">
+            <Text style={styles.coverageText}>Escolher um terço</Text>
+          </Pressable>
+          <Pressable onPress={() => router.push('/ajustes' as Href)} accessibilityRole="button">
+            <Text style={styles.coverageText}>Ajustes</Text>
+          </Pressable>
+        </View>
 
         <ChantToggle />
 
@@ -378,9 +388,20 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 22,
   },
-  coverageLink: {
+  links: {
     marginTop: 28,
-    alignSelf: 'flex-start',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    columnGap: 24,
+    rowGap: 12,
+  },
+  counter: {
+    marginTop: 10,
+    color: contemplative.gold,
+    fontFamily: contemplativeFonts.sansSemi,
+    fontSize: 10,
+    letterSpacing: 1.6,
+    textTransform: 'uppercase',
   },
   coverageText: {
     color: contemplative.gold,

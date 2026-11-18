@@ -1,60 +1,58 @@
 {
-  "reference": "Lc 1, 26-27",
-  "text": "Estando Isabel no sexto mês, foi enviado por Deus o anjo Gabriel a uma cidade da Galileia, chamada Nazaré, a uma virgem desposada com um varão, chamado José, da casa de David; o nome da virgem era Maria.",
-  "commentaries": [
+  "passages": [
     {
-      "sortOrder": 0,
-      "author": "São Tomás de Aquino",
-      "source": "Suma Teológica, III, q. 30, a. 1",
-      "text": "Era conveniente que fosse anunciado à bem-aventurada Virgem que ela havia de conceber Cristo. Primeiro, para que se guardasse a devida ordem na união do Filho de Deus com a Virgem, a saber, que primeiro sua mente fosse instruída acerca d’Ele, antes de O conceber na carne. Segundo, para que pudesse ser testemunha mais certa deste mistério… Terceiro, para que oferecesse a Deus os dons voluntários de sua obediência, para o que se mostrou pronta, dizendo: Eis a serva do Senhor. Em quarto lugar, para mostrar que existe um certo matrimônio espiritual entre o Filho de Deus e a natureza humana. E por isso, na Anunciação, era solicitado o consentimento da Virgem em lugar de toda a natureza humana."
+      "reference": "Lc 1, 26-27",
+      "text": "Estando Isabel no sexto mês, foi enviado por Deus o anjo Gabriel a uma cidade da Galileia, chamada Nazaré, a uma virgem desposada com um varão, chamado José, da casa de David; o nome da virgem era Maria.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 30, a. 1",
+          "text": "Era conveniente que fosse anunciado à bem-aventurada Virgem que ela havia de conceber Cristo. Primeiro, para que se guardasse a devida ordem na união do Filho de Deus com a Virgem, a saber, que primeiro sua mente fosse instruída acerca d’Ele, antes de O conceber na carne. Segundo, para que pudesse ser testemunha mais certa deste mistério… Terceiro, para que oferecesse a Deus os dons voluntários de sua obediência, para o que se mostrou pronta, dizendo: Eis a serva do Senhor. Em quarto lugar, para mostrar que existe um certo matrimônio espiritual entre o Filho de Deus e a natureza humana. E por isso, na Anunciação, era solicitado o consentimento da Virgem em lugar de toda a natureza humana."
+        },
+        {
+          "sortOrder": 1,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 30, a. 2",
+          "text": "Convinha que fosse anunciado à Mãe de Deus por um Anjo o mistério da divina encarnação, por três razões. Primeiro, para que também nisto se conservasse a ordenação divina, segundo a qual as coisas divinas chegam aos homens por meio dos Anjos. Segundo, isto foi conveniente à restauração da natureza humana… (porque a ruína começou pela serpente enviada à mulher, o reparo começa pelo anjo enviado à Virgem). Terceiro, porque isto convinha à virgindade da Mãe de Deus. Por isso Jerônimo diz: É conveniente que um anjo seja enviado à Virgem, porque a virgindade é sempre aparentada com os anjos."
+        },
+        {
+          "sortOrder": 2,
+          "author": "Santo Agostinho",
+          "source": "De sancta virginitate, 3",
+          "text": "Maria é mais bem-aventurada por receber a fé de Cristo do que por conceber a carne de Cristo"
+        }
+      ]
     },
     {
-      "sortOrder": 1,
-      "author": "São Tomás de Aquino",
-      "source": "Suma Teológica, III, q. 30, a. 2",
-      "text": "Convinha que fosse anunciado à Mãe de Deus por um Anjo o mistério da divina encarnação, por três razões. Primeiro, para que também nisto se conservasse a ordenação divina, segundo a qual as coisas divinas chegam aos homens por meio dos Anjos. Segundo, isto foi conveniente à restauração da natureza humana… (porque a ruína começou pela serpente enviada à mulher, o reparo começa pelo anjo enviado à Virgem). Terceiro, porque isto convinha à virgindade da Mãe de Deus. Por isso Jerônimo diz: É conveniente que um anjo seja enviado à Virgem, porque a virgindade é sempre aparentada com os anjos."
-    },
-    {
-      "sortOrder": 2,
-      "author": "Santo Agostinho",
-      "source": "De sancta virginitate, 3",
-      "text": "Maria é mais bem-aventurada por receber a fé de Cristo do que por conceber a carne de Cristo"
-    },
-    {
-      "sortOrder": 3,
-      "author": "São João Paulo II",
-      "source": "Audiências gerais de 4 e 18 de setembro de 1996 (texto condensado, não é citação verbal)",
-      "text": "No mistério da Anunciação contemplamos a humildade e a obediência da Virgem, modelo da nossa resposta a Deus."
-    },
-    {
-      "sortOrder": 4,
-      "author": "Bento XVI",
-      "source": "Homilia nas Vésperas, Basílica da Anunciação, Nazaré, 14 de maio de 2009 (texto condensado)",
-      "text": "Ao meditar este mistério, somos convidados a abrir-nos à ação do Espírito e a dar o nosso consentimento para que o Verbo habite em nós."
-    },
-    {
-      "sortOrder": 5,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 484",
-      "text": "A Anunciação a Maria inaugura a «plenitude dos tempos» (Gl 4, 4), isto é, o cumprimento das promessas e das preparações. Maria é convidada a conceber Aquele em quem habitará «corporalmente toda a plenitude da Divindade» (Cl 2, 9). A resposta divina ao seu «como será isto, se Eu não conheço homem?» (Lc 1, 34) é dada pelo poder do Espírito: «O Espírito Santo virá sobre ti» (Lc 1, 35)."
-    },
-    {
-      "sortOrder": 6,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 490",
-      "text": "Para vir a ser Mãe do Salvador, Maria «foi adornada por Deus com dons dignos de uma tão grande missão». O anjo Gabriel, no momento da Anunciação, saúda-a como «cheia de graça». De facto, para poder dar o assentimento livre da sua fé ao anúncio da sua vocação, era necessário que Ela fosse totalmente movida pela graça de Deus."
-    },
-    {
-      "sortOrder": 7,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 494",
-      "text": "… Maria respondeu com «a obediência da fé»… «Eis a serva do Senhor; faça-se em mim segundo a tua palavra» (Lc 1, 38). Assim, dando o seu consentimento à palavra de Deus, Maria torna-se Mãe de Jesus."
-    },
-    {
-      "sortOrder": 8,
-      "author": "São Bernardo de Claraval",
-      "source": "In laudibus Virginis Matris, homilia 4, 8-9 (texto abreviado)",
-      "text": "Ouviste, ó Virgem, que vais conceber e dar à luz um Filho… O Anjo aguarda a tua resposta… Nós também, miseravelmente oprimidos… esperamos a tua palavra de misericórdia. Em tuas mãos está o preço da nossa salvação. Dá, depressa, ó Virgem, a tua resposta. Responde sem demora ao Anjo, ou, para melhor dizer, ao Senhor por meio do Anjo. Pronuncia uma palavra e recebe a Palavra. Profere a tua palavra humana e concebe a divina."
+      "reference": "Lc 1, 28-38",
+      "text": "Entrando o anjo onde ela estava, disse-lhe: «Deus te salve, cheia de graça; o Senhor é contigo.» … O anjo disse-lhe: «Não temas, Maria, pois achaste graça diante de Deus; eis que conceberás no teu ventre, e darás à luz um filho, a quem porás o nome de Jesus.» … Maria disse ao anjo: «Como se fará isso, pois eu não conheço varão?» O anjo respondeu-lhe: «O Espírito Santo descerá sobre ti, e a virtude do Altíssimo te cobrirá com a sua sombra; por isso mesmo o Menino que há-de nascer de ti, será santo e será chamado Filho de Deus.» … Então Maria disse: «Eis aqui a serva do Senhor, faça-se em mim a tua palavra.» E o anjo afastou-se dela.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 484",
+          "text": "A Anunciação a Maria inaugura a «plenitude dos tempos» (Gl 4, 4), isto é, o cumprimento das promessas e das preparações. Maria é convidada a conceber Aquele em quem habitará «corporalmente toda a plenitude da Divindade» (Cl 2, 9). A resposta divina ao seu «como será isto, se Eu não conheço homem?» (Lc 1, 34) é dada pelo poder do Espírito: «O Espírito Santo virá sobre ti» (Lc 1, 35)."
+        },
+        {
+          "sortOrder": 1,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 490",
+          "text": "Para vir a ser Mãe do Salvador, Maria «foi adornada por Deus com dons dignos de uma tão grande missão». O anjo Gabriel, no momento da Anunciação, saúda-a como «cheia de graça». De facto, para poder dar o assentimento livre da sua fé ao anúncio da sua vocação, era necessário que Ela fosse totalmente movida pela graça de Deus."
+        },
+        {
+          "sortOrder": 2,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 494",
+          "text": "… Maria respondeu com «a obediência da fé»… «Eis a serva do Senhor; faça-se em mim segundo a tua palavra» (Lc 1, 38). Assim, dando o seu consentimento à palavra de Deus, Maria torna-se Mãe de Jesus."
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Bernardo de Claraval",
+          "source": "In laudibus Virginis Matris, homilia 4, 8-9 (texto abreviado)",
+          "text": "Ouviste, ó Virgem, que vais conceber e dar à luz um Filho… O Anjo aguarda a tua resposta… Nós também, miseravelmente oprimidos… esperamos a tua palavra de misericórdia. Em tuas mãos está o preço da nossa salvação. Dá, depressa, ó Virgem, a tua resposta. Responde sem demora ao Anjo, ou, para melhor dizer, ao Senhor por meio do Anjo. Pronuncia uma palavra e recebe a Palavra. Profere a tua palavra humana e concebe a divina."
+        }
+      ]
     }
   ]
 }

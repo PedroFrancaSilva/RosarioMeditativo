@@ -1,54 +1,58 @@
 {
-  "reference": "Mt 17, 1-8",
-  "text": "Jesus tomou consigo Pedro, Tiago e João, seu irmão, e os levou a um alto monte. Transfigurou-se diante deles; o seu rosto resplandeceu como o sol. Eis que lhes apareceram Moisés e Elias. Uma voz dos céus disse: «Este é o meu Filho amado, em quem me comprazo; ouvi-o.»",
-  "commentaries": [
+  "passages": [
     {
-      "sortOrder": 0,
-      "author": "São João Paulo II",
-      "source": "Rosarium Virginis Mariae, n. 21 (16 de outubro de 2002)",
-      "text": "Mistério de luz por excelência é a Transfiguração que, segundo a tradição, se deu no Monte Tabor. A glória da Divindade reluz no rosto de Cristo, enquanto o Pai O acredita aos Apóstolos extasiados para que O «escutem» (cf. Lc 9, 35 par) e se disponham a viver com Ele o momento doloroso da Paixão, a fim de chegarem com Ele à glória da Ressurreição e a uma vida transfigurada pelo Espírito Santo."
+      "reference": "Mt 17, 1-8",
+      "text": "Seis dias depois, tomou Jesus consigo Pedro, Tiago e João, seu irmão, e levou-os aparte a um alto monte, e transfigurou-se diante deles. O seu rosto ficou refulgente como o sol, e as suas vestiduras tornaram-se luminosas de brancas que estavam. Eis que lhes apareceram Moisés e Elias, falando com ele. … Estando ele ainda a falar, eis que uma nuvem resplandecente os envolveu; e saiu da nuvem uma voz que dizia: «Este é o meu Filho dilecto em quem pus toda a minha complacência; ouvi-o.» … Eles, então, levantando os olhos, não viram ninguém, excepto só Jesus.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "São João Paulo II",
+          "source": "Rosarium Virginis Mariae, n. 21 (16 de outubro de 2002)",
+          "text": "Mistério de luz por excelência é a Transfiguração que, segundo a tradição, se deu no Monte Tabor. A glória da Divindade reluz no rosto de Cristo, enquanto o Pai O acredita aos Apóstolos extasiados para que O «escutem» (cf. Lc 9, 35 par) e se disponham a viver com Ele o momento doloroso da Paixão, a fim de chegarem com Ele à glória da Ressurreição e a uma vida transfigurada pelo Espírito Santo."
+        },
+        {
+          "sortOrder": 1,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 556",
+          "text": "No limiar da vida pública, o baptismo; no limiar da Páscoa, a transfiguração. Pelo baptismo de Jesus «declaratum fuit mysterium primae regenerationis – foi declarado o mistério da (nossa) primeira regeneração» – o nosso Baptismo; e a transfiguração «est sacramentum secundae regenerationis – é o sacramento da (nossa) segunda regeneração» – a nossa própria ressurreição (318). Desde agora, nós participamos na ressurreição do Senhor pelo Espírito Santo que actua nos sacramentos do Corpo de Cristo. A transfiguração dá-nos um antegozo da vinda gloriosa de Cristo, «que transfigurará o nosso corpo miserável para o conformar com o seu corpo glorioso» (Fl 3, 21). Mas lembra-nos também que temos de passar por muitas tribulações para entrar no Reino de Deus» (Act 14, 22)…"
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 45, a. 4, ad 2",
+          "text": "… assim também na transfiguração, que é o sacramento da segunda regeneração, apareceu toda a Trindade: o Pai na voz, o Filho no homem, o Espírito Santo na nuvem luminosa; porque, assim como no Baptismo concede a inocência, simbolizada pela simplicidade da pomba, assim na ressurreição dará aos eleitos a claridade da glória e o refrigério de todo mal, simbolizados na nuvem luminosa."
+        },
+        {
+          "sortOrder": 3,
+          "author": "São João Paulo II",
+          "source": "Rosarium Virginis Mariae, n. 9 (16 de outubro de 2002)",
+          "text": "«Transfigurou-Se diante deles: o seu rosto resplandeceu como o sol» (Mt 17, 2). A cena evangélica da transfiguração de Cristo… pode ser tomada como ícone da contemplação cristã. Fixar os olhos no rosto de Cristo… até perceber o brilho divino definitivamente manifestado no Ressuscitado glorificado à direita do Pai, é a tarefa de cada discípulo de Cristo…"
+        }
+      ]
     },
     {
-      "sortOrder": 1,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 554",
-      "text": "A partir do dia em que Pedro confessou que Jesus era o Cristo, Filho do Deus vivo, o Mestre «começou a explicar aos seus discípulos que tinha de ir a Jerusalém e lá sofrer [...], que tinha de ser morto e ressuscitar ao terceiro dia» (Mt 16, 21). Pedro rejeita este anúncio e os outros também não o entendem (312). É neste contexto que se situa o episódio misterioso da transfiguração de Jesus (313), no cimo duma alta montanha, perante três testemunhas por Ele escolhidas: Pedro, Tiago e João. O rosto e as vestes de Jesus tornaram-se fulgurantes de luz, Moisés e Elias aparecem, «e falam da sua morte, que ia consumar-se em Jerusalém» (Lc 9, 31). Uma nuvem envolve-os e uma voz do céu diz: «Este é o meu Filho predilecto: escutai-O» (Lc 9, 35)."
-    },
-    {
-      "sortOrder": 2,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 555",
-      "text": "Por um momento, Jesus mostra a sua glória divina, confirmando assim a confissão de Pedro. Mostra também que, para «entrar na sua glória» (Lc 24, 26), tem de passar pela cruz em Jerusalém. Moisés e Elias tinham visto a glória de Deus sobre a montanha; a Lei e os Profetas tinham anunciado os sofrimentos do Messias (314). A paixão de Jesus é da vontade do Pai: o Filho age como Servo de Deus (315). A nuvem indica a presença do Espírito Santo: «Tota Trinitas apparuit: Pater in voce; Filius in homine; Spiritus in nube clara – Apareceu toda a Trindade: o Pai na voz; o Filho na humanidade; o Espírito Santo na nuvem luminosa» (316):"
-    },
-    {
-      "sortOrder": 3,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 556",
-      "text": "No limiar da vida pública, o baptismo; no limiar da Páscoa, a transfiguração. Pelo baptismo de Jesus «declaratum fuit mysterium primae regenerationis – foi declarado o mistério da (nossa) primeira regeneração» – o nosso Baptismo; e a transfiguração «est sacramentum secundae regenerationis – é o sacramento da (nossa) segunda regeneração» – a nossa própria ressurreição (318). Desde agora, nós participamos na ressurreição do Senhor pelo Espírito Santo que actua nos sacramentos do Corpo de Cristo. A transfiguração dá-nos um antegozo da vinda gloriosa de Cristo, «que transfigurará o nosso corpo miserável para o conformar com o seu corpo glorioso» (Fl 3, 21). Mas lembra-nos também que temos de passar por muitas tribulações para entrar no Reino de Deus» (Act 14, 22)…"
-    },
-    {
-      "sortOrder": 4,
-      "author": "São Tomás de Aquino",
-      "source": "Suma Teológica, III, q. 45, a. 4, ad 2",
-      "text": "… assim também na transfiguração, que é o sacramento da segunda regeneração, apareceu toda a Trindade: o Pai na voz, o Filho no homem, o Espírito Santo na nuvem luminosa; porque, assim como no Baptismo concede a inocência, simbolizada pela simplicidade da pomba, assim na ressurreição dará aos eleitos a claridade da glória e o refrigério de todo mal, simbolizados na nuvem luminosa."
-    },
-    {
-      "sortOrder": 5,
-      "author": "Liturgia bizantina",
-      "source": "Kontakion na Festa da Transfiguração (Menaion; cf. CIC 555, nota 317)",
-      "text": "«Transfiguraste-Te sobre a montanha e, na medida em que disso eram capazes, os teus discípulos contemplaram a tua glória, ó Cristo Deus; para que, quando Te vissem crucificado, compreendessem que a tua paixão era voluntária, e anunciassem ao mundo que Tu és verdadeiramente a irradiação do Pai»"
-    },
-    {
-      "sortOrder": 6,
-      "author": "São João Paulo II",
-      "source": "Audiência geral de 26 de abril de 2000 (texto condensado, não é citação verbal)",
-      "text": "Na Transfiguração no Tabor antecipa-se o que a Páscoa realiza plenamente. Cristo manifesta glória e luz; Moisés e Elias convergem para Ele; a voz do Pai convida a escutá-Lo. Visão, escuta, contemplação e obediência conduzem ao monte onde a Trindade se revela na glória do Filho e fortalece a esperança diante da cruz e das tribulações."
-    },
-    {
-      "sortOrder": 7,
-      "author": "São João Paulo II",
-      "source": "Rosarium Virginis Mariae, n. 9 (16 de outubro de 2002)",
-      "text": "«Transfigurou-Se diante deles: o seu rosto resplandeceu como o sol» (Mt 17, 2). A cena evangélica da transfiguração de Cristo… pode ser tomada como ícone da contemplação cristã. Fixar os olhos no rosto de Cristo… até perceber o brilho divino definitivamente manifestado no Ressuscitado glorificado à direita do Pai, é a tarefa de cada discípulo de Cristo…"
+      "reference": "Lc 9, 28-31",
+      "text": "Cerca de oito dias depois destas palavras, tomou consigo Pedro, Tiago e João, e subiu a um monte para orar. … E eis que dois homens falavam com ele: Moisés e Elias, os quais apareceram cheios de majestade, e falavam da morte que ele devia sofrer em Jerusalém.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 554",
+          "text": "A partir do dia em que Pedro confessou que Jesus era o Cristo, Filho do Deus vivo, o Mestre «começou a explicar aos seus discípulos que tinha de ir a Jerusalém e lá sofrer [...], que tinha de ser morto e ressuscitar ao terceiro dia» (Mt 16, 21). Pedro rejeita este anúncio e os outros também não o entendem (312). É neste contexto que se situa o episódio misterioso da transfiguração de Jesus (313), no cimo duma alta montanha, perante três testemunhas por Ele escolhidas: Pedro, Tiago e João. O rosto e as vestes de Jesus tornaram-se fulgurantes de luz, Moisés e Elias aparecem, «e falam da sua morte, que ia consumar-se em Jerusalém» (Lc 9, 31). Uma nuvem envolve-os e uma voz do céu diz: «Este é o meu Filho predilecto: escutai-O» (Lc 9, 35)."
+        },
+        {
+          "sortOrder": 1,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 555",
+          "text": "Por um momento, Jesus mostra a sua glória divina, confirmando assim a confissão de Pedro. Mostra também que, para «entrar na sua glória» (Lc 24, 26), tem de passar pela cruz em Jerusalém. Moisés e Elias tinham visto a glória de Deus sobre a montanha; a Lei e os Profetas tinham anunciado os sofrimentos do Messias (314). A paixão de Jesus é da vontade do Pai: o Filho age como Servo de Deus (315). A nuvem indica a presença do Espírito Santo: «Tota Trinitas apparuit: Pater in voce; Filius in homine; Spiritus in nube clara – Apareceu toda a Trindade: o Pai na voz; o Filho na humanidade; o Espírito Santo na nuvem luminosa» (316):"
+        },
+        {
+          "sortOrder": 2,
+          "author": "Liturgia bizantina",
+          "source": "Kontakion na Festa da Transfiguração (Menaion; cf. CIC 555, nota 317)",
+          "text": "«Transfiguraste-Te sobre a montanha e, na medida em que disso eram capazes, os teus discípulos contemplaram a tua glória, ó Cristo Deus; para que, quando Te vissem crucificado, compreendessem que a tua paixão era voluntária, e anunciassem ao mundo que Tu és verdadeiramente a irradiação do Pai»"
+        }
+      ]
     }
   ]
 }

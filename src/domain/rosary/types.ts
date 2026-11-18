@@ -1,4 +1,5 @@
 import type { Mystery } from '@/domain/mystery';
+import type { OpeningIntentions } from '@/domain/preferences/prayerPreferences';
 
 export type RosaryMode = 'full' | 'single' | 'tercio';
 
@@ -35,6 +36,8 @@ export type RosarySessionConfig = {
   mode: RosaryMode;
   set: MysterySet;
   mysteries: Mystery[];
+  /** Frases das três Ave-Marias iniciais. Padrão: fé, esperança e caridade. */
+  openingIntentions?: OpeningIntentions;
 };
 
 export type FixedPrayer = {

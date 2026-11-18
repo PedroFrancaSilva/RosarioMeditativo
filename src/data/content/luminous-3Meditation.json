@@ -1,48 +1,52 @@
 {
-  "reference": "Mc 1, 14-15",
-  "text": "Depois que João foi preso, Jesus foi para a Galileia, pregando o Evangelho de Deus, e dizendo: «Completou-se o tempo, e está próximo o reino de Deus; fazei penitência, e crede no Evangelho.»",
-  "commentaries": [
+  "passages": [
     {
-      "sortOrder": 0,
-      "author": "São João Paulo II",
-      "source": "*Rosarium Virginis Mariae*, 21 (texto abreviado)",
-      "text": "Mistério de luz é a pregação com a qual Jesus anuncia o advento do Reino de Deus e convida à conversão (cf. Mc 1, 15), perdoando os pecados de quem a Ele se dirige com humilde confiança … início do ministério de misericórdia que Ele prosseguirá exercendo até ao fim do mundo, especialmente através do sacramento da Reconciliação confiado à sua Igreja (cf. Jo 20, 22-23)."
+      "reference": "Mc 1, 14-15",
+      "text": "Depois que João foi preso, foi Jesus para a Galileia, pregando o Evangelho de Deus, e dizendo: «Está completo o tempo e aproxima-se o reino de Deus; fazei penitência, crede no Evangelho.»",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "São João Paulo II",
+          "source": "*Rosarium Virginis Mariae*, 21 (texto abreviado)",
+          "text": "Mistério de luz é a pregação com a qual Jesus anuncia o advento do Reino de Deus e convida à conversão (cf. Mc 1, 15), perdoando os pecados de quem a Ele se dirige com humilde confiança … início do ministério de misericórdia que Ele prosseguirá exercendo até ao fim do mundo, especialmente através do sacramento da Reconciliação confiado à sua Igreja (cf. Jo 20, 22-23)."
+        },
+        {
+          "sortOrder": 1,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 541",
+          "text": "«Depois de João ter sido preso, Jesus partiu para a Galileia. Aí proclamava a Boa-Nova da vinda de Deus, nestes termos: \"Completou-se o tempo e o Reino de Deus está próximo: convertei-vos e acreditai na Boa-Nova!\"» (Mc 1, 14-15). «Por isso, Cristo, a fim de cumprir a vontade do Pai, deu começo na terra ao Reino dos céus». … Esta reunião é a Igreja, a qual é na terra «o germe e o princípio» do Reino de Deus."
+        },
+        {
+          "sortOrder": 2,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 542",
+          "text": "Cristo está no centro desta reunião dos homens na «família de Deus». Reúne-os à sua volta pela sua palavra, pelos seus sinais que manifestam o Reino de Deus, pelo envio dos discípulos. E realizará a vinda do seu Reino sobretudo pelo grande mistério da sua Páscoa: a sua morte de cruz e a sua ressurreição. «E Eu, uma vez elevado da Terra, atrairei todos a Mim» (Jo 12, 32). Todos os homens são chamados a esta união com Cristo."
+        },
+        {
+          "sortOrder": 3,
+          "author": "São João Crisóstomo",
+          "source": "*Homiliae in Matthaeum*, hom. 14, 1-2 (texto abreviado)",
+          "text": "Veja-se que nesta pregação nada diz de si mesmo … no princípio falou de coisas agradáveis evangelizando o reino dos céus."
+        }
+      ]
     },
     {
-      "sortOrder": 1,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 541",
-      "text": "«Depois de João ter sido preso, Jesus partiu para a Galileia. Aí proclamava a Boa-Nova da vinda de Deus, nestes termos: \"Completou-se o tempo e o Reino de Deus está próximo: convertei-vos e acreditai na Boa-Nova!\"» (Mc 1, 14-15). «Por isso, Cristo, a fim de cumprir a vontade do Pai, deu começo na terra ao Reino dos céus». … Esta reunião é a Igreja, a qual é na terra «o germe e o princípio» do Reino de Deus."
-    },
-    {
-      "sortOrder": 2,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 542",
-      "text": "Cristo está no centro desta reunião dos homens na «família de Deus». Reúne-os à sua volta pela sua palavra, pelos seus sinais que manifestam o Reino de Deus, pelo envio dos discípulos. E realizará a vinda do seu Reino sobretudo pelo grande mistério da sua Páscoa: a sua morte de cruz e a sua ressurreição. «E Eu, uma vez elevado da Terra, atrairei todos a Mim» (Jo 12, 32). Todos os homens são chamados a esta união com Cristo."
-    },
-    {
-      "sortOrder": 3,
-      "author": "Catecismo da Igreja Católica",
-      "source": "CIC 543",
-      "text": "Todos os homens são chamados a entrar no Reino. Anunciado primeiro aos filhos de Israel, este Reino messiânico é destinado a acolher os homens de todas as nações. Para ter acesso a ele, é preciso acolher a Palavra de Jesus: «A Palavra do Senhor compara-se à semente lançada ao campo: aqueles que a ouvem com fé … já receberam o Reino …»"
-    },
-    {
-      "sortOrder": 4,
-      "author": "São Tomás de Aquino",
-      "source": "Suma Teológica, I-II, q. 108, a. 1, ad 1 (texto abreviado; tradução a partir do latim conferido em tomasdeaquino.org)",
-      "text": "O reino de Deus consiste principalmente nos actos interiores, mas, por consequência, pertencem também ao reino de Deus todas aquelas coisas sem as quais os actos interiores não podem existir. … se o reino de Deus é justiça interior, e paz, e gozo espiritual, é necessário que todos os actos exteriores que repugnem à justiça, ou à paz, ou ao gozo espiritual, repugnem também ao reino de Deus, e por isso devam ser proibidos no Evangelho do reino."
-    },
-    {
-      "sortOrder": 5,
-      "author": "São João Crisóstomo",
-      "source": "*Homiliae in Matthaeum*, hom. 14, 1-2 (texto abreviado)",
-      "text": "Veja-se que nesta pregação nada diz de si mesmo … no princípio falou de coisas agradáveis evangelizando o reino dos céus."
-    },
-    {
-      "sortOrder": 6,
-      "author": "Bento XVI",
-      "source": "Angelus, 25 de janeiro de 2009 (texto condensado, não é citação verbal)",
-      "text": "No Evangelho deste domingo ressoam as palavras da primeira pregação de Jesus na Galileia sobre o Reino próximo e a conversão (Mc 1, 15). A conversão cristã consiste em crer em Jesus morto e ressuscitado e abrir-se à luz da sua graça, deixando-se conduzir por Ele para sair do orgulho, do pecado e do egoísmo."
+      "reference": "Mc 4, 26-29",
+      "text": "Dizia também: «O reino de Deus é como um homem que lança a semente à terra. Dorme e se levanta, noite e dia, e a semente brota e cresce sem ele saber como. Porque a terra por si mesma produz, primeiramente, a erva, depois a espiga, e por último o trigo grado na espiga. E, quando o fruto está maduro, mete logo a fouce, porque está chegado o tempo da ceifa.»",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 543",
+          "text": "Todos os homens são chamados a entrar no Reino. Anunciado primeiro aos filhos de Israel, este Reino messiânico é destinado a acolher os homens de todas as nações. Para ter acesso a ele, é preciso acolher a Palavra de Jesus: «A Palavra do Senhor compara-se à semente lançada ao campo: aqueles que a ouvem com fé … já receberam o Reino …»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, I-II, q. 108, a. 1, ad 1 (texto abreviado; tradução a partir do latim conferido em tomasdeaquino.org)",
+          "text": "O reino de Deus consiste principalmente nos actos interiores, mas, por consequência, pertencem também ao reino de Deus todas aquelas coisas sem as quais os actos interiores não podem existir. … se o reino de Deus é justiça interior, e paz, e gozo espiritual, é necessário que todos os actos exteriores que repugnem à justiça, ou à paz, ou ao gozo espiritual, repugnem também ao reino de Deus, e por isso devam ser proibidos no Evangelho do reino."
+        }
+      ]
     }
   ]
 }

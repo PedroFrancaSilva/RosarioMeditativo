@@ -33,7 +33,7 @@ Detalhes de SQL, JSON e checklist longo: [reference.md](reference.md).
 | `images` | Por `mystery_id`; `sort_order` = ordem da galeria; `url` remoto; metadados de crédito; `resize_mode`, `rotate_every_n_hail_marys`, opcional `focal_*` / `drift_*`. |
 | `mysteries.meditation_ready` | `true` só quando o pacote está pronto para o checklist “Curado”. **Não** inferir de “tem passagem” — todos já têm Matos Soares no JSON. |
 
-Na oração: um par **sorteado** (uma passagem + um comentário **dela**), sem lista nem troca manual. Várias passagens entram no mesmo sorteio.
+Na oração: um par **sorteado** (uma passagem + um comentário **dela**). “Outra meditação” sorteia outro par do mesmo mistério. Várias passagens entram no mesmo sorteio.
 
 ## Fluxo recomendado (ordem)
 
@@ -60,10 +60,14 @@ Espelhe a estrutura de `src/data/content/annunciationMeditation.json`:
 
 ```json
 {
-  "reference": "…",
-  "text": "…",
-  "commentaries": [
-    { "sortOrder": 0, "author": "…", "source": "…", "text": "…" }
+  "passages": [
+    {
+      "reference": "…",
+      "text": "…",
+      "commentaries": [
+        { "sortOrder": 0, "author": "…", "source": "…", "text": "…" }
+      ]
+    }
   ]
 }
 ```
@@ -88,7 +92,7 @@ Arquivos típicos (seguir `joyful-1`):
 | JSON do pacote | `src/data/content/<slug>Meditation.json` |
 | Ignorar Matos Soares deste slug | `buildEmbeddedPassages`: `if (row.mystery_slug === '<slug>') continue` |
 | Passagem + comentários embutidos | `meditationContentRepository.ts`: funções/`if (contentSlug === '<slug>')` ou mapa por slug |
-| IDs estáveis embutidos | ex. `embedded-passage-<slug>-0`, `embedded-commentary-<slug>-{n}`; `passageId` em cada comentário |
+| IDs estáveis embutidos | `embedded-passage-<slug>-<i>`, `embedded-commentary-<slug>-<i>-<n>`; `passageId` em cada comentário |
 | Galeria de obras | `src/shared/constants/prayerAssets.ts` → `EMBEDDED_MYSTERY_GALLERIES['<slug>']` |
 | Ficheiros PNG/JPG | `assets/images/` (crops `_crop_sides` se usar o mesmo padrão da Anunciação) |
 | Flag Curado offline | `mysteryRepository.ts` → `meditationReady: seed.id === '<slug>'` (até ler só do remoto em todos os casos) |
@@ -108,7 +112,9 @@ Rodar: `npm test`, `npx tsc --noEmit`.
 
 ## O que não fazer
 
-- Não repor “Outra passagem” / “Outro comentário” na UI.
+- Não separar “Outra passagem” / “Outro comentário”: a troca é do par inteiro (“Outra meditação”).
+- Não pôr paráfrase sob o nome de um autor; não pôr notas editoriais dentro do texto da passagem ou do comentário (vão na `source`).
+- Passagem bíblica sempre verbatim (Matos Soares); cortes marcados com “…”. Grafia original da fonte mantida (pt-PT ou pt-BR).
 - Não marcar `meditation_ready` só porque existe passagem Matos Soares no JSON.
 - Não inserir comentário sem `passage_id`.
 - Não reescrever `passages-matos-soares.json` para entregar um pacote curado — usar JSON dedicado + skip no repositório.

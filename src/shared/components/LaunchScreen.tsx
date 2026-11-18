@@ -89,7 +89,7 @@ export function LaunchScreen({ onReady, onFinish }: Props) {
   return (
     <Animated.View
       style={[styles.screen, { width, height }, screenStyle]}
-      accessibilityLabel="Rosário Meditativo. Preparando seu momento de oração."
+      accessibilityLabel="Ora et Contempla. Preparando seu momento de oração."
       onLayout={() => {
         if (readyOnce.current) return;
         readyOnce.current = true;
@@ -114,8 +114,8 @@ export function LaunchScreen({ onReady, onFinish }: Props) {
       </View>
 
       <Animated.View style={[styles.copy, copyStyle]}>
-        <Text style={styles.eyebrow}>Ora et contempla</Text>
-        <Text style={styles.title}>Rosário{'\n'}Meditativo</Text>
+        <Text style={styles.eyebrow}>Rosário meditativo</Text>
+        <Text style={styles.title}>Ora et{'\n'}Contempla</Text>
         <Text style={styles.subtitle}>Preparando seu momento de oração</Text>
       </Animated.View>
 

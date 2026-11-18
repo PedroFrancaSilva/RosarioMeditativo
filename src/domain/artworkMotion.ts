@@ -3,6 +3,17 @@ export const ARTWORK_SCALE_START = 1;
 export const ARTWORK_SCALE_END = 1.045;
 export const ARTWORK_DURATION_MS = 18_000;
 
+/**
+ * Obra que transborda a tela num eixo é percorrida de borda a borda nesse eixo
+ * (vai e volta), para que se veja inteira. A velocidade fica perto deste valor;
+ * a duração de cada ida fica entre o fôlego padrão e o máximo abaixo, que é
+ * mais ou menos o tempo de duas Ave-Marias (o intervalo de rotação das obras).
+ */
+export const ARTWORK_SWEEP_SPEED_PX_PER_S = 36;
+export const ARTWORK_SWEEP_MAX_DURATION_MS = 30_000;
+/** Sobra mínima, em fração da tela, para valer a pena percorrer a obra. */
+export const ARTWORK_SWEEP_MIN_OVERFLOW = 0.08;
+
 export type ArtworkMotion = {
   focalX: number;
   focalY: number;
@@ -28,6 +39,10 @@ export type ArtworkPath = {
   start: ArtworkFrame;
   end: ArtworkFrame;
   durationMs: number;
+  /** Quadro parado no foco curado, para quem pede menos movimento. */
+  rest: ArtworkFrame;
+  /** Eixo percorrido de borda a borda, ou `null` quando a obra só “respira”. */
+  sweep: 'x' | 'y' | null;
 };
 
 export type ArtworkMotionInput = Partial<{
@@ -89,9 +104,48 @@ function frameAt(
   };
 }
 
+type Overflow = { x: number; y: number };
+
+/** Quanto da obra fica fora da tela, em px, já na escala final (a maior). */
+function overflowAt(
+  screenWidth: number,
+  screenHeight: number,
+  imageWidth: number,
+  imageHeight: number,
+  scale: number,
+): Overflow {
+  const cover = Math.max(screenWidth / imageWidth, screenHeight / imageHeight);
+  return {
+    x: Math.max(0, imageWidth * cover * scale - screenWidth),
+    y: Math.max(0, imageHeight * cover * scale - screenHeight),
+  };
+}
+
+/** Eixo a percorrer: o que mais transborda, se a sobra passar do mínimo. */
+export function artworkSweepAxis(
+  screenWidth: number,
+  screenHeight: number,
+  overflow: Overflow,
+): 'x' | 'y' | null {
+  const relX = overflow.x / screenWidth;
+  const relY = overflow.y / screenHeight;
+  if (Math.max(relX, relY) < ARTWORK_SWEEP_MIN_OVERFLOW) return null;
+  return relX >= relY ? 'x' : 'y';
+}
+
+export function artworkSweepDuration(distancePx: number): number {
+  const byspeed = (distancePx / ARTWORK_SWEEP_SPEED_PX_PER_S) * 1000;
+  return Math.round(clamp(byspeed, ARTWORK_DURATION_MS, ARTWORK_SWEEP_MAX_DURATION_MS));
+}
+
 /**
  * Translação do canto superior esquerdo da imagem já em cover, com escala
  * aplicada a partir desse canto. As bordas ficam grampeadas na tela.
+ *
+ * Obra mais larga (ou alta) que a tela: o caminho vai de uma borda à outra no
+ * eixo que transborda, começando pelo lado para onde a deriva aponta ao
+ * contrário (deriva positiva = da esquerda para a direita). O outro eixo segue o
+ * foco. Obra que cabe quase inteira: o fôlego curto em torno do foco.
  * Devolve `null` quando falta um tamanho utilizável.
  */
 export function artworkPath(input: ArtworkPathInput): ArtworkPath | null {
@@ -101,25 +155,44 @@ export function artworkPath(input: ArtworkPathInput): ArtworkPath | null {
     return null;
   }
   const motion = resolveArtworkMotion(input.motion);
+  const frame = (scale: number, fx: number, fy: number) =>
+    frameAt(screenWidth, screenHeight, imageWidth, imageHeight, scale, fx, fy);
+  const rest = frame(ARTWORK_SCALE_START, motion.focalX, motion.focalY);
+
+  const overflow = overflowAt(screenWidth, screenHeight, imageWidth, imageHeight, ARTWORK_SCALE_END);
+  const sweep = artworkSweepAxis(screenWidth, screenHeight, overflow);
+
+  if (sweep === 'x') {
+    // Foco 0 grampeia na borda esquerda, 1 na direita.
+    const [from, to] = motion.driftX >= 0 ? [0, 1] : [1, 0];
+    return {
+      durationMs: artworkSweepDuration(overflow.x),
+      start: frame(ARTWORK_SCALE_START, from, motion.focalY),
+      end: frame(ARTWORK_SCALE_END, to, clamp(motion.focalY + motion.driftY, 0, 1)),
+      rest,
+      sweep,
+    };
+  }
+  if (sweep === 'y') {
+    const [from, to] = motion.driftY >= 0 ? [0, 1] : [1, 0];
+    return {
+      durationMs: artworkSweepDuration(overflow.y),
+      start: frame(ARTWORK_SCALE_START, motion.focalX, from),
+      end: frame(ARTWORK_SCALE_END, clamp(motion.focalX + motion.driftX, 0, 1), to),
+      rest,
+      sweep,
+    };
+  }
+
   return {
     durationMs: ARTWORK_DURATION_MS,
-    start: frameAt(
-      screenWidth,
-      screenHeight,
-      imageWidth,
-      imageHeight,
-      ARTWORK_SCALE_START,
-      motion.focalX,
-      motion.focalY,
-    ),
-    end: frameAt(
-      screenWidth,
-      screenHeight,
-      imageWidth,
-      imageHeight,
+    start: rest,
+    end: frame(
       ARTWORK_SCALE_END,
       clamp(motion.focalX + motion.driftX, 0, 1),
       clamp(motion.focalY + motion.driftY, 0, 1),
     ),
+    rest,
+    sweep: null,
   };
 }
