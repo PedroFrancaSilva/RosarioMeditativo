@@ -87,19 +87,19 @@
 - **artist:** Pietro Perugino
 - **date:** 1495-1498
 - **institution:** Musée des Beaux-Arts de Lyon
-- **url:** https://commons.wikimedia.org/wiki/File:Pietro_Perugino_-_The_Ascension_of_Christ_-_WGA17257.jpg
+- **url:** https://commons.wikimedia.org/wiki/File:Pietro_Perugino_cat48c.jpg
 - **license:** PD-Art (Perugino, †1523); «Reproduction libre de droit» (MBA Lyon)
 - **porque representa este mistério:** Composição renascentista centrada na subida de Cristo e no grupo dos apóstolos.
 
-### 4 — Ascension of Christ (Tomar)
+### 4 — The Ascension of Christ (Mantegna)
 
-- **title:** Ascension of Christ (Charola, Convento de Cristo)
-- **artist:** Jorge Afonso
-- **date:** c. 1510
-- **institution:** Convento de Cristo, Tomar
-- **url:** https://commons.wikimedia.org/wiki/File:Ascen%C3%A7%C3%A3o_de_Cristo_Charola_Tomar_2.jpg
-- **license:** Domínio público (séc. XVI; Commons)
-- **porque representa este mistério:** Pintura portuguesa do políptico da Charola dedicada explicitamente à Ascensão.
+- **title:** The Ascension of Christ
+- **artist:** Andrea Mantegna
+- **date:** c. 1460-1470
+- **institution:** Galleria degli Uffizi, Florença (painel esquerdo do Tríptico dos Uffizi)
+- **url:** https://commons.wikimedia.org/wiki/File:Andrea_Mantegna_012.jpg
+- **license:** Domínio público (PD-Art; Commons)
+- **porque representa este mistério:** Cristo sobe numa mandorla de anjos enquanto a Virgem e os apóstolos olham do monte. Substitui a pintura de Jorge Afonso (Tomar), cujo único ficheiro na Commons tinha 297×307 px.
 
 ### 5 — The Ascension of Christ
 

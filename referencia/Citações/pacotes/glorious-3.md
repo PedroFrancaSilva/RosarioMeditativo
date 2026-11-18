@@ -121,7 +121,7 @@
 - **artist:** Duccio di Buoninsegna
 - **date:** 1308–1311
 - **institution:** Museo dell'Opera del Duomo, Siena
-- **url:** https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna_-_Pentecost_-_WGA06739.jpg
+- **url:** https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna_018.jpg
 - **license:** PD-Art (Commons / Web Gallery of Art)
 - **porque representa este mistério:** Tradição iconográfica sienesa: Maria presente com os apóstolos, como no Cenáculo orante antes da efusão.
 

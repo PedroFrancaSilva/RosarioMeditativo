@@ -98,7 +98,7 @@
 - **artist:** Lorenzo Lotto
 - **date:** c. 1510–1512
 - **institution:** Villa Colloredo Mels, Recanati
-- **url:** https://upload.wikimedia.org/wikipedia/commons/a/ab/Lorenzo_Lotto_-_Transfiguration_-_WGA13666.jpg
+- **url:** https://commons.wikimedia.org/wiki/File:Lorenzo_Lotto_065.jpg
 - **license:** Obra em domínio público; reprodução fotográfica PD-Art (Commons / Web Gallery of Art)
 - **porque representa este mistério:** Painel dedicado ao episódio evangélico, com Cristo glorificado e testemunhas da Lei e dos Profetas.
 
@@ -108,7 +108,7 @@
 - **artist:** Duccio di Buoninsegna
 - **date:** c. 1308–1311
 - **institution:** National Gallery, Londres (NG1330)
-- **url:** https://upload.wikimedia.org/wikipedia/commons/d/d2/Duccio_di_Buoninsegna_-_Transfiguration_-_WGA06780.jpg
+- **url:** https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna_039.jpg
 - **license:** Obra em domínio público; reprodução fotográfica PD-Art (Commons)
 - **porque representa este mistério:** Cristo no cimo da montanha com Moisés, Elias e os três discípulos — uma das primeiras grandes imagens narrativas da Transfiguração.
 
