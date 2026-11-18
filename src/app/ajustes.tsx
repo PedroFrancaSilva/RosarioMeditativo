@@ -1,7 +1,8 @@
+import Constants from 'expo-constants';
 import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useState, type ReactNode } from 'react';
-import { Platform, Pressable, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
+import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import {
@@ -14,9 +15,12 @@ import {
 } from '@/domain/preferences/prayerPreferences';
 import { completedCountLabel } from '@/domain/rosary/completionCount';
 import { openingLeads } from '@/domain/rosary/buildPrayerSteps';
+import { ChantToggle } from '@/features/chant/ChantToggle';
 import { usePrayerPreferences } from '@/features/preferences/preferencesContext';
 import { cancelDailyReminder, scheduleDailyReminder } from '@/features/reminder/dailyReminder';
 import { useCompletedCount } from '@/features/rosary-prayer/session/completionCounter';
+import { AppIcon } from '@/shared/components/AppIcon';
+import { ContemplativeSwitch } from '@/shared/components/ContemplativeSwitch';
 import { contemplative, contemplativeFonts } from '@/shared/constants/contemplative';
 
 const REMINDER_STEP_MINUTES = 15;
@@ -118,15 +122,23 @@ export default function SettingsScreen() {
           { paddingTop: insets.top + 16, paddingBottom: insets.bottom + 28 },
         ]}
         showsVerticalScrollIndicator={false}>
-        <Pressable
-          style={styles.backButton}
-          onPress={() => router.back()}
-          accessibilityRole="button"
-          accessibilityLabel="Voltar ao início">
-          <Text style={styles.backMark}>‹</Text>
-        </Pressable>
+        <View style={styles.topBar}>
+          <Pressable
+            style={styles.backButton}
+            onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))}
+            hitSlop={8}
+            accessibilityRole="button"
+            accessibilityLabel="Voltar ao início">
+            <AppIcon name="chevron_left" size={20} color={contemplative.cream} />
+          </Pressable>
+          <AppIcon name="settings" size={18} color={contemplative.goldFaint} />
+        </View>
         <Text style={styles.title}>Ajustes</Text>
         <Text style={styles.counter}>{completedCountLabel(completedCount ?? 0)}</Text>
+
+        <Section title="Canto gregoriano">
+          <ChantToggle />
+        </Section>
 
         <Section title="Tamanho do texto">
           <Segmented
@@ -146,12 +158,10 @@ export default function SettingsScreen() {
               <Text style={styles.rowLabel}>Vibrar a cada conta</Text>
               <Text style={styles.hint}>Um toque leve por oração; outro, diferente, ao fim da dezena.</Text>
             </View>
-            <Switch
+            <ContemplativeSwitch
               value={preferences.haptics}
               onValueChange={(haptics) => update({ haptics })}
               accessibilityLabel="Vibrar a cada conta"
-              trackColor={{ false: '#3a342c', true: contemplative.gold }}
-              thumbColor={contemplative.cream}
             />
           </View>
         </Section>
@@ -176,13 +186,11 @@ export default function SettingsScreen() {
           <Section title="Lembrete diário">
             <View style={styles.row}>
               <Text style={styles.rowLabel}>Lembrar de rezar</Text>
-              <Switch
+              <ContemplativeSwitch
                 value={reminder.enabled}
                 disabled={busy}
                 onValueChange={(enabled) => void applyReminder({ ...reminder, enabled })}
                 accessibilityLabel="Lembrete diário"
-                trackColor={{ false: '#3a342c', true: contemplative.gold }}
-                thumbColor={contemplative.cream}
               />
             </View>
             <View style={styles.timeRow}>
@@ -211,6 +219,22 @@ export default function SettingsScreen() {
             {reminderNote ? <Text style={styles.warning}>{reminderNote}</Text> : null}
           </Section>
         ) : null}
+
+        <Section title="Sobre">
+          <Text style={styles.aboutTitle}>Ora et Contempla</Text>
+          <Text style={styles.hint}>
+            As obras de fundo são de domínio público. Durante a oração, toque no nome da obra para
+            ver o acervo e a fonte da imagem; toque em “Ver a fonte” para ler cada citação por inteiro.
+          </Text>
+          <Text style={styles.hint}>
+            Bíblia: tradução do Pe. Matos Soares. Versão {Constants.expoConfig?.version ?? '—'} (alfa).
+          </Text>
+          {__DEV__ ? (
+            <Pressable onPress={() => router.push('/modal')} accessibilityRole="button">
+              <Text style={styles.devLink}>Ferramentas de desenvolvimento</Text>
+            </Pressable>
+          ) : null}
+        </Section>
       </ScrollView>
     </View>
   );
@@ -219,16 +243,23 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: contemplative.background },
   container: { paddingHorizontal: 25 },
+  topBar: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  devLink: {
+    color: contemplative.muted,
+    fontFamily: contemplativeFonts.sans,
+    fontSize: 12,
+    textDecorationLine: 'underline',
+  },
+  aboutTitle: { color: contemplative.cream, fontFamily: contemplativeFonts.serif, fontSize: 20 },
   backButton: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     borderWidth: 1,
-    borderColor: 'rgba(242,234,219,0.28)',
+    borderColor: 'rgba(242,234,219,0.18)',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  backMark: { color: contemplative.cream, fontSize: 28, lineHeight: 30, marginTop: -2 },
   title: {
     marginTop: 20,
     color: contemplative.cream,

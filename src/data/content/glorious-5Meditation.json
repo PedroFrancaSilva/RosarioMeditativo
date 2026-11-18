@@ -12,12 +12,6 @@
         },
         {
           "sortOrder": 1,
-          "author": "São João Paulo II",
-          "source": "Rosarium Virginis Mariae, § 23 (texto abreviado)",
-          "text": "«Enfim, coroada de glória – como aparece no último mistério glorioso – Ela resplandece como Rainha dos Anjos e dos Santos, antecipação e ponto culminante da condição escatológica da Igreja.»"
-        },
-        {
-          "sortOrder": 2,
           "author": "Pio XII",
           "source": "Encíclica Ad caeli reginam, § 31 (texto abreviado)",
           "text": "«Finalmente a arte cristã … desde o concílio de Éfeso … chegando até a figurar o divino Redentor no ato de cingir com brilhante coroa a cabeça da própria Mãe.» … «no santo rosário … do quinto mistério glorioso, o reino de Maria, que abraça o céu e a terra.»"
@@ -25,8 +19,8 @@
       ]
     },
     {
-      "reference": "Lc 1, 48-50",
-      "text": "… porque lançou os olhos para a baixeza da sua serva. Portanto, eis que, de hoje em diante, todas as gerações me chamarão bem-aventurada. Porque o Todo-poderoso fez em mim grandes coisas, o seu nome é santo. E a sua misericórdia se estende de geração em geração sobre aqueles que o temem.",
+      "reference": "1 Rs 2, 19-20",
+      "text": "Foi, pois, Betsabé ter com o rei Salomão, para lhe falar em favor de Adonias. O rei levantou-se para a vir receber, saúdou-a com profunda reverência e sentou-se no seu trono e mandou colocar um trono para a mãe do rei, a qual se sentou à sua mão direita. Ela disse-lhe: Eu só te peço uma pequena coisa, não me envergonhes com a repulsa. O rei disse-lhe: Pede, minha mãe, porque não é justo que vás descontente.",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -51,6 +45,18 @@
           "author": "São Bernardo de Claraval",
           "source": "In laudibus Virginis Matris (Super Missus est), homilia II, 17 (texto abreviado)",
           "text": "«Ó tu, que na instabilidade deste mundo sentes que és mais sacudido pelas tormentas … não desvies o olhar do fulgor desta estrela … olha para a estrela, invoca Maria.» … «Nos perigos, nas angústias e nas incertezas, pensa em Maria, invoca Maria.» … «Seguindo-a, não te desviarás; invocando-a, não desesperarás … se te é propícia chegarás ao fim.»"
+        }
+      ]
+    },
+    {
+      "reference": "Sl 44, 10-12",
+      "text": "Filhas de reis saem ao teu encontro, a rainha está à tua dextra, ornada com ouro de Ofir. Escuta, ó filha, e vê, inclina o teu ouvido, e esquece-te do teu povo e da casa de teu pai. O rei desejará a tua beleza: ele é o teu Senhor, presta-lhe homenagem.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "São João Paulo II",
+          "source": "Rosarium Virginis Mariae, § 23 (texto abreviado)",
+          "text": "«Enfim, coroada de glória – como aparece no último mistério glorioso – Ela resplandece como Rainha dos Anjos e dos Santos, antecipação e ponto culminante da condição escatológica da Igreja.»"
         }
       ]
     }

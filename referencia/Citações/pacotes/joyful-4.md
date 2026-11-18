@@ -132,7 +132,7 @@ Cinco obras, cinco artistas. Quatro no Met, com `isPublicDomain: true` e imagem 
 - artist: Fra Angelico
 - date: 1440–1442
 - institution: Museu de São Marcos, Florença
-- url: https://commons.wikimedia.org/wiki/File:Fra_Angelico_-_Presentation_of_Jesus_in_the_Temple_(Cell_10)_-_WGA00544.jpg
+- url: https://commons.wikimedia.org/wiki/File:Presentation_of_Jesus_at_the_Temple_by_Fra_Angelico_(San_Marco_Cell_10).jpg
 - license: Domínio público da obra (autor morto em 1455). O ficheiro Commons está identificado como livre de restrições conhecidas (reprodução fiel de obra bidimensional em domínio público; Public Domain Mark). Nalgumas jurisdições, a fotografia de uma obra em domínio público pode ter regime próprio; aqui segue-se a marcação do ficheiro.
 - porque representa este mistério: O fresco da cela 10 de São Marcos é a Apresentação de Jesus no Templo. A ficha Commons indica o Menino e Maria entre as figuras.
 

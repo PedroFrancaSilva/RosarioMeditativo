@@ -16,6 +16,9 @@ export type MysteryImageCredit = {
 export const DEFAULT_MYSTERY_IMAGE_CREDIT: MysteryImageCredit = {
   title: 'Imaculada Conceição',
   artist: 'Cristóbal de Villalpando',
+  description: 'Óleo sobre tela, ca. 1680–1690. Catedral de Puebla, México. Domínio público.',
+  sourceUrl:
+    'https://commons.wikimedia.org/wiki/File:La_Pur%C3%ADsima_Concepci%C3%B3n_-_Crist%C3%B3bal_de_Villalpando.jpg',
 };
 
 export type EmbeddedMysteryImageEntry = {

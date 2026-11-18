@@ -8,7 +8,7 @@
           "sortOrder": 0,
           "author": "São João Paulo II",
           "source": "Rosarium Virginis Mariae, § 21 (texto abreviado)",
-          "text": "«… 5.º na instituição da Eucaristia, expressão sacramental do mistério pascal. … Mistério de luz é, enfim, a instituição da Eucaristia, na qual Cristo Se faz alimento com o seu Corpo e o seu Sangue sob os sinais do pão e do vinho, testemunhando «até ao extremo» o seu amor pela humanidade (Jo 13, 1), por cuja salvação Se oferecerá em sacrifício.»"
+          "text": "«Mistério de luz é, enfim, a instituição da Eucaristia, na qual Cristo Se faz alimento com o seu Corpo e o seu Sangue sob os sinais do pão e do vinho, testemunhando «até ao extremo» o seu amor pela humanidade (Jo 13, 1), por cuja salvação Se oferecerá em sacrifício.»"
         },
         {
           "sortOrder": 1,
@@ -24,12 +24,18 @@
         },
         {
           "sortOrder": 3,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 1376 (Concílio de Trento, sess. XIII, cap. 4)",
+          "text": "O Concílio de Trento resume a fé católica, ao declarar: «Porque Cristo, nosso Redentor, disse que aquilo que oferecia sob a espécie do pão era verdadeiramente o seu corpo, sempre na Igreja se teve esta convicção, que o sagrado Concílio de novo declara: pela consagração do pão e do vinho opera-se a conversão de toda a substância do pão na substância do corpo de Cristo nosso Senhor e de toda a substância do vinho na substância do seu sangue; esta conversão, de modo conveniente e apropriado, foi chamada pela santa Igreja católica transubstanciação»."
+        },
+        {
+          "sortOrder": 4,
           "author": "São Tomás de Aquino",
           "source": "Suma Teológica, III, q. 73, a. 2",
           "text": "Pelo contrário, diz o Apóstolo em 1 Cor 10,17: ainda que sejamos muitos, somos um só pão e um só corpo, todos os que participamos de um só pão e de um só cálice. Donde se conclui que a Eucaristia é o sacramento da unidade eclesiástica. … Este sacramento está ordenado ao alimento espiritual … para a integridade deste sacramento concorrem o cibo espiritual e a bebida espiritual … Por isso este sacramento é materialmente múltiplo, mas um formal e perfeitivamente."
         },
         {
-          "sortOrder": 4,
+          "sortOrder": 5,
           "author": "São Tomás de Aquino",
           "source": "Suma Teológica, III, q. 73, a. 3",
           "text": "… Como o batismo se chama sacramento da fé, que é o fundamento da vida espiritual, assim a eucaristia se chama sacramento da caridade, que é o «vínculo da perfeição», como se diz em Cl 3,14."

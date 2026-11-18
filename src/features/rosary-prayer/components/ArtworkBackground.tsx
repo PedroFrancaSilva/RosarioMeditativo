@@ -17,6 +17,7 @@ import type { ImageSourcePropType } from 'react-native';
 import Animated, {
   Easing,
   cancelAnimation,
+  interpolate,
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
@@ -102,6 +103,9 @@ export function ArtworkBackground({ source, motion, backgroundKey }: Props) {
   const startScale = useSharedValue(1);
   const endScale = useSharedValue(1);
   const visible = useSharedValue(0);
+  /** Curva tempo → posição da ida (rápida nas bordas, lenta no foco). */
+  const timeIn = useSharedValue<number[]>([0, 1]);
+  const timeOut = useSharedValue<number[]>([0, 1]);
 
   useEffect(() => {
     let active = true;
@@ -161,10 +165,12 @@ export function ArtworkBackground({ source, motion, backgroundKey }: Props) {
     endY.value = current.end.translateY;
     startScale.value = current.start.scale;
     endScale.value = current.end.scale;
+    timeIn.value = current.timeline.progress;
+    timeOut.value = current.timeline.position;
     progress.value = 0;
     progress.value = withRepeat(
-      // Ida e volta suaves: desacelera nas bordas da obra, sem tranco na virada.
-      withTiming(1, { duration: current.durationMs, easing: Easing.inOut(Easing.sin) }),
+      // Tempo linear; a curva da obra (timeline) decide onde ela anda devagar.
+      withTiming(1, { duration: current.durationMs, easing: Easing.linear }),
       -1,
       true,
     );
@@ -183,11 +189,13 @@ export function ArtworkBackground({ source, motion, backgroundKey }: Props) {
     startScale,
     startX,
     startY,
+    timeIn,
+    timeOut,
     visible,
   ]);
 
   const animatedStyle = useAnimatedStyle(() => {
-    const t = progress.value;
+    const t = interpolate(progress.value, timeIn.value, timeOut.value);
     return {
       opacity: visible.value,
       transform: [

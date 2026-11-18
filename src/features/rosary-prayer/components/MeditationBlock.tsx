@@ -1,5 +1,13 @@
 import type { Commentary, Passage } from '@/domain/mystery';
+import {
+  commentaryLink,
+  passageLabel,
+  passageLink,
+  shortCitationSource,
+} from '@/domain/citationSources';
 import { meditationExcerpt } from '@/domain/meditationExcerpt';
+import { AppIcon } from '@/shared/components/AppIcon';
+import type { SourceSheetContent } from '@/shared/components/SourceSheet';
 import { usePrayerPreferences } from '@/features/preferences/preferencesContext';
 import { contemplative, contemplativeFonts } from '@/shared/constants/contemplative';
 import { useState } from 'react';
@@ -13,7 +21,23 @@ type Props = {
   onOpenDeeper: () => void;
   canDrawAnother?: boolean;
   onDrawAnother?: () => void;
+  /** Abre a ficha com a referência completa e o link para o texto. */
+  onOpenSource?: (content: SourceSheetContent) => void;
 };
+
+function SourceLink({ label, onPress }: { label: string; onPress: () => void }) {
+  return (
+    <Pressable
+      style={styles.sourceLink}
+      onPress={onPress}
+      hitSlop={8}
+      accessibilityRole="button"
+      accessibilityLabel={label}>
+      <AppIcon name="menu_book" size={13} color={contemplative.gold} />
+      <Text style={styles.sourceLinkText}>{label}</Text>
+    </Pressable>
+  );
+}
 
 function ExpandableText({ text, meta }: { text: string; meta?: string }) {
   const excerpt = meditationExcerpt(text);
@@ -55,6 +79,7 @@ export function MeditationBlock({
   onOpenDeeper,
   canDrawAnother = false,
   onDrawAnother,
+  onOpenSource,
 }: Props) {
   if (status === 'loading') {
     return (
@@ -72,17 +97,53 @@ export function MeditationBlock({
   return (
     <View style={styles.wrap}>
       <View style={styles.block}>
-        <Text style={styles.reference}>Evangelho</Text>
-        <Text style={styles.reference}>{passage.reference}</Text>
+        <View style={styles.referenceRow}>
+          <Text style={styles.reference}>{passageLabel(passage.reference)}</Text>
+          <Text style={styles.referenceDot}>·</Text>
+          <Text style={styles.reference}>{passage.reference}</Text>
+        </View>
         <ExpandableText text={passage.text} />
+        {onOpenSource ? (
+          <SourceLink
+            label="Ler no contexto"
+            onPress={() => {
+              const link = passageLink(passage.reference);
+              onOpenSource({
+                kicker: passageLabel(passage.reference),
+                title: passage.reference,
+                subtitle: 'Tradução do Pe. Matos Soares',
+                notes: 'O capítulo inteiro abre numa edição católica online (Bíblia Ave-Maria), que pode diferir ligeiramente na tradução.',
+                link,
+              });
+            }}
+          />
+        ) : null}
       </View>
       {commentary ? (
         <View style={styles.block}>
           <Text style={styles.reference}>Comentário</Text>
           <ExpandableText
             text={commentary.text}
-            meta={`${commentary.author}${commentary.source ? ` · ${commentary.source}` : ''}`}
+            meta={`${commentary.author}${commentary.source ? ` · ${shortCitationSource(commentary.source)}` : ''}`}
           />
+          {onOpenSource ? (
+            <SourceLink
+              label="Ver a fonte"
+              onPress={() => {
+                const link = commentaryLink(commentary.author, commentary.source);
+                onOpenSource({
+                  kicker: 'Comentário',
+                  title: commentary.author,
+                  subtitle: shortCitationSource(commentary.source) || undefined,
+                  notes:
+                    commentary.source && commentary.source.replace(/\*/g, '') !== shortCitationSource(commentary.source)
+                      ? commentary.source.replace(/\*/g, '')
+                      : undefined,
+                  link,
+                });
+              }}
+            />
+          ) : null}
         </View>
       ) : null}
       {hasDeeperReferences || (canDrawAnother && onDrawAnother) ? (
@@ -121,6 +182,29 @@ const styles = StyleSheet.create({
   },
   block: {
     gap: 6,
+  },
+  referenceRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 6,
+  },
+  referenceDot: {
+    color: contemplative.goldFaint,
+    fontSize: 10,
+  },
+  sourceLink: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    gap: 6,
+    paddingVertical: 2,
+  },
+  sourceLinkText: {
+    color: contemplative.gold,
+    fontFamily: contemplativeFonts.sansSemi,
+    fontSize: 11,
+    letterSpacing: 0.4,
   },
   reference: {
     color: contemplative.gold,
