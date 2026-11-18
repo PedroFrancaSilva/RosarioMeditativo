@@ -22,6 +22,9 @@ import type { StepPresentation } from '@/features/rosary-prayer/session/stepPres
 import type { RosaryProgressModel } from '@/domain/rosary/rosaryProgress';
 import type { MysteryType } from '@/domain/mystery';
 import { TERCO_TITLES } from '@/domain/mysteryTerco';
+import { AppIcon } from '@/shared/components/AppIcon';
+import { SourceSheet, type SourceSheetContent } from '@/shared/components/SourceSheet';
+import { artworkSheet } from '@/features/rosary-prayer/components/artworkSheet';
 import { contemplative, contemplativeFonts, contemplativeMotion } from '@/shared/constants/contemplative';
 import { useKeepAwake } from 'expo-keep-awake';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -94,6 +97,7 @@ export function PrayerScreen({
   );
   const meditation = useMeditationSelection(meditationQuery.data);
   const [deeperOpen, setDeeperOpen] = useState(false);
+  const [sheet, setSheet] = useState<SourceSheetContent | null>(null);
   const advancing = useRef(false);
   /** Só vibra ao chegar a um passo avançando (não ao voltar nem ao retomar). */
   const movedForward = useRef(false);
@@ -188,8 +192,14 @@ export function PrayerScreen({
         <View style={styles.background}>
           <ArtworkBackground key={backgroundKey} source={source} motion={motion} backgroundKey={backgroundKey} />
           <LinearGradient
-            colors={['rgba(13,11,10,0.12)', 'rgba(13,11,10,0.28)', contemplative.background]}
-            locations={[0, 0.42, 1]}
+            // Topo levemente escurecido: o cabeçalho continua legível sobre obras claras.
+            colors={[
+              'rgba(13,11,10,0.62)',
+              'rgba(13,11,10,0.12)',
+              'rgba(13,11,10,0.28)',
+              contemplative.background,
+            ]}
+            locations={[0, 0.16, 0.42, 1]}
             style={styles.gradient}>
             <View style={[styles.header, { paddingTop: insets.top + 8 }]}>
               <Pressable
@@ -243,14 +253,16 @@ export function PrayerScreen({
                   </Pressable>
                 </View>
               )}
-              {credit && presentation.step.mysteryId == null ? (
+              {credit ? (
                 <Pressable
                   style={styles.credit}
-                  onPress={() => undefined}
-                  accessibilityRole="text"
-                  accessibilityLabel={`${credit.title}, ${credit.artist}`}>
+                  onPress={() => setSheet(artworkSheet(credit))}
+                  hitSlop={8}
+                  accessibilityRole="button"
+                  accessibilityLabel={`Sobre a obra: ${credit.title}, ${credit.artist}`}>
+                  <AppIcon name="info" size={13} color="rgba(242,234,219,0.7)" />
                   <Text style={styles.creditText} numberOfLines={1}>
-                    {credit.title} — {credit.artist}
+                    {credit.title} · {credit.artist}
                   </Text>
                 </Pressable>
               ) : null}
@@ -291,6 +303,7 @@ export function PrayerScreen({
                         onOpenDeeper={() => setDeeperOpen(true)}
                         canDrawAnother={meditation.canDrawAnother}
                         onDrawAnother={meditation.drawAnother}
+                        onOpenSource={setSheet}
                       />
                     ) : null}
                     <PrayerTextBlock
@@ -315,6 +328,7 @@ export function PrayerScreen({
           references={meditation.deeperReferences}
           onClose={() => setDeeperOpen(false)}
         />
+        <SourceSheet content={sheet} onClose={() => setSheet(null)} />
       </Animated.View>
     </GestureDetector>
   );
@@ -433,10 +447,18 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 16,
     bottom: 8,
-    maxWidth: '78%',
+    maxWidth: '82%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    borderRadius: 14,
+    backgroundColor: 'rgba(13,11,10,0.38)',
   },
   creditText: {
-    color: 'rgba(242,234,219,0.55)',
+    flexShrink: 1,
+    color: 'rgba(242,234,219,0.72)',
     fontFamily: contemplativeFonts.sans,
     fontSize: 9,
     letterSpacing: 1.2,

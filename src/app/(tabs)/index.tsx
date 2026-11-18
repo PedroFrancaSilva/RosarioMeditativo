@@ -3,11 +3,11 @@ import type { MysteryType } from '@/domain/mystery';
 import { groupMysteriesByTerco, tercoTypeForDate } from '@/domain/mysteryTerco';
 import type { MysterySet } from '@/domain/rosary/types';
 import { completedCountLabel } from '@/domain/rosary/completionCount';
-import { ChantToggle } from '@/features/chant/ChantToggle';
 import { useCompletedCount } from '@/features/rosary-prayer/session/completionCounter';
 import { ResumePrayerDialog } from '@/features/rosary-prayer/components/ResumePrayerDialog';
 import { usePrayerStart } from '@/features/rosary-prayer/hooks/usePrayerStart';
 import type { PrayerStartIntent } from '@/features/rosary-prayer/navigation/incompleteSessionLabel';
+import { AppIcon } from '@/shared/components/AppIcon';
 import { contemplative, contemplativeFonts } from '@/shared/constants/contemplative';
 import { router, type Href } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -56,9 +56,19 @@ export default function HomePrayerScreen() {
           { paddingTop: insets.top + 28, paddingBottom: insets.bottom + 28 },
         ]}
         showsVerticalScrollIndicator={false}>
-        <View style={styles.eyebrowRow}>
-          <View style={styles.eyebrowRule} />
-          <Text style={styles.eyebrow}>Rosário meditativo</Text>
+        <View style={styles.topBar}>
+          <View style={styles.eyebrowRow}>
+            <View style={styles.eyebrowRule} />
+            <Text style={styles.eyebrow}>Rosário meditativo</Text>
+          </View>
+          <Pressable
+            style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}
+            onPress={() => router.push('/ajustes' as Href)}
+            hitSlop={8}
+            accessibilityRole="button"
+            accessibilityLabel="Ajustes">
+            <AppIcon name="settings" size={20} color={contemplative.cream} />
+          </Pressable>
         </View>
         <Text style={styles.title}>Ora et{'\n'}Contempla</Text>
         <Text style={styles.intro}>Um momento de silêncio, presença e oração.</Text>
@@ -87,7 +97,10 @@ export default function HomePrayerScreen() {
           </Pressable>
         </View>
 
-        <Pressable style={styles.completeCard} onPress={startFull} accessibilityRole="button">
+        <Pressable
+          style={({ pressed }) => [styles.completeCard, pressed && styles.pressed]}
+          onPress={startFull}
+          accessibilityRole="button">
           <View style={styles.cross}>
             <Text style={styles.crossMark}>✦</Text>
           </View>
@@ -128,7 +141,7 @@ export default function HomePrayerScreen() {
               {daySection.mysteries.map((mystery, index) => (
                 <Pressable
                   key={mystery.id}
-                  style={styles.mysteryRow}
+                  style={({ pressed }) => [styles.mysteryRow, pressed && styles.pressed]}
                   onPress={() => startSingle(mystery.id)}
                   accessibilityRole="button">
                   <Text style={styles.number}>{index + 1}</Text>
@@ -140,20 +153,19 @@ export default function HomePrayerScreen() {
           </View>
         ) : null}
 
-        <View style={styles.links}>
-          <Pressable
-            onPress={() =>
-              router.push({ pathname: '/meditation-coverage', params: { set } } as Href)
-            }
-            accessibilityRole="button">
-            <Text style={styles.coverageText}>Escolher um terço</Text>
-          </Pressable>
-          <Pressable onPress={() => router.push('/ajustes' as Href)} accessibilityRole="button">
-            <Text style={styles.coverageText}>Ajustes</Text>
-          </Pressable>
-        </View>
-
-        <ChantToggle />
+        <Pressable
+          style={({ pressed }) => [styles.chooseCard, pressed && styles.pressed]}
+          onPress={() =>
+            router.push({ pathname: '/meditation-coverage', params: { set } } as Href)
+          }
+          accessibilityRole="button">
+          <AppIcon name="menu_book" size={20} color={contemplative.gold} />
+          <View style={styles.completeCopy}>
+            <Text style={styles.completeKicker}>Outro dia, outro terço</Text>
+            <Text style={styles.chooseTitle}>Escolher um terço</Text>
+          </View>
+          <Text style={styles.chevron}>›</Text>
+        </Pressable>
 
         <View style={styles.footer}>
           <View style={styles.footerRule} />
@@ -187,11 +199,45 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     gap: 0,
   },
+  topBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 14,
+  },
   eyebrowRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 11,
-    marginBottom: 14,
+  },
+  iconButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(242,234,219,0.18)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  pressed: {
+    opacity: 0.6,
+  },
+  chooseCard: {
+    marginTop: 24,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    borderRadius: 18,
+    borderWidth: 1,
+    borderColor: contemplative.panelBorder,
+  },
+  chooseTitle: {
+    color: contemplative.cream,
+    fontFamily: contemplativeFonts.serif,
+    fontSize: 19,
+    lineHeight: 23,
   },
   eyebrowRule: {
     width: 22,
@@ -388,13 +434,6 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 22,
   },
-  links: {
-    marginTop: 28,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    columnGap: 24,
-    rowGap: 12,
-  },
   counter: {
     marginTop: 10,
     color: contemplative.gold,
@@ -402,12 +441,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
     letterSpacing: 1.6,
     textTransform: 'uppercase',
-  },
-  coverageText: {
-    color: contemplative.gold,
-    fontFamily: contemplativeFonts.serifItalic,
-    fontSize: 16,
-    textDecorationLine: 'underline',
   },
   footer: {
     marginTop: 28,

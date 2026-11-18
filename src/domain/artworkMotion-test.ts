@@ -8,6 +8,13 @@ import {
   DEFAULT_ARTWORK_MOTION,
   resolveArtworkMotion,
   type ArtworkFrame,
+  ARTWORK_SWEEP_FOCUS_SPEED_RATIO,
+  ARTWORK_SWEEP_SPEED_PX_PER_S,
+  ARTWORK_SWEEP_TURN_SPEED_RATIO,
+  artworkBreathTimeline,
+  artworkSweepSpeed,
+  artworkSweepTimeline,
+  artworkTimelineAt,
 } from '@/domain/artworkMotion';
 import { getEmbeddedMysteryImageEntry } from '@/shared/constants/prayerAssets';
 
@@ -113,5 +120,68 @@ describe('artworkPath', () => {
     expect(artworkSweepAxis(390, 844, { x: 300, y: 0 })).toBe('x');
     expect(artworkSweepAxis(390, 844, { x: 0, y: 400 })).toBe('y');
     expect(artworkSweepAxis(390, 844, { x: 10, y: 10 })).toBeNull();
+  });
+});
+
+describe('varredura com velocidade variável', () => {
+  it('corre nas bordas e desacelera no foco', () => {
+    const focus = 0.5;
+    expect(artworkSweepSpeed(0.2, focus)).toBeGreaterThan(0.9);
+    expect(artworkSweepSpeed(0.8, focus)).toBeGreaterThan(0.9);
+    expect(artworkSweepSpeed(0.5, focus)).toBeCloseTo(ARTWORK_SWEEP_FOCUS_SPEED_RATIO, 2);
+    // Vira devagar, sem tranco, mas sem parar.
+    expect(artworkSweepSpeed(0, focus)).toBeCloseTo(ARTWORK_SWEEP_TURN_SPEED_RATIO * 1, 1);
+    expect(artworkSweepSpeed(0, focus)).toBeGreaterThan(0);
+  });
+
+  it('a curva tempo → posição é crescente e passa mais tempo perto do foco', () => {
+    const { timeline } = artworkSweepTimeline(1000, 0.5);
+    for (let i = 1; i < timeline.progress.length; i += 1) {
+      expect(timeline.progress[i]).toBeGreaterThan(timeline.progress[i - 1]);
+      expect(timeline.position[i]).toBeGreaterThan(timeline.position[i - 1]);
+    }
+    expect(timeline.progress[0]).toBe(0);
+    expect(timeline.progress[timeline.progress.length - 1]).toBeCloseTo(1);
+    // O terço central do caminho leva bem mais que um terço do tempo.
+    const timeAt = (s: number) => {
+      const i = timeline.position.findIndex((p) => p >= s);
+      return timeline.progress[i];
+    };
+    expect(timeAt(2 / 3) - timeAt(1 / 3)).toBeGreaterThan(0.45);
+  });
+
+  it('a ida fica mais lenta que a velocidade de borda, sem passar do teto', () => {
+    const plain = (1000 / ARTWORK_SWEEP_SPEED_PX_PER_S) * 1000;
+    const { durationMs } = artworkSweepTimeline(1000, 0.5);
+    expect(durationMs).toBeGreaterThan(plain * 1.2);
+    expect(artworkSweepTimeline(20_000, 0.5).durationMs).toBe(ARTWORK_SWEEP_MAX_DURATION_MS);
+  });
+
+  it('o trecho lento acompanha o foco curado da obra', () => {
+    const left = artworkPath({ ...SCREEN, motion: { focalX: 0.3 } })!;
+    const right = artworkPath({ ...SCREEN, motion: { focalX: 0.7 } })!;
+    const slowest = (path: typeof left) => {
+      let best = 0;
+      let bestDt = 0;
+      for (let i = 1; i < path.timeline.position.length; i += 1) {
+        const dt = path.timeline.progress[i] - path.timeline.progress[i - 1];
+        if (dt > bestDt) {
+          bestDt = dt;
+          best = path.timeline.position[i];
+        }
+      }
+      return best;
+    };
+    expect(slowest(left)).toBeLessThan(0.45);
+    expect(slowest(right)).toBeGreaterThan(0.55);
+  });
+
+  it('interpola a curva no tempo', () => {
+    const breath = artworkBreathTimeline();
+    expect(artworkTimelineAt(breath, 0)).toBe(0);
+    expect(artworkTimelineAt(breath, 1)).toBeCloseTo(1);
+    expect(artworkTimelineAt(breath, 0.5)).toBeCloseTo(0.5);
+    const path = artworkPath(SCREEN)!;
+    expect(artworkTimelineAt(path.timeline, 0.5)).toBeCloseTo(0.5, 1);
   });
 });

@@ -114,3 +114,49 @@ describe('<MeditationBlock />', () => {
     expect(queryByText('Outra meditação')).toBeNull();
   });
 });
+
+describe('<MeditationBlock /> fontes', () => {
+  it('abre a ficha da passagem e do comentário com o link do texto completo', async () => {
+    const user = userEvent.setup();
+    const onOpenSource = jest.fn();
+    const { getByLabelText } = await render(
+      <MeditationBlock
+        status="ready"
+        passage={passage}
+        commentary={commentary}
+        hasDeeperReferences={false}
+        onOpenDeeper={() => undefined}
+        onOpenSource={onOpenSource}
+      />,
+    );
+    await user.press(getByLabelText('Ler no contexto'));
+    expect(onOpenSource).toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        kicker: 'Evangelho',
+        title: 'Lc 1, 26-27',
+        link: expect.objectContaining({ url: 'https://www.bibliacatolica.com.br/biblia-ave-maria/sao-lucas/1/' }),
+      }),
+    );
+    await user.press(getByLabelText('Ver a fonte'));
+    expect(onOpenSource).toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        kicker: 'Comentário',
+        title: 'São Tomás de Aquino',
+        link: expect.objectContaining({ url: 'https://www.newadvent.org/summa/4030.htm#article1' }),
+      }),
+    );
+  });
+
+  it('passagem fora dos evangelhos não leva o rótulo Evangelho', async () => {
+    const { getByText, queryByText } = await render(
+      <MeditationBlock
+        status="ready"
+        passage={{ ...passage, reference: 'Is 53, 5' }}
+        hasDeeperReferences={false}
+        onOpenDeeper={() => undefined}
+      />,
+    );
+    expect(getByText('Sagrada Escritura')).toBeTruthy();
+    expect(queryByText('Evangelho')).toBeNull();
+  });
+});

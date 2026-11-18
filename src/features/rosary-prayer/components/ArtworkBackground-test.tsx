@@ -5,11 +5,16 @@ jest.mock('react-native-reanimated', () => {
   return {
     __esModule: true,
     default: { View: NativeView, Image },
-    useSharedValue: (initial: number) => ({ value: initial }),
+    useSharedValue: (initial: unknown) => ({ value: initial }),
     useAnimatedStyle: (updater: () => object) => updater(),
     withTiming: (toValue: number) => toValue,
     withRepeat: (animation: unknown) => animation,
     cancelAnimation: () => undefined,
+    interpolate: (value: number, input: number[], output: number[]) => {
+      const i = Math.max(1, input.findIndex((x) => x >= value));
+      const k = (value - input[i - 1]) / (input[i] - input[i - 1] || 1);
+      return output[i - 1] + (output[i] - output[i - 1]) * k;
+    },
     Easing: {
       linear: (value: number) => value,
       sin: (value: number) => value,

@@ -1,4 +1,6 @@
-import { Switch, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+
+import { ContemplativeSwitch } from '@/shared/components/ContemplativeSwitch';
 
 import { useChant } from '@/features/chant/chantContext';
 import { contemplative, contemplativeFonts } from '@/shared/constants/contemplative';
@@ -7,6 +9,7 @@ export function chantCreditLine(credit: { title: string; performer: string; lice
   return `${credit.title} — ${credit.performer}. ${credit.licenseName}.`;
 }
 
+/** Linha de ajuste do canto: interruptor e, embaixo, a gravação de hoje. */
 export function ChantToggle() {
   const { enabled, unavailable, ready, credit, setEnabled } = useChant();
   const line = chantCreditLine(credit);
@@ -14,15 +17,16 @@ export function ChantToggle() {
   return (
     <View style={styles.block}>
       <View style={styles.row}>
-        <Text style={styles.label}>Canto gregoriano</Text>
-        <Switch
+        <View style={styles.copy}>
+          <Text style={styles.label}>Tocar durante a oração</Text>
+          <Text style={styles.hint}>A antífona mariana do tempo litúrgico, em loop, só com a oração aberta.</Text>
+        </View>
+        <ContemplativeSwitch
           value={enabled}
           disabled={!ready}
           onValueChange={setEnabled}
           accessibilityLabel="Canto gregoriano"
           accessibilityState={{ disabled: !ready, checked: enabled }}
-          trackColor={{ false: '#3a342c', true: contemplative.gold }}
-          thumbColor={contemplative.cream}
         />
       </View>
       <Text style={styles.credit} numberOfLines={2} accessibilityLabel={line}>
@@ -35,8 +39,7 @@ export function ChantToggle() {
 
 const styles = StyleSheet.create({
   block: {
-    marginTop: 22,
-    gap: 6,
+    gap: 8,
   },
   row: {
     flexDirection: 'row',
@@ -44,18 +47,23 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     gap: 12,
   },
+  copy: { flex: 1, gap: 4 },
   label: {
     color: contemplative.cream,
-    fontFamily: contemplativeFonts.sansSemi,
+    fontFamily: contemplativeFonts.sans,
+    fontSize: 15,
+  },
+  hint: {
+    color: contemplative.muted,
+    fontFamily: contemplativeFonts.sans,
     fontSize: 12,
-    letterSpacing: 1.2,
-    textTransform: 'uppercase',
+    lineHeight: 17,
   },
   credit: {
     color: contemplative.muted,
-    fontFamily: contemplativeFonts.sans,
-    fontSize: 11,
-    lineHeight: 15,
+    fontFamily: contemplativeFonts.serifItalic,
+    fontSize: 14,
+    lineHeight: 18,
   },
   unavailable: {
     color: contemplative.gold,

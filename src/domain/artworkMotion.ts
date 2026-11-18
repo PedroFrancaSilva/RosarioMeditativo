@@ -10,7 +10,25 @@ export const ARTWORK_DURATION_MS = 18_000;
  * mais ou menos o tempo de duas Ave-Marias (o intervalo de rotação das obras).
  */
 export const ARTWORK_SWEEP_SPEED_PX_PER_S = 36;
-export const ARTWORK_SWEEP_MAX_DURATION_MS = 30_000;
+/**
+ * Teto de uma ida. Com a desaceleração no centro a ida dura mais que a conta
+ * simples distância ÷ velocidade; o teto só segura obras muito largas.
+ */
+export const ARTWORK_SWEEP_MAX_DURATION_MS = 90_000;
+/**
+ * Perfil de velocidade da varredura: nas bordas a obra corre na velocidade
+ * acima; perto do foco (o centro da cena, por padrão) cai para esta fração,
+ * para que o essencial do quadro fique mais tempo na tela.
+ */
+export const ARTWORK_SWEEP_FOCUS_SPEED_RATIO = 0.3;
+/** Largura (desvio, em fração do percurso) da zona lenta em torno do foco. */
+export const ARTWORK_SWEEP_FOCUS_WIDTH = 0.14;
+/** Trecho junto de cada borda em que a obra desacelera para virar sem tranco. */
+export const ARTWORK_SWEEP_TURN_ZONE = 0.05;
+/** Velocidade mínima (fração da de borda) no instante da virada. */
+export const ARTWORK_SWEEP_TURN_SPEED_RATIO = 0.3;
+/** Amostras da curva tempo → posição. */
+export const ARTWORK_TIMELINE_SAMPLES = 64;
 /** Sobra mínima, em fração da tela, para valer a pena percorrer a obra. */
 export const ARTWORK_SWEEP_MIN_OVERFLOW = 0.08;
 
@@ -43,6 +61,17 @@ export type ArtworkPath = {
   rest: ArtworkFrame;
   /** Eixo percorrido de borda a borda, ou `null` quando a obra só “respira”. */
   sweep: 'x' | 'y' | null;
+  /**
+   * Curva da ida: `progress[i]` é a fração do tempo e `position[i]` a fração do
+   * caminho de `start` a `end` nesse instante. Crescentes, de 0 a 1. A volta
+   * percorre a mesma curva ao contrário.
+   */
+  timeline: ArtworkTimeline;
+};
+
+export type ArtworkTimeline = {
+  progress: number[];
+  position: number[];
 };
 
 export type ArtworkMotionInput = Partial<{
@@ -133,9 +162,110 @@ export function artworkSweepAxis(
   return relX >= relY ? 'x' : 'y';
 }
 
-export function artworkSweepDuration(distancePx: number): number {
-  const byspeed = (distancePx / ARTWORK_SWEEP_SPEED_PX_PER_S) * 1000;
-  return Math.round(clamp(byspeed, ARTWORK_DURATION_MS, ARTWORK_SWEEP_MAX_DURATION_MS));
+function smoothstep(x: number): number {
+  const t = clamp(x, 0, 1);
+  return t * t * (3 - 2 * t);
+}
+
+/**
+ * Velocidade relativa (0–1] na posição `s` do caminho: 1 nas bordas, a fração
+ * de foco perto de `focus`, e uma desaceleração curta junto às bordas.
+ */
+export function artworkSweepSpeed(s: number, focus: number): number {
+  const d = (s - focus) / ARTWORK_SWEEP_FOCUS_WIDTH;
+  const dip = 1 - (1 - ARTWORK_SWEEP_FOCUS_SPEED_RATIO) * Math.exp(-0.5 * d * d);
+  const edge = Math.min(s, 1 - s) / ARTWORK_SWEEP_TURN_ZONE;
+  const turn = ARTWORK_SWEEP_TURN_SPEED_RATIO + (1 - ARTWORK_SWEEP_TURN_SPEED_RATIO) * smoothstep(edge);
+  return dip * turn;
+}
+
+/**
+ * Curva tempo → posição para uma ida de `distancePx`, lenta em torno de
+ * `focus` (fração do caminho). A duração sai da soma do tempo gasto em cada
+ * trecho, limitada entre o fôlego padrão e o teto da varredura.
+ */
+export function artworkSweepTimeline(
+  distancePx: number,
+  focus: number,
+): { timeline: ArtworkTimeline; durationMs: number } {
+  const n = ARTWORK_TIMELINE_SAMPLES;
+  const f = clamp(focus, 0, 1);
+  const position: number[] = [0];
+  const elapsed: number[] = [0];
+  let total = 0;
+  for (let i = 1; i <= n; i += 1) {
+    const s0 = (i - 1) / n;
+    const s1 = i / n;
+    // Ponto médio do trecho: evita dividir pela velocidade exata da borda.
+    const v = artworkSweepSpeed((s0 + s1) / 2, f);
+    total += (s1 - s0) / v;
+    position.push(s1);
+    elapsed.push(total);
+  }
+  const progress = elapsed.map((value) => value / total);
+  const seconds = (distancePx * total) / ARTWORK_SWEEP_SPEED_PX_PER_S;
+  const durationMs = Math.round(
+    clamp(seconds * 1000, ARTWORK_DURATION_MS, ARTWORK_SWEEP_MAX_DURATION_MS),
+  );
+  return { timeline: { progress, position }, durationMs };
+}
+
+/** Fôlego da obra que cabe na tela: ida e volta em seno, sem foco lento. */
+export function artworkBreathTimeline(): ArtworkTimeline {
+  const n = ARTWORK_TIMELINE_SAMPLES;
+  const progress: number[] = [];
+  const position: number[] = [];
+  for (let i = 0; i <= n; i += 1) {
+    const t = i / n;
+    progress.push(t);
+    position.push(-(Math.cos(Math.PI * t) - 1) / 2);
+  }
+  return { progress, position };
+}
+
+/** Posição (0–1) da curva no instante `t` (0–1), por interpolação linear. */
+export function artworkTimelineAt(timeline: ArtworkTimeline, t: number): number {
+  const { progress, position } = timeline;
+  const x = clamp(t, 0, 1);
+  let i = 1;
+  while (i < progress.length - 1 && progress[i] < x) i += 1;
+  const t0 = progress[i - 1];
+  const t1 = progress[i];
+  const span = t1 - t0;
+  const k = span > 0 ? (x - t0) / span : 0;
+  return position[i - 1] + (position[i] - position[i - 1]) * k;
+}
+
+/**
+ * Fração do caminho de `start` a `end` em que o centro da tela mostra o foco
+ * curado da obra, no eixo da varredura.
+ */
+function focusAlongPath(
+  start: ArtworkFrame,
+  end: ArtworkFrame,
+  axis: 'x' | 'y',
+  focal: number,
+  screenSize: number,
+  imageSize: number,
+  cover: number,
+): number {
+  let best = 0.5;
+  let bestError = Infinity;
+  const steps = 200;
+  for (let i = 0; i <= steps; i += 1) {
+    const s = i / steps;
+    const translate = axis === 'x'
+      ? start.translateX + (end.translateX - start.translateX) * s
+      : start.translateY + (end.translateY - start.translateY) * s;
+    const scale = start.scale + (end.scale - start.scale) * s;
+    const center = (screenSize / 2 - translate) / (imageSize * cover * scale);
+    const error = Math.abs(center - focal);
+    if (error < bestError) {
+      bestError = error;
+      best = s;
+    }
+  }
+  return best;
 }
 
 /**
@@ -145,7 +275,8 @@ export function artworkSweepDuration(distancePx: number): number {
  * Obra mais larga (ou alta) que a tela: o caminho vai de uma borda à outra no
  * eixo que transborda, começando pelo lado para onde a deriva aponta ao
  * contrário (deriva positiva = da esquerda para a direita). O outro eixo segue o
- * foco. Obra que cabe quase inteira: o fôlego curto em torno do foco.
+ * foco. A velocidade não é constante: rápida nas bordas, lenta quando o foco
+ * curado passa pelo centro da tela (ver {@link artworkSweepSpeed}). Obra que cabe quase inteira: o fôlego curto em torno do foco.
  * Devolve `null` quando falta um tamanho utilizável.
  */
 export function artworkPath(input: ArtworkPathInput): ArtworkPath | null {
@@ -162,26 +293,24 @@ export function artworkPath(input: ArtworkPathInput): ArtworkPath | null {
   const overflow = overflowAt(screenWidth, screenHeight, imageWidth, imageHeight, ARTWORK_SCALE_END);
   const sweep = artworkSweepAxis(screenWidth, screenHeight, overflow);
 
+  const cover = Math.max(screenWidth / imageWidth, screenHeight / imageHeight);
+
   if (sweep === 'x') {
     // Foco 0 grampeia na borda esquerda, 1 na direita.
     const [from, to] = motion.driftX >= 0 ? [0, 1] : [1, 0];
-    return {
-      durationMs: artworkSweepDuration(overflow.x),
-      start: frame(ARTWORK_SCALE_START, from, motion.focalY),
-      end: frame(ARTWORK_SCALE_END, to, clamp(motion.focalY + motion.driftY, 0, 1)),
-      rest,
-      sweep,
-    };
+    const start = frame(ARTWORK_SCALE_START, from, motion.focalY);
+    const end = frame(ARTWORK_SCALE_END, to, clamp(motion.focalY + motion.driftY, 0, 1));
+    const focus = focusAlongPath(start, end, 'x', motion.focalX, screenWidth, imageWidth, cover);
+    const { timeline, durationMs } = artworkSweepTimeline(overflow.x, focus);
+    return { durationMs, start, end, rest, sweep, timeline };
   }
   if (sweep === 'y') {
     const [from, to] = motion.driftY >= 0 ? [0, 1] : [1, 0];
-    return {
-      durationMs: artworkSweepDuration(overflow.y),
-      start: frame(ARTWORK_SCALE_START, motion.focalX, from),
-      end: frame(ARTWORK_SCALE_END, clamp(motion.focalX + motion.driftX, 0, 1), to),
-      rest,
-      sweep,
-    };
+    const start = frame(ARTWORK_SCALE_START, motion.focalX, from);
+    const end = frame(ARTWORK_SCALE_END, clamp(motion.focalX + motion.driftX, 0, 1), to);
+    const focus = focusAlongPath(start, end, 'y', motion.focalY, screenHeight, imageHeight, cover);
+    const { timeline, durationMs } = artworkSweepTimeline(overflow.y, focus);
+    return { durationMs, start, end, rest, sweep, timeline };
   }
 
   return {
@@ -194,5 +323,6 @@ export function artworkPath(input: ArtworkPathInput): ArtworkPath | null {
     ),
     rest,
     sweep: null,
+    timeline: artworkBreathTimeline(),
   };
 }
