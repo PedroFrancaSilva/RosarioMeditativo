@@ -39,4 +39,4 @@ Se esta política mudar, a nova versão será publicada nesta mesma página, com
 
 ## Contato
 
-Dúvidas sobre privacidade: **[seu e-mail de contato]**.
+Dúvidas sobre privacidade: **peu06@hotmail.com*.
