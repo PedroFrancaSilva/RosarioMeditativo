@@ -25,6 +25,9 @@ const BIBLE_BOOKS: Record<string, { slug: string; name: string; gospel: boolean 
   '1 Co': { slug: 'i-corintios', name: '1 Coríntios', gospel: false },
   Ap: { slug: 'apocalipse', name: 'Apocalipse', gospel: false },
   Is: { slug: 'isaias', name: 'Isaías', gospel: false },
+  /** Numeração dos Salmos da Vulgata, a mesma da Matos Soares e da Ave-Maria. */
+  Sl: { slug: 'salmos', name: 'Salmos', gospel: false },
+  '1 Rs': { slug: 'i-reis', name: '1 Reis', gospel: false },
 };
 
 const BIBLE_BASE = 'https://www.bibliacatolica.com.br/biblia-ave-maria';
