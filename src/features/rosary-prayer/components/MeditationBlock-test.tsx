@@ -76,7 +76,7 @@ describe('<MeditationBlock />', () => {
     const loading = await render(
       <MeditationBlock status="loading" hasDeeperReferences={false} onOpenDeeper={() => undefined} />,
     );
-    expect(loading.getByLabelText('A carregar')).toBeTruthy();
+    expect(loading.getByLabelText('Carregando')).toBeTruthy();
 
     const empty = await render(
       <MeditationBlock status="empty" hasDeeperReferences={false} onOpenDeeper={() => undefined} />,

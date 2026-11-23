@@ -103,7 +103,7 @@ export default function SettingsScreen() {
       update({ reminder: { ...next, enabled: false } });
       setReminderNote(
         result === 'denied'
-          ? 'Sem permissão para notificações. Ative-as nas definições do aparelho para receber o lembrete.'
+          ? 'Sem permissão para notificações. Ative-as nas configurações do aparelho para receber o lembrete.'
           : 'Não foi possível agendar o lembrete.',
       );
     }

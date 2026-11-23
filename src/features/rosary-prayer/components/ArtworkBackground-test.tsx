@@ -32,7 +32,7 @@ describe('<ArtworkBackground />', () => {
     const screen = await render(
       <ArtworkBackground source={{ uri: 'https://example.com/a.jpg' }} motion={motion} backgroundKey="a" />,
     );
-    expect(screen.getByLabelText('A carregar')).toBeTruthy();
+    expect(screen.getByLabelText('Carregando')).toBeTruthy();
 
     const image = screen.getByTestId('artwork-image');
     await act(async () => {
@@ -40,15 +40,15 @@ describe('<ArtworkBackground />', () => {
         nativeEvent: { source: { width: 800, height: 600 } },
       });
     });
-    expect(screen.queryByLabelText('A carregar')).toBeNull();
+    expect(screen.queryByLabelText('Carregando')).toBeNull();
 
     await screen.rerender(
       <ArtworkBackground source={{ uri: 'https://example.com/b.jpg' }} motion={motion} backgroundKey="b" />,
     );
-    expect(screen.getByLabelText('A carregar')).toBeTruthy();
+    expect(screen.getByLabelText('Carregando')).toBeTruthy();
     await act(async () => {
       fireEvent(screen.getByTestId('artwork-image'), 'error');
     });
-    expect(screen.queryByLabelText('A carregar')).toBeNull();
+    expect(screen.queryByLabelText('Carregando')).toBeNull();
   });
 });

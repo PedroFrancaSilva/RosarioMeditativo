@@ -71,6 +71,12 @@ describe('entrada para escolher um terço', () => {
     expect(present).toEqual([TERCO_TITLES[tercoTypeForDate('jp2', new Date())]]);
   });
 
+  it('o Rosário completo mostra os mistérios do conjunto, sem estimar tempo', async () => {
+    const { getByText, queryByText } = await render(<HomePrayerScreen />);
+    expect(getByText('20 mistérios')).toBeTruthy();
+    expect(queryByText(/minutos/)).toBeNull();
+  });
+
   it('escolher um terço inicia esse terço e não o checklist', async () => {
     const { getByText, queryByText, getByRole } = await render(<MeditationCoverageScreen />);
 

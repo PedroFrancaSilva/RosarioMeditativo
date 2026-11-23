@@ -37,9 +37,7 @@ export function presentPrayerStep(step: PrayerStep, form?: PrayerForm): StepPres
       step,
       title,
       bodySummary: step.announcement ?? `Medite o mistério: ${title}.`,
-      bodyFull: step.announcement
-        ? `${step.announcement} Medite este mistério enquanto reza a dezena.`
-        : `Anunciamos o ${title}. Medite este mistério enquanto reza a década.`,
+      bodyFull: step.announcement ?? `Medite o mistério: ${title}.`,
       translation: null,
       lead: null,
       frameLabel: null,
@@ -52,7 +50,7 @@ export function presentPrayerStep(step: PrayerStep, form?: PrayerForm): StepPres
   if (step.kind === 'completion') {
     return {
       step,
-      title: 'Terço concluído',
+      title: step.label,
       bodySummary: 'Louvado seja Nosso Senhor Jesus Cristo.',
       bodyFull:
         'Louvado seja Nosso Senhor Jesus Cristo. Por todos os séculos dos séculos. Amém. Que esta oração enriqueça a sua vida espiritual.',

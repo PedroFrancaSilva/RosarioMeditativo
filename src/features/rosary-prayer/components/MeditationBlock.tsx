@@ -86,7 +86,7 @@ export function MeditationBlock({
       <View style={styles.wrap}>
         <ActivityIndicator
           color={contemplative.gold}
-          accessibilityLabel="A carregar"
+          accessibilityLabel="Carregando"
         />
       </View>
     );

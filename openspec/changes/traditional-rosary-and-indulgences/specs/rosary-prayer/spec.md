@@ -76,6 +76,36 @@ The selected mystery set SHALL persist across launches, and a resumed session SH
 - **WHEN** o usuário a retoma
 - **THEN** ela continua no mesmo passo, em português e com a Oração de Fátima
 
+### Requirement: Long prayer and meditation text is reachable
+The prayer panel SHALL let the user read the whole expanded prayer, translation, passage, and commentary at every text size. A new step MUST start at the top of the panel.
+
+#### Scenario: Expanded text larger than the panel
+- **GIVEN** o texto expandido não cabe na área do painel
+- **WHEN** o usuário rola o painel
+- **THEN** ele alcança o fim do texto e a opção de recolher, sem corte
+
+#### Scenario: Next step after scrolling
+- **GIVEN** o usuário rolou o painel de um passo
+- **WHEN** avança para o passo seguinte
+- **THEN** o painel começa do topo
+
+#### Scenario: Nothing more to expand
+- **WHEN** o texto do passo já está inteiro
+- **THEN** o convite para ver o texto completo não aparece
+
+### Requirement: Accurate rosary labels
+The home screen MUST NOT estimate prayer duration, and SHALL show how many mysteries the full rosary of the selected set has. The completion screen SHALL name what was prayed.
+
+#### Scenario: Full rosary card
+- **WHEN** o conjunto é “Com Luminosos”
+- **THEN** o card mostra “20 mistérios”, sem tempo estimado
+- **WHEN** o conjunto é “Tradicional”
+- **THEN** o card mostra “15 mistérios”, sem tempo estimado
+
+#### Scenario: Completion title
+- **WHEN** a sessão termina
+- **THEN** o título é “Rosário concluído”, “Terço concluído” ou “Mistério concluído”, conforme o que foi rezado
+
 ## MODIFIED Requirements
 
 ### Requirement: Home shows the day's third

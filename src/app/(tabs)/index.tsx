@@ -3,6 +3,7 @@ import type { MysteryType } from '@/domain/mystery';
 import {
   groupMysteriesByTerco,
   liturgicalSundayNote,
+  mysteryTypesForSet,
   tercoTypeForDate,
 } from '@/domain/mysteryTerco';
 import type { MysterySet, PrayerLanguage } from '@/domain/rosary/types';
@@ -143,7 +144,7 @@ export default function HomePrayerScreen() {
           <View style={styles.completeCopy}>
             <Text style={styles.completeKicker}>Todos os mistérios</Text>
             <Text style={styles.completeTitle}>Rosário completo</Text>
-            <Text style={styles.completeHint}>Cerca de 45 minutos</Text>
+            <Text style={styles.completeHint}>{mysteryTypesForSet(set).length * 5} mistérios</Text>
           </View>
           <Text style={styles.chevron}>›</Text>
         </Pressable>

@@ -76,6 +76,7 @@ export function buildDecadeBeadView(
 }
 
 export function prayerPanelKicker(step: PrayerStep | undefined): string {
+  if (step?.kind === 'mystery-announcement') return 'Anúncio do mistério';
   if (
     step?.mysteryId &&
     step.prayerId === 'hail-mary' &&

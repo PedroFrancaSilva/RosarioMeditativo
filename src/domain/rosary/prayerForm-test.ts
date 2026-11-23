@@ -130,6 +130,19 @@ describe('buildPrayerSteps com forma', () => {
     );
   });
 
+  it('o anúncio não tem texto extra para expandir', () => {
+    const presented = presentPrayerStep(buildPrayerSteps(singleMysterySession)[0]!);
+    expect(presented.bodyFull).toBe(presented.bodySummary);
+  });
+
+  it('a conclusão nomeia o que foi rezado', () => {
+    const titleFor = (config: Parameters<typeof buildPrayerSteps>[0]) =>
+      presentPrayerStep(buildPrayerSteps(config).at(-1)!).title;
+    expect(titleFor(twoMysterySession)).toBe('Rosário concluído');
+    expect(titleFor({ ...twoMysterySession, mode: 'tercio' })).toBe('Terço concluído');
+    expect(titleFor(singleMysterySession)).toBe('Mistério concluído');
+  });
+
   it('em latim, título e tradução acompanham o passo', () => {
     const steps = buildPrayerSteps({ ...singleMysterySession, form: traditionalLa });
     const hail = steps.find((step) => step.id === 'single-hail-3')!;

@@ -31,9 +31,9 @@ import { useKeepAwake } from 'expo-keep-awake';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, type ComponentRef } from 'react';
 import { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, {
   runOnJS,
@@ -100,6 +100,7 @@ export function PrayerScreen({
   const [deeperOpen, setDeeperOpen] = useState(false);
   const [sheet, setSheet] = useState<SourceSheetContent | null>(null);
   const advancing = useRef(false);
+  const panelScroll = useRef<ComponentRef<typeof ScrollView>>(null);
   /** Só vibra ao chegar a um passo avançando (não ao voltar nem ao retomar). */
   const movedForward = useRef(false);
 
@@ -116,6 +117,11 @@ export function PrayerScreen({
       withTiming(1, { duration: contemplativeMotion.content - 80 }),
     );
   }, [contentOpacity, presentation.step.id]);
+
+  // Cada oração começa do topo, mesmo que a anterior tenha sido rolada até o fim.
+  useEffect(() => {
+    panelScroll.current?.scrollTo({ y: 0, animated: false });
+  }, [presentation.step.id]);
 
   useEffect(() => {
     if (!showMeditation) setDeeperOpen(false);
@@ -296,8 +302,11 @@ export function PrayerScreen({
                 <>
                   {/* Com texto grande ou meditação longa, o painel rola; as contas ficam fixas. */}
                   <ScrollView
+                    ref={panelScroll}
                     style={styles.bottomScroll}
-                    showsVerticalScrollIndicator={false}
+                    showsVerticalScrollIndicator
+                    persistentScrollbar
+                    indicatorStyle="white"
                     bounces={false}
                     keyboardShouldPersistTaps="handled">
                   <Animated.View style={contentStyle}>
@@ -321,7 +330,7 @@ export function PrayerScreen({
                     <PrayerTextBlock
                       key={presentation.step.id}
                       kicker={prayerPanelKicker(presentation.step)}
-                      title={presentation.title}
+                      title={isMysteryAnnouncement ? undefined : presentation.title}
                       lead={presentation.lead}
                       summary={presentation.bodySummary}
                       fullText={presentation.bodyFull}
@@ -440,6 +449,13 @@ const styles = StyleSheet.create({
   },
   bottomScroll: {
     flexGrow: 0,
+    // Na web, a barra padrão do navegador é larga e clara sobre a obra.
+    ...Platform.select({
+      web: {
+        scrollbarWidth: 'thin',
+        scrollbarColor: 'rgba(242,234,219,0.35) transparent',
+      } as object,
+    }),
   },
   setName: {
     color: contemplative.gold,

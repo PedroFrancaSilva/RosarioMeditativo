@@ -4,7 +4,16 @@ import type { PrayerStep } from '@/domain/rosary/types';
 import {
   buildDecadeBeadView,
   mysteryProgressLabel,
+  prayerPanelKicker,
 } from '@/features/rosary-prayer/session/decadeBeadView';
+
+describe('prayerPanelKicker', () => {
+  it('identifica o anúncio do mistério', () => {
+    expect(
+      prayerPanelKicker(step({ id: 'a', kind: 'mystery-announcement', label: 'A', mysteryId: 'm' })),
+    ).toBe('Anúncio do mistério');
+  });
+});
 
 describe('mysteryProgressLabel', () => {
   it('no mistério avulso mostra a posição real e o tipo, sem contagem', () => {

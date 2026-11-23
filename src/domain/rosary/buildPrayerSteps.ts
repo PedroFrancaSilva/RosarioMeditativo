@@ -2,7 +2,7 @@ import type { Mystery } from '@/domain/mystery';
 import type { OpeningIntentions } from '@/domain/preferences/prayerPreferences';
 import { mysteryAnnouncement } from '@/domain/rosary/mysteryFruits';
 import { MODERN_PRAYER_FORM } from '@/domain/rosary/prayerForm';
-import type { PrayerForm, PrayerStep, RosarySessionConfig } from '@/domain/rosary/types';
+import type { PrayerForm, PrayerStep, RosaryMode, RosarySessionConfig } from '@/domain/rosary/types';
 
 function fixedStep(
   id: string,
@@ -92,11 +92,17 @@ function closingSteps(): PrayerStep[] {
   ];
 }
 
-function completionStep(): PrayerStep {
+const COMPLETION_LABELS: Record<RosaryMode, string> = {
+  full: 'Rosário concluído',
+  tercio: 'Terço concluído',
+  single: 'Mistério concluído',
+};
+
+function completionStep(mode: RosaryMode): PrayerStep {
   return {
     id: 'completion',
     kind: 'completion',
-    label: 'Terço concluído',
+    label: COMPLETION_LABELS[mode],
     hailMaryIndex: null,
     lead: null,
   };
@@ -118,12 +124,12 @@ export function buildPrayerSteps(config: RosarySessionConfig): PrayerStep[] {
   } else {
     const mystery = mysteries[0];
     if (!mystery) {
-      return [completionStep()];
+      return [completionStep(mode)];
     }
     steps.push(announceStep(mystery));
     steps.push(...decadeSteps(mystery, 'single', form));
   }
 
-  steps.push(completionStep());
+  steps.push(completionStep(mode));
   return steps;
 }

@@ -20,6 +20,9 @@
 - [x] 3.3 Oração com fruto, latim e tradução ao expandir. Verificar na web percorrendo um terço.
 - [x] 3.4 Rota `/indulgencias`. Verificar na web em largura de celular.
 
+- [x] 3.5 Texto expandido sem corte, rolagem visível, passo novo no topo. Verificar na web em todos os tamanhos de texto.
+- [x] 3.6 Remover o tempo estimado e nomear a conclusão. Verificar com `npx jest src/features/rosary-prayer`.
+
 ## 4. Fechamento
 
 - [x] 4.1 Rodar `npx jest`, `npx tsc --noEmit`, lint e `openspec validate traditional-rosary-and-indulgences --strict`.

@@ -16,7 +16,7 @@ export function getPersistentMysteryLabel(
     return '';
   }
   if (currentStep.kind === 'completion') {
-    return 'Terço concluído';
+    return currentStep.label;
   }
   if (currentStep.kind === 'mystery-announcement') {
     return currentStep.mysteryTitle ?? currentStep.label;

@@ -33,4 +33,24 @@ describe('<PrayerTextBlock />', () => {
 
     expect(getAllByText('Texto completo da oração').length).toBeGreaterThan(0);
   });
+
+  it('não oferece expandir quando não há mais texto', async () => {
+    const { queryByText } = await render(
+      <PrayerTextBlock kicker="Anúncio" summary="Texto único" fullText="Texto único" />,
+    );
+    expect(queryByText('Toque para ver texto completo')).toBeNull();
+  });
+
+  it('oferece expandir quando só a tradução é adicional', async () => {
+    const { getAllByText } = await render(
+      <PrayerTextBlock
+        kicker="Oração"
+        title="Ave Maria"
+        summary="Ave Maria"
+        fullText="Ave Maria"
+        translation="Ave, Maria"
+      />,
+    );
+    expect(getAllByText('Toque para ver texto completo').length).toBeGreaterThan(0);
+  });
 });

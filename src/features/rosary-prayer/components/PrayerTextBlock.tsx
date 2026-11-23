@@ -6,7 +6,8 @@ import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-na
 
 type Props = {
   kicker: string;
-  title: string;
+  /** Omitido quando o título já aparece logo acima do painel. */
+  title?: string;
   summary: string;
   fullText: string;
   lead?: string | null;
@@ -19,6 +20,7 @@ export function PrayerTextBlock({ kicker, title, summary, fullText, lead, transl
   const animatedHeight = useSharedValue(0);
   const hasMeasured = useRef(false);
   const body = expanded ? fullText : summary;
+  const canExpand = fullText !== summary || Boolean(translation);
   const { textScale } = usePrayerPreferences();
   const titleSize = { fontSize: 28 * textScale, lineHeight: 32 * textScale };
   const bodySize = { fontSize: 16 * textScale, lineHeight: 24 * textScale };
@@ -44,17 +46,21 @@ export function PrayerTextBlock({ kicker, title, summary, fullText, lead, transl
   const inner = (
     <>
       <Text style={styles.kicker}>{kicker}</Text>
-      <Text style={[styles.title, titleSize]}>{title}</Text>
+      {title ? <Text style={[styles.title, titleSize]}>{title}</Text> : null}
       {lead ? <Text style={[styles.lead, leadSize]}>{lead}</Text> : null}
       <Text style={[styles.body, bodySize]}>{body}</Text>
       {expanded && translation ? (
         <Text style={[styles.translation, translationSize]}>{translation}</Text>
       ) : null}
-      <Text style={styles.hint}>
-        {expanded ? 'Toque para recolher' : 'Toque para ver texto completo'}
-      </Text>
+      {canExpand ? (
+        <Text style={styles.hint}>
+          {expanded ? 'Toque para recolher' : 'Toque para ver texto completo'}
+        </Text>
+      ) : null}
     </>
   );
+
+  if (!canExpand) return <View style={styles.card}>{inner}</View>;
 
   return (
     <Pressable
@@ -62,15 +68,18 @@ export function PrayerTextBlock({ kicker, title, summary, fullText, lead, transl
       onPress={() => setExpanded((value) => !value)}
       accessibilityRole="button"
       accessibilityHint="Toque para expandir ou recolher o texto da oração">
-      <View
-        style={styles.measure}
-        onLayout={onMeasure}
-        pointerEvents="none"
-        accessibilityElementsHidden
-        importantForAccessibility="no-hide-descendants">
-        {inner}
+      {/* Sem padding aqui: a cópia medida precisa quebrar as linhas na mesma largura do texto. */}
+      <View>
+        <View
+          style={styles.measure}
+          onLayout={onMeasure}
+          pointerEvents="none"
+          accessibilityElementsHidden
+          importantForAccessibility="no-hide-descendants">
+          {inner}
+        </View>
+        <Animated.View style={animatedStyle}>{inner}</Animated.View>
       </View>
-      <Animated.View style={animatedStyle}>{inner}</Animated.View>
     </Pressable>
   );
 }
