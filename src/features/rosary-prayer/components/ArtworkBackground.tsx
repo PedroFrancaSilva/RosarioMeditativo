@@ -235,7 +235,7 @@ export function ArtworkBackground({ source, motion, backgroundKey }: Props) {
       {failed || loaded ? null : (
         <ActivityIndicator
           color={contemplative.gold}
-          accessibilityLabel="A carregar"
+          accessibilityLabel="Carregando"
           style={styles.loading}
         />
       )}

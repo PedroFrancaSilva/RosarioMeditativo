@@ -24,6 +24,9 @@ describe('prayerPreferences', () => {
       haptics: false,
       openingIntentions: 'angelus' as const,
       reminder: { enabled: true, hour: 6, minute: 30 },
+      mysterySet: 'classic' as const,
+      prayerLanguage: 'la' as const,
+      fatimaPrayer: false,
     };
     expect(parsePrayerPreferences(serializePrayerPreferences(prefs))).toEqual(prefs);
   });
@@ -57,5 +60,32 @@ describe('prayerPreferences', () => {
     expect(shiftReminderTime({ hour: 23, minute: 45 }, 15)).toEqual({ hour: 0, minute: 0 });
     expect(shiftReminderTime({ hour: 0, minute: 0 }, -15)).toEqual({ hour: 23, minute: 45 });
     expect(formatReminderTime({ hour: 6, minute: 5 })).toBe('06:05');
+  });
+});
+
+describe('preferências do modo tradicional', () => {
+  it('começa com Luminosos, português e Oração de Fátima', () => {
+    expect(DEFAULT_PREFERENCES.mysterySet).toBe('jp2');
+    expect(DEFAULT_PREFERENCES.prayerLanguage).toBe('pt');
+    expect(DEFAULT_PREFERENCES.fatimaPrayer).toBe(true);
+  });
+
+  it('preserva as escolhas salvas', () => {
+    const saved = {
+      ...DEFAULT_PREFERENCES,
+      mysterySet: 'classic' as const,
+      prayerLanguage: 'la' as const,
+      fatimaPrayer: false,
+    };
+    expect(parsePrayerPreferences(serializePrayerPreferences(saved))).toEqual(saved);
+  });
+
+  it('dados antigos ou inválidos ficam no padrão', () => {
+    const parsed = parsePrayerPreferences(
+      JSON.stringify({ schemaVersion: 1, mysterySet: 'x', prayerLanguage: 'grego', fatimaPrayer: 1 }),
+    );
+    expect(parsed.mysterySet).toBe('jp2');
+    expect(parsed.prayerLanguage).toBe('pt');
+    expect(parsed.fatimaPrayer).toBe(true);
   });
 });

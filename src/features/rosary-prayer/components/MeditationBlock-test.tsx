@@ -1,7 +1,9 @@
 import { render, userEvent } from '@testing-library/react-native';
+import { StyleSheet } from 'react-native';
 
 import { MeditationBlock } from '@/features/rosary-prayer/components/MeditationBlock';
 import type { Commentary, Passage } from '@/domain/mystery';
+import { contemplative } from '@/shared/constants/contemplative';
 
 const passage: Passage = {
   id: 'p1',
@@ -72,11 +74,25 @@ describe('<MeditationBlock />', () => {
     expect(queryByText(longText)).toBeNull();
   });
 
+  it('coloca a passagem e o comentário sobre o painel escuro', async () => {
+    const { getByTestId } = await render(
+      <MeditationBlock
+        status="ready"
+        passage={passage}
+        commentary={commentary}
+        hasDeeperReferences={false}
+        onOpenDeeper={() => undefined}
+      />,
+    );
+    const style = StyleSheet.flatten(getByTestId('meditation-panel').props.style);
+    expect(style.backgroundColor).toBe(contemplative.panel);
+  });
+
   it('indica carregamento e não mostra bloco vazio', async () => {
     const loading = await render(
       <MeditationBlock status="loading" hasDeeperReferences={false} onOpenDeeper={() => undefined} />,
     );
-    expect(loading.getByLabelText('A carregar')).toBeTruthy();
+    expect(loading.getByLabelText('Carregando')).toBeTruthy();
 
     const empty = await render(
       <MeditationBlock status="empty" hasDeeperReferences={false} onOpenDeeper={() => undefined} />,

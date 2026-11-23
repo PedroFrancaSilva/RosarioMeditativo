@@ -86,7 +86,7 @@ export function MeditationBlock({
       <View style={styles.wrap}>
         <ActivityIndicator
           color={contemplative.gold}
-          accessibilityLabel="A carregar"
+          accessibilityLabel="Carregando"
         />
       </View>
     );
@@ -95,7 +95,7 @@ export function MeditationBlock({
   if (status === 'empty' || !passage) return null;
 
   return (
-    <View style={styles.wrap}>
+    <View testID="meditation-panel" style={[styles.wrap, styles.panel]}>
       <View style={styles.block}>
         <View style={styles.referenceRow}>
           <Text style={styles.reference}>{passageLabel(passage.reference)}</Text>
@@ -179,6 +179,17 @@ const styles = StyleSheet.create({
   wrap: {
     gap: 10,
     marginBottom: 4,
+  },
+  // Mesmo fundo do cartão da oração: o texto fica legível sobre obras claras.
+  panel: {
+    marginBottom: 10,
+    paddingHorizontal: 18,
+    paddingTop: 16,
+    paddingBottom: 14,
+    borderRadius: 18,
+    borderWidth: 1,
+    borderColor: contemplative.panelBorder,
+    backgroundColor: contemplative.panel,
   },
   block: {
     gap: 6,

@@ -6,20 +6,25 @@ import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-na
 
 type Props = {
   kicker: string;
-  title: string;
+  /** Omitido quando o título já aparece logo acima do painel. */
+  title?: string;
   summary: string;
   fullText: string;
   lead?: string | null;
+  /** Tradução mostrada só com o texto expandido. */
+  translation?: string | null;
 };
 
-export function PrayerTextBlock({ kicker, title, summary, fullText, lead }: Props) {
+export function PrayerTextBlock({ kicker, title, summary, fullText, lead, translation }: Props) {
   const [expanded, setExpanded] = useState(false);
   const animatedHeight = useSharedValue(0);
   const hasMeasured = useRef(false);
   const body = expanded ? fullText : summary;
+  const canExpand = fullText !== summary || Boolean(translation);
   const { textScale } = usePrayerPreferences();
   const titleSize = { fontSize: 28 * textScale, lineHeight: 32 * textScale };
   const bodySize = { fontSize: 16 * textScale, lineHeight: 24 * textScale };
+  const translationSize = { fontSize: 14 * textScale, lineHeight: 20 * textScale };
   const leadSize = { fontSize: 10 * textScale, lineHeight: 14 * textScale };
 
   const onMeasure = (event: LayoutChangeEvent) => {
@@ -41,14 +46,21 @@ export function PrayerTextBlock({ kicker, title, summary, fullText, lead }: Prop
   const inner = (
     <>
       <Text style={styles.kicker}>{kicker}</Text>
-      <Text style={[styles.title, titleSize]}>{title}</Text>
+      {title ? <Text style={[styles.title, titleSize]}>{title}</Text> : null}
       {lead ? <Text style={[styles.lead, leadSize]}>{lead}</Text> : null}
       <Text style={[styles.body, bodySize]}>{body}</Text>
-      <Text style={styles.hint}>
-        {expanded ? 'Toque para recolher' : 'Toque para ver texto completo'}
-      </Text>
+      {expanded && translation ? (
+        <Text style={[styles.translation, translationSize]}>{translation}</Text>
+      ) : null}
+      {canExpand ? (
+        <Text style={styles.hint}>
+          {expanded ? 'Toque para recolher' : 'Toque para ver texto completo'}
+        </Text>
+      ) : null}
     </>
   );
+
+  if (!canExpand) return <View style={styles.card}>{inner}</View>;
 
   return (
     <Pressable
@@ -56,15 +68,18 @@ export function PrayerTextBlock({ kicker, title, summary, fullText, lead }: Prop
       onPress={() => setExpanded((value) => !value)}
       accessibilityRole="button"
       accessibilityHint="Toque para expandir ou recolher o texto da oração">
-      <View
-        style={styles.measure}
-        onLayout={onMeasure}
-        pointerEvents="none"
-        accessibilityElementsHidden
-        importantForAccessibility="no-hide-descendants">
-        {inner}
+      {/* Sem padding aqui: a cópia medida precisa quebrar as linhas na mesma largura do texto. */}
+      <View>
+        <View
+          style={styles.measure}
+          onLayout={onMeasure}
+          pointerEvents="none"
+          accessibilityElementsHidden
+          importantForAccessibility="no-hide-descendants">
+          {inner}
+        </View>
+        <Animated.View style={animatedStyle}>{inner}</Animated.View>
       </View>
-      <Animated.View style={animatedStyle}>{inner}</Animated.View>
     </Pressable>
   );
 }
@@ -113,6 +128,11 @@ const styles = StyleSheet.create({
     fontFamily: contemplativeFonts.serifRegular,
     fontSize: 16,
     lineHeight: 24,
+  },
+  translation: {
+    marginTop: 8,
+    color: contemplative.muted,
+    fontFamily: contemplativeFonts.serifItalic,
   },
   hint: {
     marginTop: 12,

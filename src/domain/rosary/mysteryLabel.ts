@@ -16,7 +16,7 @@ export function getPersistentMysteryLabel(
     return '';
   }
   if (currentStep.kind === 'completion') {
-    return 'Terço concluído';
+    return currentStep.label;
   }
   if (currentStep.kind === 'mystery-announcement') {
     return currentStep.mysteryTitle ?? currentStep.label;
@@ -26,7 +26,8 @@ export function getPersistentMysteryLabel(
   }
   if (
     currentStep.prayerId === 'closing-thanksgiving' ||
-    currentStep.prayerId === 'hail-holy-queen'
+    currentStep.prayerId === 'hail-holy-queen' ||
+    currentStep.prayerId === 'concluding-prayer'
   ) {
     return 'Encerramento';
   }

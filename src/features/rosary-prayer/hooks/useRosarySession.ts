@@ -97,8 +97,8 @@ export function useRosarySession(
 
   const currentStep = state.steps[state.stepIndex];
   const presentation: StepPresentation = useMemo(
-    () => presentPrayerStep(currentStep),
-    [currentStep],
+    () => presentPrayerStep(currentStep, config.form),
+    [currentStep, config.form],
   );
 
   const persistentMysteryLabel = useMemo(

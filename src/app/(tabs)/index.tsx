@@ -1,8 +1,14 @@
 import { useMysteries } from '@/features/rosary-prayer/hooks/useMysteries';
 import type { MysteryType } from '@/domain/mystery';
-import { groupMysteriesByTerco, tercoTypeForDate } from '@/domain/mysteryTerco';
-import type { MysterySet } from '@/domain/rosary/types';
+import {
+  groupMysteriesByTerco,
+  liturgicalSundayNote,
+  mysteryTypesForSet,
+  tercoTypeForDate,
+} from '@/domain/mysteryTerco';
+import type { MysterySet, PrayerLanguage } from '@/domain/rosary/types';
 import { completedCountLabel } from '@/domain/rosary/completionCount';
+import { usePrayerPreferences } from '@/features/preferences/preferencesContext';
 import { useCompletedCount } from '@/features/rosary-prayer/session/completionCounter';
 import { ResumePrayerDialog } from '@/features/rosary-prayer/components/ResumePrayerDialog';
 import { usePrayerStart } from '@/features/rosary-prayer/hooks/usePrayerStart';
@@ -11,13 +17,16 @@ import { AppIcon } from '@/shared/components/AppIcon';
 import { contemplative, contemplativeFonts } from '@/shared/constants/contemplative';
 import { router, type Href } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function HomePrayerScreen() {
   const insets = useSafeAreaInsets();
-  const [set, setSet] = useState<MysterySet>('classic');
+  const { preferences, update } = usePrayerPreferences();
+  const set = preferences.mysterySet;
+  const setSet = (mysterySet: MysterySet) => update({ mysterySet });
+  const setLanguage = (prayerLanguage: PrayerLanguage) => update({ prayerLanguage });
   const { data: mysteries, isLoading, isError } = useMysteries(set);
 
   const daySection = useMemo(() => {
@@ -25,6 +34,7 @@ export default function HomePrayerScreen() {
     const dayType = tercoTypeForDate(set, new Date());
     return sections.find((section) => section.type === dayType) ?? null;
   }, [mysteries, set]);
+  const dayNote = liturgicalSundayNote(set, new Date());
 
   const { begin, continueSaved, startFresh, dismiss, dialogDescription } = usePrayerStart();
   const { data: completedCount } = useCompletedCount();
@@ -97,6 +107,33 @@ export default function HomePrayerScreen() {
           </Pressable>
         </View>
 
+        {set === 'classic' ? (
+          <View style={styles.languageRow} accessibilityRole="radiogroup">
+            <Text style={styles.languageLabel}>Orações em</Text>
+            {(
+              [
+                { id: 'pt', label: 'Português' },
+                { id: 'la', label: 'Latim' },
+              ] as const
+            ).map((option) => {
+              const selected = preferences.prayerLanguage === option.id;
+              return (
+                <Pressable
+                  key={option.id}
+                  style={[styles.languageChip, selected && styles.languageChipActive]}
+                  onPress={() => setLanguage(option.id)}
+                  hitSlop={6}
+                  accessibilityRole="radio"
+                  accessibilityState={{ selected }}>
+                  <Text style={[styles.languageText, selected && styles.languageTextActive]}>
+                    {option.label}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+        ) : null}
+
         <Pressable
           style={({ pressed }) => [styles.completeCard, pressed && styles.pressed]}
           onPress={startFull}
@@ -107,7 +144,7 @@ export default function HomePrayerScreen() {
           <View style={styles.completeCopy}>
             <Text style={styles.completeKicker}>Todos os mistérios</Text>
             <Text style={styles.completeTitle}>Rosário completo</Text>
-            <Text style={styles.completeHint}>Cerca de 45 minutos</Text>
+            <Text style={styles.completeHint}>{mysteryTypesForSet(set).length * 5} mistérios</Text>
           </View>
           <Text style={styles.chevron}>›</Text>
         </Pressable>
@@ -127,7 +164,9 @@ export default function HomePrayerScreen() {
             </View>
             <View style={styles.dailyHeading}>
               <View style={styles.dailyTitles}>
-                <Text style={styles.days}>{daySection.recommendedDays.toUpperCase()}</Text>
+                <Text style={styles.days}>
+                  {(dayNote ?? daySection.recommendedDays).toUpperCase()}
+                </Text>
                 <Text style={styles.dailyTitle}>{daySection.title}</Text>
               </View>
               <Pressable
@@ -163,6 +202,18 @@ export default function HomePrayerScreen() {
           <View style={styles.completeCopy}>
             <Text style={styles.completeKicker}>Outro dia, outro terço</Text>
             <Text style={styles.chooseTitle}>Escolher um terço</Text>
+          </View>
+          <Text style={styles.chevron}>›</Text>
+        </Pressable>
+
+        <Pressable
+          style={({ pressed }) => [styles.chooseCard, styles.indulgenceCard, pressed && styles.pressed]}
+          onPress={() => router.push('/indulgencias' as Href)}
+          accessibilityRole="button">
+          <Text style={styles.crossMark}>✦</Text>
+          <View style={styles.completeCopy}>
+            <Text style={styles.completeKicker}>Como obter e em quais dias</Text>
+            <Text style={styles.chooseTitle}>Indulgências</Text>
           </View>
           <Text style={styles.chevron}>›</Text>
         </Pressable>
@@ -232,6 +283,42 @@ const styles = StyleSheet.create({
     borderRadius: 18,
     borderWidth: 1,
     borderColor: contemplative.panelBorder,
+  },
+  indulgenceCard: {
+    marginTop: 10,
+  },
+  languageRow: {
+    marginTop: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  languageLabel: {
+    flex: 1,
+    color: contemplative.muted,
+    fontFamily: contemplativeFonts.serifItalic,
+    fontSize: 15,
+  },
+  languageChip: {
+    minHeight: 34,
+    justifyContent: 'center',
+    paddingHorizontal: 13,
+    borderRadius: 17,
+    borderWidth: 1,
+    borderColor: contemplative.panelBorder,
+  },
+  languageChipActive: {
+    borderColor: contemplative.gold,
+    backgroundColor: 'rgba(255,255,255,0.06)',
+  },
+  languageText: {
+    color: contemplative.muted,
+    fontFamily: contemplativeFonts.sans,
+    fontSize: 13,
+  },
+  languageTextActive: {
+    color: contemplative.cream,
+    fontFamily: contemplativeFonts.sansSemi,
   },
   chooseTitle: {
     color: contemplative.cream,

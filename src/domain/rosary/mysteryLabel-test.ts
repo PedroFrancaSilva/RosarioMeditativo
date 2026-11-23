@@ -14,9 +14,9 @@ describe('getPersistentMysteryLabel', () => {
     expect(getPersistentMysteryLabel(steps, hail)).toBe('Mistério Um');
   });
 
-  it('mostra Terço concluído no passo final', () => {
+  it('mostra o que foi concluído no passo final', () => {
     const steps = buildPrayerSteps(singleMysterySession);
     const last = steps.at(-1);
-    expect(getPersistentMysteryLabel(steps, last)).toBe('Terço concluído');
+    expect(getPersistentMysteryLabel(steps, last)).toBe('Mistério concluído');
   });
 });

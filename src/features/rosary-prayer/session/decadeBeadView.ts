@@ -1,5 +1,7 @@
+import type { MysteryType } from '@/domain/mystery';
 import type { RosaryProgressModel } from '@/domain/rosary/rosaryProgress';
 import { getFixedPrayer } from '@/domain/rosary/fixedPrayers';
+import { MYSTERY_TYPE_ADJECTIVES } from '@/domain/rosary/mysteryFruits';
 import type { PrayerStep } from '@/domain/rosary/types';
 
 export type DecadeBeadVisual = 'upcoming' | 'completed' | 'current';
@@ -74,6 +76,7 @@ export function buildDecadeBeadView(
 }
 
 export function prayerPanelKicker(step: PrayerStep | undefined): string {
+  if (step?.kind === 'mystery-announcement') return 'Anúncio do mistério';
   if (
     step?.mysteryId &&
     step.prayerId === 'hail-mary' &&
@@ -88,9 +91,14 @@ export function prayerPanelKicker(step: PrayerStep | undefined): string {
 export function mysteryProgressLabel(
   mysteries: RosaryProgressModel['mysteries'],
   hasMystery: boolean,
+  activeMystery?: { type?: MysteryType; sortOrder?: number },
 ): { kicker: string; detail: string } {
   if (!hasMystery || mysteries.length === 0) {
     return { kicker: 'Abertura', detail: '' };
+  }
+  if (mysteries.length === 1 && activeMystery?.type && activeMystery.sortOrder) {
+    const adjective = MYSTERY_TYPE_ADJECTIVES[activeMystery.type];
+    return { kicker: `${activeMystery.sortOrder}º mistério ${adjective}`, detail: '' };
   }
   const current = mysteries.findIndex((state) => state === 'current');
   const position = current >= 0 ? current + 1 : 1;

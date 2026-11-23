@@ -111,6 +111,13 @@ function RootLayoutNav() {
               }}
             />
             <Stack.Screen
+              name="indulgencias"
+              options={{
+                headerShown: false,
+                contentStyle: { backgroundColor: contemplative.background },
+              }}
+            />
+            <Stack.Screen
               name="ajustes"
               options={{
                 headerShown: false,

@@ -46,8 +46,9 @@ describe('buildPrayerSteps', () => {
     expect(steps.some((s) => s.kind === 'mystery-announcement' && s.mysteryId === 'test-m2')).toBe(
       true,
     );
-    expect(steps.at(-3)?.prayerId).toBe('closing-thanksgiving');
-    expect(steps.at(-2)?.prayerId).toBe('hail-holy-queen');
+    expect(steps.at(-4)?.prayerId).toBe('closing-thanksgiving');
+    expect(steps.at(-3)?.prayerId).toBe('hail-holy-queen');
+    expect(steps.at(-2)?.prayerId).toBe('concluding-prayer');
     expect(steps.at(-1)?.kind).toBe('completion');
     const decadeHails = steps.filter((s) => s.prayerId === 'hail-mary' && s.mysteryId);
     expect(decadeHails.every((s) => s.lead === null)).toBe(true);

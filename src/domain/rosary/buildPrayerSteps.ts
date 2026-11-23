@@ -1,6 +1,8 @@
 import type { Mystery } from '@/domain/mystery';
 import type { OpeningIntentions } from '@/domain/preferences/prayerPreferences';
-import type { PrayerStep, RosarySessionConfig } from '@/domain/rosary/types';
+import { mysteryAnnouncement } from '@/domain/rosary/mysteryFruits';
+import { MODERN_PRAYER_FORM } from '@/domain/rosary/prayerForm';
+import type { PrayerForm, PrayerStep, RosaryMode, RosarySessionConfig } from '@/domain/rosary/types';
 
 function fixedStep(
   id: string,
@@ -30,10 +32,11 @@ function announceStep(mystery: Mystery): PrayerStep {
     label: mystery.name,
     hailMaryIndex: null,
     lead: null,
+    announcement: mysteryAnnouncement(mystery),
   };
 }
 
-function decadeSteps(mystery: Mystery, prefix: string): PrayerStep[] {
+function decadeSteps(mystery: Mystery, prefix: string, form: PrayerForm): PrayerStep[] {
   const steps: PrayerStep[] = [
     fixedStep(`${prefix}-our-father`, 'our-father', 'Pai-Nosso', 0, mystery.id),
   ];
@@ -42,10 +45,10 @@ function decadeSteps(mystery: Mystery, prefix: string): PrayerStep[] {
       fixedStep(`${prefix}-hail-${i}`, 'hail-mary', `Ave-Maria ${i}`, i, mystery.id),
     );
   }
-  steps.push(
-    fixedStep(`${prefix}-glory`, 'glory-be', 'Glória', null, mystery.id),
-    fixedStep(`${prefix}-fatima`, 'fatima-prayer', 'Oração de Fátima', null, mystery.id),
-  );
+  steps.push(fixedStep(`${prefix}-glory`, 'glory-be', 'Glória', null, mystery.id));
+  if (form.fatima) {
+    steps.push(fixedStep(`${prefix}-fatima`, 'fatima-prayer', 'Oração de Fátima', null, mystery.id));
+  }
   return steps;
 }
 
@@ -85,14 +88,21 @@ function closingSteps(): PrayerStep[] {
   return [
     fixedStep('close-thanks', 'closing-thanksgiving', 'Agradecimento'),
     fixedStep('close-salve', 'hail-holy-queen', 'Salve Rainha'),
+    fixedStep('close-oremus', 'concluding-prayer', 'Oração conclusiva'),
   ];
 }
 
-function completionStep(): PrayerStep {
+const COMPLETION_LABELS: Record<RosaryMode, string> = {
+  full: 'Rosário concluído',
+  tercio: 'Terço concluído',
+  single: 'Mistério concluído',
+};
+
+function completionStep(mode: RosaryMode): PrayerStep {
   return {
     id: 'completion',
     kind: 'completion',
-    label: 'Terço concluído',
+    label: COMPLETION_LABELS[mode],
     hailMaryIndex: null,
     lead: null,
   };
@@ -101,24 +111,25 @@ function completionStep(): PrayerStep {
 /** Gera a sequência de passos para a sessão configurada. */
 export function buildPrayerSteps(config: RosarySessionConfig): PrayerStep[] {
   const { mode, mysteries } = config;
+  const form = config.form ?? MODERN_PRAYER_FORM;
   const steps: PrayerStep[] = [];
 
   if (mode === 'full' || mode === 'tercio') {
     steps.push(...openingSteps(config.openingIntentions));
     mysteries.forEach((mystery, index) => {
       steps.push(announceStep(mystery));
-      steps.push(...decadeSteps(mystery, `m${index}`));
+      steps.push(...decadeSteps(mystery, `m${index}`, form));
     });
     steps.push(...closingSteps());
   } else {
     const mystery = mysteries[0];
     if (!mystery) {
-      return [completionStep()];
+      return [completionStep(mode)];
     }
     steps.push(announceStep(mystery));
-    steps.push(...decadeSteps(mystery, 'single'));
+    steps.push(...decadeSteps(mystery, 'single', form));
   }
 
-  steps.push(completionStep());
+  steps.push(completionStep(mode));
   return steps;
 }

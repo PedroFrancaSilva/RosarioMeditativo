@@ -16,7 +16,7 @@ export function civilDateFromLocal(date: Date): CivilDate {
   };
 }
 
-function dateKey(date: CivilDate): number {
+export function dateKey(date: CivilDate): number {
   return date.year * 10000 + date.month * 100 + date.day;
 }
 
@@ -28,7 +28,7 @@ function fromUtc(date: Date): CivilDate {
   };
 }
 
-function addDays(date: CivilDate, days: number): CivilDate {
+export function addDays(date: CivilDate, days: number): CivilDate {
   return fromUtc(new Date(Date.UTC(date.year, date.month - 1, date.day + days)));
 }
 
@@ -67,8 +67,9 @@ export function marianAntiphonForDate(date: CivilDate): MarianAntiphonId {
   const holySaturday = addDays(easter, -1);
   if (key <= dateKey(holySaturday)) return 'ave-regina';
 
-  const pentecost = addDays(easter, 49);
-  if (key <= dateKey(pentecost)) return 'regina-caeli';
+  // No rito tradicional, a Regina Caeli vai até o sábado depois de Pentecostes.
+  const saturdayAfterPentecost = addDays(easter, 55);
+  if (key <= dateKey(saturdayAfterPentecost)) return 'regina-caeli';
 
   return 'salve';
 }

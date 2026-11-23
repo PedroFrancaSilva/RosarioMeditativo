@@ -1,4 +1,4 @@
-import type { FixedPrayer, FixedPrayerId } from '@/domain/rosary/types';
+import type { FixedPrayer, FixedPrayerId, PrayerForm } from '@/domain/rosary/types';
 
 const prayers: Record<FixedPrayerId, FixedPrayer> = {
   'sign-of-cross': {
@@ -66,10 +66,93 @@ Creio no Espírito Santo, na Santa Igreja Católica, na comunhão dos santos, na
     fullText:
       'Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva. A vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei. E, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria. Rogai por nós, Santa Mãe de Deus, para que sejamos dignos das promessas de Cristo. Amém.',
   },
+  'concluding-prayer': {
+    id: 'concluding-prayer',
+    title: 'Oração conclusiva',
+    summary: 'Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição…',
+    fullText:
+      'Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, nós Vos pedimos, que, meditando estes mistérios do Santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, Nosso Senhor. Amém.',
+  },
 };
 
-export function getFixedPrayer(id: FixedPrayerId): FixedPrayer {
-  return prayers[id];
+type PrayerText = Pick<FixedPrayer, 'summary' | 'fullText'>;
+
+/** Formas tradicionais em português; as demais orações não mudam. */
+const traditionalTexts: Partial<Record<FixedPrayerId, PrayerText>> = {
+  creed: {
+    summary: prayers.creed.summary,
+    fullText: prayers.creed.fullText.replace('desceu à mansão dos mortos', 'desceu aos infernos'),
+  },
+  'glory-be': {
+    summary: prayers['glory-be'].summary,
+    fullText:
+      'Glória ao Pai, e ao Filho, e ao Espírito Santo. Assim como era no princípio, agora e sempre, e por todos os séculos dos séculos. Amém.',
+  },
+  'fatima-prayer': {
+    summary: prayers['fatima-prayer'].summary,
+    fullText:
+      'Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno, levai as almas todas para o Céu e socorrei principalmente as que mais precisarem.',
+  },
+};
+
+/** Oferecimento e Agradecimento são devoções em português, sem texto latino consagrado. */
+const latinTexts: Partial<Record<FixedPrayerId, PrayerText & { title: string }>> = {
+  'sign-of-cross': {
+    title: 'Signum Crucis',
+    summary: 'Per signum Crucis de inimicis nostris libera nos, Deus noster…',
+    fullText:
+      'Per signum Crucis de inimicis nostris libera nos, Deus noster. In nomine Patris, et Filii, et Spiritus Sancti. Amen.',
+  },
+  creed: {
+    title: 'Credo',
+    summary: 'Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae…',
+    fullText: `Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae. Et in Iesum Christum, Filium eius unicum, Dominum nostrum, qui conceptus est de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato, crucifixus, mortuus, et sepultus, descendit ad inferos, tertia die resurrexit a mortuis, ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis, inde venturus est iudicare vivos et mortuos.
+
+Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen.`,
+  },
+  'our-father': {
+    title: 'Pater Noster',
+    summary: 'Pater noster, qui es in caelis, sanctificetur nomen tuum…',
+    fullText:
+      'Pater noster, qui es in caelis, sanctificetur nomen tuum. Adveniat regnum tuum. Fiat voluntas tua, sicut in caelo et in terra. Panem nostrum quotidianum da nobis hodie, et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris. Et ne nos inducas in tentationem, sed libera nos a malo. Amen.',
+  },
+  'hail-mary': {
+    title: 'Ave Maria',
+    summary: 'Ave Maria, gratia plena, Dominus tecum…',
+    fullText:
+      'Ave Maria, gratia plena, Dominus tecum. Benedicta tu in mulieribus, et benedictus fructus ventris tui, Iesus. Sancta Maria, Mater Dei, ora pro nobis peccatoribus, nunc et in hora mortis nostrae. Amen.',
+  },
+  'glory-be': {
+    title: 'Gloria Patri',
+    summary: 'Gloria Patri, et Filio, et Spiritui Sancto…',
+    fullText:
+      'Gloria Patri, et Filio, et Spiritui Sancto. Sicut erat in principio, et nunc et semper, et in saecula saeculorum. Amen.',
+  },
+  'fatima-prayer': {
+    title: 'Oratio Fatimae',
+    summary: 'Domine Iesu, dimitte nobis debita nostra, salva nos ab igne inferni…',
+    fullText:
+      'Domine Iesu, dimitte nobis debita nostra, salva nos ab igne inferni, perduc in caelum omnes animas, praesertim eas quae misericordiae tuae maxime indigent.',
+  },
+  'hail-holy-queen': {
+    title: 'Salve Regina',
+    summary: 'Salve, Regina, mater misericordiae; vita, dulcedo et spes nostra, salve…',
+    fullText:
+      'Salve, Regina, mater misericordiae; vita, dulcedo et spes nostra, salve. Ad te clamamus, exsules filii Hevae. Ad te suspiramus, gementes et flentes in hac lacrimarum valle. Eia ergo, advocata nostra, illos tuos misericordes oculos ad nos converte. Et Iesum, benedictum fructum ventris tui, nobis post hoc exsilium ostende. O clemens, o pia, o dulcis Virgo Maria. Ora pro nobis, sancta Dei Genetrix, ut digni efficiamur promissionibus Christi. Amen.',
+  },
+  'concluding-prayer': {
+    title: 'Oremus',
+    summary: 'Oremus. Deus, cuius Unigenitus per vitam, mortem et resurrectionem suam…',
+    fullText:
+      'Oremus. Deus, cuius Unigenitus per vitam, mortem et resurrectionem suam nobis salutis aeternae praemia comparavit: concede, quaesumus, ut haec mysteria sacratissimo beatae Mariae Virginis Rosario recolentes, et imitemur quod continent, et quod promittunt assequamur. Per eundem Christum Dominum nostrum. Amen.',
+  },
+};
+
+export function getFixedPrayer(id: FixedPrayerId, form?: PrayerForm): FixedPrayer {
+  const base = prayers[id];
+  const portuguese = form?.traditional ? { ...base, ...traditionalTexts[id] } : base;
+  const latin = form?.language === 'la' ? latinTexts[id] : undefined;
+  return latin ? { ...portuguese, ...latin, translation: portuguese.fullText } : portuguese;
 }
 
 export function listFixedPrayerIds(): FixedPrayerId[] {
