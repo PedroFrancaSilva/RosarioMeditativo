@@ -89,6 +89,11 @@ The prayer panel SHALL let the user read the whole expanded prayer, translation,
 - **WHEN** avança para o passo seguinte
 - **THEN** o painel começa do topo
 
+#### Scenario: Meditation over a light artwork
+- **GIVEN** a obra de fundo é clara
+- **WHEN** a passagem e o comentário são mostrados
+- **THEN** eles aparecem sobre um painel escuro, com o mesmo fundo do cartão da oração
+
 #### Scenario: Nothing more to expand
 - **WHEN** o texto do passo já está inteiro
 - **THEN** o convite para ver o texto completo não aparece

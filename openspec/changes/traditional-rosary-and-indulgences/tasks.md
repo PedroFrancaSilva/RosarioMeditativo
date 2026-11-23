@@ -22,6 +22,7 @@
 
 - [x] 3.5 Texto expandido sem corte, rolagem visível, passo novo no topo. Verificar na web em todos os tamanhos de texto.
 - [x] 3.6 Remover o tempo estimado e nomear a conclusão. Verificar com `npx jest src/features/rosary-prayer`.
+- [x] 3.7 Painel escuro atrás da passagem e do comentário. Verificar com `npx jest src/features/rosary-prayer/components/MeditationBlock-test.tsx` e na web sobre uma obra clara.
 
 ## 4. Fechamento
 

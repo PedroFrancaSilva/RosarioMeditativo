@@ -14,7 +14,7 @@ A revisão teológica de 18/11/2026 mostrou que o app guia bem a oração, mas d
 - **Sessão retomada mantém a forma** com que começou, para o passo salvo continuar correto.
 - **Mistérios pelo tempo litúrgico**: no modo tradicional, os domingos do Advento sugerem os Gozosos e os da Quaresma, os Dolorosos.
 - **Página “Indulgências”**: o que são, as condições, como o Rosário se qualifica, as obras de cada dia e o calendário do ano, com a próxima data em destaque.
-- **Leitura completa**: texto expandido sem corte, rolagem visível e cada passo começando do topo.
+- **Leitura completa**: texto expandido sem corte, rolagem visível, cada passo começando do topo e painel escuro atrás da meditação.
 - **Rótulos fiéis**: a home deixa de estimar o tempo e a conclusão nomeia o que foi rezado.
 - Correções da revisão já feitas nesta branch: troca de duas obras, títulos em português, rótulo do mistério avulso, *Regina Caeli* até o sábado depois de Pentecostes, “Outra meditação” sem repetição e maior contraste do texto.
 
