@@ -1,3 +1,6 @@
+import { isPrayerLanguage } from '@/domain/rosary/prayerForm';
+import type { MysterySet, PrayerLanguage } from '@/domain/rosary/types';
+
 /** Tamanho do texto das orações e da meditação. */
 export type TextSize = 'normal' | 'large' | 'xlarge';
 
@@ -15,6 +18,12 @@ export type PrayerPreferences = {
   haptics: boolean;
   openingIntentions: OpeningIntentions;
   reminder: DailyReminder;
+  /** Conjunto escolhido na home. `classic` é o modo Rosário tradicional. */
+  mysterySet: MysterySet;
+  /** Idioma das orações no modo tradicional. */
+  prayerLanguage: PrayerLanguage;
+  /** Oração de Fátima no modo tradicional. */
+  fatimaPrayer: boolean;
 };
 
 export const PREFERENCES_SCHEMA_VERSION = 1;
@@ -24,6 +33,9 @@ export const DEFAULT_PREFERENCES: PrayerPreferences = {
   haptics: true,
   openingIntentions: 'virtues',
   reminder: { enabled: false, hour: 20, minute: 0 },
+  mysterySet: 'jp2',
+  prayerLanguage: 'pt',
+  fatimaPrayer: true,
 };
 
 export const TEXT_SIZES: readonly TextSize[] = ['normal', 'large', 'xlarge'];
@@ -86,6 +98,15 @@ export function parsePrayerPreferences(raw: string | null | undefined): PrayerPr
       hour: clampInt(reminder.hour, 0, 23, fallback.reminder.hour),
       minute: clampInt(reminder.minute, 0, 59, fallback.reminder.minute),
     },
+    mysterySet:
+      record.mysterySet === 'classic' || record.mysterySet === 'jp2'
+        ? record.mysterySet
+        : fallback.mysterySet,
+    prayerLanguage: isPrayerLanguage(record.prayerLanguage)
+      ? record.prayerLanguage
+      : fallback.prayerLanguage,
+    fatimaPrayer:
+      typeof record.fatimaPrayer === 'boolean' ? record.fatimaPrayer : fallback.fatimaPrayer,
   };
 }
 

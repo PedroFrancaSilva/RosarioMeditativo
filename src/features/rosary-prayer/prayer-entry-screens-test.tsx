@@ -68,7 +68,7 @@ describe('entrada para escolher um terço', () => {
     expect(queryByText('Conteúdo dos mistérios')).toBeNull();
 
     const present = THIRD_TITLES.filter((title) => queryByText(title));
-    expect(present).toEqual([TERCO_TITLES[tercoTypeForDate('classic', new Date())]]);
+    expect(present).toEqual([TERCO_TITLES[tercoTypeForDate('jp2', new Date())]]);
   });
 
   it('escolher um terço inicia esse terço e não o checklist', async () => {

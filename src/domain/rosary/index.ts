@@ -4,6 +4,8 @@ export type {
   FixedPrayer,
   FixedPrayerId,
   MysterySet,
+  PrayerForm,
+  PrayerLanguage,
   PrayerStep,
   PrayerStepKind,
   RosaryMode,

@@ -5,6 +5,8 @@ import {
   drawAnotherMeditationPair,
   drawMeditationPair,
   meditationPairs,
+  nextDrawPool,
+  pairKey,
   useMeditationSelection,
 } from '@/features/rosary-prayer/hooks/useMeditationSelection';
 
@@ -66,7 +68,7 @@ describe('drawAnotherMeditationPair', () => {
   it('nunca devolve o par atual e mantém o comentário na sua passagem', () => {
     const current = { passage: passages[0], commentary: commentaries[0] };
     for (const value of [0, 0.4, 0.99]) {
-      const next = drawAnotherMeditationPair(passages, commentaries, current, () => value);
+      const { pair: next } = drawAnotherMeditationPair(passages, commentaries, current, () => value);
       expect(next.commentary?.id).not.toBe('c1');
       expect(next.commentary?.passageId).toBe(next.passage?.id);
     }
@@ -74,7 +76,7 @@ describe('drawAnotherMeditationPair', () => {
 
   it('com um só par possível fica no atual', () => {
     const only = { passage: passages[1], commentary: commentaries[2] };
-    expect(drawAnotherMeditationPair([passages[1]!], commentaries, only, () => 0.5)).toBe(only);
+    expect(drawAnotherMeditationPair([passages[1]!], commentaries, only, () => 0.5).pair).toBe(only);
   });
 
   it('passagem sem comentário também entra no sorteio', () => {
@@ -82,8 +84,38 @@ describe('drawAnotherMeditationPair', () => {
   });
 });
 
+describe('nextDrawPool', () => {
+  const pairs = meditationPairs(passages, commentaries);
+  const [first, second] = pairs;
+
+  it('deixa de fora o que já saiu e o par atual', () => {
+    const { pool } = nextDrawPool(pairs, new Set([pairKey(second!)]), first!);
+    expect(pool).toHaveLength(pairs.length - 2);
+    expect(pool.map(pairKey)).not.toContain(pairKey(first!));
+    expect(pool.map(pairKey)).not.toContain(pairKey(second!));
+  });
+
+  it('ao esgotar recomeça o ciclo sem repetir o par atual', () => {
+    const everyone = new Set(pairs.map(pairKey));
+    const { pool, seen } = nextDrawPool(pairs, everyone, first!);
+    expect(pool).toHaveLength(pairs.length - 1);
+    expect(pool.map(pairKey)).not.toContain(pairKey(first!));
+    expect([...seen]).toEqual([pairKey(first!)]);
+  });
+});
+
 describe('useMeditationSelection', () => {
   const content = { passages, commentaries, deeperReferences: [] };
+
+  it('"Outra meditação" percorre todos os pares antes de repetir', async () => {
+    const { result } = await renderHook(() => useMeditationSelection(content, () => 0));
+    const shown = [result.current.commentary?.id];
+    for (let i = 1; i < meditationPairs(passages, commentaries).length; i += 1) {
+      await act(() => result.current.drawAnother());
+      shown.push(result.current.commentary?.id);
+    }
+    expect(new Set(shown).size).toBe(shown.length);
+  });
 
   it('avançar o passo não troca o par', async () => {
     const random = queue([0.6, 0, 0, 0]);

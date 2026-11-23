@@ -37,7 +37,14 @@ describe('prayer navigation hrefs', () => {
     const resumeHref = prayerHrefFromSnapshot(snapshot);
     expect(resumeHref).toEqual({
       pathname: '/prayer',
-      params: { mode: 'full', set: 'classic', stepIndex: '7' },
+      params: {
+        mode: 'full',
+        set: 'classic',
+        stepIndex: '7',
+        formTraditional: '0',
+        formLanguage: 'pt',
+        formFatima: '1',
+      },
     });
 
     const freshHref = prayerHrefForIntent({ mode: 'single', set: 'jp2', mysteryId: 'x' });

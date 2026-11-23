@@ -15,7 +15,18 @@ export type FixedPrayerId =
   | 'glory-be'
   | 'fatima-prayer'
   | 'closing-thanksgiving'
-  | 'hail-holy-queen';
+  | 'hail-holy-queen'
+  | 'concluding-prayer';
+
+export type PrayerLanguage = 'pt' | 'la';
+
+/** Como as orações são rezadas nesta sessão. */
+export type PrayerForm = {
+  /** Credo, Glória e Oração de Fátima nas formas tradicionais. */
+  traditional: boolean;
+  language: PrayerLanguage;
+  fatima: boolean;
+};
 
 export type PrayerStepKind = 'fixed-prayer' | 'mystery-announcement' | 'completion';
 
@@ -30,6 +41,8 @@ export type PrayerStep = {
   /** Citação mostrada inteira acima do texto, no mesmo passo. */
   lead: string | null;
   label: string;
+  /** Posição, tipo e fruto do mistério, no passo de anúncio. */
+  announcement?: string | null;
 };
 
 export type RosarySessionConfig = {
@@ -38,6 +51,7 @@ export type RosarySessionConfig = {
   mysteries: Mystery[];
   /** Frases das três Ave-Marias iniciais. Padrão: fé, esperança e caridade. */
   openingIntentions?: OpeningIntentions;
+  form?: PrayerForm;
 };
 
 export type FixedPrayer = {
@@ -45,4 +59,6 @@ export type FixedPrayer = {
   title: string;
   summary: string;
   fullText: string;
+  /** Tradução em português, quando o texto está em latim. */
+  translation?: string;
 };

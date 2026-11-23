@@ -1,7 +1,27 @@
 import type { RosaryProgressModel } from '@/domain/rosary/rosaryProgress';
 import type { PrayerStep } from '@/domain/rosary/types';
 
-import { buildDecadeBeadView } from '@/features/rosary-prayer/session/decadeBeadView';
+import {
+  buildDecadeBeadView,
+  mysteryProgressLabel,
+} from '@/features/rosary-prayer/session/decadeBeadView';
+
+describe('mysteryProgressLabel', () => {
+  it('no mistério avulso mostra a posição real e o tipo, sem contagem', () => {
+    expect(mysteryProgressLabel(['current'], true, { type: 'glorious', sortOrder: 2 })).toEqual({
+      kicker: '2º mistério glorioso',
+      detail: '',
+    });
+  });
+
+  it('no terço completo mantém a posição na sessão', () => {
+    const states = ['completed', 'current', 'upcoming', 'upcoming', 'upcoming'] as const;
+    expect(mysteryProgressLabel([...states], true, { type: 'glorious', sortOrder: 2 })).toEqual({
+      kicker: '2º mistério',
+      detail: '2 de 5',
+    });
+  });
+});
 
 function step(partial: Partial<PrayerStep> & Pick<PrayerStep, 'id' | 'kind' | 'label'>): PrayerStep {
   return {

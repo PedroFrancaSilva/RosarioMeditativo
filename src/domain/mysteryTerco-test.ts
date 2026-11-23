@@ -3,6 +3,7 @@ import {
   getRecommendedDaysLabel,
   groupMysteriesByTerco,
   mysteryTypesForSet,
+  liturgicalSundayNote,
   tercoTypeForDate,
   TERCO_TITLES,
 } from '@/domain/mysteryTerco';
@@ -65,6 +66,34 @@ describe('tercoTypeForDate', () => {
     expect(tercoTypeForDate('jp2', day(30))).toBe('sorrowful');
     expect(tercoTypeForDate('jp2', day(31))).toBe('joyful');
     expect(tercoTypeForDate('jp2', day(25))).toBe('glorious');
+  });
+});
+
+describe('tempo litúrgico no conjunto tradicional', () => {
+  it('domingos do Advento sugerem os Gozosos', () => {
+    const sunday = new Date(2026, 10, 29);
+    expect(tercoTypeForDate('classic', sunday)).toBe('joyful');
+    expect(liturgicalSundayNote('classic', sunday)).toBe('Domingo do Advento');
+  });
+
+  it('domingos da Quaresma sugerem os Dolorosos, até o de Ramos', () => {
+    for (const sunday of [new Date(2026, 2, 1), new Date(2026, 2, 29)]) {
+      expect(tercoTypeForDate('classic', sunday)).toBe('sorrowful');
+      expect(liturgicalSundayNote('classic', sunday)).toBe('Domingo da Quaresma');
+    }
+  });
+
+  it('Natal e Páscoa no domingo voltam aos Gloriosos', () => {
+    for (const sunday of [new Date(2022, 11, 25), new Date(2026, 3, 5)]) {
+      expect(tercoTypeForDate('classic', sunday)).toBe('glorious');
+      expect(liturgicalSundayNote('classic', sunday)).toBeNull();
+    }
+  });
+
+  it('não altera os dias de semana nem o conjunto com Luminosos', () => {
+    expect(tercoTypeForDate('classic', new Date(2026, 11, 2))).toBe('glorious');
+    expect(tercoTypeForDate('jp2', new Date(2026, 10, 29))).toBe('glorious');
+    expect(liturgicalSundayNote('jp2', new Date(2026, 10, 29))).toBeNull();
   });
 });
 

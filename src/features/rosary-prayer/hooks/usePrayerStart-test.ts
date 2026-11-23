@@ -80,6 +80,9 @@ describe('usePrayerStart', () => {
         set: 'classic',
         mysteryType: 'joyful',
         stepIndex: '2',
+        formTraditional: '0',
+        formLanguage: 'pt',
+        formFatima: '1',
       },
     });
   });

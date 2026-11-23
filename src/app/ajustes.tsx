@@ -1,5 +1,5 @@
 import Constants from 'expo-constants';
-import { router } from 'expo-router';
+import { router, type Href } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useState, type ReactNode } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
@@ -15,6 +15,7 @@ import {
 } from '@/domain/preferences/prayerPreferences';
 import { completedCountLabel } from '@/domain/rosary/completionCount';
 import { openingLeads } from '@/domain/rosary/buildPrayerSteps';
+import type { PrayerLanguage } from '@/domain/rosary/types';
 import { ChantToggle } from '@/features/chant/ChantToggle';
 import { usePrayerPreferences } from '@/features/preferences/preferencesContext';
 import { cancelDailyReminder, scheduleDailyReminder } from '@/features/reminder/dailyReminder';
@@ -24,6 +25,11 @@ import { ContemplativeSwitch } from '@/shared/components/ContemplativeSwitch';
 import { contemplative, contemplativeFonts } from '@/shared/constants/contemplative';
 
 const REMINDER_STEP_MINUTES = 15;
+
+const PRAYER_LANGUAGE_OPTIONS: { id: PrayerLanguage; label: string }[] = [
+  { id: 'pt', label: 'Português' },
+  { id: 'la', label: 'Latim' },
+];
 
 const OPENING_OPTIONS: { id: OpeningIntentions; label: string }[] = [
   { id: 'virtues', label: 'Fé, esperança e caridade' },
@@ -182,6 +188,33 @@ export default function SettingsScreen() {
           <Text style={styles.hint}>Vale para a próxima oração que começar.</Text>
         </Section>
 
+        <Section title="Rosário tradicional">
+          <Text style={styles.hint}>
+            Vale quando a aba “Tradicional” está escolhida no início, com “desceu aos infernos” e o
+            Glória longo.
+          </Text>
+          <Segmented
+            options={PRAYER_LANGUAGE_OPTIONS}
+            value={preferences.prayerLanguage}
+            onChange={(prayerLanguage) => update({ prayerLanguage })}
+          />
+          <Text style={styles.hint}>
+            Em latim, toque na oração para ver a tradução. Oferecimento e Agradecimento ficam em
+            português.
+          </Text>
+          <View style={styles.row}>
+            <View style={styles.rowCopy}>
+              <Text style={styles.rowLabel}>Oração de Fátima</Text>
+              <Text style={styles.hint}>Rezada depois do Glória de cada dezena.</Text>
+            </View>
+            <ContemplativeSwitch
+              value={preferences.fatimaPrayer}
+              onValueChange={(fatimaPrayer) => update({ fatimaPrayer })}
+              accessibilityLabel="Oração de Fátima"
+            />
+          </View>
+        </Section>
+
         {remindersSupported ? (
           <Section title="Lembrete diário">
             <View style={styles.row}>
@@ -229,6 +262,11 @@ export default function SettingsScreen() {
           <Text style={styles.hint}>
             Bíblia: tradução do Pe. Matos Soares. Versão {Constants.expoConfig?.version ?? '—'} (alfa).
           </Text>
+          <Pressable
+            onPress={() => router.push('/indulgencias' as Href)}
+            accessibilityRole="button">
+            <Text style={styles.aboutLink}>Indulgências: como obter e em quais dias</Text>
+          </Pressable>
           {__DEV__ ? (
             <Pressable onPress={() => router.push('/modal')} accessibilityRole="button">
               <Text style={styles.devLink}>Ferramentas de desenvolvimento</Text>
@@ -248,6 +286,12 @@ const styles = StyleSheet.create({
     color: contemplative.muted,
     fontFamily: contemplativeFonts.sans,
     fontSize: 12,
+    textDecorationLine: 'underline',
+  },
+  aboutLink: {
+    color: contemplative.gold,
+    fontFamily: contemplativeFonts.serifItalic,
+    fontSize: 16,
     textDecorationLine: 'underline',
   },
   aboutTitle: { color: contemplative.cream, fontFamily: contemplativeFonts.serif, fontSize: 20 },

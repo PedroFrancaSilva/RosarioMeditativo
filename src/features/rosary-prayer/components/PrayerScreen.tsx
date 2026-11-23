@@ -1,4 +1,5 @@
 import { hapticCueForStep } from '@/domain/rosary/hapticCue';
+import { mysteryFruit } from '@/domain/rosary/mysteryFruits';
 import { completedCountLabel } from '@/domain/rosary/completionCount';
 import { useChantDuringPrayer } from '@/features/chant/useChantDuringPrayer';
 import { usePrayerPreferences } from '@/features/preferences/preferencesContext';
@@ -174,9 +175,16 @@ export function PrayerScreen({
 
   const header = isCompletion
     ? { kicker: 'Conclusão', detail: '' }
-    : mysteryProgressLabel(progress.mysteries, hasMystery);
+    : mysteryProgressLabel(progress.mysteries, hasMystery, {
+        type: activeMysteryType,
+        sortOrder: activeMysterySortOrder,
+      });
   const beadView = buildDecadeBeadView(isCompletion ? undefined : presentation.step, progress);
   const setName = activeMysteryType ? TERCO_TITLES[activeMysteryType] : null;
+  const fruit =
+    activeMysteryType && activeMysterySortOrder
+      ? mysteryFruit(activeMysteryType, activeMysterySortOrder)
+      : null;
   const meditationStatus = !showMeditation
     ? 'empty'
     : meditationQuery.isLoading && !meditation.passage
@@ -196,10 +204,11 @@ export function PrayerScreen({
             colors={[
               'rgba(13,11,10,0.62)',
               'rgba(13,11,10,0.12)',
-              'rgba(13,11,10,0.28)',
+              'rgba(13,11,10,0.46)',
+              'rgba(13,11,10,0.82)',
               contemplative.background,
             ]}
-            locations={[0, 0.16, 0.42, 1]}
+            locations={[0, 0.16, 0.42, 0.62, 1]}
             style={styles.gradient}>
             <View style={[styles.header, { paddingTop: insets.top + 8 }]}>
               <Pressable
@@ -294,6 +303,9 @@ export function PrayerScreen({
                   <Animated.View style={contentStyle}>
                     {setName && hasMystery ? <Text style={styles.setName}>{setName}</Text> : null}
                     <Text style={styles.mysteryTitle}>{persistentMysteryLabel}</Text>
+                    {fruit && hasMystery && !isMysteryAnnouncement ? (
+                      <Text style={styles.fruit}>Fruto: {fruit}</Text>
+                    ) : null}
                     {showMeditation ? (
                       <MeditationBlock
                         status={meditationStatus}
@@ -313,6 +325,7 @@ export function PrayerScreen({
                       lead={presentation.lead}
                       summary={presentation.bodySummary}
                       fullText={presentation.bodyFull}
+                      translation={presentation.translation}
                     />
                   </Animated.View>
                   </ScrollView>
@@ -434,6 +447,13 @@ const styles = StyleSheet.create({
     fontSize: 10,
     letterSpacing: 1.8,
     textTransform: 'uppercase',
+  },
+  fruit: {
+    marginBottom: 6,
+    color: contemplative.gold,
+    fontFamily: contemplativeFonts.serifItalic,
+    fontSize: 15,
+    lineHeight: 19,
   },
   mysteryTitle: {
     marginTop: 4,

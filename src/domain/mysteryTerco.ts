@@ -1,3 +1,10 @@
+import {
+  addDays,
+  adventSunday,
+  civilDateFromLocal,
+  dateKey,
+  easterSunday,
+} from '@/domain/chant/marianAntiphon';
 import type { Mystery, MysteryType } from '@/domain/mystery';
 import type { MysterySet } from '@/domain/rosary/types';
 
@@ -59,7 +66,24 @@ const TERCO_BY_WEEKDAY: Record<MysterySet, readonly MysteryType[]> = {
   jp2: ['glorious', 'joyful', 'sorrowful', 'glorious', 'luminous', 'sorrowful', 'joyful'],
 };
 
+export type LiturgicalSundayNote = 'Domingo do Advento' | 'Domingo da Quaresma';
+
+/** No costume tradicional, os domingos do Advento e da Quaresma têm terço próprio. */
+export function liturgicalSundayNote(set: MysterySet, date: Date): LiturgicalSundayNote | null {
+  if (set !== 'classic' || date.getDay() !== 0) return null;
+  const today = civilDateFromLocal(date);
+  const key = dateKey(today);
+  const christmas = dateKey({ year: today.year, month: 12, day: 25 });
+  if (key >= dateKey(adventSunday(today.year)) && key < christmas) return 'Domingo do Advento';
+  const easter = easterSunday(today.year);
+  if (key >= dateKey(addDays(easter, -46)) && key < dateKey(easter)) return 'Domingo da Quaresma';
+  return null;
+}
+
 export function tercoTypeForDate(set: MysterySet, date: Date): MysteryType {
+  const note = liturgicalSundayNote(set, date);
+  if (note === 'Domingo do Advento') return 'joyful';
+  if (note === 'Domingo da Quaresma') return 'sorrowful';
   const day = date.getDay();
   return TERCO_BY_WEEKDAY[set][day] ?? 'joyful';
 }

@@ -26,7 +26,8 @@ export function getPersistentMysteryLabel(
   }
   if (
     currentStep.prayerId === 'closing-thanksgiving' ||
-    currentStep.prayerId === 'hail-holy-queen'
+    currentStep.prayerId === 'hail-holy-queen' ||
+    currentStep.prayerId === 'concluding-prayer'
   ) {
     return 'Encerramento';
   }

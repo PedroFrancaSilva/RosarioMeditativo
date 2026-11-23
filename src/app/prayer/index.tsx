@@ -10,6 +10,7 @@ import {
 } from '@/data/repositories/mysteryRepository';
 import type { MysteryType } from '@/domain/mystery';
 import { filterMysteriesByType } from '@/domain/mysteryTerco';
+import { prayerFormFromParams, resolvePrayerForm } from '@/domain/rosary/prayerForm';
 import type { MysterySet, RosaryMode } from '@/domain/rosary/types';
 import { contemplative, contemplativeMotion } from '@/shared/constants/contemplative';
 import { Stack, useLocalSearchParams } from 'expo-router';
@@ -60,6 +61,9 @@ function PrayerSession() {
     mysteryId?: string;
     mysteryType?: string;
     stepIndex?: string;
+    formTraditional?: string;
+    formLanguage?: string;
+    formFatima?: string;
   }>();
 
   const mode = parseMode(params.mode);
@@ -69,7 +73,17 @@ function PrayerSession() {
   const initialStepIndex = parseStepIndex(params.stepIndex);
 
   const { data: remoteCatalog, isLoading: mysteriesLoading } = useMysteries(set);
-  const { openingIntentions } = usePrayerPreferences().preferences;
+  const { openingIntentions, prayerLanguage, fatimaPrayer } = usePrayerPreferences().preferences;
+  // Sessão retomada traz a própria forma: mudar os ajustes não desloca o passo salvo.
+  const form = useMemo(
+    () =>
+      prayerFormFromParams({
+        formTraditional: params.formTraditional,
+        formLanguage: params.formLanguage,
+        formFatima: params.formFatima,
+      }) ?? resolvePrayerForm(set, { language: prayerLanguage, fatima: fatimaPrayer }),
+    [params.formTraditional, params.formLanguage, params.formFatima, set, prayerLanguage, fatimaPrayer],
+  );
 
   const sessionConfig = useMemo(() => {
     const catalog = remoteCatalog ?? getEmbeddedCatalog(set);
@@ -77,17 +91,17 @@ function PrayerSession() {
       const mystery =
         catalog.find((m) => m.id === mysteryId) ?? getEmbeddedMysteryById(mysteryId);
       if (mystery) {
-        return { mode, set, mysteries: [mystery], openingIntentions };
+        return { mode, set, mysteries: [mystery], openingIntentions, form };
       }
     }
     if (mode === 'tercio' && mysteryType) {
       const subset = filterMysteriesByType(catalog, mysteryType);
       if (subset.length > 0) {
-        return { mode: 'tercio' as const, set, mysteries: subset, openingIntentions };
+        return { mode: 'tercio' as const, set, mysteries: subset, openingIntentions, form };
       }
     }
-    return { mode: 'full' as const, set, mysteries: catalog, openingIntentions };
-  }, [remoteCatalog, mode, set, mysteryId, mysteryType, openingIntentions]);
+    return { mode: 'full' as const, set, mysteries: catalog, openingIntentions, form };
+  }, [remoteCatalog, mode, set, mysteryId, mysteryType, openingIntentions, form]);
 
   const session = useRosarySession(sessionConfig, { initialStepIndex });
 

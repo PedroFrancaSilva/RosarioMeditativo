@@ -1,7 +1,8 @@
 import { getEmbeddedCatalog, getEmbeddedMysteryById } from '@/data/repositories/mysteryRepository';
 import type { Mystery, MysteryType } from '@/domain/mystery';
 import { buildPrayerSteps } from '@/domain/rosary/buildPrayerSteps';
-import type { MysterySet, RosaryMode, RosarySessionConfig } from '@/domain/rosary/types';
+import { isPrayerForm } from '@/domain/rosary/prayerForm';
+import type { MysterySet, PrayerForm, RosaryMode, RosarySessionConfig } from '@/domain/rosary/types';
 
 export const INCOMPLETE_SESSION_SCHEMA_VERSION = 1 as const;
 
@@ -13,6 +14,8 @@ export type IncompleteRosarySession = {
   stepIndex: number;
   mysteryId?: string;
   mysteryType?: MysteryType;
+  /** Ausente em sessões salvas antes do modo tradicional. */
+  form?: PrayerForm;
 };
 
 function isRosaryMode(value: unknown): value is RosaryMode {
@@ -50,6 +53,7 @@ export function snapshotFromConfig(
     set: config.set,
     mysteryIds,
     stepIndex,
+    ...(config.form ? { form: config.form } : {}),
   };
   if (config.mode === 'single' && mysteryIds[0]) {
     return { ...base, mysteryId: mysteryIds[0] };
@@ -78,7 +82,12 @@ export function configFromIncompleteSession(
     if (!session.mysteryType) return null;
     if (mysteries.some((m) => m.type !== session.mysteryType)) return null;
   }
-  return { mode: session.mode, set: session.set, mysteries };
+  return {
+    mode: session.mode,
+    set: session.set,
+    mysteries,
+    ...(session.form ? { form: session.form } : {}),
+  };
 }
 
 export function validateIncompleteSession(
@@ -127,6 +136,7 @@ export function normalizeIncompleteSession(data: unknown): IncompleteRosarySessi
     if (!isMysteryType(record.mysteryType)) return null;
     session.mysteryType = record.mysteryType;
   }
+  if (isPrayerForm(record.form)) session.form = record.form;
   return session;
 }
 
