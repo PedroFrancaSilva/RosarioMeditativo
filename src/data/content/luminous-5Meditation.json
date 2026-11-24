@@ -2,7 +2,7 @@
   "passages": [
     {
       "reference": "Mt 26, 26-29",
-      "text": "Enquanto comiam, Jesus tomou pão e o benzeu, e o partiu, e deu-o a seus discípulos, dizendo: «Tomai e comei, isto é o meu corpo.» Depois, tomando um cálice, deu graças, e deu-lho, dizendo: «Bebei dele todos. Porque isto é o meu sangue, o sangue da nova aliança, que será derramado por muitos para remissão dos pecados. Digo-vos: desta hora em diante não beberei mais deste fruto da videira até aquele dia, em que o beberei novo convosco no reino de meu Pai.»",
+      "text": "E, enquanto ceavam, Jesus tomou o pão, e o benzeu, e o partiu, e deu-o a seus discípulos, e disse: Tomai e comei; isto é o meu corpo. E, tomando o cálice, deu graças, e deu-lho, dizendo: Bebei dele todos, Porque isto é o meu sangue (que será o selo) do novo testamento, o qual será derramado por muitos para remissão dos pecados. E digo-vos: desta hora em diante não beberei mais deste fruto da videira até àquele dia, em que o beberei novo convosco no reino de meu Pai.",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -12,39 +12,51 @@
         },
         {
           "sortOrder": 1,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 1323",
-          "text": "«O nosso Salvador instituiu na última ceia, na noite em que foi entregue, o sacrifício eucarístico do seu corpo e sangue, para perpetuar pelo decorrer dos séculos, até voltar, o sacrifício da cruz, confiando à Igreja, sua esposa amada, o memorial da sua morte e ressurreição: sacramento de piedade, sinal de unidade, vínculo de caridade, banquete pascal em que se recebe Cristo, a alma se enche de graça e nos é dado o penhor da glória futura»."
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 73, a. 5, resp. (texto abreviado; tradução a partir do latim)",
+          "text": "«… Quando o próprio Cristo estava para se apartar dos discípulos na sua figura própria, deixou-se-lhes a Si mesmo sob a figura sacramental, como na ausência do imperador se expõe à veneração a sua imagem. … O que se diz por último, sobretudo pelos amigos que partem, mais se grava na memória, porque então mais se inflama o afeto para com os amigos; e aquilo que mais nos toca mais profundamente se imprime na alma. … Por isso, para que fosse tido em maior veneração, o Senhor instituiu este sacramento na sua última despedida dos discípulos.»"
         },
         {
           "sortOrder": 2,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 1324",
-          "text": "A Eucaristia é «fonte e cume de toda a vida cristã». «Os restantes sacramentos, assim como todos os ministérios eclesiásticos e obras de apostolado, estão vinculados com a sagrada Eucaristia e a ela se ordenam. Com efeito, na santíssima Eucaristia está contido todo o tesouro espiritual da Igreja, isto é, o próprio Cristo, nossa Páscoa»."
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte IV (Dos Sacramentos), cap. IV (Da Eucaristia), § 1, 1.ª e 3.ª perguntas do capítulo (ed. Roma, 1905, p. 202, sem numeração contínua; texto abreviado; tradução a partir do italiano original)",
+          "text": "«— Que é o sacramento da Eucaristia? — A Eucaristia é um sacramento no qual, pela admirável conversão de toda a substância do pão no Corpo de Jesus Cristo e da do vinho no seu precioso Sangue, se contém verdadeira, real e substancialmente o Corpo, o Sangue, a Alma e a Divindade do mesmo Jesus Cristo Nosso Senhor, sob as espécies do pão e do vinho, para ser nosso alimento espiritual. … — Por que credes que no sacramento da Eucaristia está verdadeiramente Jesus Cristo? — Creio que no sacramento da Eucaristia está verdadeiramente presente Jesus Cristo, porque Ele mesmo o disse, e mo ensina a santa Igreja.»"
         },
         {
           "sortOrder": 3,
+          "author": "São João Crisóstomo",
+          "source": "Homilia sobre a traição de Judas, 1, 6 (citado no CIC 1375)",
+          "text": "«Não é o homem que faz com que as coisas oferecidas se tornem corpo e sangue de Cristo, mas o próprio Cristo, que foi crucificado por nós. O sacerdote, figura de Cristo, pronuncia estas palavras, mas a sua eficácia e a graça são de Deus. Isto é o Meu corpo, diz ele. Esta palavra transforma as coisas oferecidas.»"
+        },
+        {
+          "sortOrder": 4,
           "author": "Catecismo da Igreja Católica",
           "source": "CIC 1376 (Concílio de Trento, sess. XIII, cap. 4)",
           "text": "O Concílio de Trento resume a fé católica, ao declarar: «Porque Cristo, nosso Redentor, disse que aquilo que oferecia sob a espécie do pão era verdadeiramente o seu corpo, sempre na Igreja se teve esta convicção, que o sagrado Concílio de novo declara: pela consagração do pão e do vinho opera-se a conversão de toda a substância do pão na substância do corpo de Cristo nosso Senhor e de toda a substância do vinho na substância do seu sangue; esta conversão, de modo conveniente e apropriado, foi chamada pela santa Igreja católica transubstanciação»."
         },
         {
-          "sortOrder": 4,
-          "author": "São Tomás de Aquino",
-          "source": "Suma Teológica, III, q. 73, a. 2",
-          "text": "Pelo contrário, diz o Apóstolo em 1 Cor 10,17: ainda que sejamos muitos, somos um só pão e um só corpo, todos os que participamos de um só pão e de um só cálice. Donde se conclui que a Eucaristia é o sacramento da unidade eclesiástica. … Este sacramento está ordenado ao alimento espiritual … para a integridade deste sacramento concorrem o cibo espiritual e a bebida espiritual … Por isso este sacramento é materialmente múltiplo, mas um formal e perfeitivamente."
+          "sortOrder": 5,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte IV (Dos Sacramentos), cap. IV (Da Eucaristia), § 1, 11.ª e 12.ª perguntas do capítulo (ed. Roma, 1905, pp. 203-204, sem numeração contínua; tradução a partir do italiano original)",
+          "text": "«— Que é a consagração? — A consagração é a renovação, por meio do sacerdote, do milagre operado por Jesus Cristo na última ceia, de mudar o pão e o vinho no seu Corpo e no seu Sangue adorável, dizendo: isto é o meu corpo, isto é o meu sangue. — Como é chamada pela Igreja a milagrosa conversão do pão e do vinho no Corpo e no Sangue de Jesus Cristo? — A milagrosa conversão, que todos os dias se opera sobre os nossos altares, é chamada pela Igreja transubstanciação.»"
         },
         {
-          "sortOrder": 5,
+          "sortOrder": 6,
           "author": "São Tomás de Aquino",
-          "source": "Suma Teológica, III, q. 73, a. 3",
-          "text": "… Como o batismo se chama sacramento da fé, que é o fundamento da vida espiritual, assim a eucaristia se chama sacramento da caridade, que é o «vínculo da perfeição», como se diz em Cl 3,14."
+          "source": "Sequência «Lauda Sion», da Missa do Corpo de Deus (texto abreviado; tradução a partir do latim)",
+          "text": "«É dogma dado aos cristãos / que o pão se muda em carne / e o vinho em sangue. / O que não compreendes, o que não vês, / afirma-o a fé animosa, / acima da ordem das coisas. / Sob espécies diversas, / sinais somente e não realidades, / ocultam-se coisas sublimes. / A carne é comida, o sangue é bebida; / mas Cristo permanece todo inteiro / sob uma e outra espécie.»"
+        },
+        {
+          "sortOrder": 7,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 75, a. 1, e hino «Adoro te devote», citados no CIC 1381 (texto abreviado) (grafia adaptada ao Brasil)",
+          "text": "A presença do verdadeiro corpo e do verdadeiro sangue de Cristo neste sacramento «não a apreendemos pelos sentidos … mas só pela fé, que se apoia na autoridade de Deus». … «Adoro-te com devoção, ó Deus que te escondes, / que sob estas figuras de verdade te ocultas: / a ti meu coração se submete inteiramente, / porque, ao contemplar-te, desfalece por completo. / Visão, tato e paladar em ti falham, / apenas ouvindo se crê com segurança: / creio em tudo o que disse o Filho de Deus: / nada mais verdadeiro que esta palavra da Verdade.»"
         }
       ]
     },
     {
       "reference": "1 Co 11, 23-26",
-      "text": "Porque eu recebi do Senhor o que vos transmiti: que o Senhor Jesus, na noite em que foi entregue, tomou o pão e, dando graças, o partiu e disse: Tomai e comei; isto é o meu corpo, que é (dado) para vós; fazei isto em memória de mim. Igualmente também, depois de ter ceado, tomou o cálice, dizendo: Este cálice é a nova Aliança no meu sangue; fazei isto em memória de mim, todas as vezes que o beberdes. Todas as vezes que comerdes este pão e beberdes este cálice, anunciareis a morte do Senhor, até que ele venha.",
+      "text": "Porque eu recebi do Senhor o que também vos ensinei a vós, que o Senhor Jesus, na noite em que foi entregue, tomou o pão, e, dando graças, o partiu, e disse: Tomai e comei; isto é o meu corpo, que será entregue por vós; fazei isto em memória de mim. Igualmente também, depois de ter ceado, (tomou) o cálice, dizendo: Este cálice é o novo testamento no meu sangue; fazei isto em memória de mim todas as vezes que o beberdes. Porque todas as vezes que comerdes este pão e beberdes este cálice, anunciareis a morte do Senhor, até que ele venha.",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -55,8 +67,74 @@
         {
           "sortOrder": 1,
           "author": "Catecismo da Igreja Católica",
-          "source": "CIC 611",
-          "text": "A Eucaristia, que neste momento instituiu, será o «memorial» do seu sacrifício. Jesus incluiu os Apóstolos na sua própria oferenda e pediu-lhes que a perpetuassem. Desse modo, instituiu os Apóstolos como sacerdotes da Nova Aliança: «Eu consagro-me por eles, para que também eles sejam consagrados na verdade» (Jo 17, 19)."
+          "source": "CIC 1366 (Concílio de Trento, sess. XXII, cap. 1) (texto abreviado)",
+          "text": "A Eucaristia é, pois, um sacrifício, porque representa (torna presente) o sacrifício da cruz, porque é dele o memorial e porque aplica o seu fruto: Cristo «nosso Deus e Senhor […] ofereceu-Se a Si mesmo a Deus Pai uma vez por todas, morrendo como intercessor sobre o altar da cruz […]. No entanto, porque após a sua morte não se devia extinguir o seu sacerdócio, na última ceia, “na noite em que foi entregue” (1 Cor 11, 23) […] Ele [quis deixar] à Igreja, sua esposa bem-amada, um sacrifício visível […], em que fosse representado o sacrifício cruento que ia realizar uma vez por todas na cruz, perpetuando a sua memória até ao fim dos séculos e aplicando a sua eficácia salvífica à remissão dos pecados que nós cometemos cada dia»."
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte IV (Dos Sacramentos), cap. V (Do santo sacrifício da Missa), § 1, 5.ª e 11.ª perguntas do capítulo (ed. Roma, 1905, pp. 214 e 216, sem numeração contínua; texto abreviado; tradução a partir do italiano original)",
+          "text": "«— O sacrifício da Missa é o mesmo da Cruz? — O sacrifício da Missa é substancialmente o mesmo da Cruz, enquanto o mesmo Jesus Cristo, que se ofereceu sobre a Cruz, é o que se oferece, pelas mãos dos sacerdotes, seus ministros, sobre os nossos altares; mas, quanto ao modo com que é oferecido, o sacrifício da Missa difere do sacrifício da Cruz, conservando todavia com ele a mais íntima e essencial relação. … — Quem instituiu o sacrifício da santa Missa? — Instituiu-o o próprio Jesus Cristo quando instituiu o sacramento da Eucaristia; e disse que se fizesse em memória da sua Paixão.»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Tomás de Aquino",
+          "source": "Ofício do Corpo de Deus («Sacerdos»), Matinas, 1.º noturno, 2.ª lição (texto abreviado; tradução a partir do latim)",
+          "text": "«Ninguém é capaz de exprimir a suavidade deste sacramento, pelo qual se saboreia na sua própria fonte a doçura espiritual e se recorda a memória daquela excelentíssima caridade que Cristo mostrou na sua paixão. Por isso, para que a imensidade desta caridade se gravasse mais profundamente nos corações dos fiéis, na última ceia, quando, celebrada a Páscoa com os discípulos, estava para passar deste mundo ao Pai, instituiu este sacramento, como memorial perene da sua paixão, cumprimento das figuras antigas, o maior dos milagres por Ele operados e singular consolação para os que a sua ausência entristecia.»"
+        },
+        {
+          "sortOrder": 4,
+          "author": "São Tomás de Aquino",
+          "source": "Ofício do Corpo de Deus, antífona «O sacrum convivium» do Magnificat das II Vésperas (tradução a partir do latim)",
+          "text": "«Ó sagrado banquete, em que Cristo é recebido, se recorda a memória da sua paixão, a alma se enche de graça e nos é dado o penhor da glória futura.»"
+        },
+        {
+          "sortOrder": 5,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte IV (Dos Sacramentos), cap. IV (Da Eucaristia), § 1, 25.ª e 26.ª perguntas do capítulo (ed. Roma, 1905, p. 206, sem numeração contínua; tradução a partir do italiano original)",
+          "text": "«— Por que motivo se conserva nas igrejas a santíssima Eucaristia? — A santíssima Eucaristia conserva-se nas igrejas para que seja adorada pelos fiéis e levada aos enfermos segundo a necessidade. — Deve-se adorar a Eucaristia? — A Eucaristia deve ser adorada por todos, porque contém verdadeira, real e substancialmente o mesmo Nosso Senhor Jesus Cristo.»"
+        },
+        {
+          "sortOrder": 6,
+          "author": "São João Paulo II",
+          "source": "Ecclesia de Eucharistia, § 56 (texto abreviado)",
+          "text": "«Impossível imaginar os sentimentos de Maria, ao ouvir dos lábios de Pedro, João, Tiago e restantes apóstolos as palavras da Última Ceia: “Isto é o meu corpo que vai ser entregue por vós” (Lc 22, 19). Aquele corpo, entregue em sacrifício e presente agora nas espécies sacramentais, era o mesmo corpo concebido no seu ventre! Receber a Eucaristia devia significar para Maria quase acolher de novo no seu ventre aquele coração que batera em uníssono com o d'Ela …»"
+        }
+      ]
+    },
+    {
+      "reference": "Jo 6, 51-58",
+      "text": "Eu sou o pão vivo, que desci do céu. Quem comer deste pão, viverá eternamente; e o pão que eu darei, é a minha carne (que será sacrificada) para a salvação do mundo. Disputavam, pois, entre si os Judeus, dizendo: Como pode este dar-nos a comer a sua carne? E Jesus disse-lhes: Em verdade, em verdade vos digo: Se não comerdes a carne do Filho do homem, e não beberdes o seu sangue, não tereis a vida em vós. O que come a minha carne, e bebe o meu sangue, tem a vida eterna; e eu o ressuscitarei no último dia. Porque a minha carne é verdadeiramente comida, e o meu sangue é verdadeiramente bebida. O que come a minha carne, e bebe o meu sangue, fica em mim e eu nele. Assim como me enviou o Pai que vive, e eu vivo pelo Pai, assim o que me comer a mim, esse mesmo também viverá por mim (e da minha própria vida).",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Santo Agostinho",
+          "source": "Comentário ao Salmo 98, 9, citado por Paulo VI, Mysterium Fidei, § 57 (texto abreviado)",
+          "text": "«A mesma carne, com que andou (o Senhor) na terra, essa mesma nos deu a comer para nossa salvação; ninguém come aquela Carne sem primeiro a adorar … não só não pecamos adorando-a, mas pecaríamos se a não adorássemos.»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte IV (Dos Sacramentos), cap. IV (Da Eucaristia), § 2, 4.ª e 5.ª perguntas do capítulo (ed. Roma, 1905, pp. 207-208, sem numeração contínua; texto abreviado; tradução a partir do italiano original)",
+          "text": "«— Que efeitos produz em nós a santíssima Eucaristia? — Os efeitos principais que a santíssima Eucaristia produz em quem a recebe dignamente são estes: 1.º conserva e aumenta a vida da alma, que é a graça, como o alimento material sustenta e aumenta a vida do corpo; 2.º perdoa os pecados veniais e preserva dos mortais; 3.º produz consolação espiritual. — A santíssima Eucaristia não produz em nós outros efeitos? — Sim … 3.º dá-nos um penhor da glória futura e da própria ressurreição do nosso corpo.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 1391 (texto abreviado) (grafia adaptada ao Brasil)",
+          "text": "A Comunhão aumenta a nossa união com Cristo. Receber a Eucaristia na comunhão traz consigo, como fruto principal, a união íntima com Cristo Jesus. De fato, o Senhor diz: «Quem come a minha carne e bebe o meu sangue permanece em Mim e Eu nele» (Jo 6, 56). A vida em Cristo tem o seu fundamento no banquete eucarístico: «Assim como o Pai, que vive, Me enviou, e Eu vivo pelo Pai, também o que Me come viverá por Mim» (Jo 6, 57)."
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Cirilo de Jerusalém",
+          "source": "Catequeses Mistagógicas, IV, 6 (citado por São João Paulo II, Ecclesia de Eucharistia, § 15) (grafia adaptada ao Brasil)",
+          "text": "«Não hás de ver o pão e o vinho [consagrados] simplesmente como elementos naturais, porque o Senhor disse expressamente que são o seu corpo e o seu sangue: a fé to assegura, ainda que os sentidos possam sugerir-te outra coisa.»"
+        },
+        {
+          "sortOrder": 4,
+          "author": "Santo Agostinho",
+          "source": "Confissões, VII, 10, 16 (citado por Bento XVI, Sacramentum Caritatis, § 70)",
+          "text": "«Sou o pão dos fortes; cresce e comer-Me-ás. Não Me transformarás em ti como ao alimento da tua carne, mas mudar-te-ás em Mim.»"
         }
       ]
     }
