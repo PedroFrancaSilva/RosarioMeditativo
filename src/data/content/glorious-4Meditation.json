@@ -2,7 +2,7 @@
   "passages": [
     {
       "reference": "Lc 1, 48-50",
-      "text": "… porque lançou os olhos para a baixeza da sua serva. Portanto, eis que, de hoje em diante, todas as gerações me chamarão bem-aventurada. Porque o Todo-poderoso fez em mim grandes coisas, o seu nome é santo. E a sua misericórdia se estende de geração em geração sobre aqueles que o temem.",
+      "text": "… porque lançou os olhos para a baixeza da sua serva; portanto, eis que, de hoje em diante, todas as gerações me chamarão bem-aventurada. Porque fez em mim grandes coisas aquele que é poderoso, e cujo nome é santo. E cuja misericórdia (se estende) de geração em geração sobre aqueles que o temem.",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -37,8 +37,8 @@
         {
           "sortOrder": 5,
           "author": "São Pio X",
-          "source": "Catecismo Maior de São Pio X, Instrução sobre as Festas, Parte II, «Da Assunção de Maria Virgem», pergunta 164 (numeração do original italiano, *Catechismo Maggiore*, 1905; tradução a partir do italiano; texto abreviado)",
-          "text": "«— Que devemos nós fazer na solenidade da Assunção de Maria Virgem? — Na solenidade da Assunção de Maria Virgem devemos: … venerá-la como nossa Senhora e nossa advogada junto do seu divino Filho; … rogar-lhe que nos alcance de Deus a graça de levar uma vida santa e de nos prepararmos desse modo para a morte …»"
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Instrução sobre as Festas, Parte II, cap. V «Da Assunção de Maria Virgem», 5ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— Que devemos nós fazer na solenidade da Assunção de Maria Virgem? — Na solenidade da Assunção de Maria Virgem devemos: 1.º alegrar-nos com a sua gloriosa assunção e exaltação; 2.º venerá-la como nossa senhora e nossa advogada junto de seu divino Filho; 3.º pedir-lhe que nos obtenha de Deus a graça de levar uma vida santa e de nos prepararmos de tal maneira para a morte, que mereçamos ser por ela assistidos e protegidos, e ter parte na sua glória.»"
         },
         {
           "sortOrder": 6,
@@ -49,8 +49,74 @@
       ]
     },
     {
+      "reference": "Sl 131, 8",
+      "text": "Levanta-te, Senhor, entra no teu repouso, tu e a arca da tua santidade.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Pio XII",
+          "source": "*Munificentissimus Deus*, §26 (texto abreviado)",
+          "text": "«… houve quem citasse a este propósito as palavras do Salmista: “Erguei-vos, Senhor, para o vosso repouso, vós e a Arca de vossa santificação” (Sl 131, 8); e na Arca da Aliança, feita de madeira incorruptível e colocada no templo de Deus, viam como que uma imagem do corpo puríssimo da virgem Maria, preservado da corrupção do sepulcro, e elevado a tamanha glória no céu.»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "Santo Antônio de Pádua",
+          "source": "Sermão na Assunção de Santa Maria Virgem, citado por Pio XII em *Munificentissimus Deus*, §29 (trad. da Santa Sé; texto abreviado)",
+          "text": "«Daqui, vê-se claramente que o corpo da santíssima Virgem foi assunto ao céu, pois era o lugar dos pés do Senhor.» … «Ressuscitou a Arca da sua santificação, quando neste dia a virgem Mãe foi assunta ao tálamo celestial.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Roberto Belarmino",
+          "source": "Sermões pregados em Lovaina, sermão 40, «Da Assunção da B. Virgem Maria», citado por Pio XII em *Munificentissimus Deus*, §34 (trad. da Santa Sé)",
+          "text": "«Quem há, pergunto, que possa pensar que a arca da santidade, o domicílio do Verbo, o templo do Espírito Santo tenha caído em ruínas? Horroriza-se o espírito só com pensar que aquela carne que gerou, deu a luz, alimentou e transportou a Deus, se tivesse convertido em cinza ou fosse alimento dos vermes.»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "Santo Afonso Maria de Ligório",
+          "source": "*Glórias de Maria*, parte II, discurso 1, citado por Pio XII em *Munificentissimus Deus*, §35 (trad. da Santa Sé)",
+          "text": "«Jesus não quis que o corpo de Maria se corrompesse depois da morte, pois redundaria em seu desdouro que se transformasse em podridão aquela carne virginal de que ele mesmo tomara a própria carne.»"
+        }
+      ]
+    },
+    {
       "reference": "1 Co 15, 20-23",
-      "text": "Mas Cristo ressuscitou dos mortos, sendo ele as primícias dos que dormem, porque, assim como a morte veio por um homem, também por um homem vem a ressurreição dos mortos. Assim como todos morrem em Adão, assim também todos serão vivificados em Cristo. Mas, cada um em sua ordem: como primícias, Cristo; depois, os que são de Cristo, que creram na sua vinda.",
+      "text": "Mas Cristo ressuscitou dos mortos, sendo ele as primícias dos que dormem; porque, assim como a morte (veio) por um homem, também por um homem (veio) a ressurreição dos mortos. E, assim como todos morreram em Adão, assim também todos serão vivificados em Cristo. Mas cada um em sua ordem, como primícias Cristo, depois os que são de Cristo, que creram na sua vinda.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 966 (texto abreviado) (grafia adaptada ao Brasil)",
+          "text": "«Finalmente, a Virgem Imaculada, preservada imune de toda a mancha da culpa original, terminado o curso da vida terrena, foi elevada ao céu em corpo e alma e exaltada pelo Senhor como rainha, para assim se conformar mais plenamente com o seu Filho, Senhor dos senhores e vencedor do pecado e da morte». A Assunção da santíssima Virgem é uma singular participação na ressurreição do seu Filho e uma antecipação da ressurreição dos outros cristãos: «No teu parto guardaste a virgindade e na tua dormição não abandonaste o mundo, ó Mãe de Deus…»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "São João Damasceno",
+          "source": "1.ª Homilia sobre a Dormição, 11-14 (texto abreviado)",
+          "text": "… O teu corpo puríssimo, sem mácula, não foi abandonado à terra, antes foste elevada até à morada do Reino dos Céus, tu, a Rainha, a Soberana, a Senhora, a Mãe de Deus … Lança os teus olhos sobre nós, ó Rainha, Mãe do nosso bom Soberano; guia o nosso caminho até ao porto sem tempestades do desejo bom de Deus."
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Instrução sobre as Festas, Parte II, cap. V «Da Assunção de Maria Virgem», 1ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— Que celebra a Igreja na festa da Assunção da santíssima Virgem? — Na festa da Assunção da santíssima Virgem a Igreja celebra a morte preciosa e a gloriosa Assunção ao Céu de Maria Virgem.»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "Pio XII",
+          "source": "*Munificentissimus Deus*, §42 (texto abreviado)",
+          "text": "«… é de esperar ainda que este luminoso e incomparável exemplo, posto diante dos olhos de todos, mostre com plena luz qual o fim a que se destinam a nossa alma e o nosso corpo. E, finalmente, esperamos que a fé na assunção corpórea de Maria ao céu torne mais firme e operativa a fé na nossa própria ressurreição.»"
+        },
+        {
+          "sortOrder": 4,
+          "author": "São João Paulo II",
+          "source": "*Rosarium Virginis Mariae*, §23 (texto abreviado)",
+          "text": "… A esta glória, onde com a Ascensão Cristo Se senta à direita do Pai, Ela mesma será elevada com a Assunção, chegando, por especialíssimo privilégio, a antecipar o destino reservado a todos os justos com a ressurreição da carne. Enfim, coroada de glória — como aparece no último mistério glorioso — Ela resplandece como Rainha dos Anjos e dos Santos…"
+        }
+      ]
+    },
+    {
+      "reference": "1 Co 15, 54-57",
+      "text": "E, quando este (corpo) mortal se revestir da imortalidade, então se cumprirá a palavra que está escrita: Tragada foi a morte na vitória. Onde está, ó morte, a tua vitória? Onde está, ó morte, o teu aguilhão? Ora, o aguilhão da morte é o pecado, e a força do pecado é a lei. Porém, graças a Deus, que nos deu a vitória (contra a morte) por Nosso Senhor Jesus Cristo.",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -66,39 +132,21 @@
         },
         {
           "sortOrder": 2,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 966 (texto abreviado)",
-          "text": "«Finalmente, a Virgem Imaculada, preservada imune de toda a mancha da culpa original, terminado o curso da vida terrena, foi elevada ao céu em corpo e alma e exaltada pelo Senhor como rainha, para assim se conformar mais plenamente com o seu Filho, Senhor dos senhores e vencedor do pecado e da morte». A Assunção da santíssima Virgem é uma singular participação na ressurreição do seu Filho e uma antecipação da ressurreição dos outros cristãos: «No teu parto guardaste a virgindade e na tua dormição não abandonaste o mundo, ó Mãe de Deus…»"
-        },
-        {
-          "sortOrder": 3,
           "author": "São Germano de Constantinopla",
           "source": "1.º Sermão sobre a Dormição da Santa Mãe de Deus, citado por Pio XII em *Munificentissimus Deus*, §22 (trad. da Santa Sé)",
           "text": "«Vós, como está escrito, aparecestes “em beleza”; o vosso corpo virginal é totalmente santo, totalmente casto, totalmente domicílio de Deus de forma que até por este motivo foi isento de desfazer-se em pó; foi, sim, transformado, enquanto era humano, para viver a vida altíssima da incorruptibilidade; mas agora está vivo, gloriosíssimo, incólume e participante da vida perfeita»."
         },
         {
-          "sortOrder": 4,
-          "author": "São João Damasceno",
-          "source": "1.ª Homilia sobre a Dormição, 11-14 (texto abreviado)",
-          "text": "… O teu corpo puríssimo, sem mácula, não foi abandonado à terra, antes foste elevada até à morada do Reino dos Céus, tu, a Rainha, a Soberana, a Senhora, a Mãe de Deus … Lança os teus olhos sobre nós, ó Rainha, Mãe do nosso bom Soberano; guia o nosso caminho até ao porto sem tempestades do desejo bom de Deus."
-        },
-        {
-          "sortOrder": 5,
-          "author": "São Pio X",
-          "source": "Catecismo Maior de São Pio X, Instrução sobre as Festas, «Da Assunção de Maria Virgem», pergunta 161 (numeração da edição portuguesa; no original italiano de 1905, pergunta 160)",
-          "text": "«— Que celebra a Igreja na festa da Assunção da Santíssima Virgem? — Na festa da Assunção da Santíssima Virgem a Igreja celebra o fim da vida mortal da Virgem Maria e sua gloriosa assunção ao céu»."
-        },
-        {
-          "sortOrder": 6,
+          "sortOrder": 3,
           "author": "Catecismo da Igreja Católica",
-          "source": "CIC 1014 (texto abreviado; cita a *Imitação de Cristo*, I, 23)",
+          "source": "CIC 1014 (texto abreviado; cita a *Imitação de Cristo*, I, 23; grafia adaptada ao Brasil)",
           "text": "«A Igreja exorta-nos a prepararmo-nos para a hora da nossa morte … a pedirmos à Mãe de Deus que rogue por nós “na hora da nossa morte” (Oração da Ave-Maria) e a confiarmo-nos a S. José, padroeiro da boa morte: “… havias de te comportar como se devesses morrer hoje. Se tivesses boa consciência, não terias grande receio da morte. Mais vale acautelares-te do pecado do que fugir da morte. Se hoje não estás preparado, como o estarás amanhã?”»"
         },
         {
-          "sortOrder": 7,
-          "author": "São João Paulo II",
-          "source": "*Rosarium Virginis Mariae*, §23 (texto abreviado)",
-          "text": "… A esta glória, onde com a Ascensão Cristo Se senta à direita do Pai, Ela mesma será elevada com a Assunção, chegando, por especialíssimo privilégio, a antecipar o destino reservado a todos os justos com a ressurreição da carne. Enfim, coroada de glória — como aparece no último mistério glorioso — Ela resplandece como Rainha dos Anjos e dos Santos…"
+          "sortOrder": 4,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Instrução sobre as Festas, Parte II, cap. V «Da Assunção de Maria Virgem», 7ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— Devem também os pecadores confiar no patrocínio de Maria Virgem? — Também os pecadores devem confiar muitíssimo no patrocínio de Maria Virgem, porque ela é mãe de misericórdia e o refúgio dos pecadores, para lhes obter de Deus a graça da conversão.»"
         }
       ]
     }
