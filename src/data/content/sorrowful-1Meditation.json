@@ -1,38 +1,128 @@
 {
   "passages": [
     {
-      "reference": "Mt 26, 36-41",
-      "text": "Então foi Jesus com eles a um lugar chamado Getsemani, e disse-lhes: «Sentai-vos aqui, enquanto eu vou acolá orar.» E, tendo tomado consigo Pedro e os dois filhos de Zebedeu, começou a entristecer-se e angustiar-se. Disse-lhes então: «A minha alma está numa tristeza mortal; ficai aqui e vigiai comigo.» Adiantando-se um pouco, prostrou-se com o rosto em terra, e fez esta oração: «Meu Pai, se é possível, passe de mim este cálice! Todavia não se faça como eu quero, mas sim como tu queres.» … «Vigiai e orai, para que não entreis em tentação. O espírito na verdade está pronto, mas a carne é fraca.»",
+      "reference": "Mt 26, 36-39",
+      "text": "Então foi Jesus com eles a uma granja, chamada Getsemani, e disse-lhes: «Sentai-vos aqui, enquanto eu vou acolá, e faço oração.» E, tendo tomado consigo Pedro e os dois filhos de Zebedeu (Tiago e João), começou a entristecer-se e angustiar-se. Disse-lhes então: «A minha alma está numa tristeza mortal; ficai aqui e vigiai comigo.» E, adiantando-se um pouco, prostrou-se com o rosto em terra, orando e dizendo: «Meu Pai, se é possível, passe de mim este cálice; todavia não (se faça) como eu quero, mas sim como tu queres.»",
       "commentaries": [
         {
           "sortOrder": 0,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 612",
-          "text": "O cálice da Nova Aliança, que Jesus antecipou na Ceia, oferecendo-Se a Si mesmo, é aceite seguidamente por Jesus das mãos do Pai, na agonia no Getsêmani, fazendo-Se «obediente até à morte» (Fl 2, 8). Na sua oração, Jesus diz: «Meu Pai, se é possível, que se afaste de Mim este cálice [...]» (Mt 26, 39). Exprime desse modo o horror que a morte representa para a sua natureza humana. … Aceitando, com a sua vontade humana, que se faça a vontade do Pai, aceita a sua morte enquanto redentora, para «suportar os nossos pecados no seu corpo, no madeiro da cruz» (1 Pe 2, 24)."
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 46, a. 6, corpo do artigo (texto abreviado; tradução a partir do latim)",
+          "text": "… A causa da dor interior de Cristo foi, primeiro, todos os pecados do gênero humano, pelos quais satisfazia padecendo; por isso os atribui a si como seus, dizendo no Salmo: «as palavras dos meus delitos». Segundo, especialmente a queda dos judeus e dos outros que pecaram na sua morte, e sobretudo dos discípulos, que se escandalizaram na paixão de Cristo. Terceiro, a perda da vida corporal, que é naturalmente horrível à natureza humana. … A sua alma apreendia com toda a eficácia todas as causas de tristeza. … E por isso assumiu tão grande quantidade de dor quanta fosse proporcionada à grandeza do fruto que dela havia de seguir-se."
         },
         {
           "sortOrder": 1,
-          "author": "São Tomás de Aquino",
-          "source": "Suma Teológica, III, q. 46, a. 6",
-          "text": "… em Cristo padecente houve verdadeira dor sensível e dor interior, a que se chama tristeza. Ambas foram em Cristo as maiores entre as dores da vida presente. … A causa da dor interior foi, em primeiro lugar, todos os pecados do género humano, pelos quais, padecendo, dava satisfação … em segundo lugar, especialmente a ruína dos discípulos escandalizados na paixão … em terceiro, a perda da vida corporal, naturalmente horrível à natureza humana. … A alma captava de modo intenso todas as causas de tristeza …"
+          "author": "Dom Columba Marmion",
+          "source": "*Le Christ dans ses mystères* (Cristo nos seus mistérios), conferência «Le Christ a aimé l'Église et s'est livré pour elle», § II (ed. Desclée, 1922; texto abreviado; tradução a partir do original francês)",
+          "text": "O Cristo, que nada exagera, revela aos seus apóstolos que a sua alma inocente está oprimida por uma tristeza tão pungente e tão amarga que é capaz de O fazer morrer. … Que abismo! Um Deus, a Potência e a Beatitude infinitas, «se encontra acabrunhado pela tristeza, pelo medo e pelo tédio». … Na divindade a que estava unida, a sua alma via claramente todos os pecados dos homens, todos os ultrajes feitos à santidade e ao amor infinito de Deus. Tomara sobre si todas essas iniquidades, como que se revestira delas. … Previa que para muitos homens o seu sangue seria derramado inutilmente, e essa vista levava ao cúmulo a amargura da sua santa alma."
+        },
+        {
+          "sortOrder": 2,
+          "author": "Santo Agostinho",
+          "source": "*Enarrationes in Psalmos*, Sl 63 (n. 16 na tradução inglesa da série *Nicene and Post-Nicene Fathers*; texto abreviado; tradução a partir dessa versão inglesa)",
+          "text": "… Não carregava Ele a tua fraqueza quando dizia: «A minha alma está triste até à morte»? Não te figurava em Si mesmo quando dizia: «Pai, se é possível, passe de mim este cálice»? Pois não eram dois e diferentes os corações do Pai e do Filho; mas, na forma de servo, trouxe consigo o teu coração, para o ensinar com o seu exemplo. … Deus não consente com o teu coração: consente tu com o coração de Deus."
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Jerônimo",
+          "source": "*Comentário sobre São Mateus*, IV (Mt 26, 37-38), citado por S. Tomás de Aquino na *Catena Aurea*, in Mt 26, lect. 10 (texto abreviado; tradução a partir do latim)",
+          "text": "Entristecia-se, pois, o Senhor, não por temor de padecer, Ele que viera precisamente para padecer, … mas por causa do infelicíssimo Judas, do escândalo de todos os apóstolos, da rejeição e reprovação do povo judeu e da ruína da desventurada Jerusalém. … E não se diz que se entristeceu por causa da morte, mas «até à morte», até que pela sua paixão libertasse os apóstolos."
+        },
+        {
+          "sortOrder": 4,
+          "author": "São João Crisóstomo",
+          "source": "*Homilias sobre São Mateus*, homilia 83, 1 (texto abreviado; tradução a partir da versão inglesa da série *Nicene and Post-Nicene Fathers*)",
+          "text": "Costumava orar afastado deles; e isto fazia para nos ensinar a preparar, nas nossas orações, silêncio e grande recolhimento. … Ao dizer: «Se é possível, passe de mim», mostrou a sua humanidade; mas ao dizer: «Todavia, não como eu quero, mas como tu queres», mostrou a sua virtude e o domínio de si, ensinando-nos a seguir a Deus mesmo quando a natureza nos puxa para trás."
+        },
+        {
+          "sortOrder": 5,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 612 (texto abreviado; grafia adaptada ao Brasil)",
+          "text": "O cálice da Nova Aliança, que Jesus antecipou na Ceia, oferecendo-Se a Si mesmo, é aceite seguidamente por Jesus das mãos do Pai, na agonia no Getsêmani, fazendo-Se «obediente até à morte» (Fl 2, 8). Na sua oração, Jesus diz: «Meu Pai, se é possível, que se afaste de Mim este cálice [...]» (Mt 26, 39). Exprime desse modo o horror que a morte representa para a sua natureza humana. … Aceitando, com a sua vontade humana, que se faça a vontade do Pai, aceita a sua morte enquanto redentora, para «suportar os nossos pecados no seu corpo, no madeiro da cruz» (1 Pe 2, 24)."
+        },
+        {
+          "sortOrder": 6,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte II (Da oração), cap. I (Da oração em geral), 22.ª e 23.ª perguntas do capítulo (Compendio della dottrina cristiana, Roma, 1905, sem numeração contínua das perguntas; texto conferido em it.wikisource.org; tradução a partir do italiano original)",
+          "text": "«— Que quer dizer orar com resignação? — Quer dizer que nos devemos conformar à vontade de Deus, o qual conhece melhor do que nós o que é necessário à nossa salvação eterna, ainda mesmo no caso em que as nossas orações não fossem atendidas. — Deus atende sempre as orações bem feitas? — Sim, Deus atende sempre as orações bem feitas, mas da maneira que Ele sabe ser mais útil para a nossa salvação eterna, e nem sempre segundo a nossa vontade.»"
         }
       ]
     },
     {
       "reference": "Lc 22, 41-44",
-      "text": "Afastou-se deles a distância de um tiro de pedra; e, posto de joelhos, orava, dizendo: «Pai, se é do teu agrado, afasta de mim este cálice; não se faça, contudo, a minha vontade, mas a tua.» Então apareceu-lhe um anjo do céu, que o confortava. Posto em agonia orava mais instantemente. O seu suor tornou-se como gotas de sangue, que corriam até à terra.",
+      "text": "E afastou-se deles a distância de um tiro de pedra; e, posto de joelhos, orava, dizendo: «Pai, se é do teu agrado, afasta de mim este cálice; não se faça, contudo, a minha vontade, mas a tua.» Então apareceu-lhe um anjo do céu, que o confortava. E, posto em agonia, orava mais instantemente. E o seu suor tornou-se como de gotas de sangue, que corria até à terra.",
       "commentaries": [
         {
           "sortOrder": 0,
-          "author": "Santo Afonso Maria de Ligório",
-          "source": "*A Paixão de Nosso Senhor Jesus Cristo*, meditação de segunda-feira — Do suor de sangue e agonia de Jesus no horto, §1-3 (texto abreviado)",
-          "text": "… chegando ao jardim de Getsêmani, quis dar começo à sua dolorosa paixão, permitindo que o temor, o tédio e a tristeza viessem afligi-Lo … «Meu Pai, se for possível, afastai de mim este cálice?» … O que propriamente afligiu o Coração de Jesus no horto não foi tanto a previsão dos tormentos … como a previsão dos nossos pecados … reduziu-O à agonia e fez-O suar sangue … «Pai, se é possível, passe de mim este cálice; todavia não seja como eu quero, mas sim como tu.»"
+          "author": "Santo Ambrósio",
+          "source": "*Exposição do Evangelho segundo São Lucas*, livro X (sobre Lc 22, 43-44), citado por S. Tomás de Aquino na *Catena Aurea*, in Lc 22, lect. 12 (texto abreviado; tradução a partir do latim)",
+          "text": "… Em nenhum outro lugar admiro mais a sua bondade e a sua majestade; pois menos me teria dado, se não tivesse assumido o meu sentimento. Tomou, pois, a minha tristeza, para me dar a sua alegria. Com confiança falo de tristeza, porque prego a cruz. … Quis, portanto, ensinar-nos como venceríamos a morte e, o que é mais, a tristeza da morte que há de vir."
         },
         {
           "sortOrder": 1,
+          "author": "Dom Columba Marmion",
+          "source": "*Le Christ dans ses mystères* (Cristo nos seus mistérios), conferência «Le Christ a aimé l'Église et s'est livré pour elle», § I (ed. Desclée, 1922; texto abreviado; tradução a partir do original francês)",
+          "text": "Vede o Cristo Jesus durante a sua agonia. … O tédio, a tristeza, o temor, as angústias precipitam-se sobre a sua alma como uma torrente, e a invadem a ponto de o sangue escapar de suas veias sagradas. … E que diz Jesus a seu Pai? «Pai, se é possível, afaste-se de mim este cálice.» … Esta oração é o grito da sensibilidade da pobre natureza humana esmagada pelo desgosto e pelo sofrimento. … Mas escutai o que acrescenta logo: «Todavia, ó Pai, faça-se a vossa vontade, e não a minha». Aqui está o triunfo do amor. Porque ama a seu Pai, põe a vontade do Pai acima de tudo, e aceita sofrer tudo."
+        },
+        {
+          "sortOrder": 2,
+          "author": "Santo Agostinho",
+          "source": "*Enarrationes in Psalmos*, Sl 140 (n. 2 na tradução inglesa da série *Nicene and Post-Nicene Fathers*; texto abreviado; tradução a partir dessa versão inglesa)",
+          "text": "… Também Ele, quando estava aqui e trazia a nossa carne, orou; e, quando orava, gotas de sangue corriam de todo o seu corpo. Assim está escrito no Evangelho: «Jesus orava mais instantemente, e o seu suor tornou-se como gotas de sangue». Que significa este suor que corre de todo o seu corpo, senão o sofrimento dos mártires de toda a Igreja?"
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Beda, o Venerável",
+          "source": "*Exposição sobre o Evangelho de São Lucas*, VI (Lc 22, 43-44), citado por S. Tomás de Aquino na *Catena Aurea*, in Lc 22, lect. 12 (texto abreviado; tradução a partir do latim)",
+          "text": "O Criador não precisava do socorro da sua criatura; mas, feito homem, assim como por nós está triste, assim por nós é confortado. … Ninguém atribua este suor à fraqueza, pois é contra a natureza suar sangue; entenda antes que por ele nos foi declarado que obtinha já o efeito da sua prece: purificar com o seu sangue a fé dos discípulos, que a fragilidade terrena ainda acusava."
+        },
+        {
+          "sortOrder": 4,
+          "author": "*Imitação de Cristo*",
+          "source": "Livro III, cap. 15, 1-3 (texto abreviado; tradução a partir do latim)",
+          "text": "Filho, dize assim em todas as coisas: «Senhor, se for do teu agrado, faça-se isto assim.» … «Senhor, tu sabes o que me é melhor, isto ou aquilo; dá-me o que queres, quanto queres e quando queres. … Eis aqui o teu servo, pronto para tudo.» … Seja a tua vontade a minha, e a minha vontade siga sempre a tua e com ela concorde perfeitamente."
+        },
+        {
+          "sortOrder": 5,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte II (Da oração), cap. I (Da oração em geral), 21.ª pergunta do capítulo (Compendio della dottrina cristiana, Roma, 1905, sem numeração contínua das perguntas; texto conferido em it.wikisource.org; tradução a partir do italiano original)",
+          "text": "«— Que quer dizer orar com perseverança? — Quer dizer que não nos devemos cansar de orar, se Deus não nos atende logo, mas que devemos antes continuar a orar com mais fervor.»"
+        }
+      ]
+    },
+    {
+      "reference": "Mt 26, 40-44",
+      "text": "Depois foi ter com seus discípulos, e encontrou-os dormindo, e disse a Pedro: «Visto isso não pudeste vigiar uma hora comigo? Vigiai e orai, para que não entreis em tentação. O espírito na verdade está pronto, mas a carne é fraca.» E retirou-se de novo pela segunda vez, e orou, dizendo: «Meu Pai, se este cálice não pode passar sem que eu o beba, faça-se a tua vontade.» E foi novamente, e encontrou-os dormindo; porque os seus olhos estavam pesados (por causa do sono). E, deixando-os, foi de novo, e orou terceira vez, dizendo as mesmas palavras.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
           "author": "São João Crisóstomo",
-          "source": "*Homilias sobre São Mateus*, homilia 83 (Mt 26, 36-51) (texto abreviado)",
-          "text": "… costumava orar separado deles, para nos ensinar silêncio e recolhimento na oração … «Se é possível, que este cálice passe de mim; contudo, não como eu quero, mas como tu.» … Ao dizer isto, mostrou o humano; ao acrescentar «não a minha vontade, mas a tua», a virtude … ensina-nos a seguir a Deus ainda quando a natureza recua … o suor como gotas de sangue e o anjo que O conforta, para que ninguém diga que a tristeza era fingida."
+          "source": "*Homilias sobre São Mateus*, homilia 83, 1 (texto abreviado; tradução a partir da versão inglesa da série *Nicene and Post-Nicene Fathers*)",
+          "text": "Os que desejavam morrer com Ele não foram capazes, naquela hora, nem sequer de se entristecer com Ele em vigília: o sono os venceu. … «Vigiai e orai, para que não entreis em tentação.» Vede como de novo os instrui a não confiarem em si mesmos, mas a serem contritos de espírito e humildes, e a referirem tudo a Deus. … E orou de novo do mesmo modo, dizendo: «Meu Pai, se este cálice não pode passar sem que eu o beba, faça-se a tua vontade», mostrando aqui que está plenamente de acordo com a vontade de Deus, e que devemos sempre segui-la e buscá-la."
+        },
+        {
+          "sortOrder": 1,
+          "author": "São Jerônimo",
+          "source": "*Comentário sobre São Mateus*, IV (Mt 26, 41), citado por S. Tomás de Aquino na *Catena Aurea*, in Mt 26, lect. 11 (texto abreviado; tradução a partir do latim)",
+          "text": "É impossível que a alma humana não seja tentada. Por isso não diz: «Vigiai e orai para não serdes tentados», mas: «para que não entreis em tentação», isto é, para que a tentação não vos vença. … Isto vai contra os temerários, que pensam poder alcançar tudo aquilo em que creem. Quanto mais confiamos no ardor do espírito, tanto mais temamos a fragilidade da carne."
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Leão Magno",
+          "source": "Sermão 58 (Sobre a Paixão do Senhor, VII), 5, citado por S. Tomás de Aquino na *Catena Aurea*, in Mt 26, lect. 11 (tradução a partir do latim)",
+          "text": "Esta voz da Cabeça é a salvação de todo o Corpo; esta voz instrui todos os fiéis, inflama todos os confessores, coroou todos os mártires. Pois quem poderia vencer os ódios do mundo, os turbilhões das tentações, os terrores dos perseguidores, se Cristo, em todos e por todos, não tivesse dito ao Pai: «Faça-se a tua vontade»? Aprendam, pois, esta voz todos os filhos da Igreja, para que, quando pesar sobre eles a adversidade de alguma tentação violenta, vencido o temor, aceitem a paciência no sofrimento."
+        },
+        {
+          "sortOrder": 3,
+          "author": "Rabano Mauro",
+          "source": "*Comentário sobre São Mateus*, VIII (Mt 26, 44), citado por S. Tomás de Aquino na *Catena Aurea*, in Mt 26, lect. 11 (texto abreviado; tradução a partir do latim)",
+          "text": "O Senhor orou três vezes para que peçamos perdão dos pecados passados, proteção nos males presentes e cautela nos perigos futuros; … e para que se conservem íntegros o nosso espírito, a alma e o corpo."
+        },
+        {
+          "sortOrder": 4,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte II (Da oração), cap. II (Da oração dominical), § 4 (Da terceira petição), 1.ª pergunta do parágrafo (Compendio della dottrina cristiana, Roma, 1905, sem numeração contínua das perguntas; texto conferido em it.wikisource.org; tradução a partir do italiano original)",
+          "text": "«— Que pedimos na terceira petição: Seja feita a vossa vontade, assim na terra como no céu? — Na terceira petição pedimos a graça de fazer em todas as coisas a vontade de Deus, obedecendo aos seus santos mandamentos tão prontamente como os anjos e os santos Lhe obedecem no céu. Pedimos ainda a graça de corresponder às inspirações divinas e de viver resignados à vontade de Deus quando Ele nos manda tribulações.»"
         }
       ]
     }
