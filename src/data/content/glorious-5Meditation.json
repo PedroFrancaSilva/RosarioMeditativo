@@ -2,61 +2,169 @@
   "passages": [
     {
       "reference": "Ap 12, 1",
-      "text": "Depois apareceu no céu um grande sinal: uma Mulher vestida de sol, com a lua debaixo de seus pés, e uma coroa de doze estrelas sobre a sua cabeça.",
+      "text": "Depois apareceu no céu um grande sinal: Uma mulher vestida de sol, e a lua debaixo de seus pés, e uma coroa de doze estrelas sobre a sua cabeça.",
       "commentaries": [
         {
           "sortOrder": 0,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 972",
-          "text": "«Assim como, glorificada já em corpo e alma, a Mãe de Jesus é imagem e início da igreja que se há-de consumar no século futuro, assim também, brilha na terra como sinal de esperança segura e de consolação, para o povo de Deus ainda peregrino.»"
+          "author": "Pio XII",
+          "source": "Encíclica Ad caeli reginam, § 1 (texto abreviado)",
+          "text": "«Desde os primeiros séculos da Igreja católica, elevou o povo cristão orações e cânticos de louvor e de devoção à Rainha do céu … e nunca foi frustrada a esperança posta na Mãe do Rei divino, Jesus Cristo, nem se enfraqueceu a fé, que nos ensina reinar com materno coração no universo inteiro a Virgem Maria, Mãe de Deus, assim como está coroada de glória na bem-aventurança celeste.»"
         },
         {
           "sortOrder": 1,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Instrução sobre as Festas, Parte II, «Da Assunção de Maria Virgem», perguntas 162-163 (numeração do original italiano, Catechismo Maggiore, 1905, conforme a transcrição de sodalitium.biz; tradução a partir do italiano)",
+          "text": "«— Qual é a glória à qual foi exaltada Maria Virgem no céu? — Maria Virgem foi exaltada acima de todos os coros dos Anjos e acima de todos os Santos do paraíso, como rainha do céu e da terra. — Por que a Virgem foi exaltada no céu acima de todas as criaturas? — A Virgem foi exaltada no céu acima de todas as criaturas porque é mãe de Deus e é, de todas as criaturas, a mais humilde e a mais santa.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "Santo Efrém",
+          "source": "Hinos sobre a Bem-aventurada Virgem Maria, XIX, citado por Pio XII, Encíclica Ad caeli reginam, § 10",
+          "text": "«Erga-me o firmamento nos seus braços, porque eu estou mais honrada do que ele. O céu não foi tua mãe, e fizeste dele teu trono. Ora, quanto mais se deve honrar e venerar a mãe do Rei, do que o seu trono!»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 972 (grafia adaptada ao Brasil)",
+          "text": "«Assim como, glorificada já em corpo e alma, a Mãe de Jesus é imagem e início da igreja que se há de consumar no século futuro, assim também, brilha na terra como sinal de esperança segura e de consolação, para o povo de Deus ainda peregrino.»"
+        },
+        {
+          "sortOrder": 4,
           "author": "Pio XII",
-          "source": "Encíclica Ad caeli reginam, § 31 (texto abreviado)",
-          "text": "«Finalmente a arte cristã … desde o concílio de Éfeso … chegando até a figurar o divino Redentor no ato de cingir com brilhante coroa a cabeça da própria Mãe.» … «no santo rosário … do quinto mistério glorioso, o reino de Maria, que abraça o céu e a terra.»"
+          "source": "Encíclica Ad caeli reginam, § 30",
+          "text": "«A esse e outros cânticos devem juntar-se as Ladainhas lauretanas, que levam o povo cristão a invocar todos os dias nossa Senhora como rainha; e no santo rosário, que se pode chamar coroa mística da celeste rainha, já há muitos séculos os fiéis contemplam, do quinto mistério glorioso, o reino de Maria, que abraça o céu e a terra.»"
         }
       ]
     },
     {
       "reference": "1 Rs 2, 19-20",
-      "text": "Foi, pois, Betsabé ter com o rei Salomão, para lhe falar em favor de Adonias. O rei levantou-se para a vir receber, saúdou-a com profunda reverência e sentou-se no seu trono e mandou colocar um trono para a mãe do rei, a qual se sentou à sua mão direita. Ela disse-lhe: Eu só te peço uma pequena coisa, não me envergonhes com a repulsa. O rei disse-lhe: Pede, minha mãe, porque não é justo que vás descontente.",
+      "text": "Foi, pois, Betsabeia ter com o rei Salomão, para lhe falar em favor de Adonias; e o rei levantou-se para a vir receber, e saudou-a com profunda reverência, e sentou-se no seu trono; e foi posto um trono para a mãe do rei, a qual se sentou à sua mão direita. E ela disse-lhe: Eu só te peço uma pequena coisa, não me envergonhes com a repulsa. E o rei disse-lhe: Pede, minha mãe, porque não é justo que vás descontente.",
       "commentaries": [
         {
           "sortOrder": 0,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 969",
-          "text": "«Esta maternidade de Maria na economia da graça perdura sem interrupção … depois de elevada ao céu, não abandonou esta missão salvadora, mas, com a sua multiforme intercessão, continua a alcançar-nos os dons da salvação eterna … Por isso, a Virgem é invocada na Igreja com os títulos de advogada, auxiliadora, socorro e medianeira.»"
+          "author": "São Germano de Constantinopla",
+          "source": "Sermão I sobre a Apresentação da Santíssima Mãe de Deus, citado por Pio XII, Encíclica Ad caeli reginam, § 18",
+          "text": "«Senta-te, ó Senhora; sendo tu Rainha e mais eminente que todos os reis, pertence-te estar sentada no lugar mais nobre.»"
         },
         {
           "sortOrder": 1,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 2677",
-          "text": "«Santa Maria, Mãe de Deus, rogai por nós …» … «Pedindo a Maria que rogue por nós, reconhecemo-nos pobres pecadores e recorremos à «Mãe de misericórdia», à «Santíssima». Confiamo-nos a Ela «agora», no hoje das nossas vidas.»"
+          "author": "Beato Pio IX",
+          "source": "Bula Ineffabilis Deus, citada por Pio XII, Encíclica Ad caeli reginam, § 40",
+          "text": "«Com ânimo verdadeiramente materno para conosco … e ocupando-se da nossa salvação, ela, que pelo Senhor foi constituída rainha do céu e da terra, toma cuidado de todo o gênero humano, e — tendo sido exaltada sobre todos os coros dos anjos e as hierarquias dos santos do céu, e estando à direita do seu unigênito Filho, Jesus Cristo, nosso Senhor — com as suas súplicas maternas impetra com eficácia, obtém quanto pede, nem pode deixar de ser ouvida.»"
         },
         {
           "sortOrder": 2,
-          "author": "Pio XII",
-          "source": "Encíclica Ad caeli reginam, § 40 (texto abreviado)",
-          "text": "«Com ânimo verdadeiramente materno para conosco … ela, que pelo Senhor foi constituída rainha do céu e da terra, toma cuidado de todo o gênero humano … com as suas súplicas maternas impetra com eficácia, obtém quanto pede, nem pode deixar de ser ouvida.»"
+          "author": "São Germano de Constantinopla",
+          "source": "Homilia I sobre a Dormição (PG 98, 348), citada por S. João Paulo II, Audiência geral de 23 de julho de 1997, n. 4",
+          "text": "Cristo quis «ter, por assim dizer, a proximidade dos teus lábios e do teu coração; desta maneira Ele atende a todos os desejos que Lhe exprimes, quando sofres pelos teus filhos, e Ele realiza, com o Seu poder divino, tudo o que Lhe pedes»."
         },
         {
           "sortOrder": 3,
-          "author": "São Bernardo de Claraval",
-          "source": "In laudibus Virginis Matris (Super Missus est), homilia II, 17 (texto abreviado)",
-          "text": "«Ó tu, que na instabilidade deste mundo sentes que és mais sacudido pelas tormentas … não desvies o olhar do fulgor desta estrela … olha para a estrela, invoca Maria.» … «Nos perigos, nas angústias e nas incertezas, pensa em Maria, invoca Maria.» … «Seguindo-a, não te desviarás; invocando-a, não desesperarás … se te é propícia chegarás ao fim.»"
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte II «Da oração», cap. III «Da Ave-Maria», perguntas 335-336 (numeração do original italiano, Catechismo Maggiore, 1905, conforme a transcrição de clerus.org; tradução a partir do italiano)",
+          "text": "«— Por que, depois do Pai-Nosso, dizemos antes a Ave-Maria que qualquer outra oração? — Porque a Santíssima Virgem é a Advogada mais poderosa junto de Jesus Cristo; por isso, depois de termos dito a oração que nos ensinou Jesus Cristo, rogamos à Santíssima Virgem que nos obtenha as graças que pedimos. — Por que motivo a Virgem Santíssima é tão poderosa? — A Santíssima Virgem é tão poderosa porque é Mãe de Deus, e é impossível que não seja por Ele atendida.»"
+        },
+        {
+          "sortOrder": 4,
+          "author": "Pio XII",
+          "source": "Encíclica Ad caeli reginam, § 46 (texto abreviado)",
+          "text": "«Procurem pois todos, e agora com mais confiança, aproximar-se do trono da misericórdia e da graça, para pedir à nossa Rainha e Mãe socorro na adversidade, luz nas trevas, conforto na dor e no pranto; e, o que é mais, esforcem-se por se libertar da escravidão do pecado …»"
+        },
+        {
+          "sortOrder": 5,
+          "author": "Bento XVI",
+          "source": "Audiência geral de 22 de agosto de 2012 (memória de Nossa Senhora Rainha) (texto abreviado)",
+          "text": "«Na serenidade ou na escuridão da existência, dirijamo-nos a Maria confiando-nos à sua intercessão contínua, porque do Filho nos possa alcançar toda a graça e misericórdia necessárias para o nosso peregrinar ao longo das sendas do mundo. … Portanto, Rainha é título de confiança, alegria e amor. E sabemos que Aquela que tem nas suas mãos em parte o destino do mundo é boa, que nos ama e nos ajuda nas nossas dificuldades.»"
         }
       ]
     },
     {
-      "reference": "Sl 44, 10-12",
-      "text": "Filhas de reis saem ao teu encontro, a rainha está à tua dextra, ornada com ouro de Ofir. Escuta, ó filha, e vê, inclina o teu ouvido, e esquece-te do teu povo e da casa de teu pai. O rei desejará a tua beleza: ele é o teu Senhor, presta-lhe homenagem.",
+      "reference": "Sl 44, 10-15",
+      "text": "As filhas dos reis são tuas damas de honra. A rainha está à tua dextra, com manto de ouro, e engalanada com variedade (de adornos). Escuta, ó filha, e vê, e inclina o teu ouvido, e esquece-te do teu povo e da casa de teu pai. E o rei cobiçará a tua beleza, porque ele é o Senhor teu Deus, e adorá-lo-ão (todos). … Toda a glória da filha do rei está no interior, (quando ela está adornada) de franjas de ouro, vestida de vários adornos.",
       "commentaries": [
         {
           "sortOrder": 0,
-          "author": "São João Paulo II",
-          "source": "Rosarium Virginis Mariae, § 23 (texto abreviado)",
-          "text": "«Enfim, coroada de glória – como aparece no último mistério glorioso – Ela resplandece como Rainha dos Anjos e dos Santos, antecipação e ponto culminante da condição escatológica da Igreja.»"
+          "author": "Santo André de Creta",
+          "source": "Homilia III sobre a Dormição da Santíssima Mãe de Deus, citada por Pio XII, Encíclica Ad caeli reginam, § 17",
+          "text": "«Rainha de todo o gênero humano, porque, fiel à significação do seu nome, se encontra acima de tudo quanto não é Deus.»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "Santo Ildefonso de Toledo",
+          "source": "Da virgindade perpétua de Santa Maria (PL 96, 58), citado por Pio XII, Encíclica Ad caeli reginam, § 20 (texto abreviado)",
+          "text": "«Ó minha senhora, minha dominadora: tu dominas em mim, ó mãe do meu Senhor … Senhora entre as escravas, rainha entre as irmãs.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Sofrônio de Jerusalém",
+          "source": "Sermão sobre a Anunciação da Bem-aventurada Virgem Maria (PG 87, 3238.3242), citado por Pio XII, Encíclica Ad caeli reginam, § 38 (texto abreviado)",
+          "text": "«Tu finalmente … superaste em muito todas as criaturas … Que poderá existir mais sublime que tal alegria, ó Virgem Mãe? Que pode existir mais elevado que tal graça, a qual por divina vontade só tu tiveste em sorte?»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "Santo Afonso Maria de Ligório",
+          "source": "Glórias de Maria, parte I, cap. 1, § 1, citado por Pio XII, Encíclica Ad caeli reginam, § 24",
+          "text": "«Porque a virgem Maria foi elevada até ser Mãe do Rei dos reis, com justa razão a distingue a Igreja com o título de Rainha.»"
+        },
+        {
+          "sortOrder": 4,
+          "author": "Bento XVI",
+          "source": "Audiência geral de 22 de agosto de 2012 (memória de Nossa Senhora Rainha) (texto abreviado)",
+          "text": "«E o mesmo é válido para Maria: é rainha ao serviço de Deus e da humanidade, é rainha do amor que vive o dom de si a Deus para entrar no desígnio da salvação do homem. Ao anjo, responde: Eis-me, sou a serva do Senhor (cf. Lc 1, 38) … É rainha precisamente amando-nos, ajudando-nos em todas as nossas necessidades; é a nossa irmã e serva humilde.»"
+        },
+        {
+          "sortOrder": 5,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Instrução sobre as Festas, Parte II, «Da Assunção de Maria Virgem», pergunta 165 (numeração do original italiano, Catechismo Maggiore, 1905, conforme a transcrição de sodalitium.biz; tradução a partir do italiano)",
+          "text": "«— Como podemos nós merecer a proteção de Maria Santíssima? — Nós podemos merecer a proteção de Maria Santíssima imitando as suas virtudes, e especialmente a pureza e a humildade.»"
+        },
+        {
+          "sortOrder": 6,
+          "author": "Pio XII",
+          "source": "Encíclica Ad caeli reginam, § 47 (texto abreviado)",
+          "text": "«Com vivo e diligente cuidado todos se esforcem por copiar nos sentimentos e nos atos, segundo a própria condição, as altas virtudes da Rainha do céu e nossa Mãe amantíssima. … Nem presuma alguém ser filho de Maria, digno de se acolher à sua poderosíssima proteção, se a exemplo dela não é justo, manso e casto …»"
+        }
+      ]
+    },
+    {
+      "reference": "Ap 2, 10",
+      "text": "Não temas nada do que terás que sofrer. … Sê fiel até à morte, e eu te darei a coroa da vida.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte II «Da oração», cap. III «Da Ave-Maria», pergunta 334 (numeração do original italiano, Catechismo Maggiore, 1905, conforme a transcrição de clerus.org; tradução a partir do italiano)",
+          "text": "«— Que pedimos nós com as últimas palavras da Ave-Maria? — Com as últimas palavras da Ave-Maria pedimos a proteção da Santíssima Virgem no curso desta vida, e especialmente na hora da nossa morte, na qual dela teremos maior necessidade.»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "Concílio Vaticano II",
+          "source": "Constituição dogmática Lumen gentium, 62 (texto abreviado; grafia adaptada ao Brasil)",
+          "text": "«Esta maternidade de Maria na economia da graça perdura sem interrupção, desde o consentimento, que fielmente deu na anunciação e que manteve inabalável junto à cruz, até à consumação eterna de todos os eleitos. De fato, depois de elevada ao céu, não abandonou esta missão salvadora, mas, com a sua multiforme intercessão, continua a alcançar-nos os dons da salvação eterna. Cuida, com amor materno, dos irmãos de seu Filho que, entre perigos e angústias, caminham ainda na terra, até chegarem à pátria bem-aventurada.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Bernardo de Claraval",
+          "source": "In laudibus Virginis Matris (Super Missus est), homilia II, 17 (texto abreviado)",
+          "text": "«Ó tu, que na instabilidade deste mundo sentes que és mais sacudido pelas tormentas … não desvies o olhar do fulgor desta estrela … olha para a estrela, invoca Maria.» … «Nos perigos, nas angústias e nas incertezas, pensa em Maria, invoca Maria.» … «Seguindo-a, não te desviarás; invocando-a, não desesperarás … se te é propícia chegarás ao fim.»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "Santo Efrém",
+          "source": "Oração à Santíssima Mãe de Deus, citada por Pio XII, Encíclica Ad caeli reginam, § 10",
+          "text": "«… Virgem augusta e protetora, rainha e senhora, protege-me à tua sombra, guarda-me, para que Satanás, que semeia ruínas, não me ataque, nem triunfe de mim o iníquo adversário.»"
+        },
+        {
+          "sortOrder": 4,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte II «Da oração», cap. III «Da Ave-Maria», pergunta 337 (numeração do original italiano, Catechismo Maggiore, 1905, conforme a transcrição de clerus.org; tradução a partir do italiano)",
+          "text": "«— Que nos ensinam os Santos sobre a devoção a Maria? — Sobre a devoção a Maria os Santos nos ensinam que os seus verdadeiros devotos são por Ela amados e protegidos com amor de mãe terníssima, e por meio d’Ela estão certos de encontrar Jesus e de obter o paraíso.»"
+        },
+        {
+          "sortOrder": 5,
+          "author": "São Bártolo Longo",
+          "source": "Súplica à Rainha do Santo Rosário de Pompeia, citada por S. João Paulo II, Rosarium Virginis Mariae, § 43 (grafia adaptada ao Brasil)",
+          "text": "«Ó Rosário bendito de Maria, doce cadeia que nos prende a Deus, vínculo de amor que nos une aos Anjos, torre de salvação contra os assaltos do inferno, porto seguro no naufrágio geral, não te deixaremos nunca mais. Serás o nosso conforto na hora da agonia. Seja para ti o último beijo da vida que se apaga. E a última palavra dos nossos lábios há de ser o vosso nome suave, ó Rainha do Rosário de Pompeia, ó nossa Mãe querida, ó Refúgio dos pecadores, ó Soberana consoladora dos tristes.»"
         }
       ]
     }
