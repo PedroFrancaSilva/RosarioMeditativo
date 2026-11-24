@@ -1,26 +1,80 @@
 {
   "passages": [
     {
+      "reference": "Mt 3, 13-15",
+      "text": "Então foi Jesus da Galileia ao Jordão ter com João, para ser batizado por ele. Mas João opunha-se-lhe, dizendo: «Sou eu que devo ser batizado por ti, e tu vens a mim?» E, respondendo Jesus, disse-lhe: «Deixa por agora, pois convém que cumpramos assim toda a justiça.» Ele então deixou-o (aproximar-se).",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 536 (grafia adaptada ao Brasil)",
+          "text": "Da parte de Jesus, o seu batismo é a aceitação e a inauguração da sua missão de Servo sofredor. Deixa-se contar entre o número dos pecadores. É já «o Cordeiro de Deus que tira o pecado do mundo» (Jo 1, 29), e antecipa já o «batismo» da sua morte sangrenta. Vem, desde já, para «cumprir toda a justiça» (Mt 3, 15). … A esta aceitação responde a voz do Pai, que põe toda a sua complacência no Filho. … No batismo de Cristo, «abriram-se os céus» (Mt 3, 16) que o pecado de Adão tinha fechado, e as águas são santificadas pela descida de Jesus e do Espírito, prelúdio da nova criação."
+        },
+        {
+          "sortOrder": 1,
+          "author": "São Gregório de Nazianzo",
+          "source": "Sermão 39, *In sancta Lumina*, 14-15 (PG 36, 350-351); Liturgia das Horas, Ofício de Leituras da Festa do Batismo do Senhor (tradução brasileira; texto abreviado)",
+          "text": "João batiza e Jesus se aproxima; talvez para santificar igualmente aquele que o batiza e, sem dúvida, para sepultar nas águas o velho Adão. Antes de nós, e por nossa causa, ele que é Espírito e carne santificou as águas do Jordão, para assim nos iniciar nos sacramentos mediante o Espírito e a água. João reluta, Jesus insiste. «Eu é que devo ser batizado por ti», diz a lâmpada ao Sol, a voz à Palavra, o amigo ao Esposo, diz o maior entre todos os nascidos de mulher ao Primogênito de toda criatura …"
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 39, a. 1 (tradução portuguesa publicada; grafia adaptada ao Brasil)",
+          "text": "Cristo devia ser batizado. Primeiro, porque, como diz Ambrósio, o Senhor foi batizado, não por querer purificar-se; mas para purificar as águas que, purificadas assim pelo corpo de Cristo, isento de pecado, pudessem servir para o batismo e a fim de deixar para o futuro as águas santificadas para os que devessem ser batizados, como ensina Crisóstomo. … Terceiro, Cristo quis ser batizado, porque, como diz Agostinho, quis fazer o que ordenou a todos fazerem … «Assim nos convém cumprir toda a justiça» (Mt 3, 15)."
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Máximo de Turim",
+          "source": "Sermão 100, *De sancta Epiphania*, 3 (CCL 23, 398-400); Liturgia das Horas, Ofício de Leituras da sexta-feira depois da Epifania (tradução brasileira; texto abreviado)",
+          "text": "Talvez alguém diga: «Se ele era santo, por que quis ser batizado?» Escuta: Cristo foi batizado, não para ser santificado pelas águas, mas para santificá-las e para purificar as torrentes com o contato de seu corpo. A consagração de Cristo é sobretudo a consagração da água. … Cristo nos precede no batismo para que os povos cristãos sigam confiantemente o seu exemplo."
+        },
+        {
+          "sortOrder": 4,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 537 (texto abreviado; o parágrafo prossegue com citações de S. Gregório de Nazianzo e S. Hilário; grafia adaptada ao Brasil)",
+          "text": "Pelo Batismo, o cristão é sacramentalmente assimilado a Jesus que, no seu batismo, antecipa a sua morte e ressurreição. Deve entrar neste mistério de humilde abatimento e de penitência, descer à água com Jesus, para de lá subir com Ele, renascer da água e do Espírito para se tornar, no Filho, filho-amado do Pai e «viver numa vida nova» (Rm 6, 4) …"
+        },
+        {
+          "sortOrder": 5,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte IV, cap. II «Do Batismo», 18ª e 19ª perguntas do capítulo. Tradução a partir do italiano.",
+          "text": "— Quem recebe o Batismo, a que fica obrigado? — Quem recebe o Batismo fica obrigado a professar sempre a fé e a observar a lei de Jesus Cristo e da sua Igreja. — A que se renuncia ao receber o santo Batismo? — Ao receber o santo Batismo, renuncia-se para sempre ao demônio, às suas obras e às suas pompas."
+        },
+        {
+          "sortOrder": 6,
+          "author": "São Luís Maria Grignion de Montfort",
+          "source": "*Tratado da Verdadeira Devoção à Santíssima Virgem*, n. 126; Liturgia das Horas, Ofício de Leituras de São Luís Maria Grignion de Montfort, 28 de abril (tradução brasileira; texto abreviado)",
+          "text": "Devemos considerar que todo o homem, quando é batizado, renuncia solenemente, pela sua própria boca ou pela do seu padrinho e madrinha, a Satanás e às suas tentações e obras, e toma Jesus Cristo como seu Mestre e soberano Senhor, a fim de depender dele na qualidade de escravo de amor. É o que realmente se faz nesta devoção: o cristão renuncia ao demônio, ao mundo, ao pecado e a si mesmo, e consagra-se totalmente a Jesus Cristo pelas mãos de Maria."
+        },
+        {
+          "sortOrder": 7,
+          "author": "São Luís Maria Grignion de Montfort",
+          "source": "*Tratado da Verdadeira Devoção à Santíssima Virgem*, n. 127 (tradução a partir do original francês; texto abreviado)",
+          "text": "Quem é que guarda este grande voto? Quem é que cumpre fielmente as promessas do santo batismo? Não faltam quase todos os cristãos à fidelidade que prometeram a Jesus Cristo no seu batismo? Donde pode vir este desregramento universal, senão do esquecimento em que se vive das promessas e compromissos do santo batismo, e de quase ninguém ratificar por si mesmo o contrato de aliança que fez com Deus por meio dos seus padrinhos e madrinhas? …"
+        }
+      ]
+    },
+    {
       "reference": "Mt 3, 16-17",
-      "text": "Logo que foi baptizado, Jesus saiu da água. E eis que se abriram os céus, e viu o Espírito de Deus descer como pomba, e vir sobre ele. E eis (que se ouviu) uma voz do céu, que dizia: «Este é o meu Filho amado, no qual pus as minhas complacências.»",
+      "text": "E, depois que Jesus foi batizado, saiu logo da água; e eis que se lhe abriram os céus, e viu o Espírito de Deus descer como pomba, e vir sobre ele. E eis (que se ouviu) uma voz do céu, que dizia: «Este é meu filho, o amado, no qual pus as minhas complacências.»",
       "commentaries": [
         {
           "sortOrder": 0,
           "author": "São Gregório de Nazianzo",
-          "source": "Sermão 39, *In sancta Lumina*, 14-16 (PG 36, 350-351); Liturgia das Horas, Ofício de Leituras da Festa do Batismo do Senhor (tradução brasileira) (texto abreviado)",
+          "source": "Sermão 39, *In sancta Lumina*, 14-16 (PG 36, 350-351); Liturgia das Horas, Ofício de Leituras da Festa do Batismo do Senhor (tradução brasileira; texto abreviado)",
           "text": "Cristo é iluminado no batismo, recebemos com ele a luz; Cristo é batizado, desçamos com ele às águas para com ele subirmos. … Jesus sai das águas, elevando consigo o mundo que estava submerso, e vê abrirem-se os céus de par em par, que Adão tinha fechado para si e sua posteridade, assim como o paraíso lhe fora fechado por uma espada de fogo. O Espírito, acorrendo àquele que lhe é igual, dá testemunho da sua divindade. Vem do céu uma voz, pois também vinha do céu aquele de quem se dava testemunho."
         },
         {
           "sortOrder": 1,
           "author": "São Máximo de Turim",
-          "source": "Sermão 100, *De sancta Epiphania*, 1 (CCL 23, 398-400); Liturgia das Horas, Ofício de Leituras da sexta-feira depois da Epifania (tradução brasileira) (texto abreviado)",
+          "source": "Sermão 100, *De sancta Epiphania*, 1 (CCL 23, 398-400); Liturgia das Horas, Ofício de Leituras da sexta-feira depois da Epifania (tradução brasileira; texto abreviado)",
           "text": "No dia do Natal, Cristo nasceu entre os homens; hoje renasce pelos sinais sagrados; naquele dia, nasceu da Virgem; hoje é gerado pelos sinais do céu. No Natal, ao nascer o Senhor segundo a natureza humana, Maria, sua mãe, o acaricia em seu colo; agora, ao ser gerado entre os sinais celestes, Deus, seu Pai, o envolve com sua voz, dizendo: «Este é o meu filho amado, no qual eu pus todo o meu agrado.» … Sua mãe o traz nos braços com ternura, seu Pai lhe presta o testemunho de amor. A Mãe apresenta-o aos magos para que o adorem, o Pai apresenta-o às nações para que o reverenciem."
         },
         {
           "sortOrder": 2,
           "author": "Santo Hilário de Poitiers",
-          "source": "*In Evangelium Matthaei*, 2, 6 (PL 9, 927); tradução portuguesa citada no CIC 537",
-          "text": "Tudo o que se passou com Cristo dá-nos a conhecer que, depois do banho de água, o Espírito Santo desce sobre nós do alto dos céus e, adoptados pela voz do Pai, tornamo-nos filhos de Deus."
+          "source": "*In Evangelium Matthaei*, 2, 6 (PL 9, 927); tradução portuguesa citada no CIC 537 (grafia adaptada ao Brasil)",
+          "text": "Tudo o que se passou com Cristo dá-nos a conhecer que, depois do banho de água, o Espírito Santo desce sobre nós do alto dos céus e, adotados pela voz do Pai, tornamo-nos filhos de Deus."
         },
         {
           "sortOrder": 3,
@@ -37,74 +91,56 @@
         {
           "sortOrder": 5,
           "author": "São Tomás de Aquino",
-          "source": "Suma Teológica, III, q. 39, a. 8",
-          "text": "Como dissemos, pelo seu baptismo, que foi o exemplar do nosso, Cristo devia mostrar o que no nosso baptismo se realiza. Ora, o baptismo que os fiéis recebem é consagrado pela invocação e pela virtude da Trindade, segundo o Evangelho: «Ide e ensinai a todas as gentes, baptizando-as em nome do Padre e do Filho e do Espírito Santo» (Mt 28, 19). E assim, no baptismo de Cristo, como diz Jerónimo, manifesta-se o mistério da Trindade; pois é o próprio Senhor, revestido da natureza humana, o baptizado; o Espírito Santo desceu sob a forma de pomba; foi ouvida a palavra do Pai dando testemunho do seu Filho."
+          "source": "Suma Teológica, III, q. 39, a. 8 (tradução portuguesa publicada; grafia adaptada ao Brasil)",
+          "text": "Como dissemos, pelo seu batismo, que foi o exemplar do nosso, Cristo devia mostrar o que no nosso batismo se realiza. Ora, o batismo que os fiéis recebem é consagrado pela invocação e pela virtude da Trindade, segundo o Evangelho: «Ide e ensinai a todas as gentes, batizando-as em nome do Padre e do Filho e do Espírito Santo» (Mt 28, 19). E assim, no batismo de Cristo, como diz Jerônimo, manifesta-se o mistério da Trindade; pois é o próprio Senhor, revestido da natureza humana, o batizado; o Espírito Santo desceu sob a forma de pomba; foi ouvida a palavra do Pai dando testemunho do seu Filho."
         },
         {
           "sortOrder": 6,
           "author": "São Pio X",
-          "source": "Catecismo Maior de São Pio X (*Compendio della dottrina cristiana*, Roma 1905), Parte IV, cap. II («Do Batismo»), § 1, pergunta 2 do capítulo (a edição de 1905 no Wikisource não traz numeração contínua); tradução a partir do italiano original",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte IV, cap. II «Do Batismo», 2ª pergunta do capítulo. Tradução a partir do italiano.",
           "text": "— Quais são os efeitos do sacramento do Batismo? — O sacramento do Batismo confere a primeira graça santificante, pela qual se apaga o pecado original, e também o atual, se o houver; perdoa toda a pena por eles devida; imprime o caráter de cristãos; faz-nos filhos de Deus, membros da Igreja e herdeiros do paraíso; e torna-nos capazes de receber os outros sacramentos."
         },
         {
           "sortOrder": 7,
           "author": "São João Paulo II",
-          "source": "*Rosarium Virginis Mariae*, n. 21 (texto abreviado; o n. 21 continua com os outros mistérios luminosos)",
-          "text": "Primeiramente é mistério de luz o Baptismo no Jordão. Aqui, enquanto Cristo desce à água do rio, como inocente que Se faz pecado por nós (cf. 2 Cor 5, 21), o céu abre-se e a voz do Pai proclama-O Filho dilecto (cf. Mt 3, 17 par), ao mesmo tempo que o Espírito vem sobre Ele para investi-Lo na missão que O espera. …"
+          "source": "*Rosarium Virginis Mariae*, n. 21 (texto abreviado; o n. 21 continua com os outros mistérios luminosos; grafia adaptada ao Brasil)",
+          "text": "Primeiramente é mistério de luz o Batismo no Jordão. Aqui, enquanto Cristo desce à água do rio, como inocente que Se faz pecado por nós (cf. 2 Cor 5, 21), o céu abre-se e a voz do Pai proclama-O Filho dileto (cf. Mt 3, 17 par), ao mesmo tempo que o Espírito vem sobre Ele para investi-Lo na missão que O espera. …"
         }
       ]
     },
     {
-      "reference": "Mt 3, 13-15",
-      "text": "Então foi Jesus da Galileia ao Jordão e apresentou-se a João, para ser baptizado por ele. Mas João opunha-se-lhe, dizendo: «Sou eu que devo ser baptizado por ti, e tu vens a mim!» Jesus respondeu-lhe: «Deixa por agora, pois convém que cumpramos assim toda a justiça.» Ele então concordou.",
+      "reference": "Jo 1, 29-34",
+      "text": "No dia seguinte João viu Jesus, que vinha ter com ele, e disse: «Eis o Cordeiro de Deus, eis o que tira o pecado do mundo. Este é aquele, de quem eu disse: Depois de mim vem um homem que me foi preferido, porque era antes de mim, e eu não o conhecia (pessoalmente), mas vim batizar em água, para ele ser reconhecido em Israel.» E João deu testemunho, dizendo: «Vi o Espírito descer do céu em forma de pomba, e repousou sobre ele. E não o conhecia (pessoalmente), mas o que me mandou batizar em água, disse-me: Aquele, sobre quem vires descer e repousar o Espírito, esse é o que batiza no Espírito Santo. Eu o vi; e dei testemunho de que ele é o Filho de Deus.»",
       "commentaries": [
         {
           "sortOrder": 0,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 536",
-          "text": "Da parte de Jesus, o seu baptismo é a aceitação e a inauguração da sua missão de Servo sofredor. Deixa-se contar entre o número dos pecadores. É já «o Cordeiro de Deus que tira o pecado do mundo» (Jo 1, 29), e antecipa já o «baptismo» da sua morte sangrenta. Vem, desde já, para «cumprir toda a justiça» (Mt 3, 15). … A esta aceitação responde a voz do Pai, que põe toda a sua complacência no Filho. … No baptismo de Cristo, «abriram-se os céus» (Mt 3, 16) que o pecado de Adão tinha fechado, e as águas são santificadas pela descida de Jesus e do Espírito, prelúdio da nova criação."
+          "author": "São Pedro Crisólogo",
+          "source": "Sermão 160 (PL 52, 620-622); Liturgia das Horas, Ofício de Leituras da segunda-feira depois da Epifania (tradução brasileira; texto abreviado)",
+          "text": "Hoje Cristo entrou nas águas do Jordão para lavar o pecado do mundo. E João dá testemunho de que foi para isso que veio, ao dizer: «Eis o Cordeiro de Deus que tira o pecado do mundo» (Jo 1, 29). Hoje o servo recebe o Senhor, o homem recebe Deus, João recebe Cristo; recebe-o para obter o perdão, não para conceder. … Hoje o Espírito Santo, em forma de pomba, paira sobre as águas: assim como uma pomba anunciou a Noé o fim do dilúvio, por sua presença os homens saberiam que havia terminado o ininterrupto naufrágio do mundo."
         },
         {
           "sortOrder": 1,
-          "author": "São Gregório de Nazianzo",
-          "source": "Sermão 39, *In sancta Lumina*, 14-15 (PG 36, 350-351); Liturgia das Horas, Ofício de Leituras da Festa do Batismo do Senhor (tradução brasileira) (texto abreviado)",
-          "text": "João batiza e Jesus se aproxima; talvez para santificar igualmente aquele que o batiza e, sem dúvida, para sepultar nas águas o velho Adão. Antes de nós, e por nossa causa, ele que é Espírito e carne santificou as águas do Jordão, para assim nos iniciar nos sacramentos mediante o Espírito e a água. João reluta, Jesus insiste. «Eu é que devo ser batizado por ti», diz a lâmpada ao Sol, a voz à Palavra, o amigo ao Esposo, diz o maior entre todos os nascidos de mulher ao Primogênito de toda criatura …"
+          "author": "São Tomás de Aquino",
+          "source": "*Super Evangelium S. Ioannis lectura*, cap. 1, lição 14 (tradução a partir do latim; texto abreviado)",
+          "text": "Poderia alguém crer que Cristo, da primeira vez que veio ao batismo, veio a João como quem precisava de ser purificado dos pecados. Para o excluir, Cristo veio a ele também depois do batismo. Por isso diz João expressamente: «Eis o que tira». Nenhum pecado cometeu, mas veio tirar o pecado. Veio também para dar exemplo de humildade. … E note-se que, assim como, estando Cristo já concebido, quando a Virgem Mãe subiu apressadamente às montanhas para visitar Isabel, João, ainda no seio materno e sem poder falar, exultou no seio, prestando a Cristo reverência e júbilo, assim também agora, vindo Cristo a ele por humildade, presta-lhe testemunho e reverência e rompe em voz, dizendo: «Eis o Cordeiro de Deus»."
         },
         {
           "sortOrder": 2,
           "author": "São Tomás de Aquino",
-          "source": "Suma Teológica, III, q. 39, a. 1",
-          "text": "Cristo devia ser baptizado. Primeiro, porque, como diz Ambrósio, o Senhor foi baptizado, não por querer purificar-se; mas para purificar as águas que, purificadas assim pelo corpo de Cristo, isento de pecado, pudessem servir para o baptismo e a fim de deixar para o futuro as águas santificadas para os que devessem ser baptizados, como ensina Crisóstomo. … Terceiro, Cristo quis ser baptizado, porque, como diz Agostinho, quis fazer o que ordenou a todos fazerem … «Assim nos convém cumprir toda a justiça» (Mt 3, 15)."
+          "source": "*Super Evangelium S. Ioannis lectura*, cap. 1, lição 14 (tradução a partir do latim; texto abreviado)",
+          "text": "Cristo é chamado Cordeiro, primeiro, pela pureza: «Não fostes resgatados por coisas corruptíveis, ouro ou prata» (1 Pd 1, 18). Segundo, pela mansidão: «Como cordeiro diante do tosquiador, emudeceu» (Is 53, 7). Terceiro, pelo fruto: tanto quanto ao vestido, segundo aquilo: «Revesti-vos do Senhor Jesus Cristo» (Rm 13, 14), como quanto ao alimento: «A minha carne é para a vida do mundo» (Jo 6, 52). … «Que tira o pecado do mundo»: o que na Lei nem pelo cordeiro nem pelos outros sacrifícios podia ser tirado, este Sangue o tira. Ou «tira», isto é, toma sobre si os pecados de todo o mundo, pois «levou os nossos pecados em seu corpo» (1 Pd 2, 24)."
         },
         {
           "sortOrder": 3,
-          "author": "São Máximo de Turim",
-          "source": "Sermão 100, *De sancta Epiphania*, 3 (CCL 23, 398-400); Liturgia das Horas, Ofício de Leituras da sexta-feira depois da Epifania (tradução brasileira) (texto abreviado)",
-          "text": "Talvez alguém diga: «Se ele era santo, por que quis ser batizado?» Escuta: Cristo foi batizado, não para ser santificado pelas águas, mas para santificá-las e para purificar as torrentes com o contato de seu corpo. A consagração de Cristo é sobretudo a consagração da água. … Cristo nos precede no batismo para que os povos cristãos sigam confiantemente o seu exemplo."
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 608 (grafia adaptada ao Brasil)",
+          "text": "Depois de ter aceitado dar-Lhe o batismo como aos pecadores, João Batista viu e mostrou em Jesus o «Cordeiro de Deus que tira o pecado do mundo». Manifestou deste modo que Jesus é, ao mesmo tempo, o Servo sofredor, que Se deixa levar ao matadouro sem abrir a boca, carregando os pecados das multidões, e o cordeiro pascal, símbolo da redenção de Israel na primeira Páscoa. Toda a vida de Cristo manifesta a sua missão: «servir e dar a vida como resgate pela multidão»."
         },
         {
           "sortOrder": 4,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 537 (texto abreviado; o parágrafo prossegue com citações de S. Gregório de Nazianzo e S. Hilário)",
-          "text": "Pelo Baptismo, o cristão é sacramentalmente assimilado a Jesus que, no seu baptismo, antecipa a sua morte e ressurreição. Deve entrar neste mistério de humilde abatimento e de penitência, descer à água com Jesus, para de lá subir com Ele, renascer da água e do Espírito para se tornar, no Filho, filho-amado do Pai e «viver numa vida nova» (Rm 6, 4) …"
-        },
-        {
-          "sortOrder": 5,
-          "author": "São Pio X",
-          "source": "Catecismo Maior de São Pio X (*Compendio della dottrina cristiana*, Roma 1905), Parte IV, cap. II («Do Batismo»), § 4, perguntas 18-19 do capítulo (a edição de 1905 no Wikisource não traz numeração contínua); tradução a partir do italiano original",
-          "text": "— Quem recebe o Batismo, a que fica obrigado? — Quem recebe o Batismo fica obrigado a professar sempre a fé e a observar a lei de Jesus Cristo e da sua Igreja. — A que se renuncia ao receber o santo Batismo? — Ao receber o santo Batismo, renuncia-se para sempre ao demônio, às suas obras e às suas pompas."
-        },
-        {
-          "sortOrder": 6,
-          "author": "São Luís Maria Grignion de Montfort",
-          "source": "*Tratado da Verdadeira Devoção à Santíssima Virgem*, n. 126; Liturgia das Horas, Ofício de Leituras de São Luís Maria Grignion de Montfort, 28 de abril (tradução brasileira; texto abreviado)",
-          "text": "Devemos considerar que todo o homem, quando é batizado, renuncia solenemente, pela sua própria boca ou pela do seu padrinho e madrinha, a Satanás e às suas tentações e obras, e toma Jesus Cristo como seu Mestre e soberano Senhor, a fim de depender dele na qualidade de escravo de amor. É o que realmente se faz nesta devoção: o cristão renuncia ao demônio, ao mundo, ao pecado e a si mesmo, e consagra-se totalmente a Jesus Cristo pelas mãos de Maria."
-        },
-        {
-          "sortOrder": 7,
-          "author": "São Luís Maria Grignion de Montfort",
-          "source": "*Tratado da Verdadeira Devoção à Santíssima Virgem*, n. 127 (tradução a partir do original francês; texto abreviado)",
-          "text": "Quem é que guarda este grande voto? Quem é que cumpre fielmente as promessas do santo batismo? Não faltam quase todos os cristãos à fidelidade que prometeram a Jesus Cristo no seu batismo? Donde pode vir este desregramento universal, senão do esquecimento em que se vive das promessas e compromissos do santo batismo, e de quase ninguém ratificar por si mesmo o contrato de aliança que fez com Deus por meio dos seus padrinhos e madrinhas? …"
+          "author": "São Cirilo de Alexandria",
+          "source": "Comentário sobre o Evangelho de São João, livro 5, cap. 2 (PG 73, 751-754); Liturgia das Horas, Ofício de Leituras da quinta-feira depois da Epifania (tradução brasileira; texto abreviado)",
+          "text": "Novamente Deus Pai nos concedeu o seu Espírito, sendo Cristo o primeiro a recebê-lo como primícias da natureza renovada. João Batista o testemunhou dizendo: «Eu vi o Espírito descer do céu, e permanecer sobre ele» (Jo 1, 32). … O Unigênito de Deus não recebeu o Espírito Santo para si mesmo; com efeito, esse Espírito que é seu, nos é dado nele e por ele … Cristo não recebeu o Espírito Santo para si mesmo, mas para que o recebêssemos nele; pois é também por ele que recebemos todos os bens."
         }
       ]
     }
