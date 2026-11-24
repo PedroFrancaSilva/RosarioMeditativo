@@ -21,14 +21,19 @@ const traditionalPt: PrayerForm = { traditional: true, language: 'pt', fatima: t
 const traditionalLa: PrayerForm = { traditional: true, language: 'la', fatima: true };
 
 describe('resolvePrayerForm', () => {
-  it('só o conjunto tradicional usa as opções escolhidas', () => {
+  it('só o conjunto tradicional usa as formas tradicionais e a escolha de Fátima', () => {
     const options = { language: 'la', fatima: false } as const;
     expect(resolvePrayerForm('classic', options)).toEqual({
       traditional: true,
       language: 'la',
       fatima: false,
     });
-    expect(resolvePrayerForm('jp2', options)).toEqual(MODERN_PRAYER_FORM);
+    expect(resolvePrayerForm('jp2', options)).toEqual({ ...MODERN_PRAYER_FORM, language: 'la' });
+  });
+
+  it('com Luminosos, o idioma escolhido também vale', () => {
+    expect(resolvePrayerForm('jp2', { language: 'pt', fatima: false })).toEqual(MODERN_PRAYER_FORM);
+    expect(resolvePrayerForm('jp2', { language: 'la', fatima: true }).language).toBe('la');
   });
 
   it('a forma sobrevive à ida e volta pela rota', () => {
@@ -53,11 +58,23 @@ describe('getFixedPrayer com forma', () => {
     );
   });
 
-  it('em latim traz a tradução em português da forma tradicional', () => {
+  it('em latim traz a tradução fiel do próprio texto latino', () => {
     const ave = getFixedPrayer('hail-mary', traditionalLa);
     expect(ave.fullText.startsWith('Ave Maria, gratia plena')).toBe(true);
-    expect(ave.translation).toBe(getFixedPrayer('hail-mary').fullText);
+    expect(ave.translation).toContain('o Senhor é convosco');
     expect(getFixedPrayer('creed', traditionalLa).translation).toContain('desceu aos infernos');
+    const pater = getFixedPrayer('our-father', traditionalLa).translation;
+    expect(pater).toContain('perdoai-nos as nossas dívidas, assim como nós perdoamos aos nossos devedores');
+    expect(pater).not.toContain('ofensas');
+    expect(getFixedPrayer('fatima-prayer', traditionalLa).translation).toContain('as nossas dívidas');
+  });
+
+  it('com Luminosos em latim, a tradução é a mesma do latim', () => {
+    const modernLa: PrayerForm = { traditional: false, language: 'la', fatima: true };
+    expect(getFixedPrayer('creed', modernLa).fullText).toContain('descendit ad inferos');
+    expect(getFixedPrayer('creed', modernLa).translation).toBe(
+      getFixedPrayer('creed', traditionalLa).translation,
+    );
   });
 
   it('Oferecimento e Agradecimento ficam em português', () => {
@@ -149,7 +166,7 @@ describe('buildPrayerSteps com forma', () => {
     const presented = presentPrayerStep(hail, traditionalLa);
     expect(presented.title).toBe('Ave Maria 3');
     expect(presented.bodyFull.startsWith('Ave Maria')).toBe(true);
-    expect(presented.translation).toBe(getFixedPrayer('hail-mary').fullText);
+    expect(presented.translation).toBe(getFixedPrayer('hail-mary', traditionalLa).translation);
   });
 });
 

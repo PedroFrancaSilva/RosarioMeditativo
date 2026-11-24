@@ -107,32 +107,30 @@ export default function HomePrayerScreen() {
           </Pressable>
         </View>
 
-        {set === 'classic' ? (
-          <View style={styles.languageRow} accessibilityRole="radiogroup">
-            <Text style={styles.languageLabel}>Orações em</Text>
-            {(
-              [
-                { id: 'pt', label: 'Português' },
-                { id: 'la', label: 'Latim' },
-              ] as const
-            ).map((option) => {
-              const selected = preferences.prayerLanguage === option.id;
-              return (
-                <Pressable
-                  key={option.id}
-                  style={[styles.languageChip, selected && styles.languageChipActive]}
-                  onPress={() => setLanguage(option.id)}
-                  hitSlop={6}
-                  accessibilityRole="radio"
-                  accessibilityState={{ selected }}>
-                  <Text style={[styles.languageText, selected && styles.languageTextActive]}>
-                    {option.label}
-                  </Text>
-                </Pressable>
-              );
-            })}
-          </View>
-        ) : null}
+        <View style={styles.languageRow} accessibilityRole="radiogroup">
+          <Text style={styles.languageLabel}>Orações em</Text>
+          {(
+            [
+              { id: 'pt', label: 'Português' },
+              { id: 'la', label: 'Latim' },
+            ] as const
+          ).map((option) => {
+            const selected = preferences.prayerLanguage === option.id;
+            return (
+              <Pressable
+                key={option.id}
+                style={[styles.languageChip, selected && styles.languageChipActive]}
+                onPress={() => setLanguage(option.id)}
+                hitSlop={6}
+                accessibilityRole="radio"
+                accessibilityState={{ selected }}>
+                <Text style={[styles.languageText, selected && styles.languageTextActive]}>
+                  {option.label}
+                </Text>
+              </Pressable>
+            );
+          })}
+        </View>
 
         <Pressable
           style={({ pressed }) => [styles.completeCard, pressed && styles.pressed]}

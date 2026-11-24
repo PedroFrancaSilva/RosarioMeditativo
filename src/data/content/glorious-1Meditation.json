@@ -1,38 +1,86 @@
 {
   "passages": [
     {
-      "reference": "Mt 28, 5-10",
-      "text": "Mas o anjo, tomando a palavra, disse às mulheres: «Vós não temais, porque sei que procurais a Jesus, que foi crucificado. Ele já aqui não está, ressuscitou como tinha dito. Vinde e vede o lugar, onde o Senhor esteve depositado.» … E eis que Jesus lhes saiu ao encontro e lhes disse: «Eu vos saúdo.» Elas aproximaram-se, abraçaram os seus pés e prostraram-se diante dele. Então Jesus disse-lhes: «Não temais; ide, avisai meus irmãos, para que vão à Galileia; lá me verão.»",
+      "reference": "Mt 28, 5-8",
+      "text": "Mas o anjo, tomando a palavra, disse às mulheres: «Vós não temais, porque sei que procurais a Jesus, que foi crucificado; ele já aqui não está, porque ressuscitou, como tinha dito; vinde e vede o lugar, onde o Senhor estava depositado. Ide já dizer aos seus discípulos que ele ressuscitou; e eis que vai adiante de vós para a Galileia; lá o vereis; eis que eu vo-lo disse antes.» Saíram logo do sepulcro com medo e grande gáudio, e foram correndo dar a nova aos discípulos.",
       "commentaries": [
         {
           "sortOrder": 0,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 652",
-          "text": "A ressurreição de Cristo é o cumprimento das promessas do Antigo Testamento (578) e do próprio Jesus, durante a sua vida terrena (579). A expressão «segundo as Escrituras» (580) indica que a ressurreição de Cristo cumpriu essas predições."
+          "author": "São Gregório Magno",
+          "source": "Homilias sobre os Evangelhos, livro II, homilia 21 (dia de Páscoa, sobre Mc 16, 1-7), n. 3 (texto abreviado). Tradução a partir do latim (ed. maurina, PL 76); Gregório comenta o «Não vos assusteis» de Marcos, paralelo do «Vós não temais» de Mateus",
+          "text": "«Não vos assusteis.» Como se dissesse claramente: Temam aqueles que não amam a vinda dos cidadãos do céu; tenham pavor os que, oprimidos pelos desejos carnais, desesperam de poder chegar à sua companhia. Vós, porém, por que temeis, vós que vedes os vossos concidadãos? … Porque Deus onipotente é terrível para os pecadores e suave para os justos, com razão o anjo, testemunha da sua ressurreição, se mostra com o rosto como relâmpago e com a veste branca como a neve, para que pelo seu próprio aspecto aterrasse os réprobos e acariciasse os piedosos."
+        },
+        {
+          "sortOrder": 1,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte I, cap. VI «Do quinto artigo», 5ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— A ressurreição de Jesus Cristo foi semelhante à ressurreição dos outros homens ressuscitados? — Não; a ressurreição de Jesus Cristo não foi semelhante à ressurreição dos outros homens ressuscitados, porque Jesus Cristo ressuscitou por virtude própria, e os outros foram ressuscitados por virtude de Deus.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "Catecismo Romano",
+          "source": "Catecismo Romano (do Concílio de Trento), I parte, cap. VI (Quinto artigo), n. 10 (texto abreviado). Trad. Frei Leopoldo Pires Martins, OFM, Vozes, Petrópolis, 1951",
+          "text": "Para dar prova de Sua Divindade, não quis retardar a ressurreição até o fim do mundo. De outro lado, para crermos que era homem de verdade, e que realmente tinha morrido, não ressuscitou logo depois da morte, mas [esperou até] ao terceiro dia. Este intervalo [Lhe] pareceu suficiente para demonstrar a realidade de Sua Morte."
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 53, a. 1 (texto abreviado). Tradução a partir do latim (ed. Leonina)",
+          "text": "Foi necessário que Cristo ressuscitasse por cinco razões. Primeiro, para recomendação da justiça divina, à qual pertence exaltar os que se humilham por Deus … Porque, pois, Cristo, por caridade e obediência a Deus, se humilhou até a morte de cruz, era preciso que fosse exaltado por Deus até a ressurreição gloriosa. … Terceiro, para levantar a nossa esperança: porque, vendo ressurgir Cristo, que é a nossa cabeça, esperamos que também nós ressurgiremos. … Quinto, para completar a nossa salvação: porque, assim como suportou males morrendo para nos livrar dos males, assim foi glorificado ressurgindo para nos promover aos bens."
+        },
+        {
+          "sortOrder": 4,
+          "author": "São Gregório Magno",
+          "source": "Homilias sobre os Evangelhos, livro II, homilia 21 (dia de Páscoa, sobre Mc 16, 1-7), n. 7 (texto abreviado). Tradução a partir do latim (ed. maurina, PL 76)",
+          "text": "Se então descesse da cruz, cedendo aos que o insultavam, não nos mostraria a virtude da paciência. Mas esperou um pouco, tolerou os opróbrios, suportou as zombarias, guardou a paciência, adiou a admiração; e aquele que não quis descer da cruz ressurgiu do sepulcro. Mais foi, pois, ressurgir do sepulcro do que descer da cruz; mais foi destruir a morte ressuscitando do que conservar a vida descendo."
+        }
+      ]
+    },
+    {
+      "reference": "Mt 28, 9-10",
+      "text": "E eis que Jesus lhes saiu ao encontro, dizendo: «Deus vos salve.» E elas aproximaram-se dele e abraçaram os seus pés, e o adoraram. Então disse-lhes Jesus: «Não temais; ide, avisai meus irmãos, para que vão à Galileia, lá me verão.»",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Instrução sobre as festas do Senhor, da B. Virgem e dos Santos, Parte I, cap. VIII «Da Páscoa da Ressurreição», 6ª e 7ª perguntas do capítulo. Tradução a partir do italiano.",
+          "text": "«— Que devemos fazer para celebrar dignamente a festa da Páscoa? — Para celebrar dignamente a festa da Páscoa devemos fazer duas coisas: 1.º adorar com santa alegria e viva gratidão a Jesus Cristo ressuscitado; 2.º ressuscitar espiritualmente com ele. — Que quer dizer ressuscitar espiritualmente com Jesus Cristo? — Quer dizer que, assim como Jesus Cristo, por meio da sua ressurreição, começou uma vida nova, imortal e celeste, assim também nós devemos começar uma vida nova segundo o espírito, renunciando inteiramente e para sempre ao pecado e a tudo o que nos leva ao pecado; amando só a Deus, e tudo o que nos leva a Deus.»"
         },
         {
           "sortOrder": 1,
           "author": "São Tomás de Aquino",
-          "source": "Suma Teológica, III, q. 53, a. 1 (texto abreviado)",
-          "text": "Respondo que foi necessário que Cristo ressuscitasse por cinco motivos. Primeiro, para recomendação da justiça divina, que é a encarregada de exaltar a quem se humilha por Deus … Por isso, tendo Cristo se humilhado até à morte de cruz, por caridade e obediência a Deus, era necessário que fosse exaltado por Deus até à ressurreição gloriosa. … Terceiro, para levantar a nossa esperança. Pois, ao ver que Cristo ressuscita, sendo Ele a nossa cabeça, esperamos que também nós ressuscitaremos. … Quinto, para complemento da nossa salvação. … assim também foi glorificado ressuscitando para nos conduzir aos bens."
+          "source": "Suma Teológica, III, q. 55, a. 1, ad 3 (texto abreviado). Tradução a partir do latim (ed. Leonina)",
+          "text": "Apareceu primeiro às mulheres para que a mulher, que primeiro levara ao homem o princípio da morte, também primeiro anunciasse os princípios da ressurreição de Cristo na glória. … Mostra-se também por isso que, quanto ao estado de glória, o sexo feminino não sofrerá detrimento algum; antes, se as mulheres arderem em maior caridade, alcançarão também maior glória na visão divina: porque as mulheres que amaram mais estreitamente o Senhor, a ponto de não se afastarem do seu sepulcro mesmo quando os discípulos se afastavam, foram as primeiras a ver o Senhor ressurgindo na glória."
         },
         {
           "sortOrder": 2,
-          "author": "Santo Agostinho",
-          "source": "Contra Fausto, o Maniqueu, livro 14, cap. 4 (texto abreviado)",
-          "text": "Negue Cristo maldito quem nega também que morreu. Mas quem confessa que morreu … Cristo assumiu sem culpa o nosso suplício, para dali desatar a nossa culpa e pôr fim também ao nosso suplício."
+          "author": "Santo Afonso Maria de Ligório",
+          "source": "Meditações para todos os dias e festas do ano, t. II, Semana da Páscoa, Domingo («A ressurreição de Jesus Cristo e a esperança do cristão»), ponto I (texto abreviado). Trad. port. publicada (Herder)",
+          "text": "Façamos um ato de fé viva na sua ressurreição, e cheguemo-nos a Ele para beijarmos em espírito os sinais de suas cinco chagas glorificadas. Alegremo-nos com Ele, por ter saído do sepulcro, vencedor da morte e do inferno, e digamos com todos os santos: “O Cordeiro que foi imolado por nós, é digno de receber o poder, a divindade, a sabedoria, a fortaleza, a honra, a glória e a bênção.”"
         },
         {
           "sortOrder": 3,
-          "author": "Santo Agostinho",
-          "source": "Sermão «Sobre a Ressurreição de Cristo, segundo São Marcos» (PL 38, 1104-1107) (texto abreviado)",
-          "text": "… posto no sepulcro; mas no terceiro dia ressurgiu, acabando-se o sofrimento, morrendo a morte. Eia, tende lá os vossos olhos na ressurreição de Cristo; porque tanto quis o Pai engrandecer o seu Santo, que o ressuscitou dos mortos e lhe deu a honra de se assentar no Céu à sua direita."
+          "author": "Santo Afonso Maria de Ligório",
+          "source": "Meditações para todos os dias e festas do ano, t. II, Semana da Páscoa, Sábado («Aparição de Jesus ressuscitado a sua Mãe Maria Santíssima»), ponto I (texto abreviado). Trad. port. publicada (Herder). O próprio autor nota que os Evangelistas não a referem: é piedosa tradição",
+          "text": "Era de inteira justiça que o divino Redentor glorificado fosse, antes de mais ninguém, visitar a Santíssima Virgem; a fim de que, antes dos outros e mais do que estes, participasse da alegria da ressurreição quem mais do que os outros participara da paixão. … Avizinhemo-nos, em espírito, de Nossa Senhora, que é também nossa Mãe, e roguemos-lhe que nos permita beijar as chagas glorificadas de Jesus Cristo."
+        },
+        {
+          "sortOrder": 4,
+          "author": "São João Paulo II",
+          "source": "Rosarium Virginis Mariae, § 23 (texto abreviado)",
+          "text": "«A contemplação do rosto de Cristo não pode deter-se na imagem do crucificado. Ele é o Ressuscitado!» O Rosário sempre expressou esta certeza da fé, convidando o crente a ultrapassar as trevas da Paixão, para fixar o olhar na glória de Cristo … Contemplando o Ressuscitado, o cristão descobre novamente as razões da própria fé (cf. 1 Cor 15, 14), e revive não só a alegria daqueles a quem Cristo Se manifestou – os Apóstolos, a Madalena, os discípulos de Emaús –, mas também a alegria de Maria, que deverá ter tido uma experiência não menos intensa da nova existência do Filho glorificado."
+        },
+        {
+          "sortOrder": 5,
+          "author": "São Gregório Magno",
+          "source": "Homilias sobre os Evangelhos, livro II, homilia 21 (dia de Páscoa, sobre Mc 16, 1-7), n. 5 (texto abreviado). Tradução a partir do latim (ed. maurina, PL 76); comenta «irá adiante de vós para a Galileia; lá o vereis» (Mc 16, 7; cf. Mt 28, 7.10)",
+          "text": "Galileia, com efeito, interpreta-se «passagem realizada». O nosso Redentor já tinha passado da paixão à ressurreição, da morte à vida, da pena à glória, da corrupção à incorrupção. E depois da ressurreição é visto primeiro pelos discípulos na Galileia, porque a glória da sua ressurreição só a veremos depois, cheios de alegria, se agora passarmos dos vícios às alturas das virtudes."
         }
       ]
     },
     {
       "reference": "1 Co 15, 14-22",
-      "text": "E, se Cristo não ressuscitou, é vã a nossa pregação, é também vã a vossa fé. … Mas Cristo ressuscitou dos mortos, sendo ele as primícias dos que dormem, porque, assim como a morte veio por um homem, também por um homem vem a ressurreição dos mortos. Assim como todos morrem em Adão, assim também todos serão vivificados em Cristo.",
+      "text": "E, se Cristo não ressuscitou, é pois vã a nossa pregação, é também vã a vossa fé; … Mas Cristo ressuscitou dos mortos, sendo ele as primícias dos que dormem; porque, assim como a morte (veio) por um homem, também por um homem (veio) a ressurreição dos mortos. E, assim como todos morreram em Adão, assim também todos serão vivificados em Cristo.",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -42,21 +90,45 @@
         },
         {
           "sortOrder": 1,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 655",
-          "text": "Finalmente, a ressurreição de Cristo – e o próprio Cristo Ressuscitado – é princípio e fonte da nossa ressurreição futura: «Cristo ressuscitou dos mortos como primícias dos que morreram [...]. Do mesmo modo que em Adão todos morreram, assim também em Cristo serão todos restituídos à vida» (1 Cor 15, 20-22). … «para que os vivos deixem de viver para si próprios, mas vivam para Aquele que morreu e ressuscitou por eles» (2 Cor 5, 15)."
+          "author": "Catecismo Romano",
+          "source": "Catecismo Romano (do Concílio de Trento), I parte, cap. VI (Quinto artigo), n. 11 (texto abreviado). Trad. Frei Leopoldo Pires Martins, OFM, Vozes, Petrópolis, 1951, que cita S. Agostinho, Enarrationes in Psalmos, 120 (grafia atualizada: «creem»)",
+          "text": "Cheio de admiração pela verdade deste Artigo, Santo Agostinho escreveu: «Que muito crermos que Cristo morreu? Também os pagãos, os judeus, e todos os maus o acreditam. Todos creem que morreu. A fé [característica] dos cristãos é a Ressurreição de Cristo. O que muito importa é crermos que ressuscitou»."
         },
         {
           "sortOrder": 2,
-          "author": "São Tomás de Aquino",
-          "source": "Suma Teológica, III, q. 56, a. 1 (texto abreviado)",
-          "text": "Respondo que, como se escreve no II Metafís., o que é primeiro num género qualquer é causa de todos os que vêm depois. Ora, no género da nossa ressurreição, o primeiro foi a ressurreição de Cristo … Por isso é necessário que a ressurreição de Cristo seja causa da nossa ressurreição. E isto é o que diz o Apóstolo em 1 Cor 15, 20-21 … O Verbo de Deus dá primeiro a vida ao corpo que lhe está naturalmente unido, e por meio dele causa a ressurreição em todos os demais."
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Instrução sobre as festas do Senhor, da B. Virgem e dos Santos, Parte I, cap. VIII «Da Páscoa da Ressurreição», 4ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— Por que se diz que a Ressurreição de Cristo é o fundamento da nossa religião? — A Ressurreição de Cristo diz-se o fundamento da nossa religião, porque nos foi dada pelo próprio Jesus Cristo como prova principal da sua divindade e da verdade da nossa fé.»"
         },
         {
           "sortOrder": 3,
-          "author": "São João Paulo II",
-          "source": "Rosarium Virginis Mariae, § 23 (texto abreviado)",
-          "text": "A contemplação do rosto de Cristo não pode deter-se na imagem do crucificado. Ele é o Ressuscitado! … Contemplando o Ressuscitado, o cristão descobre novamente as razões da própria fé (cf. 1 Cor 15, 14), e revive não só a alegria daqueles a quem Cristo Se manifestou – os Apóstolos, a Madalena, os discípulos de Emaús –, mas também a alegria de Maria …"
+          "author": "São Gregório Magno",
+          "source": "Homilias sobre os Evangelhos, livro II, homilia 21 (dia de Páscoa, sobre Mc 16, 1-7), n. 6 (texto abreviado). Tradução a partir do latim (ed. maurina, PL 76)",
+          "text": "Havia duas vidas: uma conhecíamos, a outra ignorávamos. Uma é mortal, a outra imortal; uma de corrupção, a outra de incorrupção; uma de morte, a outra de ressurreição. Mas veio o Mediador entre Deus e os homens, o homem Cristo Jesus: assumiu uma e mostrou a outra. Suportou uma morrendo, e mostrou a outra ressuscitando. … Se, pois, somos membros do nosso Redentor, esperemos confiadamente em nós o que sabemos realizado na Cabeça."
+        },
+        {
+          "sortOrder": 4,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 56, a. 1 (texto abreviado). Tradução a partir do latim (ed. Leonina)",
+          "text": "O que é primeiro em qualquer gênero é causa de tudo o que vem depois. Ora, o primeiro no gênero da nossa ressurreição foi a ressurreição de Cristo … Por isso é necessário que a ressurreição de Cristo seja causa da nossa ressurreição. … O princípio da vivificação humana é o Verbo de Deus, de quem se diz no Salmo: «Em ti está a fonte da vida». … Ora, toda causa opera primeiro naquilo que lhe está mais próximo e, por meio disso, nas coisas mais remotas, como o fogo aquece primeiro o ar próximo, por meio do qual aquece os corpos distantes. … Por isso o Verbo de Deus dá primeiro a vida imortal ao corpo que lhe está naturalmente unido, e por meio dele opera a ressurreição em todos os outros."
+        },
+        {
+          "sortOrder": 5,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 655 (texto abreviado)",
+          "text": "Finalmente, a ressurreição de Cristo – e o próprio Cristo Ressuscitado – é princípio e fonte da nossa ressurreição futura: «Cristo ressuscitou dos mortos como primícias dos que morreram [...]. Do mesmo modo que em Adão todos morreram, assim também em Cristo serão todos restituídos à vida» (1 Cor 15, 20-22). … «para que os vivos deixem de viver para si próprios, mas vivam para Aquele que morreu e ressuscitou por eles» (2 Cor 5, 15)."
+        },
+        {
+          "sortOrder": 6,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte I, cap. XII «Do undécimo artigo», 5ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— Os homens ressuscitarão todos da mesma maneira? — Não; haverá grandíssima diferença entre os corpos dos eleitos e os corpos dos condenados, porque só os corpos dos eleitos terão, à semelhança de Jesus Cristo ressuscitado, os dotes dos corpos gloriosos.»"
+        },
+        {
+          "sortOrder": 7,
+          "author": "Santo Afonso Maria de Ligório",
+          "source": "Meditações para todos os dias e festas do ano, t. II, Semana da Páscoa, Domingo («A ressurreição de Jesus Cristo e a esperança do cristão»), ponto II (texto abreviado). Trad. port. publicada (Herder)",
+          "text": "Regozijemo-nos com Jesus Cristo; mas regozijemo-nos também por nós mesmos, porquanto a sua ressurreição é o penhor e a norma da nossa … Ó doce esperança! «Virá a hora em que os mortos ouvirão a voz do Filho de Deus»; e então pelo poder divino retomaremos o mesmo corpo que agora temos, mas formoso e resplandecente como o sol. Nós também ressuscitaremos!"
         }
       ]
     }

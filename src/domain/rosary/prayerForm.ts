@@ -6,12 +6,15 @@ export const MODERN_PRAYER_FORM: PrayerForm = {
   fatima: true,
 };
 
-/** As opções do modo tradicional só valem quando esse conjunto foi escolhido. */
+/**
+ * O idioma vale para os dois conjuntos; as formas tradicionais e a escolha da Oração de
+ * Fátima só valem no conjunto tradicional.
+ */
 export function resolvePrayerForm(
   set: MysterySet,
   options: { language: PrayerLanguage; fatima: boolean },
 ): PrayerForm {
-  if (set !== 'classic') return MODERN_PRAYER_FORM;
+  if (set !== 'classic') return { ...MODERN_PRAYER_FORM, language: options.language };
   return { traditional: true, language: options.language, fatima: options.fatima };
 }
 

@@ -148,11 +148,37 @@ Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, 
   },
 };
 
+/**
+ * Tradução fiel do texto latino, mostrada sob a oração em latim. Segue o latim palavra a
+ * palavra (ex.: «debita nostra» → «as nossas dívidas»), e não a forma usual em português;
+ * só o tratamento por «vós», reverente, substitui o «tu» latino.
+ */
+const latinTranslations: Partial<Record<FixedPrayerId, string>> = {
+  'sign-of-cross':
+    'Pelo sinal da Cruz, livrai-nos dos nossos inimigos, ó Deus nosso. Em nome do Pai, e do Filho, e do Espírito Santo. Amém.',
+  creed: `Creio em Deus Pai todo-poderoso, Criador do céu e da terra. E em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido do Espírito Santo, nasceu da Virgem Maria, padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado, desceu aos infernos, ao terceiro dia ressuscitou dos mortos, subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, de onde há de vir a julgar os vivos e os mortos.
+
+Creio no Espírito Santo, na santa Igreja católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.`,
+  'our-father':
+    'Pai nosso, que estais nos céus, santificado seja o vosso nome. Venha o vosso reino. Seja feita a vossa vontade, assim no céu como na terra. O pão nosso de cada dia nos dai hoje, e perdoai-nos as nossas dívidas, assim como nós perdoamos aos nossos devedores. E não nos induzais em tentação, mas livrai-nos do mal. Amém.',
+  'hail-mary':
+    'Ave, Maria, cheia de graça, o Senhor é convosco. Bendita sois vós entre as mulheres, e bendito é o fruto do vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós, pecadores, agora e na hora da nossa morte. Amém.',
+  'glory-be':
+    'Glória ao Pai, e ao Filho, e ao Espírito Santo. Assim como era no princípio, e agora e sempre, e pelos séculos dos séculos. Amém.',
+  'fatima-prayer':
+    'Senhor Jesus, perdoai-nos as nossas dívidas, salvai-nos do fogo do inferno, conduzi ao céu todas as almas, principalmente aquelas que mais necessitam da vossa misericórdia.',
+  'hail-holy-queen':
+    'Salve, Rainha, mãe de misericórdia; vida, doçura e esperança nossa, salve. A vós clamamos, os exilados filhos de Eva. A vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei. E Jesus, bendito fruto do vosso ventre, mostrai-nos depois deste exílio. Ó clemente, ó piedosa, ó doce Virgem Maria. Rogai por nós, santa Mãe de Deus, para que sejamos feitos dignos das promessas de Cristo. Amém.',
+  'concluding-prayer':
+    'Oremos. Ó Deus, cujo Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, vos pedimos, que, recordando estes mistérios no sacratíssimo Rosário da bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.',
+};
+
 export function getFixedPrayer(id: FixedPrayerId, form?: PrayerForm): FixedPrayer {
   const base = prayers[id];
   const portuguese = form?.traditional ? { ...base, ...traditionalTexts[id] } : base;
   const latin = form?.language === 'la' ? latinTexts[id] : undefined;
-  return latin ? { ...portuguese, ...latin, translation: portuguese.fullText } : portuguese;
+  if (!latin) return portuguese;
+  return { ...portuguese, ...latin, translation: latinTranslations[id] ?? portuguese.fullText };
 }
 
 export function listFixedPrayerIds(): FixedPrayerId[] {

@@ -2,19 +2,37 @@
   "passages": [
     {
       "reference": "Mt 27, 26",
-      "text": "Então soltou-lhes Barrabás. Quanto a Jesus, depois de o ter mandado flagelar, entregou-lho para ser crucificado.",
+      "text": "Então soltou-lhes Barrabás; e, depois de fazer flagelar Jesus, entregou-lho para ser crucificado.",
       "commentaries": [
         {
           "sortOrder": 0,
+          "author": "São Jerônimo",
+          "source": "Comentário ao Evangelho de São Mateus, livro IV (sobre Mt 27, 26), no texto recolhido por S. Tomás na Catena Aurea in Mt 27, lição 4; tradução a partir do latim (texto abreviado)",
+          "text": "«Saiba-se que Pilatos se serviu das leis romanas, pelas quais estava determinado que quem fosse crucificado fosse antes açoitado. Jesus é, pois, entregue aos soldados para ser açoitado, e aquele santíssimo corpo, aquele peito que encerrava a Deus, foi retalhado pelos flagelos. … Isto, porém, se fez para que, estando escrito: “Muitos são os flagelos dos pecadores”, fôssemos nós, por aquele flagelo, livrados dos açoites.»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "Santo Agostinho (atribuído)",
+          "source": "Sermão sobre a Paixão (atribuído a Santo Agostinho), citado por S. Tomás na Catena Aurea in Mt 27, lição 4; tradução a partir do latim",
+          "text": "«Eis que o Senhor é preparado para os açoites, eis que já é ferido: a violência dos flagelos rompeu a sua santa pele; os golpes cruéis, repetidos sem cessar, dilaceram-lhe as costas. Ó dor! Deus jaz estendido diante do homem, e sofre o suplício de réu Aquele em quem não se pôde encontrar vestígio algum de pecado.»"
+        },
+        {
+          "sortOrder": 2,
           "author": "São Tomás de Aquino",
-          "source": "Suma Teológica, III, q. 47, a. 4",
-          "text": "Convinha que Cristo começasse a padecer por parte dos judeus e que, depois de ser entregue por eles, a sua paixão se concluísse por mãos dos gentios — como o Senhor disse que o entregariam «aos gentios para ser escarnecido, flagelado e crucificado» (Mt 20, 19)."
+          "source": "Suma Teológica, III, q. 46, a. 5 (texto abreviado; tradução a partir do latim)",
+          "text": "«[Cristo padeceu] no corpo, pelas chagas e pelos flagelos. … Na cabeça padeceu a coroa de espinhos pungentes; nas mãos e nos pés, a cravação dos pregos; no rosto, as bofetadas e os escarros; e em todo o corpo, os flagelos. Padeceu também segundo todos os sentidos do corpo: no tato, sendo flagelado e cravado com pregos; no gosto, sendo-lhe dado a beber fel e vinagre; no olfato, sendo suspenso no patíbulo num lugar fétido de cadáveres, chamado Calvário; no ouvido, sendo provocado pelas vozes dos que blasfemavam e escarneciam; na vista, vendo chorar a sua Mãe e o discípulo que amava.»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte I, cap. V «Do quarto artigo», 5ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— Quem foi que condenou Jesus Cristo a ser crucificado? — Quem condenou Jesus Cristo a ser crucificado foi Pôncio Pilatos, governador da Judeia, o qual tinha reconhecido a inocência dele; mas cedeu covardemente à ameaçadora insistência do povo de Jerusalém.»"
         }
       ]
     },
     {
       "reference": "Jo 19, 1",
-      "text": "Pilatos tomou então Jesus e mandou-o flagelar.",
+      "text": "Pilatos, pois, tomou então Jesus e mandou-o flagelar.",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -27,12 +45,60 @@
           "author": "Santo Agostinho",
           "source": "Tratados sobre o Evangelho de João, Tratado 116, §1",
           "text": "Então Pilatos tomou a Jesus e açoitou-o… para que os judeus, saciados com as injúrias, cessassem de se enfurecer até à morte dele. … O reino que não era deste mundo vencia o soberbo mundo não pela atrocidade de pelejar, mas pela humildade de padecer; aquele grão, que se havia de multiplicar, era semeado em horrível ultraje, para brotar em admirável glória."
+        },
+        {
+          "sortOrder": 2,
+          "author": "São João Crisóstomo",
+          "source": "Homilias sobre o Evangelho de São João, homilia 84, 1 (sobre Jo 19, 1-3), na versão latina recolhida por S. Tomás na Catena Aurea in Jo 19, lição 1; tradução a partir do latim",
+          "text": "«Ele, enquanto se faziam tantas e tais coisas, permanecia calado. Tu, porém, ao ouvires isto, guarda-o continuamente na mente; e, vendo o Rei de toda a terra e Senhor dos Anjos padecer a afronta e suportar tudo em silêncio, imita-o.»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "Leão XIII",
+          "source": "Encíclica Laetitiae sanctae (8 de setembro de 1893), nn. 10–11 (texto abreviado)",
+          "text": "«Através destes mistérios vemos que Jesus … começou a fazer e a ensinar, a fim de que víssemos n'Ele próprio o exemplo prático dos ensinamentos que Ele daria à nossa humanidade, acerca da tolerância da dor e dos trabalhos; e o exemplo de Jesus chegou a tal ponto, que, voluntariamente e de grande coração, Ele mesmo abraçou tudo o que há de mais duro de suportar. … Vemo-lo flagelado, coroado de espinhos, crucificado… Todo aquele que se não contentar com olhar, porém meditar amiúde exemplos de tão excelsa virtude, oh! como se sentirá impelido a imitá-los!»"
+        },
+        {
+          "sortOrder": 4,
+          "author": "Imitação de Cristo",
+          "source": "Imitação de Cristo, livro II, cap. 12 («Da estrada real da santa cruz»), nn. 7–8 (texto abreviado; tradução a partir do latim)",
+          "text": "«Toda a vida de Cristo foi cruz e martírio, e tu buscas para ti descanso e alegria? Enganas-te, enganas-te, se buscas outra coisa que não seja padecer tribulações. … E quanto mais a carne é abatida pela tribulação, tanto mais o espírito é fortalecido pela consolação interior.»"
+        }
+      ]
+    },
+    {
+      "reference": "Is 50, 6",
+      "text": "Eu entreguei o meu corpo aos que me feriam, e a minha face aos que me arrancavam a barba; não desviei a minha face dos que me injuriavam e cuspiam.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "São Cirilo de Jerusalém",
+          "source": "Catequeses, XIII, 13 (texto abreviado; tradução a partir da versão inglesa da Nicene and Post-Nicene Fathers)",
+          "text": "«O Espírito Santo escreveu de antemão, na pessoa de Cristo: “Entreguei as minhas costas aos flagelos” — pois Pilatos, depois de O açoitar, entregou-O para ser crucificado — … como se dissesse: “Sabendo de antemão que me feririam, nem sequer desviei a face; pois como teria eu fortalecido os meus discípulos contra a morte pela verdade, se eu mesmo a tivesse temido?” … Sendo Ele mesmo Deus, suportou padecer estas coisas da parte dos homens, para que depois nós, homens, quando padecermos tais coisas por amor d'Ele, não nos envergonhemos.»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte I, cap. V «Do quarto artigo», 6ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— Não teria podido Jesus Cristo livrar-se das mãos dos judeus e de Pilatos? — Sim, Jesus Cristo teria podido livrar-se das mãos dos judeus e de Pilatos; mas, sabendo que a vontade do seu Eterno Pai era que Ele padecesse e morresse para a nossa salvação, submeteu-se voluntariamente; antes, Ele mesmo foi ao encontro dos seus inimigos, e deixou-se espontaneamente prender e conduzir à morte.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 46, a. 6 (texto abreviado; tradução a partir do latim)",
+          "text": "«Segundo o corpo, [Cristo] era de compleição perfeitíssima, pois o seu corpo fora formado milagrosamente por obra do Espírito Santo … e por isso nele era vivíssimo o sentido do tato, de cuja percepção se segue a dor. … Aquela paixão e aquela dor foram assumidas por Cristo voluntariamente, em vista da libertação dos homens do pecado; e por isso assumiu tanta dor quanta fosse proporcionada à grandeza do fruto que dela se havia de seguir.»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 609",
+          "text": "Ao partilhar, no seu coração humano, o amor do Pai para com os homens, Jesus «amou-os até ao fim» (Jo 13, 1), «pois não há maior amor do que dar a vida por aqueles que se ama» (Jo 15, 13). Assim, no sofrimento e na morte, a sua humanidade tornou-se instrumento livre e perfeito do seu amor divino, que quer a salvação dos homens. Com efeito, Ele aceitou livremente a sua paixão e morte por amor do Pai e dos homens a quem o Pai quer salvar: «Ninguém Me tira a vida. Sou Eu que a dou espontaneamente» (Jo 10, 18)."
         }
       ]
     },
     {
       "reference": "Is 53, 5",
-      "text": "Mas foi ferido por causa das nossas iniquidades, foi despedaçado por causa dos nossos crimes; o castigo que nos devia trazer a paz, caiu sobre ele, e nós fomos sarados com os seus ferimentos.",
+      "text": "Mas foi ferido por causa das nossas iniquidades, foi despedaçado por causa dos nossos crimes; o castigo que nos devia trazer a paz, caiu sobre ele, e nós fomos sarados com as suas pisaduras.",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -42,6 +108,24 @@
         },
         {
           "sortOrder": 1,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte I, cap. V «Do quarto artigo», 12ª e 13ª perguntas do capítulo. Tradução a partir do italiano.",
+          "text": "«— Era necessário que Jesus padecesse tanto? — Não, não era absolutamente necessário que Jesus padecesse tanto, porque o menor dos seus padecimentos teria bastado para a nossa redenção, sendo cada ato seu de valor infinito. — Por que, então, quis Jesus padecer tanto? — Jesus quis padecer tanto para satisfazer mais abundantemente à divina justiça, para nos mostrar mais o seu amor e para nos inspirar o maior horror ao pecado.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Jerônimo",
+          "source": "Comentário ao Evangelho de São Mateus, livro IV (sobre Mt 27, 31), no texto recolhido por S. Tomás na Catena Aurea in Mt 27, lição 5; tradução a partir do latim (texto abreviado)",
+          "text": "«Note-se que, quando Jesus é flagelado e coberto de escarros, não tem as suas próprias vestes, mas as que assumira por causa dos nossos pecados.»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "Imitação de Cristo",
+          "source": "Imitação de Cristo, livro II, cap. 1 («Da conversação interior»), nn. 4–5 (texto abreviado; tradução a partir do latim)",
+          "text": "«Se não sabes contemplar as coisas altas e celestes, descansa na paixão de Cristo e habita de boa vontade nas suas sagradas chagas. Porque, se te refugiares devotamente nas chagas e nos formosos estigmas de Jesus, sentirás grande consolação na tribulação. … O Senhor Jesus quis padecer e ser desprezado, e tu ousas queixar-te de alguma coisa?»"
+        },
+        {
+          "sortOrder": 4,
           "author": "Catecismo da Igreja Católica",
           "source": "CIC 1851",
           "text": "É precisamente na paixão, em que a misericórdia de Cristo o vai vencer, que o pecado manifesta melhor a sua violência e a sua multiplicidade: incredulidade, ódio assassino, rejeição e escárnio por parte dos chefes e do povo, cobardia de Pilatos e crueldade dos soldados, traição de Judas tão dura para Jesus, negação de Pedro e abandono dos discípulos. No entanto, mesmo na hora das trevas e do príncipe deste mundo, o sacrifício de Cristo torna-se secretamente a fonte de onde brotará, inesgotável, o perdão dos nossos pecados."

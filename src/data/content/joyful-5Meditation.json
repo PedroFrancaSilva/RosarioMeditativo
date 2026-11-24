@@ -1,38 +1,92 @@
 {
   "passages": [
     {
-      "reference": "Lc 2, 42-49",
-      "text": "Quando chegou aos doze anos, indo eles a Jerusalém segundo o costume daquela festa, acabados os dias que ela durava, quando voltaram, ficou o Menino Jesus em Jerusalém, sem que seus pais o advertissem. … Aconteceu que, três dias depois, o encontraram no templo sentado no meio dos doutores, ouvindo-os e interrogando-os. … Quando o viram, admiraram-se. E sua mãe disse-lhe: «Filho, porque procedeste assim connosco? Eis que teu pai e eu te procurávamos cheios de aflição.» Ele disse-lhes: «Para que me buscáveis? Não sabíeis que devo ocupar-me nas coisas de meu Pai?»",
+      "reference": "Lc 2, 41-45",
+      "text": "Seus pais iam todos os anos a Jerusalém, no dia solene da Páscoa. E, quando chegou aos doze anos, indo eles a Jerusalém segundo o costume daquela festa, acabados os dias (que ela durava), quando voltaram, ficou o Menino Jesus em Jerusalém, sem que seus pais o advertissem. E, julgando que ele fosse na comitiva, caminharam uma jornada, e (depois) procuravam-no entre os parentes e conhecidos. E, não o encontrando, voltaram a Jerusalém em busca dele.",
       "commentaries": [
         {
           "sortOrder": 0,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 534",
-          "text": "«O reencontro de Jesus no templo é o único acontecimento que quebra o silêncio dos evangelhos sobre os anos ocultos de Jesus. Nele, Jesus deixa entrever o mistério da sua consagração total à missão decorrente da sua filiação divina: \"Não sabíeis que Eu tenho de estar na casa do meu Pai?\". Maria e José \"não compreenderam\" esta palavra, mas acolheram-na na fé, e Maria \"guardava no coração todas estas recordações\", ao longo dos anos em que Jesus permaneceu oculto no silêncio duma vida normal.»"
+          "author": "São Beda, o Venerável",
+          "source": "Comentário a S. Lucas, citado na Catena Aurea de S. Tomás de Aquino, in Lc 2, lect. 13 (tradução a partir do latim; texto abreviado)",
+          "text": "«Que o Senhor fosse todos os anos a Jerusalém pela Páscoa com seus pais é sinal da humildade humana: é próprio do homem acorrer a oferecer sacrifícios a Deus e torná-lo propício com orações. … Sigamos, pois, o caminho da sua vida humana, se nos deleitamos em contemplar a glória da sua divindade.»"
         },
         {
           "sortOrder": 1,
-          "author": "São Tomás de Aquino",
-          "source": "Suma Teológica, III, q. 12, a. 3",
-          "text": "«Cristo foi constituído cabeça da Igreja … de modo que … todos recebessem dele a doutrina da Verdade. Donde ele mesmo diz … \"Para isto nasci … para dar testemunho da verdade.\" E por isso não convinha à sua dignidade que fosse ensinado por qualquer homem.» … «Como Orígenes afirma … o Senhor interrogava, não para aprender algo, mas para ensinar ao interrogar.»"
+          "author": "Orígenes",
+          "source": "Homilias sobre S. Lucas, citado na Catena Aurea de S. Tomás de Aquino, in Lc 2, lect. 13 (tradução a partir do latim; texto abreviado)",
+          "text": "«Não é encontrado logo que é procurado: Jesus não se encontra entre os parentes e os próximos segundo a carne, pois o parentesco humano não podia conter o Filho de Deus. Não se encontra entre os conhecidos, porque é maior que todo conhecimento mortal. … Na companhia de muitos não pode ser encontrado.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "Imitação de Cristo",
+          "source": "Imitação de Cristo, livro II, cap. 8 («Da familiar amizade de Jesus»), nn. 1 e 3 (texto abreviado; tradução a partir do latim)",
+          "text": "«Quando Jesus está presente, tudo é bom e nada parece difícil; mas quando Jesus não está presente, tudo é duro. … Quão árido e duro és sem Jesus! … Não é isto dano maior do que se perdesses o mundo inteiro?» … «Grande arte é saber conversar com Jesus, e grande prudência saber retê-lo.»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "Imitação de Cristo",
+          "source": "Imitação de Cristo, livro II, cap. 7 («Do amor de Jesus sobre todas as coisas»), n. 3 (texto abreviado; tradução a partir do latim)",
+          "text": "«Se em todas as coisas procuras Jesus, certamente acharás Jesus. Mas se procuras a ti mesmo, também acharás a ti mesmo, porém para tua ruína.»"
+        },
+        {
+          "sortOrder": 4,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte II, cap. III «Da Ave-Maria», 14ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— Que nos ensinam os Santos sobre a devoção a Maria? — Sobre a devoção a Maria, os Santos nos ensinam que os seus verdadeiros devotos são amados e protegidos por Ela com amor de terníssima Mãe, e que por meio dela têm a certeza de encontrar Jesus e de alcançar o paraíso.»"
+        }
+      ]
+    },
+    {
+      "reference": "Lc 2, 46-50",
+      "text": "E aconteceu que, três dias depois, o encontraram no templo sentado no meio dos doutores, ouvindo-os e interrogando-os. E todos os que ouviam estavam maravilhados da sua sabedoria e das suas respostas. Quando o viram, admiraram-se. E sua Mãe disse-lhe: «Filho, por que procedeste assim conosco? Eis que teu pai e eu te procurávamos cheios de aflição.» E ele disse-lhe: «Para que me buscáveis? Não sabíeis que devo ocupar-me nas coisas de meu Pai?» E eles não entenderam o que lhes disse.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Orígenes",
+          "source": "Homilias sobre S. Lucas, citado na Catena Aurea de S. Tomás de Aquino, in Lc 2, lect. 13 (tradução a partir do latim)",
+          "text": "«Não o encontraram em toda parte, mas no templo. Procura, pois, também tu a Jesus no templo de Deus, procura-o na Igreja, onde acharás a palavra e a sabedoria de Cristo, isto é, o Filho de Deus.»"
+        },
+        {
+          "sortOrder": 1,
+          "author": "Orígenes",
+          "source": "Homilias sobre S. Lucas, citado na Catena Aurea de S. Tomás de Aquino, in Lc 2, lect. 13 (tradução a partir do latim; texto abreviado)",
+          "text": "«Por que o procuravam aflitos? … Assim como tu, quando lês as Escrituras, procuras nelas o sentido com dor, … assim eles procuravam Jesus. Convém, pois, que quem procura Jesus não o procure com negligência e descuido, como muitos que procuram e não encontram, mas com trabalho e com dor.»"
         },
         {
           "sortOrder": 2,
           "author": "Santo Agostinho",
-          "source": "Sermão 51",
-          "text": "«Quando o Senhor Jesus Cristo tinha doze anos … ficou … no templo, e discutia com os anciãos … A Palavra de Deus nunca se cala, mas nem sempre é ouvida.» … «Não sabíeis que devo estar nas coisas que são de meu Pai?» … «não aponta para Deus como Pai de tal modo que negue ser José pai … \"Era-lhes submisso.\"»"
+          "source": "Sermão 51, 17-18 (tradução a partir da versão inglesa da série Nicene and Post-Nicene Fathers; texto abreviado)",
+          "text": "«Encontraram-no a discutir no templo com os anciãos … Mas que admira? A Palavra de Deus nunca se cala, ainda que nem sempre seja ouvida.» … «Era humílima: nem sequer se antepôs ao marido na ordem dos nomes, dizendo \"eu e teu pai\", mas diz: \"Teu pai e eu\". Não olhou à alta honra do seu seio, mas à ordem do matrimônio; pois Cristo, humilde, não teria ensinado a sua Mãe a ser soberba.»"
         },
         {
           "sortOrder": 3,
-          "author": "Orígenes de Alexandria",
-          "source": "Homilias sobre Lucas, hom. 19 (Lc 2,40-46)",
-          "text": "«Onde, pois, o encontram? No templo; pois aí se encontra o Filho de Deus. Se tu também … procurares o Filho de Deus, procura-o primeiro no templo.» … «Interrogava … os mestres, não para aprender algo, mas para instruí-los ao interrogar.»"
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 12, a. 3, ad 1 (tradução a partir do latim)",
+          "text": "«Como diz Orígenes, o Senhor interrogava, não para aprender alguma coisa, mas para ensinar interrogando. Pois de uma única fonte de doutrina brotam o interrogar e o responder sabiamente.»"
+        },
+        {
+          "sortOrder": 4,
+          "author": "São Beda, o Venerável",
+          "source": "Comentário a S. Lucas, citado na Catena Aurea de S. Tomás de Aquino, in Lc 2, lect. 13 (tradução a partir do latim)",
+          "text": "«Não os repreende por procurarem o Filho, mas obriga-os a levantar os olhos da mente para aquilo que Ele deve Àquele de quem é Filho eterno.»"
+        },
+        {
+          "sortOrder": 5,
+          "author": "Santo Ambrósio",
+          "source": "Exposição sobre S. Lucas, citado na Catena Aurea de S. Tomás de Aquino, in Lc 2, lect. 13 (tradução a partir do latim)",
+          "text": "«Depois de três dias é encontrado no templo, para que fosse sinal de que, três dias depois da sua paixão triunfal, Aquele que se julgava morto, ressuscitando, se mostraria à nossa fé no trono celeste e na honra divina.»"
+        },
+        {
+          "sortOrder": 6,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 534 (grafia adaptada ao Brasil)",
+          "text": "«O reencontro de Jesus no templo é o único acontecimento que quebra o silêncio dos evangelhos sobre os anos ocultos de Jesus. Nele, Jesus deixa entrever o mistério da sua consagração total à missão decorrente da sua filiação divina: \"Não sabíeis que Eu tenho de estar na casa do meu Pai?\". Maria e José \"não compreenderam\" esta palavra, mas acolheram-na na fé, e Maria \"guardava no coração todas estas recordações\", ao longo dos anos em que Jesus permaneceu oculto no silêncio duma vida normal.»"
         }
       ]
     },
     {
       "reference": "Lc 2, 51-52",
-      "text": "Depois desceu com eles, e foi a Nazaré; e era-lhes submisso. Sua mãe conservava todas estas coisas no seu coração. Jesus crescia em sabedoria, em estatura e em graça diante de Deus e dos homens.",
+      "text": "E desceu com eles, e foi a Nazaré, e era-lhes submisso. E sua mãe conservava todas estas coisas no seu coração. E Jesus crescia em sabedoria, em idade e em graça diante de Deus e diante dos homens.",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -42,8 +96,44 @@
         },
         {
           "sortOrder": 1,
+          "author": "Santo Agostinho",
+          "source": "Sermão 51, 19 (tradução a partir da versão inglesa da série Nicene and Post-Nicene Fathers; texto abreviado)",
+          "text": "«Não disse: era submisso à mãe, mas: era-lhes submisso. … Era submisso a ambos os pais, pela mesma condescendência pela qual era Filho do homem. … O mundo estava sujeito a Cristo, e Cristo estava sujeito a seus pais.»"
+        },
+        {
+          "sortOrder": 2,
+          "author": "Santo Ambrósio",
+          "source": "Exposição sobre S. Lucas, citado na Catena Aurea de S. Tomás de Aquino, in Lc 2, lect. 14 (tradução a partir do latim; texto abreviado)",
+          "text": "«E admiras-te de que preste deferência ao pai Aquele que se submete à mãe? Não é, de fato, sujeição de fraqueza, mas de piedade. … Prestava deferência à serva, prestava deferência ao que passava por seu pai.»"
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Beda, o Venerável",
+          "source": "Comentário a S. Lucas, citado na Catena Aurea de S. Tomás de Aquino, in Lc 2, lect. 14 (tradução a partir do latim)",
+          "text": "«A Virgem, quer o que entendia, quer o que ainda não podia entender, tudo igualmente guardava no seu coração, como para o ruminar e perscrutar com mais diligência.»"
+        },
+        {
+          "sortOrder": 4,
+          "author": "São Tomás de Aquino",
+          "source": "Suma Teológica, III, q. 7, a. 12, ad 3 (tradução a partir do latim)",
+          "text": "«Na sabedoria e na graça pode alguém progredir de dois modos. De um modo, segundo os próprios hábitos da sabedoria e da graça, aumentados; e assim Cristo não progredia neles. De outro modo, segundo os efeitos, isto é, enquanto alguém faz obras mais sábias e mais virtuosas; e assim Cristo progredia em sabedoria e graça, como também em idade, porque, com o avançar da idade, fazia obras mais perfeitas, para se mostrar verdadeiro homem, tanto nas coisas que são de Deus como nas que são dos homens.»"
+        },
+        {
+          "sortOrder": 5,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte III, cap. III «Dos mandamentos que se referem ao próximo», 6ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— Deu-nos Deus o exemplo de uma família perfeita? — Deus nos deu o exemplo de uma família perfeita na Sagrada Família, na qual Jesus Cristo viveu sujeito a Maria Santíssima e a São José até os trinta anos, isto é, até quando começou a exercer a missão, confiada pelo Eterno Pai, de pregar o Evangelho.»"
+        },
+        {
+          "sortOrder": 6,
+          "author": "Leão XIII",
+          "source": "Encíclica Laetitiae sanctae (1893), 7 (texto abreviado)",
+          "text": "«Eis diante do nosso olhar a Casa de Nazaré, onde toda santidade, a humana e a divina, colocou a sua morada. Que exemplo de vida comum! Que perfeito modelo de sociedade! … reina ali a maior serenidade de ânimo e alegria de espírito: duas coisas que sempre acompanham a consciência do dever cumprido.»"
+        },
+        {
+          "sortOrder": 7,
           "author": "Catecismo da Igreja Católica",
-          "source": "CIC 564",
+          "source": "CIC 564 (grafia adaptada ao Brasil)",
           "text": "«Pela sua submissão a Maria e a José, assim como pelo seu trabalho humilde em Nazaré durante longos anos, Jesus dá-nos o exemplo da santidade na vida quotidiana da família e do trabalho.»"
         }
       ]
