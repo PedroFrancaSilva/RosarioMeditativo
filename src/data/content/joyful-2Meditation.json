@@ -1,8 +1,56 @@
 {
   "passages": [
     {
-      "reference": "Lc 1, 39-45",
-      "text": "Naqueles dias, levantando-se Maria, foi com pressa às montanhas, a uma cidade de Judá. Entrou em casa de Zacarias, e saudou Isabel. Aconteceu que, apenas Isabel ouviu a saudação de Maria, o menino saltou no seu ventre, e Isabel ficou cheia do Espírito Santo; e exclamou em alta voz: «Bendita és tu entre todas as mulheres, e bendito é o fruto do teu ventre. Donde a mim esta dita, que a mãe do meu Senhor venha ter comigo? Porque, logo que a voz da tua saudação chegou aos meus ouvidos, o menino saltou de alegria no meu ventre. Bem-aventurada a que acreditou, porque se hão-de cumprir as coisas que da parte do Senhor foram ditas.»",
+      "reference": "Lc 1, 39-40",
+      "text": "Naqueles dias, levantando-se Maria, foi com pressa às montanhas, a uma cidade de Judá. Entrou em casa de Zacarias, e saudou Isabel.",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Santo Ambrósio",
+          "source": "Expositio Evangelii secundum Lucam, livro II, 19 (texto abreviado). Tradução do Ofício das Leituras de 21 de dezembro, Liturgia das Horas (CNBB), conferida com o latim. O número começa por «Morale est omnibus…», aqui omitido.",
+          "text": "… O Anjo anunciara à Virgem Maria coisas misteriosas. Para fortalecer sua fé com um exemplo, anunciou-lhe a maternidade de uma mulher idosa e estéril, como prova de que é possível a Deus tudo que ele quer. Logo ao ouvir a notícia, Maria dirigiu-se às montanhas, não por falta de fé na profecia ou falta de confiança na mensagem, nem por duvidar do exemplo dado, mas guiada pela felicidade de ver cumprida a promessa, levada pela vontade de prestar um serviço, movida pelo impulso interior de sua alegria. Já plena de Deus, aonde ir depressa senão às alturas? A graça do Espírito Santo ignora a lentidão."
+        },
+        {
+          "sortOrder": 1,
+          "author": "Santo Ambrósio",
+          "source": "Expositio Evangelii secundum Lucam, livro II, 20 (texto abreviado). Latim de la.wikisource (PL 15, col. 1560-1562), conferido com os excertos da Catena Aurea de S. Tomás (Corpus Thomisticum); tradução a partir do latim, não é edição portuguesa publicada.",
+          "text": "Aprendei vós, santas mulheres, a solicitude que deveis mostrar às vossas parentes que estão para dar à luz. A Maria, que antes vivia sozinha no mais recôndito da casa, não a retardaram nem o pudor virginal diante do público, nem a aspereza dos montes no seu empenho, nem a extensão do caminho no seu serviço. Às montanhas foi a Virgem, com pressa; a Virgem lembrada do serviço, esquecida da fadiga, forte pelo afeto e não pela condição de mulher, deixou a sua casa e partiu."
+        },
+        {
+          "sortOrder": 2,
+          "author": "Santo Ambrósio",
+          "source": "Expositio Evangelii secundum Lucam, livro II, 22 (texto abreviado). Latim de la.wikisource (PL 15, col. 1560-1562), conferido com os excertos da Catena Aurea de S. Tomás (Corpus Thomisticum); tradução a partir do latim, não é edição portuguesa publicada.",
+          "text": "Aprendestes, virgens, o pudor de Maria; aprendei a humildade. Veio a parente à sua próxima, a mais nova à mais velha; e não só veio, mas foi a primeira a saudar. … Há nisto também uma razão de piedade e uma norma de doutrina. Deve-se considerar que o superior vem ao inferior, para que o inferior seja ajudado: Maria a Isabel, Cristo a João. …"
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte V (Das virtudes principais), cap. I, § 7 (Da Caridade), 9.ª e 11.ª perguntas do parágrafo (ed. Roma, 1905, pp. 268-269, sem numeração contínua; texto abreviado; tradução a partir do italiano original)",
+          "text": "— Por que devemos amar o próximo? — Devemos amar o próximo por amor de Deus, porque Ele no-lo manda, e porque todo o homem é imagem d’Ele. … — Que quer dizer amar o próximo como a si mesmo? — Amar o próximo como a si mesmo quer dizer desejar-lhe e fazer-lhe, quanto se pode, aquele bem que devemos desejar a nós mesmos, e não lhe desejar nem fazer mal algum."
+        },
+        {
+          "sortOrder": 4,
+          "author": "Bento XVI",
+          "source": "Carta encíclica Deus caritas est, n. 41 (texto abreviado). Cita-se o início do número; o resto trata da fé de Maria e de Caná.",
+          "text": "Entre os Santos, sobressai Maria, Mãe do Senhor e espelho de toda a santidade. No Evangelho de Lucas, encontramo-La empenhada num serviço de caridade à prima Isabel, junto da qual permanece «cerca de três meses» (1, 56) assistindo-a na última fase da gravidez. «Magnificat anima mea Dominum – A minha alma engrandece o Senhor» (Lc 1, 46), disse Ela por ocasião de tal visita, exprimindo assim todo o programa da sua vida: não colocar-Se a Si mesma ao centro, mas dar espaço ao Deus que encontra tanto na oração como no serviço ao próximo — só então o mundo se torna bom. …"
+        },
+        {
+          "sortOrder": 5,
+          "author": "São João Paulo II",
+          "source": "Carta encíclica Redemptoris Mater, n. 12 (texto abreviado). Omitem-se a localização de Ain-Karim e a referência ao anúncio do Anjo sobre Isabel.",
+          "text": "… Maria dirigiu-se para lá «apressadamente», para visitar Isabel, sua parente. … Maria dirige-se, pois, impelida pela caridade, a casa da sua parente. …"
+        },
+        {
+          "sortOrder": 6,
+          "author": "São Beda, o Venerável",
+          "source": "Catena Aurea de S. Tomás de Aquino, sobre Lc 1, lição 13 (trecho atribuído a Beda). Tradução a partir do latim do Corpus Thomisticum; a Catena atribui o trecho a Beda e não se conferiu na obra original de Beda.",
+          "text": "Toda a alma que concebeu na mente o Verbo de Deus sobe logo, com o passo do amor, aos altos cumes das virtudes, para poder entrar na cidade de Judá, isto é, na cidadela da confissão e do louvor, e aí permanecer como que três meses, até à perfeição da fé, da esperança e da caridade."
+        }
+      ]
+    },
+    {
+      "reference": "Lc 1, 41-45",
+      "text": "Aconteceu que, apenas Isabel ouviu a saudação de Maria, o menino saltou no seu ventre, e Isabel ficou cheia do Espírito Santo; e exclamou em alta voz: «Bendita és tu entre todas as mulheres, e bendito é o fruto do teu ventre. Donde a mim esta dita, que a mãe do meu Senhor venha ter comigo? Porque, logo que a voz da tua saudação chegou aos meus ouvidos, o menino saltou de alegria no meu ventre. Bem-aventurada a que acreditou, porque se hão-de cumprir as coisas que da parte do Senhor foram ditas.»",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -13,44 +61,44 @@
         {
           "sortOrder": 1,
           "author": "Santo Ambrósio",
-          "source": "Expositio Evangelii secundum Lucam, livro II, 19 (texto abreviado). Tradução do Ofício das Leituras de 21 de dezembro, Liturgia das Horas (CNBB), conferida com o latim. O número começa por «Morale est omnibus…», aqui omitido.",
-          "text": "… O Anjo anunciara à Virgem Maria coisas misteriosas. Para fortalecer sua fé com um exemplo, anunciou-lhe a maternidade de uma mulher idosa e estéril, como prova de que é possível a Deus tudo que ele quer. Logo ao ouvir a notícia, Maria dirigiu-se às montanhas, não por falta de fé na profecia ou falta de confiança na mensagem, nem por duvidar do exemplo dado, mas guiada pela felicidade de ver cumprida a promessa, levada pela vontade de prestar um serviço, movida pelo impulso interior de sua alegria. Já plena de Deus, aonde ir depressa senão às alturas? A graça do Espírito Santo ignora a lentidão."
-        },
-        {
-          "sortOrder": 2,
-          "author": "Santo Ambrósio",
           "source": "Expositio Evangelii secundum Lucam, livro II, 23 (texto abreviado). Mesma tradução do Ofício das Leituras, 21 de dezembro (CNBB), conferida com o latim de II, 23 («Vocem prior Elizabeth audivit, sed Ioannes prior gratiam sensit»).",
           "text": "Notai como cada palavra está escolhida com perfeita precisão e propriedade: Isabel foi a primeira a ouvir a voz, mas João foi o primeiro a pressentir a graça; aquela ouviu segundo a ordem da natureza, este exultou em virtude do mistério. Ela percebeu a chegada de Maria, ele, a do Senhor; a mulher ouviu a voz da mulher, o menino sentiu a presença do Filho; elas proclamam a graça de Deus, eles realizam-na interiormente, iniciando no seio de suas mães o mistério de misericórdia; e, por um duplo milagre, as mães profetizam sob a inspiração de seus filhos. A criança exultou, a mãe ficou cheia do Espírito Santo. A mãe não se antecipou ao filho; mas estando o filho cheio do Espírito Santo, comunicou-o a sua mãe. …"
         },
         {
+          "sortOrder": 2,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Instrução sobre as Festas, Parte II, cap. VII (Da festa da Natividade de S. João Batista), 5.ª pergunta do capítulo (ed. Roma, 1905, p. 339, sem numeração contínua; tradução a partir do italiano original)",
+          "text": "— S. João Batista não nasceu em pecado como os outros homens? — S. João Batista não nasceu em pecado como os outros homens, porque foi santificado no seio de sua mãe Santa Isabel, na presença de Jesus Cristo e da Santíssima Virgem."
+        },
+        {
           "sortOrder": 3,
+          "author": "Santo Ambrósio",
+          "source": "Expositio Evangelii secundum Lucam, livro II, 25 (texto abreviado). Latim de la.wikisource (PL 15, col. 1560-1562), conferido com os excertos da Catena Aurea de S. Tomás (Corpus Thomisticum); tradução a partir do latim, não é edição portuguesa publicada.",
+          "text": "Não o diz como quem ignora: sabe bem que é graça e operação do Espírito Santo que a mãe do Profeta seja saudada pela Mãe do Senhor, para proveito do seu filho; mas, como quem reconhece que isto não é mérito humano, e sim dom da graça divina, diz: Donde a mim isto? Isto é: que grande bem me acontece, que a Mãe do meu Senhor venha ter comigo? Não reconheço nisto nada de meu. Donde a mim, por que justiça, por que obras, por que méritos? … Sinto o milagre, reconheço o mistério: a Mãe do Senhor, fecunda do Verbo, está cheia de Deus."
+        },
+        {
+          "sortOrder": 4,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X, Parte II (Da oração), cap. III (Da «Ave-Maria»), 7.ª a 9.ª perguntas do capítulo (ed. Roma, 1905, pp. 146-147, sem numeração contínua; tradução a partir do italiano original)",
+          "text": "— Quais são as palavras de Santa Isabel? — As palavras de Santa Isabel são: «Tu és bendita entre as mulheres, e bendito é o fruto do teu ventre». — Quando foi que Santa Isabel disse estas palavras? — Santa Isabel disse estas palavras, inspirada por Deus, quando, três meses antes de dar à luz S. João Batista, foi visitada pela Santíssima Virgem, que já trazia no seio o seu divino Filho. — Que fazemos nós ao dizer estas palavras? — Ao dizer as palavras de Santa Isabel, alegramo-nos com Maria Santíssima pela sua excelsa dignidade de Mãe de Deus, e bendizemos a Deus e lhe agradecemos por nos ter dado Jesus Cristo por meio de Maria."
+        },
+        {
+          "sortOrder": 5,
           "author": "Catecismo da Igreja Católica",
           "source": "CIC 2676 (texto abreviado). Omitidas as secções da saudação do anjo («Ave, Maria» e «Cheia de graça»); fica a saudação de Isabel.",
           "text": "… «Bendita sois vós entre as mulheres e bendito é o fruto do vosso ventre, Jesus». Depois da saudação do anjo, fazemos nossa a de Isabel. «Cheia [...] do Espírito Santo» (Lc 1, 41), Isabel é a primeira, na longa sequência das gerações, a declarar Maria bem-aventurada (26): «Feliz d'Aquela que acreditou...» (Lc 1, 45); Maria é «bendita entre as mulheres», porque acreditou no cumprimento da Palavra do Senhor. Abraão, pela sua fé, tornou-se uma bênção «para todas as nações da terra» (Gn 12, 3). Pela sua fé, Maria tornou-se a mãe dos crentes, graças a quem todas as nações da terra recebem Aquele que é a própria bênção de Deus: Jesus, «fruto bendito do vosso ventre»."
         },
         {
-          "sortOrder": 4,
-          "author": "Catecismo da Igreja Católica",
-          "source": "CIC 2677 (texto abreviado). O parágrafo continua com o «rogai por nós» e a hora da morte, aqui omitidos.",
-          "text": "«Santa Maria, Mãe de Deus, rogai por nós...». Com Isabel, também nós ficamos maravilhados: «E de onde me é dado que venha ter comigo a Mãe do meu Senhor?» (Lc 1, 43). …"
-        },
-        {
-          "sortOrder": 5,
-          "author": "São Tomás de Aquino",
-          "source": "Suma Teológica, III, q. 27, a. 6, corpo do artigo (primeiro parágrafo do «Respondeo», sobre o salto de João, até à conclusão de que João foi santificado no ventre; não é o artigo inteiro). Latim do Corpus Thomisticum. Tradução a partir desse latim, confrontada com a inglesa dos Dominican Fathers (New Advent) e com a portuguesa de permanencia.org.br; não é a do Lírio Católico. Permanência traduz «a maioribus» por «pelos pais» e traz o lapso «saltor»; aqui segue-se o latim: os maiores, e «exsultatio» (o salto / a exultação).",
-          "text": "Agostinho, na carta a Dardano, parece falar com dúvida da santificação deles no ventre. A exultação de João no ventre, como ele diz, pôde ser o sinal de uma realidade tão grande, a saber, que a mulher era Mãe de Deus, a dar a conhecer aos maiores, sem que o menino a conhecesse. Por isso no Evangelho não se diz que o menino acreditou no ventre, mas que exultou. Vemos, porém, que a exultação não é só das crianças, mas também dos animais. Esta, contudo, foi insólita, porque foi no ventre. E assim, como costumam fazer-se os milagres, fez-se por ação divina no menino, não humanamente pelo menino. E ainda que neste menino o uso da razão e da vontade se tenha antecipado a tal ponto que, já nas entranhas da mãe, pudesse conhecer, crer e consentir, o que nos outros meninos se espera da idade, também isto julgo dever contar-se entre os milagres do poder divino. Mas, porque no Evangelho se diz expressamente que «será cheio do Espírito Santo já desde o seio de sua mãe», e de Jeremias se diz expressamente: «antes que saísses do ventre, eu te santifiquei», parece que se deve afirmar que eles foram santificados no ventre, ainda que no ventre não tivessem o uso do livre-arbítrio (sobre o que Agostinho levanta a questão); assim como também as crianças que são santificadas pelo Batismo não têm logo o uso do livre-arbítrio."
-        },
-        {
           "sortOrder": 6,
-          "author": "São João Paulo II",
-          "source": "Carta encíclica Redemptoris Mater, n. 12 (texto abreviado). Cita-se o segundo parágrafo do número, por inteiro; o primeiro parágrafo do n. 12, sobre o caminho até Ain-Karim, fica de fora.",
-          "text": "… Maria dirige-se, pois, impelida pela caridade, a casa da sua parente. Quando aí entrou, Isabel, ao responder à sua saudação, tendo sentido o menino estremecer de alegria no próprio seio, «cheia do Espírito Santo», saúda por sua vez Maria em alta voz: «Bendita és tu entre as mulheres e bendito o fruto do teu ventre» (cf. Lc 1, 40-42). Esta proclamação e aclamação de Isabel deveria vir a entrar na Ave Maria, como continuação da saudação do Anjo, tornando-se assim uma das orações mais frequentes da Igreja. Mas são ainda mais significativas as palavras de Isabel, na pergunta que se segue: «E donde me é dada a dita que venha ter comigo a mãe do meu Senhor?» (Lc 1, 43). Isabel dá testemunho acerca de Maria: reconhece e proclama que diante de si está a Mãe do Senhor, a Mãe do Messias. Neste testemunho participa também o filho que Isabel traz no seio: «estremeceu de alegria o menino no meu seio» (Lc 1, 44). O menino é o futuro João Baptista, que, nas margens do Jordão, indicará em Jesus o Messias."
+          "author": "Santo Ambrósio",
+          "source": "Expositio Evangelii secundum Lucam, livro II, 26 (texto abreviado). Latim de la.wikisource (PL 15, col. 1560-1562), conferido com os excertos da Catena Aurea de S. Tomás (Corpus Thomisticum); tradução a partir do latim, não é edição portuguesa publicada. O resto do número («Esteja em cada um a alma de Maria…») está na passagem do Magnificat.",
+          "text": "Vês que Maria não duvidou, mas acreditou; e por isso alcançou o fruto da fé. Bem-aventurada, diz, tu que acreditaste. Mas também vós sois bem-aventurados, que ouvistes e acreditastes; porque toda a alma que crê concebe e gera o Verbo de Deus e reconhece as suas obras. …"
         },
         {
           "sortOrder": 7,
-          "author": "São João Paulo II",
-          "source": "Carta apostólica Rosarium Virginis Mariae, n. 20 (texto abreviado). A frase seguinte do número passa a Belém e aos outros mistérios gozosos.",
-          "text": "Sob o signo da exultação, aparece depois a cena do encontro com Isabel, onde a mesma voz de Maria e a presença de Cristo no seu ventre fazem « saltar de alegria » João (cf. Lc 1, 44). …"
+          "author": "São Beda, o Venerável",
+          "source": "Catena Aurea de S. Tomás de Aquino, sobre Lc 1, lição 13 (trecho atribuído a Beda). Tradução a partir do latim do Corpus Thomisticum; a Catena atribui o trecho a Beda e não se conferiu na obra original de Beda.",
+          "text": "Nem é de admirar que o Senhor, vindo para remir o mundo, tenha começado a sua obra pela Mãe: para que aquela por quem a salvação se preparava para todos fosse a primeira a colher, do Filho que trazia no seio, o fruto da salvação."
         }
       ]
     },
@@ -63,6 +111,36 @@
           "author": "São Bernardo de Claraval",
           "source": "Sermo in dominica infra octavam Assumptionis B. V. Mariae (De duodecim praerogativis B. V. Mariae), n. 12 (texto abreviado). Tradução a partir do latim consultado em duas transcrições (colunas cerca de 436); não é o Lírio Católico nem uma edição portuguesa. As cópias online deturpam «dicta» («aicta» / «acta»); aqui segue-se o texto de Lc 1, 45 que Bernardo cita.",
           "text": "… Chegou-se então a Isabel, e logo a glória singular da Virgem lhe foi revelada pelo Espírito. Admirava-se também da pessoa que vinha, dizendo: Donde me vem isto, que a Mãe do meu Senhor venha a mim? Louvava também a voz da que saudava, acrescentando: Quando a voz da tua saudação chegou aos meus ouvidos, o menino exultou de alegria no meu ventre; e chamava bem-aventurada a fé da que acreditou: Bem-aventurada, dizia, a que acreditou, porque se hão de cumprir em ti as coisas que te foram ditas da parte do Senhor. Grandes louvores, sem dúvida; mas a humildade devota não sofreu reter nada para si, e antes devolveu tudo àquele cujos benefícios nela eram louvados. Tu, diz ela, engrandeces a mãe do Senhor; mas a minha alma magnifica o Senhor. …"
+        },
+        {
+          "sortOrder": 1,
+          "author": "Santo Ambrósio",
+          "source": "Expositio Evangelii secundum Lucam, livro II, 26-27 (texto abreviado). Latim de la.wikisource (PL 15, col. 1560-1562), conferido com os excertos da Catena Aurea de S. Tomás (Corpus Thomisticum); tradução a partir do latim, não é edição portuguesa publicada.",
+          "text": "… Esteja em cada um a alma de Maria, para engrandecer o Senhor; esteja em cada um o espírito de Maria, para exultar em Deus. Se, segundo a carne, uma só é a Mãe de Cristo, segundo a fé Cristo é fruto de todos; porque toda a alma recebe o Verbo de Deus, contanto que, imaculada e livre de vícios, guarde a castidade com pudor intacto. Toda a alma, pois, que puder ser assim engrandece o Senhor, como a alma de Maria engrandeceu o Senhor e o seu espírito exultou em Deus Salvador. …"
+        },
+        {
+          "sortOrder": 2,
+          "author": "São Beda, o Venerável",
+          "source": "Catena Aurea de S. Tomás de Aquino, sobre Lc 1, lição 16 (dois trechos atribuídos a Beda, unidos; texto abreviado). Tradução a partir do latim do Corpus Thomisticum; a Catena atribui o trecho a Beda e não se conferiu na obra original de Beda.",
+          "text": "Aquela cuja humildade é olhada por Deus é com razão chamada bem-aventurada por todos. … Convinha que, assim como pela soberba do primeiro pai a morte entrou no mundo, assim pela humildade de Maria se mostrasse a entrada da vida."
+        },
+        {
+          "sortOrder": 3,
+          "author": "São Beda, o Venerável",
+          "source": "Catena Aurea de S. Tomás de Aquino, sobre Lc 1, lição 17 (trecho atribuído a Beda). Tradução a partir do latim do Corpus Thomisticum; a Catena atribui o trecho a Beda e não se conferiu na obra original de Beda.",
+          "text": "Isto remete para o início do cântico, onde se disse: A minha alma engrandece o Senhor; pois só a alma a quem o Senhor se digna fazer grandes coisas O pode engrandecer com louvores dignos."
+        },
+        {
+          "sortOrder": 4,
+          "author": "São João Paulo II",
+          "source": "Carta encíclica Redemptoris Mater, n. 36 (texto abreviado). Cita-se o início do número e a passagem sobre «grandes coisas» e «exulta»; omitem-se as citações conciliares e o fim, sobre Abraão.",
+          "text": "Quando Isabel saudou a jovem parente, que acabava de chegar de Nazaré, Maria respondeu com o Magnificat. … As palavras usadas por Maria, no limiar da casa de Isabel, constituem uma profissão inspirada desta sua fé, na qual se exprime a resposta à palavra da revelação, com a elevação religiosa e poética de todo o seu ser no sentido de Deus. … Maria é a primeira a participar nesta nova revelação de Deus e, mediante ela, nesta nova «autodoação» de Deus. Por isso proclama: «Grandes coisas fez em mim ... e santo é o seu nome». As suas palavras reflectem a alegria do espírito, difícil de exprimir: «O meu espírito exulta em Deus, meu Salvador». …"
+        },
+        {
+          "sortOrder": 5,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 971 (texto abreviado). Omitem-se as notas e o fim da citação conciliar.",
+          "text": "«Todas as gerações me hão-de proclamar ditosa» (Lc 1, 48): «a piedade da Igreja para com a santíssima Virgem pertence à própria natureza do culto cristão». A santíssima Virgem «é com razão venerada pela Igreja com um culto especial. E, na verdade, a santíssima Virgem é, desde os tempos mais antigos, honrada com o título de \"Mãe de Deus\", e sob a sua protecção se acolhem os fiéis implorando-a em todos os perigos e necessidades [...]». … Encontra a sua expressão nas festas litúrgicas dedicadas à Mãe de Deus e na oração mariana, como o santo rosário, «resumo de todo o Evangelho»."
         }
       ]
     }
