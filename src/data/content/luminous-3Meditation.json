@@ -2,7 +2,7 @@
   "passages": [
     {
       "reference": "Mc 1, 14-15",
-      "text": "Depois que João foi preso, foi Jesus para a Galileia, pregando o Evangelho de Deus, e dizendo: «Está completo o tempo e aproxima-se o reino de Deus; fazei penitência, crede no Evangelho.»",
+      "text": "Depois que João foi preso, foi Jesus para a Galileia, pregando o Evangelho do reino de Deus, e dizendo: «Está completo o tempo, e aproxima-se o reino de Deus; fazei penitência, e crede no Evangelho.»",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -19,14 +19,14 @@
         {
           "sortOrder": 2,
           "author": "Catecismo da Igreja Católica",
-          "source": "CIC 545",
-          "text": "Jesus convida os pecadores para a mesa do Reino: «Eu não vim chamar os justos, mas os pecadores» (Mc 2, 17). Convida-os à conversão sem a qual não se pode entrar no Reino, mas por palavras e actos, mostra-lhes a misericórdia sem limites do Seu Pai para com eles e a imensa «alegria que haverá no céu, por um só pecador que se arrependa» (Lc 15, 7). A prova suprema deste amor será o sacrifício da sua própria vida, «pela remissão dos pecados» (Mt 26, 28)."
+          "source": "CIC 545 (grafia adaptada ao Brasil)",
+          "text": "Jesus convida os pecadores para a mesa do Reino: «Eu não vim chamar os justos, mas os pecadores» (Mc 2, 17). Convida-os à conversão sem a qual não se pode entrar no Reino, mas por palavras e atos, mostra-lhes a misericórdia sem limites do Seu Pai para com eles e a imensa «alegria que haverá no céu, por um só pecador que se arrependa» (Lc 15, 7). A prova suprema deste amor será o sacrifício da sua própria vida, «pela remissão dos pecados» (Mt 26, 28)."
         },
         {
           "sortOrder": 3,
           "author": "Catecismo da Igreja Católica",
-          "source": "CIC 1431",
-          "text": "A penitência interior é uma reorientação radical de toda a vida, um regresso, uma conversão a Deus de todo o nosso coração, uma rotura com o pecado, uma aversão ao mal, com repugnância pelas más acções que cometemos. Ao mesmo tempo, implica o desejo e o propósito de mudar de vida, com a esperança da misericórdia divina e a confiança na ajuda da sua graça. Esta conversão do coração é acompanhada por uma dor e uma tristeza salutares, a que os Santos Padres chamaram animi cruciatus (aflição do espírito), compunctio cordis (compunção do coração)."
+          "source": "CIC 1431 (grafia adaptada ao Brasil)",
+          "text": "A penitência interior é uma reorientação radical de toda a vida, um regresso, uma conversão a Deus de todo o nosso coração, uma rotura com o pecado, uma aversão ao mal, com repugnância pelas más ações que cometemos. Ao mesmo tempo, implica o desejo e o propósito de mudar de vida, com a esperança da misericórdia divina e a confiança na ajuda da sua graça. Esta conversão do coração é acompanhada por uma dor e uma tristeza salutares, a que os Santos Padres chamaram animi cruciatus (aflição do espírito), compunctio cordis (compunção do coração)."
         },
         {
           "sortOrder": 4,
@@ -37,13 +37,13 @@
         {
           "sortOrder": 5,
           "author": "São Pio X",
-          "source": "Catecismo Maior de São Pio X, Parte IV (Dos Sacramentos), cap. VI (Da Penitência), § 1, perguntas 683-684; tradução a partir do italiano original (Catechismo Maggiore, 1905, numeração contínua conforme o texto do Museo San Pio X)",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte IV (Dos Sacramentos), cap. VI «Da Penitência», 12ª e 13ª perguntas do capítulo. Tradução a partir do italiano.",
           "text": "«— Que quer dizer esta palavra contrição? — A palavra contrição quer dizer rompimento ou despedaçamento, como quando uma pedra é pisada e reduzida a pó. — Por que se dá o nome de contrição à dor dos pecados? — Dá-se o nome de contrição à dor dos pecados para significar que o coração duro do pecador de certo modo se despedaça pela dor de ter ofendido a Deus.»"
         },
         {
           "sortOrder": 6,
           "author": "São Pio X",
-          "source": "Catecismo Maior de São Pio X, Parte IV (Dos Sacramentos), cap. VI (Da Penitência), § 4 (Da dor), pergunta 716; tradução a partir do italiano original (Catechismo Maggiore, 1905, numeração contínua conforme o texto do Museo San Pio X)",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte IV (Dos Sacramentos), cap. VI «Da Penitência», 45ª pergunta do capítulo. Tradução a partir do italiano.",
           "text": "«— Por que deve a dor ser interna? — A dor deve ser interna, porque a vontade, que se afastou de Deus pelo pecado, deve voltar a Deus detestando o pecado cometido.»"
         },
         {
@@ -56,7 +56,7 @@
     },
     {
       "reference": "Mc 4, 26-29",
-      "text": "Dizia também: «O reino de Deus é como um homem que lança a semente à terra. Dorme e se levanta, noite e dia, e a semente brota e cresce sem ele saber como. Porque a terra por si mesma produz, primeiramente, a erva, depois a espiga, e por último o trigo grado na espiga. E, quando o fruto está maduro, mete logo a fouce, porque está chegado o tempo da ceifa.»",
+      "text": "Dizia também: «O reino de Deus é como um homem que lança a semente à terra, e que dorme e se levanta noite e dia, e a semente brota e cresce sem ele saber como. Porque a terra por si mesma produz, primeiramente, a erva, depois a espiga, e por último o trigo grado na espiga. E, quando o fruto está maduro, mete logo a foice, porque está chegado o tempo da ceifa.»",
       "commentaries": [
         {
           "sortOrder": 0,
@@ -85,14 +85,56 @@
         {
           "sortOrder": 4,
           "author": "São Pio X",
-          "source": "Catecismo Maior de São Pio X, Parte II (Da Oração), cap. II (Da Oração Dominical), § 3 (Da segunda petição), pergunta 293; tradução a partir do italiano original (Catechismo Maggiore, 1905, numeração contínua conforme o texto do Museo San Pio X)",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte II (Da Oração), cap. II «Da Oração Dominical», 15ª pergunta do capítulo. Tradução a partir do italiano.",
           "text": "«— Que entendemos nós por reino de Deus? — Por reino de Deus entendemos um tríplice reino espiritual, a saber: o reino de Deus em nós, ou seja, o reino da graça; o reino de Deus na terra, isto é, a santa Igreja Católica; e o reino de Deus nos céus, ou seja, o paraíso.»"
         },
         {
           "sortOrder": 5,
           "author": "São Pio X",
-          "source": "Catecismo Maior de São Pio X, Parte II (Da Oração), cap. II (Da Oração Dominical), § 3 (Da segunda petição), pergunta 294; tradução a partir do italiano original (Catechismo Maggiore, 1905, numeração contínua conforme o texto do Museo San Pio X)",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte II (Da Oração), cap. II «Da Oração Dominical», 16ª pergunta do capítulo. Tradução a partir do italiano.",
           "text": "«— Que pedimos com as palavras \"venha a nós o vosso reino\", com relação à graça? — Com relação à graça, pedimos que Deus reine em nós com a sua graça santificante, pela qual se compraz em residir em nós como um rei no seu palácio, e que nos conserve unidos a Si com as virtudes da fé, da esperança e da caridade, pelas quais reina sobre o nosso entendimento, sobre o nosso coração e sobre a nossa vontade.»"
+        }
+      ]
+    },
+    {
+      "reference": "Lc 15, 11-24",
+      "text": "Um homem tinha dois filhos, e o mais novo deles disse a seu pai: «Pai, dá-me a parte dos bens que me toca.» E ele repartiu entre eles os bens. E, passados poucos dias, juntando tudo (o que era seu), o filho mais novo partiu para uma terra distante, e lá dissipou os seus bens, vivendo dissolutamente. … Mas, tendo entrado em si, disse: «Quantos jornaleiros há em casa de meu pai, que têm pão em abundância, e eu aqui morro de fome! Levantar-me-ei, e irei ter com meu pai, e lhe direi: Pai, pequei contra o céu e contra ti; já não sou digno de ser chamado teu filho; trata-me como um dos teus jornaleiros.» E, levantando-se, foi para seu pai. E, quando ele estava ainda longe, seu pai viu-o, e ficou movido de compaixão, e, correndo, lançou-lhe os braços ao pescoço, e beijou-o. O filho disse-lhe: «Pai, pequei contra o céu e contra ti; já não sou digno de ser chamado teu filho.» Porém o pai disse aos seus servos: «Tirai depressa o vestido mais precioso, e vesti-lho, e metei-lhe um anel no dedo e os sapatos nos pés; trazei também um vitelo gordo, e matai-o, e comamos e banqueteemo-nos, porque este meu filho estava morto, e reviveu; tinha-se perdido, e foi encontrado.»",
+      "commentaries": [
+        {
+          "sortOrder": 0,
+          "author": "Catecismo da Igreja Católica",
+          "source": "CIC 1439",
+          "text": "O dinamismo da conversão e da penitência foi maravilhosamente descrito por Jesus na parábola do «filho pródigo», cujo centro é «o pai misericordioso»: o deslumbramento duma liberdade ilusória e o abandono da casa paterna: a miséria extrema em que o filho se encontra depois de delapidada a fortuna: a humilhação profunda de se ver obrigado a guardar porcos e, pior ainda, de desejar alimentar-se das bolotas que os porcos comiam: a reflexão sobre os bens perdidos: o arrependimento e a decisão de se declarar culpado diante do pai: o caminho do regresso: o acolhimento generoso por parte do pai: a alegria do pai: eis alguns dos aspectos próprios do processo de conversão. O fato novo, o anel e o banquete festivo são símbolos desta vida nova, pura, digna, cheia de alegria, que é a vida do homem que volta para Deus e para o seio da família que é a Igreja. Só o coração de Cristo, que conhece a profundidade do amor do seu Pai, pôde revelar-nos o abismo da sua misericórdia, de um modo tão cheio de simplicidade e beleza."
+        },
+        {
+          "sortOrder": 1,
+          "author": "Santo Ambrósio",
+          "source": "Expositio Evangelii secundum Lucam, livro VII, segundo a Catena Aurea de S. Tomás de Aquino sobre Lc 15, lição 3 e 4 (dois trechos unidos; texto abreviado). Tradução a partir do latim do Corpus Thomisticum (corpusthomisticum.org); não é edição portuguesa publicada.",
+          "text": "Que há de mais longínquo do que afastar-se de si mesmo, e separar-se não pelas regiões, mas pelos costumes? … Bem volta a si, porque de si se afastara: pois quem regressa a Deus é restituído a si mesmo, e quem se afasta de Cristo renega-se a si mesmo."
+        },
+        {
+          "sortOrder": 2,
+          "author": "Santo Agostinho",
+          "source": "Quaestiones Evangeliorum, livro II, q. 33, segundo a Catena Aurea de S. Tomás de Aquino sobre Lc 15, lição 4. Tradução a partir do latim do Corpus Thomisticum (corpusthomisticum.org); não é edição portuguesa publicada.",
+          "text": "«Levantar-me-ei», porque jazia; «e irei», porque estava longe; «ter com meu pai», porque estava sob o príncipe dos porcos."
+        },
+        {
+          "sortOrder": 3,
+          "author": "Santo Ambrósio",
+          "source": "Expositio Evangelii secundum Lucam, livro VII, segundo a Catena Aurea de S. Tomás de Aquino sobre Lc 15, lição 4 (texto abreviado). Tradução a partir do latim do Corpus Thomisticum (corpusthomisticum.org); não é edição portuguesa publicada.",
+          "text": "Quão misericordioso é aquele que foi ofendido! Não desdenha ouvir o nome de pai. «Pequei»: esta é a primeira confissão diante do autor da natureza, do senhor da misericórdia, do juiz da culpa. Mas, ainda que Deus saiba tudo, espera a voz da tua confissão … Confessa antes, para que interceda por ti Cristo, rogue por ti a Igreja, chore por ti o povo; e não temas não alcançar o perdão."
+        },
+        {
+          "sortOrder": 4,
+          "author": "Santo Ambrósio",
+          "source": "Expositio Evangelii secundum Lucam, livro VII, segundo a Catena Aurea de S. Tomás de Aquino sobre Lc 15, lição 4. Tradução a partir do latim do Corpus Thomisticum (corpusthomisticum.org); não é edição portuguesa publicada.",
+          "text": "Corre, pois, ao teu encontro, porque te ouve a deliberar no segredo da mente; e, estando tu ainda longe, corre ao teu encontro, para que ninguém te impeça; e também te abraça: no encontro está a presciência, no abraço a clemência; e, como num afeto de amor paterno, lança-se-te ao pescoço, para levantar o que jazia e voltar para o céu aquele que, carregado de pecados, se inclinava para a terra. Prefiro, pois, ser filho a ser ovelha: a ovelha é achada pelo pastor, o filho é honrado pelo pai."
+        },
+        {
+          "sortOrder": 5,
+          "author": "São Pio X",
+          "source": "Catecismo Maior de São Pio X (Roma, 1905), Parte IV (Dos Sacramentos), cap. VI «Da Penitência», 22ª pergunta do capítulo. Tradução a partir do italiano.",
+          "text": "«— O sacramento da Penitência tem a virtude de perdoar todos os pecados, por muitos e grandes que sejam? — O sacramento da Penitência tem a virtude de perdoar todos os pecados, por muitos e grandes que sejam, contanto que seja recebido com as devidas disposições.»"
         }
       ]
     }
