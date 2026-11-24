@@ -13,21 +13,25 @@ jest.mock('@/data/api/supabaseClient', () => ({
 }));
 
 describe('meditationContentRepository', () => {
-  it('embedded joyful-1 tem a anunciação, a saudação do anjo e o «faça-se», cada uma com os seus comentários', () => {
+  it('embedded joyful-1 tem a anunciação, a saudação do anjo, o «faça-se» e o Verbo feito carne, cada um com os seus comentários', () => {
     const bundle = getEmbeddedMeditationBundle('joyful-1');
     expect(bundle.images).toHaveLength(5);
     expect(bundle.passages.map((passage) => passage.reference)).toEqual([
       'Lc 1, 26-27',
-      'Lc 1, 28-31',
+      'Lc 1, 28-33',
       'Lc 1, 34-38',
+      'Jo 1, 14',
     ]);
     expect(bundle.passages[2]?.text).toContain('Eis aqui a serva do Senhor');
-    const [first, second, third] = bundle.passages;
+    const [first, second, third, fourth] = bundle.passages;
     const of = (passageId?: string) => bundle.commentaries.filter((item) => item.passageId === passageId);
     expect(of(first?.id).map((item) => item.author)).toContain('São Tomás de Aquino');
     expect(of(second?.id).map((item) => item.author)).toContain('São Pio X');
-    expect(of(third?.id).map((item) => item.source)).toContain('CIC 494 (texto abreviado)');
-    expect(of(first?.id).length + of(second?.id).length + of(third?.id).length).toBe(bundle.commentaries.length);
+    expect(of(third?.id).map((item) => item.source)).toContain('CIC 494 (texto abreviado; grafia adaptada ao Brasil)');
+    expect(of(fourth?.id).map((item) => item.source)).toContain('CIC 461 (grafia adaptada ao Brasil)');
+    expect(
+      of(first?.id).length + of(second?.id).length + of(third?.id).length + of(fourth?.id).length,
+    ).toBe(bundle.commentaries.length);
     expect(bundle.rotateEveryNHailMarys).toBe(2);
   });
 
