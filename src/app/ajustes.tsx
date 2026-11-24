@@ -188,19 +188,22 @@ export default function SettingsScreen() {
           <Text style={styles.hint}>Vale para a próxima oração que começar.</Text>
         </Section>
 
-        <Section title="Rosário tradicional">
-          <Text style={styles.hint}>
-            Vale quando a aba “Tradicional” está escolhida no início, com “desceu aos infernos” e o
-            Glória longo.
-          </Text>
+        <Section title="Orações em">
           <Segmented
             options={PRAYER_LANGUAGE_OPTIONS}
             value={preferences.prayerLanguage}
             onChange={(prayerLanguage) => update({ prayerLanguage })}
           />
           <Text style={styles.hint}>
-            Em latim, toque na oração para ver a tradução. Oferecimento e Agradecimento ficam em
-            português.
+            Vale nas duas abas do início, com ou sem Luminosos. Em latim, toque na oração para ver a
+            tradução fiel do texto latino. Oferecimento e Agradecimento ficam em português.
+          </Text>
+        </Section>
+
+        <Section title="Rosário tradicional">
+          <Text style={styles.hint}>
+            Vale quando a aba “Tradicional” está escolhida no início, com “desceu aos infernos” e o
+            Glória longo.
           </Text>
           <View style={styles.row}>
             <View style={styles.rowCopy}>
